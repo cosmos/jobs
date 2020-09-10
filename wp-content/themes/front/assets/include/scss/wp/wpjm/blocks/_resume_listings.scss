@@ -1,0 +1,87 @@
+div.resume_listings {
+    .resume-filters {
+        margin-bottom: ($spacer * 2) !important;
+    }
+
+    .no_resume_listings_found {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+    }
+}
+
+ul.resume_listings {
+    .resume {
+        margin-bottom: ($spacer * 2) !important;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+        }
+
+        .card {
+            height: 100% !important;
+        }
+        
+        &.resume_featured {
+            > .card {
+                //border-color: $card-frame-hover-border-color;
+                //box-shadow: $card-frame-hover-box-shadow;
+                height: 100% !important;
+            }
+        }
+
+        .resume-excerpt {
+            line-height: $paragraph-line-height;
+        }
+    }
+
+    &.list-view {
+        &.has-resume-sidebar {
+            .resume {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(12);
+                }
+            }
+        }
+
+        &:not(.has-resume-sidebar) {
+            .resume {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(6);
+                }
+            }
+        }
+
+        .grid {
+            display: none !important;
+        }
+    }
+
+    &.grid-view,
+    &:not(.list-view):not(.grid-view) {
+        &.has-resume-sidebar {
+            .resume {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(6);
+                }
+            }
+        }
+
+        &:not(.has-resume-sidebar) {
+            .resume {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(4);
+                }
+            }
+        }
+
+        .resume-excerpt > p {
+            margin-bottom: 0 !important;
+        }
+
+        .list {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+#job-manager-bookmarks {
+	table {
+		tr.no-bookmarks-notice {
+			display: none;
+			&:only-child {
+				display: table-row;
+			}
+		}
+
+		img.candidate_photo,
+		img.company_logo {
+			width: 42px;
+			height: 42px;
+			float: left;
+			margin-right: 1em;
+			vertical-align: middle;
+			box-shadow: none;
+			object-fit: cover;
+			min-width: auto;
+		}
+
+		ul.job-manager-bookmark-actions {
+			margin: 0;
+			padding:0;
+			visibility: hidden;
+			font-size: 0.92em;
+			li {
+				float: none;
+				display: inline;
+				padding: 0;
+				margin: 0 .5em 0 0;
+				font-weight: normal;
+				list-style: none outside;
+
+				&:after {
+					padding: 0 0 0 .5em;
+					content: "\2023";
+				}
+
+				&:last-child:after {
+					content: '';
+				}
+
+				.job-manager-bookmark-action-delete {
+					color: red;
+				}
+
+				a.disabled {
+					opacity: .5;
+					filter: alpha(opacity=50);
+					cursor: not-allowed;
+				}
+
+				.spinner {
+					background: url(../../../../../wp-includes/images/spinner.gif) no-repeat;
+					background-size: 20px 20px;
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					margin: 0 0 0 5px;
+					vertical-align: middle;
+				}
+			}
+		}
+		tr:hover, tr:focus, tr.performing-action {
+			ul.job-manager-bookmark-actions {
+				visibility: visible;
+			}
+		}
+	}
+}
+
+ul.job_listings, ul.resumes {
+	.listing-bookmarked h3 {
+		&::before {
+			float: right;
+			content: "\e81e";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			-webkit-font-smoothing: antialiased;
+			font-size: 16px;
+			font-family: "job-manager" !important;
+			text-decoration: none;
+			font-weight: normal;
+			font-style: normal;
+			vertical-align: top;
+			font-size: 16px;
+			margin: 0 0 0 .5em;
+			*overflow: auto;
+			*zoom: 1;
+			*display: inline;
+			color: red;
+		}
+	}
+}
+
+.wp-job-manager-bookmarks-form {
+	margin: 2em 0;
+	overflow: hidden;
+	border: 1px solid #eee;
+	border-bottom-width: 2px;
+
+	.remove-bookmark-wrapper {
+		display: none;
+	}
+
+	&.has-bookmark {
+		.remove-bookmark-wrapper {
+			display: block;
+		}
+		.add-bookmark-wrapper {
+			display: none;
+		}
+	}
+
+	.spinner {
+		background: url(../../../../../wp-includes/images/spinner.gif) no-repeat;
+		background-size: 20px 20px;
+		display: inline-block;
+		visibility: hidden;
+		width: 20px;
+		height: 20px;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	.spinner.is-active {
+		visibility: visible;
+	}
+
+	a .spinner {
+		margin: 0 0 0 5px;
+	}
+
+	input[type=submit]:disabled, input[type=submit].disabled, a.disabled {
+		opacity: .5;
+		filter: alpha(opacity=50);
+		cursor: not-allowed;
+	}
+
+	a.bookmark-notice {
+		margin: 0;
+		display: inline-block;
+		padding: 1em;
+		text-decoration: none;
+
+		&::before {
+			content: "\e81f";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			-webkit-font-smoothing: antialiased;
+			font-size: 16px;
+			font-family: "job-manager" !important;
+			text-decoration: none;
+			font-weight: normal;
+			font-style: normal;
+			vertical-align: top;
+			font-size: 16px;
+			margin: 0 2px 0 0;
+			*overflow: auto;
+			*zoom: 1;
+			*display: inline;
+		}
+		&.bookmarked {
+			&::before {
+				content: "\e81e";
+			}
+		}
+	}
+	a.remove-bookmark {
+		float: right;
+		color: red;
+		padding: 1em;
+		visibility: hidden;
+		&.performing-action {
+			visibility: visible;
+		}
+	}
+	&:hover, &:focus {
+		a.remove-bookmark {
+			visibility: visible;
+		}
+	}
+	div.bookmark-details {
+		display: none;
+		padding: 0 1em;
+		p {
+			margin: 0 0 1em;
+		}
+		textarea {
+			width: 100%;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+	}
+}

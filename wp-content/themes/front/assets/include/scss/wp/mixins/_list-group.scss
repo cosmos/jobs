@@ -1,0 +1,187 @@
+%make-list-group {
+    display: flex;
+    flex-direction: column;
+
+    // No need to set list-style: none; since .list-group-item is block level
+    padding-left: 0; // reset padding because ul and ol
+    margin-bottom: 0;
+
+    list-style: none;
+
+    %make-list-group {
+        margin-left: 1rem;
+    }
+
+    %make-list-group-item,
+    .list-group-item {
+        font-size: $list-group-item-font-size;
+    }
+
+    .active {
+        // > %make-list-group-item,
+        // > .list-group-item {
+        //     color: $primary;
+        // }
+
+        > %make-list-group-text,
+        > .list-group-text {
+            color: $white;
+        }
+    }
+}
+
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+%make-list-group-item-action {
+    width: 100%; // For `<button>`s (anchors become 100% by default though)
+    color: $list-group-action-color;
+    text-align: inherit; // For `<button>`s (anchors inherit)
+
+    // Hover state
+    @include hover-focus {
+        z-index: 1; // Place hover/focus items above their siblings for proper border styling
+        color: $list-group-action-hover-color;
+        text-decoration: none;
+        background-color: $list-group-hover-bg;
+    }
+
+    &:active {
+        color: $list-group-action-active-color;
+        background-color: $list-group-action-active-bg;
+    }
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+%make-list-group-item {
+    position: relative;
+    display: block;
+    padding: $list-group-item-padding-y $list-group-item-padding-x;
+    // Place the border on the list items and negative margin up for better styling
+    margin-bottom: -$list-group-border-width;
+    color: $list-group-color;
+    background-color: $list-group-bg;
+    border: $list-group-border-width solid $list-group-border-color;
+
+    &:first-child {
+        @include border-top-radius($list-group-border-radius);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+        @include border-bottom-radius($list-group-border-radius);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $list-group-disabled-color;
+        pointer-events: none;
+        background-color: $list-group-disabled-bg;
+    }
+
+    // Include both here for `<a>`s and `<button>`s
+    &.active {
+        z-index: 2; // Place active items above their siblings for proper border styling
+        color: $list-group-active-color;
+        background-color: $list-group-active-bg;
+        border-color: $list-group-active-border-color;
+    }
+}
+
+// Flush list items
+//
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
+// useful within other components (e.g., cards).
+
+@mixin make-list-group-flush {
+    %make-list-group-item,
+    .list-group-item {
+        border-right: 0;
+        border-left: 0;
+        @include border-radius(0);
+        padding-left: 0;
+        padding-right: 0;
+
+        &.active {
+            //color: $primary;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        &:last-child {
+            margin-bottom: -$list-group-border-width;
+        }
+    }
+
+    &:first-child {
+        %make-list-group-item:first-child,
+        .list-group-item:first-child {
+            border-top: 0;
+        }
+    }
+
+    &:last-child {
+        %make-list-group-item:last-child,
+        .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}
+
+/* Transparent */
+@mixin make-list-group-transparent {
+    %make-list-group-item,
+    .list-group-item {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
+
+/* White */
+@mixin make-list-group-white {
+    %make-list-group-item,
+    %make-list-group-item-action,
+    .list-group-item,
+    .list-group-item-action {
+        color: $white;
+
+        &[href] {
+            color: $white-color-70;
+        }
+
+        &[href]:hover {
+            color: $white-color-hover;
+        }
+    }
+
+    .active {
+        > %make-list-group-item,
+        > .list-group-item {
+            color: $white;
+        }
+    }
+}
+
+/* Borderless */
+@mixin make-list-group-borderless {
+    %make-list-group-item,
+    .list-group-item {
+        border: none;
+    }
+}
+
+@mixin make-list-inline-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: $list-inline-padding;
+    }
+}

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+#portfolio_images_container {
+  padding: 0;
+  margin-bottom: 1em; }
+  #portfolio_images_container ul {
+    *zoom: 1;
+    margin: 0;
+    padding: 0; }
+    #portfolio_images_container ul::before, #portfolio_images_container ul::after {
+      content: ' ';
+      display: table; }
+    #portfolio_images_container ul::after {
+      clear: both; }
+    #portfolio_images_container ul li.image,
+    #portfolio_images_container ul li.add,
+    #portfolio_images_container ul li.front-metabox-sortable-placeholder {
+      width: 69px;
+      float: left;
+      cursor: move;
+      border: 1px solid #d5d5d5;
+      margin: 9px 9px 0 0;
+      background: #f7f7f7;
+      border-radius: 2px;
+      position: relative;
+      box-sizing: border-box; }
+      #portfolio_images_container ul li.image img,
+      #portfolio_images_container ul li.add img,
+      #portfolio_images_container ul li.front-metabox-sortable-placeholder img {
+        width: 100%;
+        height: auto;
+        display: block; }
+    #portfolio_images_container ul li.front-metabox-sortable-placeholder {
+      border: 3px dashed #dddddd;
+      position: relative; }
+      #portfolio_images_container ul li.front-metabox-sortable-placeholder::after {
+        font-family: 'Dashicons';
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        text-indent: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        content: "";
+        font-size: 2.618em;
+        line-height: 72px;
+        color: #ddd; }
+    #portfolio_images_container ul ul.actions {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      padding: 2px;
+      display: none; }
+      #portfolio_images_container ul ul.actions li {
+        float: right;
+        margin: 0 0 0 2px; }
+        #portfolio_images_container ul ul.actions li a {
+          width: 1em;
+          height: 1em;
+          margin: 0;
+          height: 0;
+          display: block;
+          overflow: hidden; }
+          #portfolio_images_container ul ul.actions li a.tips {
+            cursor: pointer; }
+        #portfolio_images_container ul ul.actions li a.delete {
+          display: block;
+          text-indent: -9999px;
+          position: relative;
+          height: 1em;
+          width: 1em;
+          font-size: 1.4em; }
+          #portfolio_images_container ul ul.actions li a.delete::before {
+            font-family: 'Dashicons';
+            speak: none;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+            text-indent: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            content: "";
+            color: #999;
+            background: #fff;
+            border-radius: 50%;
+            height: 1em;
+            width: 1em;
+            line-height: 1em; }
+          #portfolio_images_container ul ul.actions li a.delete:hover::before {
+            color: #a00; }
+    #portfolio_images_container ul li:hover ul.actions {
+      display: block; }
+
+#add_portfolio_images {
+  margin-top: 1em; }
+
+.block-editor .ugb-placeholder {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  margin-bottom: 12px;
+  margin-top: .6rem; }
+
+.block-editor .ugb-image-preview-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  margin-top: .6rem;
+  border-radius: 4px; }
+
+.block-editor .ugb-image-control .ugb-image-preview:hover,
+.block-editor .ugb-image-control .ugb-placeholder:hover {
+  background: #fafafa; }
+
+.block-editor .ugb-image-control .ugb-image-preview:focus,
+.block-editor .ugb-image-control .ugb-placeholder:focus {
+  background: #fafafa;
+  box-shadow: 0 0 0 2px rgba(30, 140, 190, 0.8); }
+
+table.wp-job-manager-repeated-rows {
+  border-color: #dfdfdf;
+  background-color: #f9f9f9;
+  margin: 0;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-collapse: separate;
+  border-spacing: 0; }
+  table.wp-job-manager-repeated-rows thead th {
+    padding: 5px 8px 8px;
+    background-color: #f1f1f1; }
+  table.wp-job-manager-repeated-rows tbody td.left {
+    width: 38%; }
+  table.wp-job-manager-repeated-rows tbody td.sort-column {
+    cursor: move;
+    color: #ccc; }
+    table.wp-job-manager-repeated-rows tbody td.sort-column:before {
+      content: "\f333";
+      font-family: 'dashicons'; }
+  table.wp-job-manager-repeated-rows tbody td {
+    padding: 8px 0 0 8px;
+    vertical-align: middle; }
+    table.wp-job-manager-repeated-rows tbody td input, table.wp-job-manager-repeated-rows tbody td textarea {
+      width: 100%; }
+    table.wp-job-manager-repeated-rows tbody td:last-child {
+      padding-right: 8px; }
+    table.wp-job-manager-repeated-rows tbody td label {
+      display: none; }
+    table.wp-job-manager-repeated-rows tbody td p {
+      margin: 0; }
+  table.wp-job-manager-repeated-rows tfoot .submit {
+    border: 0 none;
+    float: none !important;
+    padding: 8px !important; }
+
+.menu-item-images .set-post-thumbnail.button img {
+  width: 16px !important;
+  height: 12px !important; }
+
+.type-jetpack-portfolio .column-thumbnail .attachment-jetpack-portfolio-admin-thumb + .attachment-jetpack-portfolio-admin-thumb {
+  display: none; }
+
+#customize-controls .description {
+  display: block; }
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,26 @@
+.page-template-template-privacy-policy #content {
+    h2,
+    h3 {
+        @extend .h5;
+    }    
+
+    h4 {
+        @extend .h6;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: $font-weight-semi-bold !important;
+        @extend .text-primary;
+    }
+
+    .hero-24 {
+        @extend .mx-md-n9;
+        @extend .mx-n7;
+        @extend .mb-md-9;
+        @extend .mb-7;
+    }
+}

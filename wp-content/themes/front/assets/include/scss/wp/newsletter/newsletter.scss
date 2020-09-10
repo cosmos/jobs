@@ -1,0 +1,49 @@
+.hero-subscribe-2 {
+    .input-group {
+        @extend .input-group-lg;
+        @extend .input-group-pill;
+
+        .form-control:last-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .wpcf7-not-valid-tip {
+            position: absolute !important;
+            top: 105%;
+        }
+    }
+
+    .wpcf7-response-output {
+        display: none !important;
+    }
+
+    .btn-primary {
+        font-size: 0;
+        width: 64px;
+        height: 68px;
+
+        @include hover-focus {
+            transform: translateY(0px);
+        }
+    }
+
+    .input-group-append {
+        &:before {
+            content: "\f1d8";
+            font-weight: 600;
+            font-family: "Font Awesome 5 Free";
+            position: absolute;
+            z-index: 10;
+            font-size: 1.25rem;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+        }
+
+        .ajax-loader {
+            width: 0;
+        }
+    }
+}
+

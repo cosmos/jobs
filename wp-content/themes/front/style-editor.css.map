@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "style-editor.css",
+	"sources": [
+		"style-editor.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

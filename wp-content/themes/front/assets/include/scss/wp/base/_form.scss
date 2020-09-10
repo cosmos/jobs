@@ -1,0 +1,9 @@
+input[type="submit"] {
+    @extend .transition-3d-hover;
+}
+
+select {
+    max-width: 100%;
+    -webkit-appearance: none;
+    @extend .custom-select;
+}

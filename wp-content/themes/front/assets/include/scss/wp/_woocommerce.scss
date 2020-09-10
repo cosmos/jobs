@@ -1,0 +1,25 @@
+/*
+ * Single Product
+ */
+
+@import "woocommerce/components/buttons";
+@import "woocommerce/components/price";
+@import "woocommerce/components/password-strength";
+@import "woocommerce/components/product";
+@import "woocommerce/components/star-rating";
+@import "woocommerce/components/comments";
+@import "woocommerce/components/store-notice";
+
+@import "woocommerce/blocks/single-product";
+@import "woocommerce/blocks/single-product-slider";
+@import "woocommerce/blocks/cart";
+@import "woocommerce/blocks/checkout";
+@import "woocommerce/blocks/payment-method";
+@import "woocommerce/blocks/products";
+@import "woocommerce/blocks/my-account";
+
+@import "woocommerce/pages/page-order-received";
+@import "woocommerce/pages/page-wishlist";
+
+@import "woocommerce/widgets/price-slider";
+@import "woocommerce/widgets/shop-sidebar";

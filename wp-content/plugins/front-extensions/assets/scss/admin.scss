@@ -1,0 +1,19 @@
+@import "mixins/mixins";
+@import "jetpack/portfolio";
+@import "imageupload/imageupload";
+@import "wp-job-manager/repeated-fields";
+
+.menu-item-images .set-post-thumbnail.button img {
+	width: 16px !important;
+	height: 12px !important;
+}
+
+.type-jetpack-portfolio .column-thumbnail {
+	.attachment-jetpack-portfolio-admin-thumb + .attachment-jetpack-portfolio-admin-thumb {
+		display: none;
+	}
+}
+
+#customize-controls .description {
+    display: block;
+}

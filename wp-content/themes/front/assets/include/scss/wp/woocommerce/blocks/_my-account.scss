@@ -1,0 +1,124 @@
+.front-user-account-menu-dropdown {
+    li a {
+        display: block;
+        width: 100%; // For `<button>`s
+        padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        clear: both;
+        font-weight: $font-weight-normal;
+        color: $dropdown-link-color;
+        text-align: inherit; // For `<button>`s
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+        background-color: transparent; // For `<button>`s
+        border: 0; // For `<button>`s
+
+        // Prevent dropdown overflow if there's no padding
+        // See https://github.com/twbs/bootstrap/pull/27703
+        @if $dropdown-padding-y == 0 {
+            &:first-child {
+                @include border-top-radius($dropdown-inner-border-radius);
+            }
+
+            &:last-child {
+                @include border-bottom-radius($dropdown-inner-border-radius);
+            }
+        }
+
+        @include hover-focus {
+            color: $dropdown-link-hover-color;
+            text-decoration: none;
+            @include gradient-bg($dropdown-link-hover-bg);
+        }
+
+        &.active,
+        &:active {
+            color: $dropdown-link-active-color;
+            text-decoration: none;
+            @include gradient-bg($dropdown-link-active-bg);
+        }
+
+        &.disabled,
+        &:disabled {
+            color: $dropdown-link-disabled-color;
+            pointer-events: none;
+            background-color: transparent;
+            // Remove CSS gradients if they're enabled
+            @if $enable-gradients {
+                background-image: none;
+            }
+        }
+    }
+
+    .sub-menu {
+        list-style: none;
+        padding-left: 15px;
+    }
+}
+
+.front-user-account-menu-sidebar {
+    margin-bottom: 0;
+
+    .sub-menu {
+        list-style: none;
+        padding-left: 15px;
+    }
+
+    li {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+
+        a {
+            display: block;
+            font-size: .875rem;
+            color: $gray-500;
+            @include border-radius($border-radius);
+            padding: .625rem;
+            transition: $transition-timing-sm $transition-function;
+
+            span {
+                display: inline-block;
+                text-align: center;
+                width: 1.125rem;
+                font-size: .8125rem;
+                color: $gray-600;
+                transition: $transition-timing-sm $transition-function;
+                margin-right: ($spacer * .5) !important;
+            }
+        }
+    }
+} 
+
+.front-user-account-sidebar-footer-menu {
+    li {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: $list-inline-padding;
+            padding-right: $spacer !important;
+        }
+
+        a {
+            position: relative;
+            z-index: 1;
+            font-size: .875rem;
+            color: $white-color-70;
+
+            &:hover {
+                color: $white-color-hover;
+            }
+        }
+    }
+
+    .front-icon-menu {
+        .menu-text {
+            display: none !important;
+        }
+    }
+}
+
+.woocommerce-account .woocommerce-notices-wrapper {
+    margin-bottom: 30px;
+}
+
+.woocommerce-orders-table__header--text {
+    word-break: normal;
+}

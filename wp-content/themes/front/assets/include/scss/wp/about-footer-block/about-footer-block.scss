@@ -1,0 +1,6 @@
+.footer-button-link {
+    a {
+        @include make-button-wide;
+        @extend .transition-3d-hover;
+    }
+}

@@ -1,0 +1,50 @@
+.shop-sidebar .widget form,
+.job_application_details .fieldset-application_attachment .field {
+    @include make-input-group;
+}
+
+.shop-sidebar .widget .search-field,
+.widget_price_filter .price_label .from,
+.widget_price_filter .price_label .to,
+.input-text,
+.input-date,
+textarea,
+.subscribe-form.wpforms-container .wpforms-field-text input[type=text],
+.subscribe-form.wpforms-container .wpforms-field-email input[type=email],
+.subscribe-form.wpforms-container .wpforms-field-name input[type=text],
+.subscribe-form.wpforms-container .wpforms-field-select select,
+.subscribe-form.wpforms-container .wpforms-field-number input[type=number],
+div.wpforms-container-full.subscribe-form .wpforms-form .wpforms-field-text input[type=text],
+div.wpforms-container-full.subscribe-form .wpforms-form .wpforms-field-email input[type=email],
+div.wpforms-container-full.subscribe-form .wpforms-form .wpforms-field-name input[type=text],
+div.wpforms-container-full.subscribe-form .wpforms-form .wpforms-field-select select,
+div.wpforms-container-full.subscribe-form .wpforms-form .wpforms-field-number input[type=text],
+.subscribe-form.wpforms-container textarea,
+div.wpforms-container-full.subscribe-form textarea,
+.contact-form.wpforms-container .wpforms-field-text input[type=text],
+.contact-form.wpforms-container .wpforms-field-email input[type=email],
+.contact-form.wpforms-container .wpforms-field-name input[type=text],
+.contact-form.wpforms-container .wpforms-field-select select,
+.contact-form.wpforms-container .wpforms-field-number input[type=number],
+div.wpforms-container-full.contact-form .wpforms-form .wpforms-field-text input[type=text],
+div.wpforms-container-full.contact-form .wpforms-form .wpforms-field-email input[type=email],
+div.wpforms-container-full.contact-form .wpforms-form .wpforms-field-name input[type=text],
+div.wpforms-container-full.contact-form .wpforms-form .wpforms-field-select select,
+div.wpforms-container-full.contact-form .wpforms-form .wpforms-field-number input[type=text],
+.contact-form.wpforms-container textarea,
+div.wpforms-container-full.contact-form textarea {
+    @include make-form-control;
+
+    &:focus {
+        box-shadow: 0 0 10px rgba(55, 125, 255, 0.1);
+        border-color: rgba(55, 125, 255, 0.5);
+    }
+}
+
+.contact-form.wpforms-container textarea,
+div.wpforms-container-full.contact-form textarea,
+.subscribe-form.wpforms-container textarea,
+div.wpforms-container-full.subscribe-form textarea {
+	height: auto;
+}
+

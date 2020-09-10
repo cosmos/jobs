@@ -1,0 +1,7 @@
+.site-footer.site-footer__default {
+    &.style-v6 {
+        .footer-social-menu {
+            @extend .mb-4;
+        }
+    }
+}

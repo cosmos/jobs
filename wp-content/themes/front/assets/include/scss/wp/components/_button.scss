@@ -1,0 +1,66 @@
+.footer-button-link a,
+input[type="submit"],
+button,
+.wcppec-checkout-buttons__button,
+.added_to_cart,
+.shop-sidebar .tagcloud a,
+[data-view=list] .yith-wcwl-wishlistaddedbrowse,
+[data-view=list] .yith-wcwl-wishlistexistsbrowse,
+[data-view=list] .yith-wcwl-wishlistaddedbrowse,
+[data-view=list] .yith-wcwl-add-button {
+    @include make-button;
+}
+
+.site-footer.style-v13 .fgb-button,
+.comment-respond input[type="submit"],
+.added_to_cart,
+.widget.widget_price_filter button,
+.widget.widget_layered_nav button,
+[data-view=list] .yith-wcwl-wishlistaddedbrowse,
+[data-view=list] .yith-wcwl-wishlistexistsbrowse ,
+[data-view=list] .yith-wcwl-add-button {
+    @include make-button-sm;
+}
+
+.footer-button-link a,
+input[type="submit"],
+.wp-block-file__button,
+.wp-block-button:not( .is-style-outline ) .wp-block-button__link,
+.widget.widget_price_filter button,
+.widget.widget_layered_nav button,
+.shop-sidebar .widget.widget_search .search-submit,
+.shop-sidebar .widget.woocommerce.widget_product_search button[type="submit"],
+.subscribe-form.wpforms-container .wpforms-submit-container button[type=submit].btn-primary, 
+div.wpforms-container-full.subscribe-form .wpforms-form button[type=submit].btn-primary,
+.contact-form.wpforms-container .wpforms-submit-container button[type=submit].btn-primary, 
+div.wpforms-container-full.contact-form .wpforms-form button[type=submit].btn-primary {
+    @extend %make-button-primary;
+}
+
+.site-footer__default.style-v2 .social-icon-menu a {
+    @extend %make-button-soft-primary;
+}
+
+.footer-button-link a,
+.wcppec-checkout-buttons__button,
+.added_to_cart,
+.shop-sidebar .widget.widget_tag_cloud .tagcloud a ,
+.subscribe-form.wpforms-container .wpforms-submit-container button[type=submit].btn-pill, 
+div.wpforms-container-full.subscribe-form .wpforms-form button[type=submit].btn-pill,
+[data-view=list] .yith-wcwl-wishlistaddedbrowse,
+[data-view=list] .yith-wcwl-wishlistexistsbrowse,
+[data-view=list] .yith-wcwl-add-button {
+    @include make-button-pill;
+}
+
+.wcppec-checkout-buttons__button {
+    @include make-button-block;
+}
+
+.site-footer__dark .widget .social-icon-menu a,
+.site-footer__default:not( .style-v2 ):not( .footer-default-v7 ):not( .footer-default-v9 ) .footer-social-menu a,
+[data-view=list] .yith-wcwl-wishlistaddedbrowse,
+[data-view=list] .yith-wcwl-wishlistexistsbrowse,
+[data-view=list] .yith-wcwl-add-button {
+    @extend %make-button-soft-secondary;
+}

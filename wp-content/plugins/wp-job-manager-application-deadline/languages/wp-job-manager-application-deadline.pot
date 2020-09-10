@@ -1,0 +1,108 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Job Manager - Application Deadline 1.2.3\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/wp-job-manager-application-deadline\n"
+"POT-Creation-Date: 2020-08-10 19:56:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: wp-job-manager-application-deadline.php:90
+msgid ""
+"<em>WP Job Manager - Application Deadline</em> requires WP Job Manager to "
+"be installed and activated."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:104
+msgid ""
+"<em>WP Job Manager - Application Deadline</em> requires WP Job Manager %s "
+"(you are using %s)."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:147
+msgid "Automatic deadline expiry"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:148
+msgid "Enable automatic expiration"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:149
+msgid ""
+"Enable this option to automatically expire jobs when application closing "
+"dates pass."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:214
+msgid "Application closing date"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:239
+msgid "Deadline for new applicants."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:241
+msgid ""
+"Deadline for new applicants. The listing will end automatically after this "
+"date."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:247
+msgid "Closing date"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:269
+msgid "Please enter a valid closing date."
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:344
+msgid "Closed"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:344
+msgid "Closes"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:377
+#: wp-job-manager-application-deadline.php:432
+msgid "Closing Date"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:380
+msgid "Expires"
+msgstr ""
+
+#: wp-job-manager-application-deadline.php:435
+#: wp-job-manager-application-deadline.php:437
+msgid "Listing Expires"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Job Manager - Application Deadline"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpjobmanager.com/add-ons/application-deadline/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows job listers to set a closing date via a new field on the job "
+"submission form. Once this date passes, the job listing is automatically "
+"ended (if enabled in settings)."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpjobmanager.com"
+msgstr ""

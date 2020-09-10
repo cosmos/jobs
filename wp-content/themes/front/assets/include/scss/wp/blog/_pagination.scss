@@ -1,0 +1,7 @@
+.page-links {
+    @extend .pagination;
+}
+
+.post-page-numbers {
+    @extend .page-link;
+}

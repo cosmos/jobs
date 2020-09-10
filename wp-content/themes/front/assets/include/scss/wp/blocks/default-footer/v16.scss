@@ -1,0 +1,17 @@
+.site-footer {
+    &.site-footer__default.style-v16 {
+        .widget {
+            width: 100%;
+            &:not(:last-child) {
+                @extend .mb-3;
+            }
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .custom-html-widget p {
+        	@extend .font-size-1;
+        }
+    }
+}

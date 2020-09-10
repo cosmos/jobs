@@ -1,0 +1,44 @@
+.site-footer .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.blog-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.blog-sidebar .widget_meta ul,
+.page-template-template-terms-conditions .list-group ul,
+.hp-listing-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.hp-listing-dashboard .hp-menu--user-account ul {
+    @extend %make-list-group;
+}
+
+.site-footer .widget .woocommerce-widget-layered-nav-list__item,
+.blog-sidebar .widget_meta ul li a,
+.hp-listing-dashboard .hp-menu--user-account ul li a {
+    @extend %make-list-group-item;
+}
+
+.site-footer .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ) a,
+.site-footer .widget .woocommerce-widget-layered-nav-list__item,
+.blog-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ) a,
+.site-footer.site-footer__primary.style-v5 .footer-social-menu li a,
+.blog-sidebar .widget_meta ul li a,
+.hp-listing-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ) a,
+.hp-listing-dashboard .hp-menu--user-account ul li a {
+    @extend %make-list-group-item-action;
+}
+
+.site-footer .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.site-footer.site-footer__primary.style-v5 .footer-primary-menu,
+.blog-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.blog-sidebar .widget_meta ul,
+.hp-listing-sidebar .widget ul:not( .widget_recent_entries ):not( .widget_recent_comments ):not( .wp-tag-cloud ):not( .social-icon-menu ),
+.hp-listing-dashboard .hp-menu--user-account ul {
+    @include make-list-group-flush;
+    @include make-list-group-borderless;
+}
+
+.site-footer .widget ul {
+    @include make-list-group-transparent;
+}
+
+.site-footer.site-footer__dark .widget ul,
+.site-footer.site-footer__primary .widget ul,
+.site-footer.site-footer__primary.style-v5 .footer-primary-menu {
+    @include make-list-group-white;
+}

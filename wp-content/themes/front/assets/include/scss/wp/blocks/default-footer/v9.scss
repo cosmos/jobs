@@ -1,0 +1,19 @@
+.site-footer {
+    &.footer-default-v9 {
+
+        .footer-social-menu {
+            li {
+                @include make-list-inline-item;
+                @extend .mb-2;
+                @include media-breakpoint-up(sm) {
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            a {
+                @extend %make-button-soft-indigo;
+                border-radius: 50% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.site-footer {
+     &.footer-default-v7 {
+     	.footer-social-menu {
+     		a {
+                @extend %make-button-soft-dark;
+                border-radius: 50% !important;
+                @extend .button-large;
+                @extend .btn-bg-transparent;
+
+                &:not(:hover) {
+                    background-color: transparent !important;
+                }
+     		}
+     	}
+    }
+}

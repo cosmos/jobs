@@ -1,0 +1,9 @@
+.site-footer {
+    &.footer-default-v8{
+    	.footer-widgets {
+    		.widget ul li {
+    			@extend .bg-transparent;
+    		}
+    	}
+    }
+}

@@ -1,0 +1,15 @@
+.header-nav-menu-block {
+    li a {
+        display: flex !important;
+	    align-items: center !important;
+	    font-size: 0.875rem !important;
+	    color: #77838f !important;
+        padding-left: 0 !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+
+        // &:hover {
+        //     color: #0052ea !important;
+        // }
+    }
+}

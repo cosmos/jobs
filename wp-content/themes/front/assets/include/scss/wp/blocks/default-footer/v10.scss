@@ -1,0 +1,38 @@
+.site-footer {
+     &.footer-default-v10 {
+        .textwidget {
+            font-size: 1rem;
+        }
+
+        .footer-primary-menu {
+            @extend .font-size-1;
+            margin-bottom: 0 !important;
+            flex-wrap: wrap;
+
+            li {
+                line-height: 20px;
+
+                a {
+                    @extend .link-muted;
+
+                    &:hover {
+                        @extend .text-primary;
+                    }
+                }
+
+            }
+
+            li,a {
+                padding: 0 !important;
+            }
+        }
+
+        .footer-bottom {
+            .footer-logo {
+                a {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+table.wishlist_table {
+    @include media-breakpoint-down(sm) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+	td.product-remove {
+		a.remove {
+			font-size: 0;
+
+			&:before {
+				font-size: 0.875rem;
+				content: "\f2ed";
+			    font-family: "Font Awesome 5 Free";
+			    display: inline-block;
+			    color: #77838f;
+			    text-indent: 0;
+			}
+		}
+	}
+	.product-name {
+		a {
+            @include font-size($h6-font-size);
+            margin-bottom: $headings-margin-bottom;
+            font-family: $headings-font-family;
+            font-weight: $font-weight-medium;
+            line-height: $headings-line-height;
+			color: #1e2022;
+
+		}
+	}
+}
+
+.yith-wcwl-share{
+    margin-top: 10px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    ul > li > a {
+        i {
+            line-height: 1;
+            font-family: 'Font Awesome 5 Brands';
+
+            &.fa {
+                font-family: FontAwesome;
+                font-weight: 900;
+            }
+        }
+
+        &.email {
+            font-family: 'Font Awesome 5 Free';
+        }
+    }
+
+    ul {
+        padding-left: 0;
+
+        > li {
+            padding-right: 10px;
+        }
+
+    }
+
+    // li.share-button {
+    //     a.facebook {
+    //         i {
+    //             &:before{
+    //                 content: "\f39e";
+    //                 color: #3b5998;
+    //             }
+    //         }
+    //     }
+
+    //     a.twitter {
+    //         i {
+    //             &:before{
+    //                 content: "\f099";
+    //                 color: #00aced;
+    //             }
+    //         }
+    //     }
+
+    //     a.pinterest {
+    //         i {
+    //             &:before{
+    //                 content: "\f0d2";
+    //                 color: #cb2027;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // .facebook{
+    //     &:before{
+    //         content: "\f39e";
+    //         color: #3b5998;
+    //     }
+    // }
+
+    // .twitter{
+    //     &:before{
+    //         content: "\f099";
+    //         color: #00aced;
+    //     }
+    // }
+
+    // .pinterest{
+    //     &:before{
+    //         content: "\f0d2";
+    //         color: #cb2027;
+    //     }
+    // }
+
+    // .googleplus{
+    //     &:before{
+    //         content: "\f0d5";
+    //         color: #dd4b39;
+    //     }
+    // }
+
+    // .email{
+    //     &:before{
+    //         content: "\f0e0";
+    //         color: #333e48;
+    //     }
+    // }
+}
+
+.yith-wcwl-form.wishlist-fragment .hidden-title-form,
+.yith-wcwl-form.wishlist-fragment .wishlist-title-with-form {
+    display: none;
+}
+
+.wishlist_table.wishlist_view.responsive.mobile  {
+    padding: 0;
+    list-style: none;
+}

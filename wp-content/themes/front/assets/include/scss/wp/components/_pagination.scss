@@ -1,0 +1,34 @@
+ul.page-numbers {
+    @extend .pagination;
+
+    > li {
+        @extend .page-item;
+
+        > a,
+        > span {
+            @extend .page-link;
+
+            &.current {
+                z-index: 1;
+                color: $white;
+            }
+        }
+    }
+}
+
+.jcc ul.page-numbers {
+    justify-content: center;
+}
+
+.page-links {
+    clear: both;
+    @extend .mb-5;
+}
+
+.hp-listing-dashboard {
+    .hp-pagination {
+        .page-numbers {
+            @extend .page-link;
+        }
+    }
+}

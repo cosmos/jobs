@@ -1,0 +1,9 @@
+.woocommerce-order-received {
+	.article__content figure:not(.alignfull):not(.alignwide) {
+        max-width: 5rem;
+	}
+
+	h1.h3 {
+        font-weight: $font-weight-medium !important;
+	}
+}

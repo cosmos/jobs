@@ -1,0 +1,36 @@
+[dir="rtl"] pre {
+  direction: ltr;
+}
+
+[dir="rtl"] .u-header__sub-menu-nav-link-toggle::after {
+  content: "\f104" !important;
+}
+[dir="rtl"] .fa-angle-right::before {
+  content: "\f104";
+}
+[dir="rtl"] .fa-angle-left::before {
+  content: "\f105";
+}
+[dir="rtl"] .fa-arrow-left::before {
+  content: "\f061";
+}
+[dir="rtl"] .fa-arrow-right::before {
+  content: "\f060";
+}
+[dir="rtl"] .flip-x {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .u-datepicker .flatpickr-prev-month.flatpickr-prev-month,
+[dir="rtl"] .u-datepicker .flatpickr-next-month.flatpickr-next-month {
+  transform: scaleX(-1) translate(0, -50%);
+}
+[dir="rtl"] .u-datepicker .flatpickr-prev-month.flatpickr-prev-month {
+  left: auto;
+  right: .75rem;
+}
+[dir="rtl"] .u-datepicker .flatpickr-next-month.flatpickr-next-month {
+  left: .75rem;
+  right: auto;
+}
+

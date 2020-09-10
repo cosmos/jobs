@@ -1,0 +1,16 @@
+.site-footer {
+    &.style-v12 {
+        .footer-primary-menu {            
+            li {
+                @extend .mr-4;
+
+                &:last-child {
+                    margin-right: 0 !important;
+                }
+            }
+            a {
+                padding: 0 !important;
+            }
+        }
+    }
+}

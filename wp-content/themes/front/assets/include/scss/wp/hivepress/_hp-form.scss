@@ -1,0 +1,35 @@
+.hp-form {
+    .hp-form {
+        &__field,
+        &__footer > * {
+            margin-bottom: $spacer;
+        }
+    }
+
+    .hp-field {
+        &:not( .button ) {
+            @include make-form-control;
+            &:focus {
+                box-shadow: 0 0 10px rgba( 55, 125, 255, 0.1);
+                border-color: rgba( 55, 125, 255, 0.5);
+            }
+        }
+
+        &__label {
+            display: block;
+        }
+
+        &.hp-field--textarea {
+            height: 220px;
+        }
+
+        &.hp-field--attachment-upload {
+            height: auto;
+        }
+
+        &--submit,
+        &--button {
+            @extend %make-button-primary;
+        }
+    }
+}

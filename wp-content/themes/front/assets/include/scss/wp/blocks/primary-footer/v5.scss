@@ -1,0 +1,45 @@
+.site-footer {
+    &.site-footer__primary {
+        &.style-v5 {
+            .footer-primary-menu {
+                @extend .text-lg-center;
+                margin-bottom: 0 !important;
+
+                li {
+                    @include make-list-inline-item; 
+                    @extend .px-2;
+
+                    a {
+                        color: rgba(255, 255, 255, 0.7);
+                        padding: 0 !important;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            .footer-social-menu {
+                text-align: right;
+                
+                li {
+                    padding: 0 !important;
+
+                    a {
+                        background: rgba(248, 249, 250, 0.1) !important;
+                        border-color: transparent !important;
+                        color: #f8f9fa;
+                        width: 2rem !important;
+
+                        &:hover {
+                            color: #1e2022 !important;
+                            background: #f8f9fa !important;
+                            box-shadow: 0 4px 11px rgba(248, 249, 250, 0.35) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

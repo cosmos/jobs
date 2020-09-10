@@ -1,0 +1,9 @@
+.site-footer {
+    &.site-footer__primary {
+        &.style-v6 {
+           .footer-logo-v6 a {
+                @extend .mb-2;
+           }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.wpjm-pagination,
+.wpjmr-pagination,
+.mas-wpjmc-pagination ul {
+    .page-numbers {
+        position: relative;
+        display: block;
+        padding: $pagination-padding-y $pagination-padding-x;
+        margin-left: -$pagination-border-width;
+        line-height: $pagination-line-height;
+        color: $pagination-color;
+        background-color: $pagination-bg;
+        border: $pagination-border-width solid $pagination-border-color;
+        cursor: pointer;
+        text-align: center;
+        min-width: $pagination-min-width;
+        @include border-radius;
+
+        &:hover {
+            z-index: 2;
+            //color: $pagination-hover-color;
+            text-decoration: none;
+            //background-color: $pagination-hover-bg;
+            //border-color: $pagination-hover-border-color;
+        }
+
+        &:focus {
+            z-index: 2;
+            outline: $pagination-focus-outline;
+            //box-shadow: $pagination-focus-box-shadow;
+        }
+
+        &.current {
+            z-index: 1;
+            color: $pagination-active-color;
+            //background-color: $pagination-active-bg;
+            //border-color: $pagination-active-border-color;
+        }
+
+        &.dots {
+            color: $pagination-disabled-color;
+            pointer-events: none;
+            // Opinionated: remove the "hand" cursor set previously for .page-link
+            cursor: auto;
+            background-color: $pagination-disabled-bg;
+            border-color: $pagination-disabled-border-color;
+        }
+    }
+}
+
+.mas-wpjmc-pagination ul {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-bottom: 0 !important;
+}

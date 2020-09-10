@@ -1,0 +1,26 @@
+.job-manager-info,
+.job-manager-warning,
+.job-manager-success,
+.job-manager-error {
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: $alert-border-width solid transparent;
+    @include border-radius($alert-border-radius);
+}
+
+.job-manager-info {
+    @include alert-variant(theme-color-level(info, $alert-bg-level), theme-color-level(info, $alert-border-level), theme-color-level(info, $alert-color-level));
+}
+
+.job-manager-warning {
+    @include alert-variant(theme-color-level(warning, $alert-bg-level), theme-color-level(warning, $alert-border-level), theme-color-level(warning, $alert-color-level));
+}
+
+.job-manager-success {
+    @include alert-variant(theme-color-level(success, $alert-bg-level), theme-color-level(success, $alert-border-level), theme-color-level(success, $alert-color-level));
+}
+
+.job-manager-error {
+    @include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+}

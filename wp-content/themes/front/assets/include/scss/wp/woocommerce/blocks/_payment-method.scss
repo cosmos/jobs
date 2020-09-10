@@ -1,0 +1,142 @@
+.payment_method_paypal .payment-method__icon {
+    img {
+        display: none;
+    }
+
+    .about_paypal {
+        color: $link-muted-color;
+        border-bottom: $link-muted-border-width dashed $link-muted-border-color;
+        font-size: ($font-size-base * .875);
+
+        &:hover {
+            border-color: $link-hover-color;
+        }
+    }
+}
+
+.wc-credit-card-form, .wc-payment-form {
+    margin-top: $spacer !important;
+
+    .row > .form-row, .row > * {
+        margin-left: 0;
+        margin-right: 0;
+        display: block !important;
+        margin-bottom: $spacer !important;
+
+        > label {
+            display: block;
+            text-transform: uppercase;
+            font-size: 80%;
+            font-weight: 500;
+
+            .required {
+                color: $danger;
+            }
+        }
+    }
+
+    .wc-stripe-elements-field, .wc-stripe-iban-element-field {
+        padding: 0.95rem;
+        border: 1px solid #d5dae2;
+        border-radius: 0.3125rem;
+
+        &.focused {
+            border-color: rgba(55, 125, 255, 0.5);
+            box-shadow: 0 0 10px rgba(55, 125, 255, 0.1);
+            outline: 0;
+        }
+    }
+
+    .wc-stripe-iban-element-field {
+        margin-left: 15px;
+        @include make-col-ready;
+        @include make-col(12);
+        margin-top: -($spacer * .5) !important;
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+}
+
+.wc-payment-form:not(.wc-credit-card-form) {
+    .row > .form-row,
+    .wc-stripe-sepa-mandate,
+    .stripe-source-errors {
+        @include make-col-ready;
+        @include make-col(12);
+    }
+
+    .row > .form-row {
+        &.form-row-first,
+        &.form-row-last {
+            @include media-breakpoint-up(md) {
+                @include make-col-ready;
+                @include make-col(6);
+            }
+        }
+    }
+}
+
+.wc-credit-card-form {
+    .row > .form-row {
+        @include make-col-ready;
+        @include make-col(12);
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+
+        &.form-row-first,
+        &.form-row-last {
+            @include make-col(6);
+            @include media-breakpoint-up(md) {
+                @include make-col(3);
+            }
+        }
+    }
+}
+
+.woocommerce-SavedPaymentMethods {
+    @include list-unstyled;
+    margin-bottom: 0 !important;
+
+    > li {
+        padding-top: ($spacer * .5) !important;
+        padding-bottom: ($spacer * .5) !important;
+        color: $text-muted !important;
+
+        > label {
+            margin-left: ($spacer * .25) !important;
+        }
+    }
+}
+
+.woocommerce-SavedPaymentMethods-saveNew {
+    align-items: center !important;
+    margin: 0 !important;
+
+    label {
+        margin-bottom: 0 !important;
+        margin-left: ($spacer * .5) !important;
+    }
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+    margin-bottom: ($spacer * 2.5) !important;
+}
+
+.payment-box__inner > p:only-child,
+.payment-box__inner > div:only-child > p:only-child {
+    margin-bottom: 0 !important;
+}
+
+.woocommerce-error {
+    @include list-unstyled;
+    margin: 0 !important;
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: $alert-border-width solid transparent;
+    @include border-radius($alert-border-radius);
+    @include alert-variant(theme-color-level(danger, $alert-bg-level), theme-color-level(danger, $alert-border-level), theme-color-level(danger, $alert-color-level));
+}

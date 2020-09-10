@@ -1,0 +1,13 @@
+.site-footer.site-footer__default {
+    &.style-v5 {
+        > a {
+            @extend .mb-3;
+        }
+        li {
+            @extend .px-2;
+            > a {
+                padding: 0;
+            }
+        }
+    }
+}

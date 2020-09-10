@@ -1,0 +1,179 @@
+div.job_listings {
+    .no_job_listings_found {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+    }
+
+    .load_more_jobs {
+        display: block;
+        width: fit-content;
+    }
+
+    .showing_jobs {
+        > span {
+            display: inline-block !important;
+            margin-right: ($spacer * .5) !important;
+
+            @include media-breakpoint-up(lg) {
+                display: block !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        > a {
+            display: inline-block !important;
+            color: $link-muted-color;
+            border-bottom: $link-muted-border-width dashed $link-muted-border-color;
+
+            &:hover {
+                border-color: $link-hover-color;
+            }
+
+            &:not( :last-child ) {
+                margin-right: ($spacer * .5) !important;
+            } 
+        }
+    }
+}
+
+ul.job_listings {
+    .job_listing {
+        margin-bottom: ($spacer * 2) !important;
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+        }
+
+        &.job_position_featured {
+            > .card {
+                //border-color: $card-frame-hover-border-color;
+                //box-shadow: $card-frame-hover-box-shadow;
+            }
+        }
+    }
+
+    &:not(.list-view):not(.list-small-view) {
+        &.has-job-sidebar {
+            .job_listing {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(6);
+                }
+            }
+        }
+
+        &:not(.has-job-sidebar) {
+            .job_listing {
+                @include media-breakpoint-up(lg) {
+                    @include make-col(4);
+                }
+            }
+        }
+    }
+
+    &:not(.list-view):not(.grid-view):not(.list-small-view):not(.grid-small-view):not(.list-grid-view) {
+        .list,
+        .list-small,
+        .list-grid,
+        .grid-small {
+            display: none !important;
+        }
+    }
+
+    &.list-view {
+        .job_listing {
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+        }
+
+        .grid,
+        .list-small,
+        .list-grid,
+        .grid-small {
+            display: none !important;
+        }
+    }
+
+    &.grid-view {
+        .list,
+        .list-small,
+        .list-grid,
+        .grid-small {
+            display: none !important;
+        }
+    }
+
+    &.list-small-view {
+        .job_listing {
+            margin-bottom: ($spacer * .5) !important;
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+        }
+
+        .list,
+        .grid,
+        .list-grid,
+        .grid-small {
+            display: none !important;
+        }
+    }
+
+    &.list-grid-view {
+        margin-left: -($spacer * .5) !important;
+        margin-right: -($spacer * .5) !important;
+
+        > .job_listing {
+            padding-left: ($spacer * .5) !important;
+            padding-right: ($spacer * .5) !important;
+            margin-bottom: $spacer !important;
+        }
+
+        .list,
+        .grid,
+        .list-small,
+        .grid-small {
+            display: none !important;
+        }
+    }
+
+    &.grid-small-view {
+        margin-bottom: -($spacer * 2) !important;
+
+        .list,
+        .grid,
+        .list-grid,
+        .list-small {
+            display: none !important;
+        }
+    }
+}
+
+div.job_listings {
+    &.columns-1 {
+        ul.job_listings .job_listing {
+            @include media-breakpoint-up(lg) {
+                @include make-col(12);
+            }
+        }
+    }
+
+    &.columns-2 {
+        ul.job_listings .job_listing {
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+        }
+    }
+
+    &.columns-4 {
+        ul.job_listings .job_listing {
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+ul.front-companies {
+    .company {
+        @include make-col-ready;
+        @include make-col(12);
+        margin-bottom: $spacer !important
+    }
+}

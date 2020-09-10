@@ -1,0 +1,50 @@
+.page-template-template-terms-conditions #content {
+    h2 {
+        @extend .h5;
+    }
+
+    h2,
+    h3 {
+        @extend .h5;
+    }
+
+    h2,
+    h3,
+    h4 {
+        @extend .mb-3;
+    }
+
+    h3 {
+        @extend .space-top-1;
+    }
+
+    h4 {
+        @extend .h6;
+    }
+
+    .primary ul {
+        @extend .text-secondary;
+
+        li {
+            @extend .pb-2;
+        }
+    }
+
+    .list-group ul {
+        margin-left: 1rem;
+    }
+
+    .js-scroll-nav > li > a {
+        @extend .font-weight-medium;
+    } 
+
+    .page__header {
+        @extend .space-top-lg-0; 
+        @extend .space-top-md-0;
+
+
+        header {
+            @extend .mb-2;
+        }
+    }
+}

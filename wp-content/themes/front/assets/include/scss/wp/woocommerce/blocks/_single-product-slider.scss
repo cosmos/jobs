@@ -1,0 +1,104 @@
+.single-product { 
+	.flex-viewport {
+		border: $border-width solid $border-color !important;
+		border-radius: $border-radius !important;
+	}
+
+	.flex-control-thumbs {
+		@include list-unstyled;
+		position: absolute !important;
+		bottom: 0 !important;
+		right: 0 !important;
+		left: 0 !important;
+		padding: ($spacer * 1.5) $spacer !important;
+		display: flex !important;
+		justify-content: center !important;
+		margin-bottom: 0 !important;
+
+		li {
+			margin-left: .25rem;
+    		margin-right: .25rem;
+    		padding: ($spacer * .25) !important;
+		}
+
+		img {
+			display: block !important;
+			border-radius: 50% !important;
+			border: $border-width solid $border-color !important;
+			padding: ($spacer * .25) !important;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.flex-direction-nav {
+		@include list-unstyled;
+
+		.flex-prev,
+		.flex-next {
+			display: none !important;
+			@include media-breakpoint-up(sm) {
+				display: inline-block !important;
+			}
+			z-index: 1;
+			line-height: 0;
+			display: inline-block;
+			//color: $slick-arrow-flat-white-color;
+			background-color: $slick-arrow-flat-white-bg-color;
+			width: $slick-arrow-width;
+			height: $slick-arrow-width;
+			font-size: $slick-arrow-font-size;
+			cursor: pointer;
+			transition: $slick-arrow-transition;
+
+			&:hover {
+				//color: $slick-arrow-flat-white-hover-color;
+				background-color: $slick-arrow-flat-white-bg-hover-color;
+			}
+			@include content-centered(false, true);
+			box-shadow: $box-shadow-soft !important;
+			border-radius: 50% !important;
+			font-size: 0; 
+
+			&:before {
+				@include content-centered;
+				font-size: 14px;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 600;
+			}		
+		}
+
+		.flex-prev {
+			left: 0;
+			margin-left: $spacer !important;
+
+			&:before {
+				content: "\f060";
+			}
+		}
+
+		.flex-next {
+			right: 0;
+			margin-right: $spacer !important;
+
+			&:before {
+				content: "\f061";
+			}
+		}
+	}
+
+	.js-slide > img {
+		@include img-fluid;
+		border-radius: $border-radius !important;
+		width: 100% !important;
+	}
+}
+
+.single-product .js-slide .js-slick-thumb-progress > img {
+	border-radius: 50% !important;
+}
+
+.single-product .js-slide .js-slick-thumb-progress > img,
+.shop-hero-slider .js-slide .js-slick-thumb-progress > img {
+	@include img-fluid;
+}

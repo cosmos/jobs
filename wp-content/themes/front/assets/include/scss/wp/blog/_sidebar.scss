@@ -1,0 +1,196 @@
+.blog-sidebar {
+    > .js-sticky-block > hr.my-7:last-child {
+        display: none;
+    }
+
+    .wp-block-archives-list,
+    .wp-block-categories-list,
+    .widget_archive .widget__title + ul,
+    .widget_categories .widget__title + ul,
+    .widget_pages .widget__title + ul,
+    .widget_meta .widget__title + ul,
+    .widget .menu {
+        @extend .mb-5;
+
+        > li {
+            > a {
+                display: flex !important;
+                align-items: center !important;
+            }
+        }
+
+        .children.collapse:not( .show ) {
+            display: none !important; 
+        }
+
+        span + .menu-text {
+            @extend .ml-2;
+        }
+    }
+
+    .wp-block-archives-dropdown {
+        @extend .mb-5;
+    }
+
+    .calendar_wrap {
+        @include font-size($small-font-size);
+        font-weight: $font-weight-normal;
+        
+        table {
+            @extend .table-bordered;
+        }
+
+        td,
+        th {
+            text-align: center !important;
+            word-break: normal;
+            padding: 0.75em;
+        }
+
+        caption {
+            text-align: center !important;
+        }
+    }
+
+    .wp-block-latest-posts,
+    .wp-block-latest-comments,
+    #recentcomments,
+    .widget_recent_entries .widget__title + ul {
+        @include list-unstyled;
+
+        > li {
+            @extend .text-secondary;
+
+            & + li {
+                border-top: $border-width solid $border-color !important;
+                @extend .mt-5;
+                @extend .pt-5;
+            }
+
+            &:last-child {
+                @extend .pb-5;
+                @extend .mb-5;
+            }
+
+            &:first-child {
+                @extend .pt-2;
+            }
+
+            a {
+                @extend .h6;
+                @extend .font-weight-medium;
+                margin-bottom: 0 !important;
+                @extend .text-dark;
+            }
+
+            time {
+                display: block !important;
+                color: $text-muted !important;
+                @include font-size($small-font-size);
+                font-weight: $font-weight-normal;
+            }
+        }
+
+        &.is-grid {
+            > li {
+                @extend .pt-5;
+                border-top: $border-width solid $border-color !important;
+                @extend .mt-5;
+            }
+        }
+    }
+
+    .article__content {
+        .wp-block-archives-list,
+        .wp-block-categories-list,
+        .wp-block-latest-posts {
+            line-height: 1.5;
+        }
+    }
+
+    .widget_rss {
+        ul {
+            @include list-unstyled;
+
+            > li {
+                @extend .text-secondary;
+                display: flex !important;
+                flex-direction: column;
+
+                & + li {
+                    border-top: $border-width solid $border-color !important;
+                    @extend .mt-5;
+                    @extend .pt-5;
+                }
+
+                &:first-child {
+                    @extend .pt-2;
+                }
+
+                &:last-child {
+                    @extend .pb-5;
+                    @extend .mb-5;
+                }
+            }
+        }
+
+        li .rsswidget {
+            @extend .h6;
+            @extend .font-weight-medium;
+            margin-bottom: 0 !important;
+            @extend .text-dark;
+            order: 2;
+        }
+
+        .rss-date {
+            display: block !important;
+            color: $text-muted !important;
+            @include font-size($small-font-size);
+            font-weight: $font-weight-normal;
+            @extend .mb-2;
+            order: 1;
+        }
+
+        cite {
+            @extend .text-dark;
+            font-weight: $font-weight-semi-bold !important;
+            display: block !important;
+            @include font-size($small-font-size);
+            order: 4;
+            font-style: normal;
+        }
+
+        .rssSummary {
+            line-height: 1.7;
+            @extend .text-secondary;
+            @include font-size($small-font-size);
+            font-weight: $font-weight-normal;
+            @extend .my-3;
+            order: 3;
+        }
+    }
+}
+
+.widget {
+    .child-indicator { 
+        text-align: center !important;
+
+        i {
+            transform: rotate(-90deg);
+        }
+
+        &.collapsed i {
+            transform: rotate(90deg);
+        } 
+    } 
+
+    .dropdown-toggle-collapse::after {
+        @extend .float-right;
+    }
+
+    input[type="submit"] {
+        &:hover {
+            transform: none;
+        }
+    }
+}

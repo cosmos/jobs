@@ -1,0 +1,22 @@
+/*------------------------------------
+  Navbar Expand
+------------------------------------*/
+.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($next, $grid-breakpoints);
+
+        &#{$infix} {
+            @include media-breakpoint-down($breakpoint) {
+                // Submenu
+                .u-header__sub-menu {
+                    &--spacer {
+                        .hs-has-sub-menu {
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

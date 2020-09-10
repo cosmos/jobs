@@ -1,0 +1,22 @@
+@mixin fa-icon {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+@mixin fa-b {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+@mixin fa-s {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+@function fa-content($fa-var) {
+    @return unquote("\"#{ $fa-var }\"");
+}

@@ -1,0 +1,101 @@
+blockquote.wp-block-quote, 
+.wp-block-quote.is-style-large {
+    @extend .card;
+    @extend .bg-soft-primary;
+    border: 0 !important;
+    @extend .font-size-2;
+    @extend .font-weight-medium;
+    @extend .text-lh-md;
+    @extend .p-5;
+    @extend .my-5;
+
+    cite {
+        display: block !important;
+        color: $text-muted !important;
+        @extend .font-size-1;
+        @extend .mt-2;
+    }
+}
+
+blockquote.wp-block-quote {
+    font-size: 1rem;
+
+    cite {
+        margin-top: 0 !important;
+    }
+}
+
+.wp-block-pullquote:not(.is-style-solid-color) {
+    position: relative !important;
+    @extend .mb-3;
+    border-width: 2px;
+
+    &:before {
+        display: inline-block;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve"><path fill="rgb(255, 255, 255)" opacity=".7" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5 C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3 c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8 C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z"/></svg>');
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        top: 100px;
+        z-index: 1;
+
+    }
+
+    blockquote {
+        margin: 0 !important;
+        @extend .py-9;
+        @extend .shadow-primary-lg;
+        @extend .bg-primary;
+        padding-top: 7rem !important;
+    }
+}
+
+.wp-block-quote.is-large, 
+.wp-block-quote.is-style-large {
+    p {
+        font-style: normal;
+    }
+
+    cite {
+       @extend .text-left; 
+    }
+    
+}
+
+.wp-block-pullquote.is-style-solid-color {
+    background-color: #0073aa;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    blockquote {
+        background-color: transparent;
+        color: $white !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+
+        p {
+            font-style: italic;
+            @extend .mb-3;
+
+        }
+
+    }
+}
+
+.wp-block-pullquote{
+    blockquote {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    p, cite {
+       color: $white !important;
+    }
+}

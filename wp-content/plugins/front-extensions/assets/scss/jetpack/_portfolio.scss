@@ -1,0 +1,95 @@
+#portfolio_images_container {
+    padding: 0;
+    margin-bottom: 1em;
+
+    ul {
+        @include clearfix();
+        margin: 0;
+        padding: 0;
+
+        li.image,
+        li.add,
+        li.front-metabox-sortable-placeholder {
+            width: 69px;
+            float: left;
+            cursor: move;
+            border: 1px solid #d5d5d5;
+            margin: 9px 9px 0 0;
+            background: #f7f7f7;
+            border-radius: 2px;
+            position: relative;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        li.front-metabox-sortable-placeholder {
+            border: 3px dashed #dddddd;
+            position: relative;
+
+            &::after {
+                @include icon_dashicons( '\f161' );
+                font-size: 2.618em;
+                line-height: 72px;
+                color: #ddd;
+            }
+        }
+
+        ul.actions {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            padding: 2px;
+            display: none;
+
+            li {
+                float: right;
+                margin: 0 0 0 2px;
+
+                a {
+                    width: 1em;
+                    height: 1em;
+                    margin: 0;
+                    height: 0;
+                    display: block;
+                    overflow: hidden;
+
+                    &.tips {
+                        cursor: pointer;
+                    }
+                }
+
+                a.delete {
+                    @include ir();
+                    font-size: 1.4em;
+
+                    &::before {
+                        @include icon_dashicons( '\f153' );
+                        color: #999;
+                        background: #fff;
+                        border-radius: 50%;
+                        height: 1em;
+                        width: 1em;
+                        line-height: 1em;
+                    }
+
+                    &:hover::before {
+                        color: #a00;
+                    }
+                }
+            }
+        }
+
+        li:hover ul.actions {
+            display: block;
+        }
+    }
+}
+
+#add_portfolio_images {
+    margin-top: 1em;
+}

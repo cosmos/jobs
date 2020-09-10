@@ -1,0 +1,21 @@
+.single-hp_listing #tab-reviews {
+    .hp-form {
+        &--review-submit {
+            margin-bottom: ( $spacer * 2 );
+        }
+
+        .hp-field {
+            &--rating {
+                cursor: auto !important;
+
+                > i {
+                    cursor: pointer;
+                }
+            }
+
+            &--submit {
+                @extend %make-button-soft-primary;
+            }
+        }
+    }
+}

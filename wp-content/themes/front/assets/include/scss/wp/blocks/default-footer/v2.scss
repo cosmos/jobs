@@ -1,0 +1,22 @@
+.site-footer.site-footer__default.style-v2 .footer-static-v2 .row {
+	.col-md-4 {
+		margin-bottom: 0 !important;
+	}
+	.d-flex {
+		margin: 0 !important;
+	}
+}
+
+.site-footer.site-footer__default.style-v2 {
+	.social-icon-menu {
+		a {
+			border-radius: $border-radius !important;  
+		}
+	}
+
+	.widget__title {
+		@extend .font-size-1;
+		font-weight: $font-weight-normal !important;
+		@extend .text-secondary;
+	}
+}

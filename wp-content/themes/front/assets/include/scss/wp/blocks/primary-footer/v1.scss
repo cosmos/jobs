@@ -1,0 +1,15 @@
+.site-footer {
+    &.site-footer__primary {
+        &.style-v1 {
+            .widget {
+                &:not(:last-child) {
+                    @extend .mb-3;
+                }
+
+                &:last-child {
+                    margin-bottom: 0 !important;
+                } 
+            }
+        }
+    }
+}

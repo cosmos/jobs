@@ -1,0 +1,1370 @@
+# Copyright (C) 2020 MadrasThemes
+# This file is distributed under the same license as the Front Extensions package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Front Extensions 1.1.0\n"
+"Report-Msgid-Bugs-To: https://madrasthemes.freshdesk.com/\n"
+"POT-Creation-Date: 2020-09-01 14:29:16+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: POT <support@madrasthemes.freshdesk.com>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: front-extensions.php:214 front-extensions.php:223
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/admin/class-front-admin-meta-boxes.php:95
+msgid "Portfolio gallery"
+msgstr ""
+
+#: includes/admin/class-front-admin.php:72
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:65
+msgid "Front"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:54
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:74
+msgid "Delete image"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:54
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:74
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:74
+msgid "Add images to portfolio gallery"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:74
+msgid "Add to gallery"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:74
+msgid "Add portfolio gallery images"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:79
+msgid "Gallery View"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:81
+msgid "Simple"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:82
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:118
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:419
+msgid "Grid"
+msgstr ""
+
+#: includes/admin/meta-boxes/class-front-meta-box-portfolio-images.php:83
+msgid "Masonry"
+msgstr ""
+
+#: includes/class-front-post-types.php:47
+msgid "Customer Stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:48
+msgid "Customer Story"
+msgstr ""
+
+#: includes/class-front-post-types.php:49
+msgid "All Customer Stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:51
+#: includes/custom-post-types/portfolios.php:270
+msgid "Add New"
+msgstr ""
+
+#: includes/class-front-post-types.php:52
+msgid "Add new customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:53
+msgid "Edit"
+msgstr ""
+
+#: includes/class-front-post-types.php:54
+msgid "Edit customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:55
+msgid "New customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:56
+msgid "View customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:57
+msgid "View customer stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:58
+msgid "Search customer stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:59
+msgid "No customer stories found"
+msgstr ""
+
+#: includes/class-front-post-types.php:60
+msgid "No customer stories found in trash"
+msgstr ""
+
+#: includes/class-front-post-types.php:61
+msgid "Parent customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:62
+msgid "Customer Story image"
+msgstr ""
+
+#: includes/class-front-post-types.php:63
+msgid "Set customer story image"
+msgstr ""
+
+#: includes/class-front-post-types.php:64
+msgid "Remove customer story image"
+msgstr ""
+
+#: includes/class-front-post-types.php:65
+msgid "Use as customer story image"
+msgstr ""
+
+#: includes/class-front-post-types.php:66
+msgid "Insert into customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:67
+msgid "Uploaded to this customer story"
+msgstr ""
+
+#: includes/class-front-post-types.php:68
+msgid "Filter customer stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:69
+msgid "Customer Stories navigation"
+msgstr ""
+
+#: includes/class-front-post-types.php:70
+msgid "Customer Stories list"
+msgstr ""
+
+#: includes/class-front-post-types.php:72
+msgid "This is where you can add new customer stories to your site."
+msgstr ""
+
+#: includes/class-front-post-types.php:101
+#: includes/widgets/class-front-random-posts-widget.php:192
+msgid "Categories"
+msgstr ""
+
+#: includes/class-front-post-types.php:102
+msgid "All Items"
+msgstr ""
+
+#: includes/class-front-post-types.php:103
+msgid "Parent Item"
+msgstr ""
+
+#: includes/class-front-post-types.php:104
+msgid "Parent Item:"
+msgstr ""
+
+#: includes/class-front-post-types.php:105
+msgid "New Item Name"
+msgstr ""
+
+#: includes/class-front-post-types.php:106
+msgid "Add New Item"
+msgstr ""
+
+#: includes/class-front-post-types.php:107
+msgid "Edit Item"
+msgstr ""
+
+#: includes/class-front-post-types.php:108
+msgid "Update Item"
+msgstr ""
+
+#: includes/class-front-post-types.php:109
+msgid "View Item"
+msgstr ""
+
+#: includes/class-front-post-types.php:110
+msgid "Separate items with commas"
+msgstr ""
+
+#: includes/class-front-post-types.php:111
+msgid "Add or remove items"
+msgstr ""
+
+#: includes/class-front-post-types.php:112
+msgid "Choose from the most used"
+msgstr ""
+
+#: includes/class-front-post-types.php:113
+msgid "Popular Items"
+msgstr ""
+
+#: includes/class-front-post-types.php:114
+msgid "Search Items"
+msgstr ""
+
+#: includes/class-front-post-types.php:115
+msgid "Not Found"
+msgstr ""
+
+#: includes/class-front-post-types.php:116
+msgid "No items"
+msgstr ""
+
+#: includes/class-front-post-types.php:117
+msgid "Items list"
+msgstr ""
+
+#: includes/class-front-post-types.php:118
+msgid "Items list navigation"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:107
+msgid "Portfolio Projects"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:136
+#. translators: %s is the name of a custom post type such as
+#. "jetpack-portfolio"
+msgid "Your theme supports <strong>%s</strong>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:140
+msgid "Enable Portfolio Projects for this site."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:141
+msgid "Learn More"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:148
+#. translators: %1$s is replaced with an input field for numbers
+msgid "Portfolio pages display at most %1$s projects"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:266
+#: includes/custom-post-types/portfolios.php:451
+msgid "Projects"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:267
+#: includes/custom-post-types/portfolios.php:401
+msgid "Project"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:268
+#: includes/custom-post-types/portfolios.php:444
+msgid "Portfolio"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:269
+msgid "All Projects"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:271
+msgid "Add New Project"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:272
+msgid "Edit Project"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:273
+msgid "New Project"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:274
+msgid "View Project"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:275
+msgid "Search Projects"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:276
+msgid "No Projects found"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:277
+msgid "No Projects found in Trash"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:278
+msgid "Filter projects list"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:279
+msgid "Project list navigation"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:280
+msgid "Projects list"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:314
+#: includes/custom-post-types/portfolios.php:316
+msgid "Project Types"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:315
+msgid "Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:317
+msgid "All Project Types"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:318
+msgid "Edit Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:319
+msgid "View Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:320
+msgid "Update Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:321
+msgid "Add New Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:322
+msgid "New Project Type Name"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:323
+msgid "Parent Project Type"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:324
+msgid "Parent Project Type:"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:325
+msgid "Search Project Types"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:326
+msgid "Project type list navigation"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:327
+msgid "Project type list"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:341
+#: includes/custom-post-types/portfolios.php:343
+msgid "Project Tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:342
+msgid "Project Tag"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:344
+msgid "All Project Tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:345
+msgid "Edit Project Tag"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:346
+msgid "View Project Tag"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:347
+msgid "Update Project Tag"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:348
+msgid "Add New Project Tag"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:349
+msgid "New Project Tag Name"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:350
+msgid "Search Project Tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:351
+msgid "Popular Project Tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:352
+msgid "Separate tags with commas"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:353
+msgid "Add or remove tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:354
+msgid "Choose from the most used tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:355
+msgid "No tags found."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:356
+msgid "Project tag list navigation"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:357
+msgid "Project tag list"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:377
+msgid "Project updated. <a href=\"%s\">View item</a>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:378
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:379
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:380
+msgid "Project updated."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:382
+#. translators: %s: date and time of the revision
+msgid "Project restored to revision from %s"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:383
+msgid "Project published. <a href=\"%s\">View project</a>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:384
+msgid "Project saved."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:385
+msgid "Project submitted. <a target=\"_blank\" href=\"%s\">Preview project</a>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:386
+msgid ""
+"Project scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Preview project</a>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:388
+#. translators: Publish box date format, see https:php.net/date
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:389
+msgid ""
+"Project item draft updated. <a target=\"_blank\" href=\"%s\">Preview "
+"project</a>"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:459
+msgid "Portfolio Archive Title"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:474
+msgid "Portfolio Archive Content"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:490
+msgid "Portfolio Archive Featured Image"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:767
+msgid ""
+"Your Portfolio Archive currently has no entries. You can start creating "
+"them on your dashboard."
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:839
+msgid "Types"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:870
+msgid "Tags"
+msgstr ""
+
+#: includes/custom-post-types/portfolios.php:896
+#. translators: %1$s is link to author posts, %2$s is author display name
+msgid "<span>Author:</span> <a href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: includes/functions.php:116
+msgid "Additional Profile Information"
+msgstr ""
+
+#: includes/functions.php:119
+msgid "Author Byline"
+msgstr ""
+
+#: includes/functions.php:122
+msgid "Displayed below author name in Single Srticle Classic in Front Theme"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-attributes-filter-widget.php:22
+msgid "Add HP listings attributes filter widgets to your sidebar."
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-attributes-filter-widget.php:23
+msgid "Front HP Listings Attributes Filter"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-attributes-filter-widget.php:54
+msgid "Filters"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-attributes-filter-widget.php:58
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:56
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:57
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:57
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:90
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-search.php:89
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:65
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:65
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:90
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-search.php:89
+msgid "No sidebars are available."
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-attributes-filter-widget.php:63
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:61
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:62
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:62
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:95
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-search.php:94
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:70
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:70
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:95
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-search.php:94
+msgid "Title:"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:28
+msgid "Listings categories"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:29
+#: includes/widgets/class-front-random-posts-widget.php:182
+#: includes/widgets/class-front-random-posts-widget.php:217
+#: includes/widgets/class-front-widget-layered-nav.php:66
+#: includes/widgets/class-front-widget-price-filter.php:19
+msgid "Title"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:34
+#: includes/widgets/class-front-random-posts-widget.php:214
+msgid "Order by"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:36
+msgid "category order"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:37
+msgid "Name"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:43
+msgid "Show counts"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:48
+msgid "Show hierarchy"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:53
+msgid "Only show children of the current category"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:58
+msgid "Hide empty categories"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:63
+msgid "Maximum depth"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:69
+msgid "A list of listings categories."
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:72
+msgid "Front HP Listing Categories Widget"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-categories-widget.php:190
+msgid "No categories exist."
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:20
+msgid "Add HP listings verification filter widgets to your sidebar."
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:21
+msgid "Front Filter HP Listings Verification"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:52
+msgid "Verification"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:98
+msgid "Verified"
+msgstr ""
+
+#: includes/hivepress-marketplace/widgets/class-front-hp-listings-verification-widget.php:99
+msgid "Unverified"
+msgstr ""
+
+#: includes/template-functions.php:10
+msgid "A-to-Z"
+msgstr ""
+
+#: includes/template-functions.php:11
+msgid "Z-to-A"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:13
+msgid "Your site&#8217;s most random Posts."
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:16
+msgid "Front Posts Widget"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:147
+msgid "Front Post Widget"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:187
+msgid "Number of posts"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:194
+msgid "&ndash; Show All &ndash;"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:204
+msgid "Sticky posts"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:206
+msgid "Show All Posts"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:207
+msgid "Hide Sticky Posts"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:208
+msgid "Show Only Sticky Posts"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:216
+msgid "Published Date"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:218
+msgid "Comment Count"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:219
+msgid "Random"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:220
+msgid "Custom Field"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:221
+msgid "Menu Order"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:226
+msgid "Custom field"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:231
+msgid "Order"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:233
+msgid "Descending"
+msgstr ""
+
+#: includes/widgets/class-front-random-posts-widget.php:234
+msgid "Ascending"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:12
+msgid "Display a list of attributes to filter products in your store."
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:14
+msgid "Front Filter Products by Attribute"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:65
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:81
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:81
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:108
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:108
+msgid "Filter by"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:71
+msgid "Attribute"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:77
+msgid "Display type"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:79
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:119
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:420
+msgid "List"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:80
+msgid "Dropdown"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:86
+msgid "Query type"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:88
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:87
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:87
+msgid "AND"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:89
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:88
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:88
+msgid "OR"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:240
+#. translators: %s: taxonomy name
+msgid "Any %s"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:278
+msgid "Apply"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:500
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:175
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:224
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:175
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:224
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:352
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:352
+msgid "View more"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:500
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:175
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:224
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:175
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:224
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:352
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:352
+msgid "View less"
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:12
+msgid "Display a slider to filter products in your store by price."
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:14
+msgid "Front Filter Products by Price"
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:18
+msgid "Filter by price"
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:129
+msgid "Min price"
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:130
+msgid "Max price"
+msgstr ""
+
+#: includes/widgets/class-front-widget-price-filter.php:139
+msgid "Filter"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:58
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:120
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:174
+msgid "Search %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:59
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:121
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:175
+msgid "All %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:60
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:122
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:176
+msgid "Parent %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:61
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:123
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:177
+msgid "Parent %s:"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:62
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:124
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:178
+msgid "Edit %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:63
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:125
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:179
+msgid "Update %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:64
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:126
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:180
+msgid "Add New %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:65
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:127
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:181
+msgid "New %s Name"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:114
+msgid "Resumes Listings Style"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:115
+msgid ""
+"Select the style for resumes listing style. This lets the plugin know the "
+"style of resumes listings."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:126
+msgid "Resumes Listings Sidebar"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:127
+msgid ""
+"Select the position for resumes listing sidebar. This lets the plugin know "
+"the position of resumes listings sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:130
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:430
+msgid "Full Width"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager-resume.php:131
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:431
+msgid "Right Sidebar"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:38
+msgid "%d Open Position"
+msgid_plural "%d Open Positions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:87
+msgid "Job Salary"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:88
+msgid "Job Salaries"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:93
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:94
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:380
+msgid "Project Length"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:99
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:100
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:389
+msgid "Working Environment"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:152
+msgid "Job Skill"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:153
+msgid "Job Skills"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:293
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:333
+msgid "Load more listings"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:371
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:13
+msgid "Salary"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:372
+msgid "Enable listing salary"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:373
+msgid ""
+"This lets users select from a list of salary when submitting a job. Note: "
+"an admin has to create salary before site users can select them."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:381
+msgid "Enable listing project length"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:382
+msgid ""
+"This lets users select from a list of project length when submitting a job. "
+"Note: an admin has to create project length before site users can select "
+"them."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:390
+msgid "Enable listing working environment"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:391
+msgid ""
+"This lets users select from a list of working environment when submitting a "
+"job. Note: an admin has to create working environment before site users can "
+"select them."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:398
+msgid "Skills"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:399
+msgid "Enable Job skills"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:400
+msgid ""
+"Choose whether to enable the job skills field. Skills can be added by users "
+"during job submission."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:407
+msgid "Maximum Skills"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:408
+msgid "Unlimited"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:409
+msgid ""
+"Enter the number of skills per job submission you wish to allow, or leave "
+"blank for unlimited skills."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:415
+msgid "Jobs Listing Style"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:416
+msgid ""
+"Select the style for jobs listing page. This lets the plugin know the style "
+"of jobs listings."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:426
+msgid "Jobs Listing Layout"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:427
+msgid "Select the layout for jobs listing page"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:437
+msgid "Single Job Style"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:438
+msgid ""
+"Select the style for single job page. This lets the plugin know the style "
+"of job single."
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:441
+msgid "Style 1"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:442
+msgid "Style 2"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:14
+msgid "expected salery per hr/m/a"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:17
+msgid "Jobs Done"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:18
+msgid "works done yet"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:21
+msgid "Success rate"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:22
+msgid "rate of successful jobs yet"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:25
+msgid "Clients"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:26
+msgid "number clients you worked with"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:29
+msgid "Website"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:30
+msgid "your website link"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:33
+msgid "Twitter"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:34
+msgid "your twitter page link"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:37
+msgid "Facebook"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:38
+msgid "your facebook page link"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:41
+msgid "Candidate Bio"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:43
+msgid "write short notes about your self"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:49
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:55
+msgid "Rewards"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:50
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:60
+msgid "Languages"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:66
+msgid "Reward Title"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:73
+msgid "Reward Image"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:84
+msgid "Language"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-resume-writepanels.php:90
+msgid "Level of known"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:27
+msgid "About Job"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:29
+msgid "short description about job"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:34
+msgid "Contact Address"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:36
+msgid "Enter contact address"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:41
+msgid "Contact Email"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:42
+msgid "e.g. \"yourname@domain.com\""
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:47
+msgid "Contact No."
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:48
+msgid "company phone number"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:53
+msgid "Qualification"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:54
+msgid "Qualification for apply this job"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:59
+msgid "About Company"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:61
+msgid "short description about company"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:72
+msgid "Responsibilties"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:73
+msgid "Requirements"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:74
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:178
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:215
+msgid "Bonus Points"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:95
+msgid "Add %s"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:152
+msgid "Responsibilty"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:165
+msgid "Requirement"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:195
+msgid "Responsibilities"
+msgstr ""
+
+#: includes/wp-job-manager/class-wp-job-manager-writepanels.php:205
+msgid "Reqiurements"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:20
+msgid "Add company filter widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-id-filter.php:21
+msgid "Front Filter Job by Company"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:20
+msgid "Add company name filter widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-campany-name-filter.php:21
+msgid "Front Filter Job by Company Name"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:25
+msgid "Add job location search widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:26
+msgid "Front Job Location Search"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:46
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:46
+msgid "City, state, or zip"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-location-search.php:46
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:46
+msgid "Locations"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-search.php:25
+msgid "Add job search widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-search.php:26
+msgid "Front Job Search"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-job-search.php:45
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-search.php:45
+msgid "Keywords"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:20
+msgid "Add job filter widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:21
+msgid "Front Filter Job by Taxonomy"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:74
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:74
+msgid "Taxonomy:"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:76
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:76
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: includes/wp-job-manager/widgets/class-front-wpjm-widget-layered-nav.php:85
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:85
+msgid "Query type:"
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:20
+msgid "Add resume filter widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-layered-nav.php:21
+msgid "Front Filter Resume by Taxonomy"
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:25
+msgid "Add resume location search widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-location-search.php:26
+msgid "Front Resume Location Search"
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-search.php:25
+msgid "Add resume search widgets to your sidebar."
+msgstr ""
+
+#: includes/wp-job-manager-resumes/widgets/class-front-wpjmr-widget-resume-search.php:26
+msgid "Front Resume Search"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Front Extensions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://madrasthemes.com/front"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This selection of extensions compliment our lean and mean theme front. "
+"Please note: they don’t work with any WordPress theme, just front."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MadrasThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://madrasthemes.com/"
+msgstr ""
+
+#: includes/class-front-post-types.php:50
+msgctxt "Admin menu name"
+msgid "Customer Stories"
+msgstr ""
+
+#: includes/class-front-post-types.php:99
+msgctxt "Taxonomy General Name"
+msgid "Categories"
+msgstr ""
+
+#: includes/class-front-post-types.php:100
+msgctxt "Taxonomy Singular Name"
+msgid "Category"
+msgstr ""
+
+#: includes/widgets/class-front-widget-layered-nav.php:312
+msgctxt "enhanced select"
+msgid "No matches found"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:89
+msgctxt "Job salary permalink - resave permalinks after changing this"
+msgid "job-salary"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:95
+msgctxt "job project length permalink - resave permalinks after changing this"
+msgid "job-project-length"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:101
+msgctxt "job working environment permalink - resave permalinks after changing this"
+msgid "job-working-environment"
+msgstr ""
+
+#: includes/wp-job-manager/class-front-wpjm-job-manager.php:157
+msgctxt "Resume skill slug - resave permalinks after changing this"
+msgid "job-skill"
+msgstr ""

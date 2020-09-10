@@ -1,0 +1,8 @@
+.single_add_to_cart_button {
+    transition: all $transition-timing-sm $transition-function;
+    margin-bottom: ($spacer * 1.5) !important;
+
+    @include hover-focus {
+        transform: translateY(-3px);
+    }
+}

@@ -1,0 +1,111 @@
+$fa-var-facebook: \f09a;
+$fa-var-facebook-f: \f39e;
+$fa-var-facebook-messenger: \f39f;
+$fa-var-facebook-square: \f082;
+$fa-var-twitter: \f099;
+$fa-var-twitter-square: \f081;
+$fa-var-google: \f1a0;
+$fa-var-google-drive: \f3aa;
+$fa-var-google-play: \f3ab;
+$fa-var-google-plus: \f2b3;
+$fa-var-google-plus-g: \f0d5;
+$fa-var-google-plus-square: \f0d4;
+$fa-var-google-wallet: \f1ee;
+$fa-var-linkedin: \f08c;
+$fa-var-linkedin-in: \f0e1;
+$fa-var-whatsapp: \f232;
+$fa-var-whatsapp-square: \f40c;
+$fa-var-print: \f02f;
+$fa-var-reddit: \f1a1;
+$fa-var-reddit-alien: \f281;
+$fa-var-reddit-square: \f1a2;
+$fa-var-tumblr: \f173;
+$fa-var-tumblr-square: \f174;
+$fa-var-pinterest: \f0d2;
+$fa-var-pinterest-p: \f231;
+$fa-var-pinterest-square: \f0d3;
+$fa-var-get-pocket: \f265;
+$fa-var-telegram: \f2c6;
+$fa-var-telegram-plane: \f3fe;
+$fa-var-skype: \f17e;
+
+.share-icon {
+    > .btn-icon__inner {
+        @include fa-icon();
+        @include fa-b();
+    }
+}
+
+.share-facebook {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-facebook-f);
+    }
+}
+
+.share-twitter {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-twitter);
+    }
+}
+
+.share-linkedin {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-linkedin-in);
+    }
+}
+
+.share-jetpack-whatsapp {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-whatsapp);
+    }
+}
+
+.share-tumblr {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-tumblr);
+    }
+}
+
+.share-pinterest {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-pinterest-p);
+    }
+}
+
+.share-reddit {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-reddit-alien);
+    }
+}
+
+.share-pocket {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-get-pocket);
+    }
+}
+
+.share-telegram {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-telegram-plane);
+    }
+}
+
+.share-skype {
+    > .btn-icon__inner::before {
+        content: fa-content($fa-var-skype);
+    }
+}
+
+.share-print {
+    > .btn-icon__inner {
+        @include fa-s();
+               
+        &::before {
+            content: fa-content($fa-var-print);
+        }
+    }
+}
+
+.list-inline-item-end {
+    display: none;
+}

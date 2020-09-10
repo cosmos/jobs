@@ -1,0 +1,77 @@
+p.stars {
+    display: inline-block;
+    margin: 0;
+
+    a {
+        position: relative;
+        height: 1.2em;
+        width: 1.2em;
+        text-indent: -999em;
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 1px;
+        font-weight: 400;
+
+        &::before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1em;
+            height: 1em;
+            line-height: 1;
+            font-family: "Font Awesome 5 Free";
+            content: '\f005';
+            color: #8c98a4;
+            text-indent: 0;
+            opacity: 0.25;
+        }
+
+        &:hover {
+            ~ a::before {
+                content: '\f005';
+                color: #8c98a4;
+                opacity: 0.25;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &:hover {
+        a {
+            &::before {
+                content: '\f005';
+                color: #efc609;
+                opacity: 1;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &.selected {
+        a.active {
+            &::before {
+                content: '\f005';
+                color: #efc609;
+                opacity: 1;
+                font-weight: 600;
+            }
+
+            ~ a::before {
+                content: '\f005';
+                color: #8c98a4;
+                opacity: 0.25;
+                font-weight: 400;
+            }
+        }
+
+        a:not( .active ) {
+            &::before {
+                content: '\f005';
+                color: #efc609;
+                opacity: 1;
+                font-weight: 600;
+            }
+        }
+    }
+}

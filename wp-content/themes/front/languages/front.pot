@@ -1,0 +1,5414 @@
+# <!=Copyright (C) 2020 MadrasThemes
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Front 1.1.0\n"
+"Report-Msgid-Bugs-To: https://madrasthemes.freshdesk.com/\n"
+"POT-Creation-Date: 2020-09-01 14:29:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: POT <support@madrasthemes.freshdesk.com>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:8 inc/redux-framework/options/404-options.php:44
+msgid "Page not <span class=\"font-weight-semi-bold\">found</span>"
+msgstr ""
+
+#: 404.php:10
+msgid "Oops! Looks like you followed a bad link."
+msgstr ""
+
+#: 404.php:13 inc/redux-framework/options/404-options.php:61
+msgid "Go Back"
+msgstr ""
+
+#: classes/class-front-categories.php:16
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:16
+#: inc/redux-framework/options/blog-options.php:23
+#: inc/redux-framework/options/blog-options.php:59
+#: inc/redux-framework/options/portfolio-options.php:85
+#: inc/redux-framework/options/portfolio-options.php:297
+msgid "Classic"
+msgstr ""
+
+#: classes/class-front-categories.php:17
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:17
+#: inc/redux-framework/options/blog-options.php:24
+#: inc/redux-framework/options/portfolio-options.php:86
+#: inc/redux-framework/options/portfolio-options.php:298
+#: inc/redux-framework/options/shop-options.php:114
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1020
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:570
+msgid "Grid"
+msgstr ""
+
+#: classes/class-front-categories.php:18
+#: inc/redux-framework/options/blog-options.php:25
+#: inc/redux-framework/options/shop-options.php:115
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1026
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:576
+msgid "List"
+msgstr ""
+
+#: classes/class-front-categories.php:19
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:18
+#: inc/redux-framework/options/blog-options.php:26
+#: inc/redux-framework/options/portfolio-options.php:87
+#: inc/redux-framework/options/portfolio-options.php:299
+msgid "Masonry"
+msgstr ""
+
+#: classes/class-front-categories.php:20
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:19
+#: inc/redux-framework/options/blog-options.php:27
+#: inc/redux-framework/options/portfolio-options.php:88
+#: inc/redux-framework/options/portfolio-options.php:300
+msgid "Modern"
+msgstr ""
+
+#: classes/class-front-categories.php:24
+#: inc/redux-framework/options/blog-options.php:38
+#: inc/redux-framework/options/shop-options.php:100
+msgid "Right Sidebar"
+msgstr ""
+
+#: classes/class-front-categories.php:25
+#: inc/redux-framework/options/blog-options.php:39
+#: inc/redux-framework/options/shop-options.php:101
+msgid "Left Sidebar"
+msgstr ""
+
+#: classes/class-front-categories.php:26
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:24
+#: inc/redux-framework/options/blog-options.php:40
+#: inc/redux-framework/options/portfolio-options.php:100
+#: inc/redux-framework/options/shop-options.php:102
+msgid "Fullwidth"
+msgstr ""
+
+#: classes/class-front-categories.php:47 classes/class-front-categories.php:83
+msgid "Blog View"
+msgstr ""
+
+#: classes/class-front-categories.php:49 classes/class-front-categories.php:88
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:47
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:86
+msgid "Select a View"
+msgstr ""
+
+#: classes/class-front-categories.php:58 classes/class-front-categories.php:99
+msgid "Blog Layout"
+msgstr ""
+
+#: classes/class-front-categories.php:60 classes/class-front-categories.php:104
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:58
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:102
+msgid "Select a Layout"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:337
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:339
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:377
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:393
+#: classes/class-tgm-plugin-activation.php:912
+#: classes/class-tgm-plugin-activation.php:2618
+#: classes/class-tgm-plugin-activation.php:3668
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:394
+#: classes/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:395
+#: classes/class-tgm-plugin-activation.php:3037
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:397
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:399
+#. translators: 1: plugin name.
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:401
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1019
+#: classes/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2067
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2477
+#. translators: 1: number of plugins.
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:2481
+#. translators: 1: number of plugins.
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:2485
+#. translators: 1: number of plugins.
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2688
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2693
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2699
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2808
+#: woocommerce/cart/shipping-calculator.php:84
+msgid "Update"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3583
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3586
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3588
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3591
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3593
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3594
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3596
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3599
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3601
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3602
+msgid "All installations have been completed."
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3604
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3608
+msgid "Show Details"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:3608
+msgid "Hide Details"
+msgstr ""
+
+#: classes/walkers/class-front-walker-bootstrap-nav-menu.php:486
+#: classes/walkers/class-front-walker-offcanvas-modal-menu.php:404
+#: classes/walkers/class-front-walker-offcanvas-sidebar-menu.php:414
+msgid "Add a menu"
+msgstr ""
+
+#: classes/walkers/class-front-walker-category.php:80
+msgid "Feed for all posts filed under %s"
+msgstr ""
+
+#: classes/walkers/class-front-walker-comment.php:53
+#: inc/mas-wp-job-manager-company/class-front-walker-company-comment.php:134
+#. translators: 1: comment date, 2: comment time
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: classes/walkers/class-front-walker-comment.php:61
+#: inc/mas-wp-job-manager-company/class-front-walker-company-comment.php:141
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: classes/walkers/class-front-walker-page.php:102
+#: inc/wedocs/front-wedocs-functions.php:259
+#. translators: %d: ID of a post
+msgid "#%d (no title)"
+msgstr ""
+
+#: comments.php:38 comments.php:103
+msgid "Post a comment"
+msgstr ""
+
+#: comments.php:88 comments.php:91 comments.php:92
+#: mas-wp-job-manager-company/comments.php:119
+#: mas-wp-job-manager-company/comments.php:122
+#: mas-wp-job-manager-company/comments.php:123
+msgid "Comments"
+msgstr ""
+
+#: comments.php:91 mas-wp-job-manager-company/comments.php:122
+#: woocommerce/myaccount/orders.php:146
+msgid "Previous"
+msgstr ""
+
+#: comments.php:92 inc/front-template-functions.php:2103
+#: mas-wp-job-manager-company/comments.php:123
+#: woocommerce/myaccount/orders.php:150
+msgid "Next"
+msgstr ""
+
+#: comments.php:101
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:112 mas-wp-job-manager-company/comments.php:130
+msgid "Comments are closed."
+msgstr ""
+
+#: hivepress/listing/view/content-listing-v2.php:34
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:297
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:570
+msgid "Verified Icon"
+msgstr ""
+
+#: inc/class-front.php:165
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/class-front.php:166
+msgid "Topbar Links - Left"
+msgstr ""
+
+#: inc/class-front.php:167
+msgid "Topbar Links - Right"
+msgstr ""
+
+#: inc/class-front.php:168
+msgid "Topbar Links - Mobile"
+msgstr ""
+
+#: inc/class-front.php:169
+msgid "Header User Account Menu"
+msgstr ""
+
+#: inc/class-front.php:170
+msgid "Header Sidebar Footer Menu"
+msgstr ""
+
+#: inc/class-front.php:171
+msgid "Header Offcanvas Menu"
+msgstr ""
+
+#: inc/class-front.php:172
+msgid "Footer Social Menu"
+msgstr ""
+
+#: inc/class-front.php:173
+msgid "Footer Primary Menu"
+msgstr ""
+
+#: inc/class-front.php:243 inc/redux-framework/options/header-options.php:627
+#: inc/redux-framework/options/portfolio-options.php:248
+msgid "Primary"
+msgstr ""
+
+#: inc/class-front.php:248 inc/redux-framework/options/header-options.php:628
+#: inc/redux-framework/options/portfolio-options.php:249
+msgid "Secondary"
+msgstr ""
+
+#: inc/class-front.php:253 inc/redux-framework/options/header-options.php:629
+#: inc/redux-framework/options/portfolio-options.php:250
+msgid "Success"
+msgstr ""
+
+#: inc/class-front.php:258 inc/redux-framework/options/header-options.php:630
+#: inc/redux-framework/options/portfolio-options.php:251
+msgid "Danger"
+msgstr ""
+
+#: inc/class-front.php:263 inc/redux-framework/options/header-options.php:631
+#: inc/redux-framework/options/portfolio-options.php:252
+msgid "Warning"
+msgstr ""
+
+#: inc/class-front.php:268 inc/redux-framework/options/header-options.php:632
+#: inc/redux-framework/options/portfolio-options.php:253
+msgid "Info"
+msgstr ""
+
+#: inc/class-front.php:273 inc/redux-framework/options/header-options.php:288
+#: inc/redux-framework/options/header-options.php:633
+#: inc/redux-framework/options/portfolio-options.php:254
+msgid "Dark"
+msgstr ""
+
+#: inc/class-front.php:278 inc/redux-framework/options/header-options.php:634
+#: inc/redux-framework/options/portfolio-options.php:255
+msgid "Light"
+msgstr ""
+
+#: inc/class-front.php:283 inc/redux-framework/options/header-options.php:635
+#: inc/redux-framework/options/portfolio-options.php:256
+msgid "Indigo"
+msgstr ""
+
+#: inc/class-front.php:288 inc/redux-framework/options/header-options.php:636
+msgid "White"
+msgstr ""
+
+#: inc/class-front.php:355
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/class-front.php:365
+msgid "Shop Sidebar"
+msgstr ""
+
+#: inc/class-front.php:375
+msgid "Product Category Sidebar"
+msgstr ""
+
+#: inc/class-front.php:385
+msgid "Listings Sidebar"
+msgstr ""
+
+#: inc/class-front.php:404
+#. translators: 1: column number
+msgid "Footer Column %1$d"
+msgstr ""
+
+#: inc/class-front.php:407
+#. translators: 1: column number
+msgid "Widgets added here will appear in column %1$d of the footer."
+msgstr ""
+
+#: inc/class-front.php:410
+#. translators: 1: row number, 2: column number
+msgid "Footer Row %1$d - Column %2$d"
+msgstr ""
+
+#: inc/class-front.php:413
+#. translators: 1: column number, 2: row number
+msgid "Widgets added here will appear in column %1$d of footer row %2$d."
+msgstr ""
+
+#: inc/class-front.php:835
+msgid "Are you sure you want to remove this item?"
+msgstr ""
+
+#: inc/class-front.php:840
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:296
+msgid "View more"
+msgstr ""
+
+#: inc/class-front.php:841
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:297
+msgid "View less"
+msgstr ""
+
+#: inc/class-front.php:1022
+msgid "Post Navigation"
+msgstr ""
+
+#: inc/class-front.php:1059
+msgid "Front Extensions"
+msgstr ""
+
+#: inc/class-front.php:1069
+msgid "Front Gutenberg Blocks"
+msgstr ""
+
+#: inc/class-front.php:1079
+msgid "MAS Static Content"
+msgstr ""
+
+#: inc/class-front.php:1088
+msgid "One Click Demo Import"
+msgstr ""
+
+#: inc/class-front.php:1097
+msgid "Redux Framework"
+msgstr ""
+
+#: inc/class-front.php:1106
+msgid "WPForms Lite"
+msgstr ""
+
+#: inc/class-front.php:1122
+msgid "Custom Sidebars"
+msgstr ""
+
+#: inc/class-front.php:1131
+msgid "Envato Market"
+msgstr ""
+
+#: inc/class-front.php:1142
+msgid "Jetpack by WordPress.com"
+msgstr ""
+
+#: inc/class-front.php:1151
+msgid "Menu Image"
+msgstr ""
+
+#: inc/class-front.php:1160
+msgid "Safe SVG"
+msgstr ""
+
+#: inc/class-front.php:1169
+msgid "User Profile Picture"
+msgstr ""
+
+#: inc/class-front.php:1184 inc/class-front.php:1222
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/class-front.php:1193 inc/class-front.php:1231
+msgid "WP Job Manager"
+msgstr ""
+
+#: inc/class-front.php:1204
+msgid "MAS Companies For WP Job Manager"
+msgstr ""
+
+#: inc/class-front.php:1213
+msgid "MAS Company Reviews For WP Job Manager"
+msgstr ""
+
+#: inc/class-front.php:1242
+msgid "weDocs"
+msgstr ""
+
+#: inc/class-front.php:1253
+msgid "HivePress"
+msgstr ""
+
+#: inc/class-front.php:1262
+msgid "HivePress Reviews"
+msgstr ""
+
+#: inc/class-front.php:1273
+msgid "Essential Real Estate"
+msgstr ""
+
+#: inc/customer-story/front-customer-story-template-functions.php:17
+#: inc/redux-framework/options/customer-story-options.php:66
+msgid "Customer success story"
+msgstr ""
+
+#: inc/customer-story/front-customer-story-template-functions.php:85
+msgid "Products used"
+msgstr ""
+
+#: inc/front-functions.php:234
+msgid "&laquo; Prev"
+msgstr ""
+
+#: inc/front-functions.php:235
+msgid "Next &raquo;"
+msgstr ""
+
+#: inc/front-functions.php:247
+msgid "Page navigation"
+msgstr ""
+
+#: inc/front-functions.php:270
+msgid "Category Archives - "
+msgstr ""
+
+#: inc/front-functions.php:272
+msgid "Tag Archives - "
+msgstr ""
+
+#: inc/front-functions.php:274
+msgid "Author Archives - "
+msgstr ""
+
+#: inc/front-functions.php:276
+msgid "Yearly Archives - "
+msgstr ""
+
+#: inc/front-functions.php:278
+msgid "Monthly Archives - "
+msgstr ""
+
+#: inc/front-functions.php:280
+msgid "Daily Archives - "
+msgstr ""
+
+#: inc/front-functions.php:282
+msgid "Post Type Archives - "
+msgstr ""
+
+#: inc/front-functions.php:286
+#. translators: %s: Taxonomy singular name
+msgid "Archives - %s"
+msgstr ""
+
+#: inc/front-functions.php:288
+msgid "Search results for - %s"
+msgstr ""
+
+#: inc/front-functions.php:290 inc/redux-framework/options/blog-options.php:4
+msgid "Blog"
+msgstr ""
+
+#: inc/front-functions.php:999
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:105
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:115
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:125
+#: inc/woocommerce/template-tags/single-product.php:227
+msgid "SVG"
+msgstr ""
+
+#: inc/front-menu-functions.php:113
+#. translators: %s: title of menu item which is invalid
+msgid "%s (Invalid)"
+msgstr ""
+
+#: inc/front-menu-functions.php:117
+#. translators: %s: title of menu item in draft status
+msgid "%s (Pending)"
+msgstr ""
+
+#: inc/front-menu-functions.php:131
+msgid "sub item"
+msgstr ""
+
+#: inc/front-menu-functions.php:148
+msgid "Move up"
+msgstr ""
+
+#: inc/front-menu-functions.php:163
+msgid "Move down"
+msgstr ""
+
+#: inc/front-menu-functions.php:169
+msgid "Edit menu item"
+msgstr ""
+
+#: inc/front-menu-functions.php:169 job_manager/job-dashboard.php:77
+#: job_manager/job-dashboard.php:95
+#: mas-wp-job-manager-company/company-dashboard.php:53
+#: mas-wp-job-manager-company/company-dashboard.php:60
+#: woocommerce/myaccount/my-address.php:56
+#: wp-job-manager-alerts/my-alerts.php:62
+#: wp-job-manager-resumes/candidate-dashboard.php:53
+#: wp-job-manager-resumes/candidate-dashboard.php:57
+msgid "Edit"
+msgstr ""
+
+#: inc/front-menu-functions.php:178
+msgid "URL"
+msgstr ""
+
+#: inc/front-menu-functions.php:185
+msgid "Navigation Label"
+msgstr ""
+
+#: inc/front-menu-functions.php:191
+msgid "Title Attribute"
+msgstr ""
+
+#: inc/front-menu-functions.php:198
+msgid "Open link in a new tab"
+msgstr ""
+
+#: inc/front-menu-functions.php:203
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: inc/front-menu-functions.php:209
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: inc/front-menu-functions.php:215
+msgid "Description"
+msgstr ""
+
+#: inc/front-menu-functions.php:217
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: inc/front-menu-functions.php:228
+msgid "Move"
+msgstr ""
+
+#: inc/front-menu-functions.php:229
+msgid "Up one"
+msgstr ""
+
+#: inc/front-menu-functions.php:230
+msgid "Down one"
+msgstr ""
+
+#: inc/front-menu-functions.php:233
+msgid "To the top"
+msgstr ""
+
+#: inc/front-menu-functions.php:241
+#. translators: %s: original title
+msgid "Original: %s"
+msgstr ""
+
+#: inc/front-menu-functions.php:258
+#: inc/woocommerce/front-woocommerce-template-hooks.php:63
+#: inc/woocommerce/template-tags/my-account.php:226
+#: job_manager/form-fields/repeated-field.php:21
+#: job_manager/form-fields/repeated-field.php:45 woocommerce/cart/cart.php:134
+#: wp-job-manager-resumes/form-fields/repeated-field.php:22
+#: wp-job-manager-resumes/form-fields/repeated-field.php:46
+msgid "Remove"
+msgstr ""
+
+#: inc/front-menu-functions.php:270
+msgid "Cancel"
+msgstr ""
+
+#: inc/front-menu-functions.php:292
+msgid "Icon Class"
+msgstr ""
+
+#: inc/front-menu-functions.php:300
+msgid "Has Megamenu ?"
+msgstr ""
+
+#: inc/front-menu-functions.php:305
+msgid "Megamenu Max Width"
+msgstr ""
+
+#: inc/front-menu-functions.php:311
+msgid "Megamenu Position"
+msgstr ""
+
+#: inc/front-menu-functions.php:313
+#: inc/redux-framework/options/header-options.php:496
+#: inc/redux-framework/options/header-options.php:563
+msgid "Left"
+msgstr ""
+
+#: inc/front-menu-functions.php:313
+#: inc/redux-framework/options/header-options.php:564
+msgid "Right"
+msgstr ""
+
+#: inc/front-template-functions.php:71
+#: inc/redux-framework/options/header-options.php:612
+msgid "Buy Now"
+msgstr ""
+
+#: inc/front-template-functions.php:207 inc/front-template-functions.php:218
+#: inc/front-template-functions.php:1072
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/front-template-functions.php:501 inc/front-template-functions.php:2247
+#: inc/redux-framework/options/header-options.php:688
+#: inc/redux-framework/options/header-options.php:692
+msgid "Address"
+msgstr ""
+
+#: inc/front-template-functions.php:520
+#: inc/redux-framework/options/header-options.php:703
+msgid "Social"
+msgstr ""
+
+#: inc/front-template-functions.php:711
+msgid "Jump to"
+msgstr ""
+
+#: inc/front-template-functions.php:934
+msgid "by"
+msgstr ""
+
+#: inc/front-template-functions.php:1030
+#: mas-wp-job-manager-company/comments.php:143
+#: templates/shop/single-product-advanced-reviews.php:146
+msgid "Name"
+msgstr ""
+
+#: inc/front-template-functions.php:1030 inc/front-template-functions.php:1031
+msgid "Please enter your name."
+msgstr ""
+
+#: inc/front-template-functions.php:1031 inc/front-template-functions.php:3720
+#: woocommerce/myaccount/form-edit-account.php:53
+#: woocommerce/myaccount/form-login.php:124
+msgid "Email address"
+msgstr ""
+
+#: inc/front-template-functions.php:1032
+#: inc/wp-job-manager/front-wpjm-template-functions.php:630
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:13
+#: mas-wp-job-manager-company/comments.php:147
+msgid "Website"
+msgstr ""
+
+#: inc/front-template-functions.php:1033
+msgid ""
+"Save my name, email, and website in this browser for the next time I "
+"comment."
+msgstr ""
+
+#: inc/front-template-functions.php:1035
+msgid "Comment"
+msgstr ""
+
+#: inc/front-template-functions.php:1035
+msgid "Please enter your message."
+msgstr ""
+
+#: inc/front-template-functions.php:1122
+msgid "Add a social menu"
+msgstr ""
+
+#: inc/front-template-functions.php:1166
+#: inc/redux-framework/options/footer-options.php:367
+msgid "contact us"
+msgstr ""
+
+#: inc/front-template-functions.php:1340 inc/front-template-functions.php:1353
+#: inc/front-template-functions.php:1660
+msgid "Pages:"
+msgstr ""
+
+#: inc/front-template-functions.php:1437
+msgid "&copy; %s. %s Htmlstream. All rights reserved"
+msgstr ""
+
+#: inc/front-template-functions.php:1448
+msgid "Viewed %s time"
+msgid_plural "Viewed %s times"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/front-template-functions.php:1524
+msgid "Go to"
+msgstr ""
+
+#: inc/front-template-functions.php:1716
+msgid "Tags:"
+msgstr ""
+
+#: inc/front-template-functions.php:1766
+msgid "Follow"
+msgstr ""
+
+#: inc/front-template-functions.php:1939
+#: inc/wedocs/front-wedocs-template-functions.php:231
+msgid "Related Articles"
+msgstr ""
+
+#: inc/front-template-functions.php:2020
+msgid "Load More"
+msgstr ""
+
+#: inc/front-template-functions.php:2025
+msgid "Loading..."
+msgstr ""
+
+#: inc/front-template-functions.php:2026
+msgid "No more works"
+msgstr ""
+
+#: inc/front-template-functions.php:2072
+#: inc/wp-job-manager/front-wpjm-functions.php:969
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:772
+msgid "Featured"
+msgstr ""
+
+#: inc/front-template-functions.php:2087
+msgid "Post navigation"
+msgstr ""
+
+#: inc/front-template-functions.php:2093
+msgid "Prev"
+msgstr ""
+
+#: inc/front-template-functions.php:2094
+msgid "Previous post:"
+msgstr ""
+
+#: inc/front-template-functions.php:2104
+msgid "Next post:"
+msgstr ""
+
+#: inc/front-template-functions.php:2125
+msgid "Is Social Icon Menu"
+msgstr ""
+
+#: inc/front-template-functions.php:2216
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+
+#: inc/front-template-functions.php:2218
+msgid "Password:"
+msgstr ""
+
+#: inc/front-template-functions.php:2235
+msgid "General enquiries"
+msgstr ""
+
+#: inc/front-template-functions.php:2236
+msgid "hello@htmlstream.com"
+msgstr ""
+
+#: inc/front-template-functions.php:2237 inc/front-template-functions.php:2243
+#: inc/front-template-functions.php:2249
+msgid "#"
+msgstr ""
+
+#: inc/front-template-functions.php:2241
+#: inc/redux-framework/options/portfolio-options.php:353
+msgid "Phone Number"
+msgstr ""
+
+#: inc/front-template-functions.php:2242
+#: inc/redux-framework/options/portfolio-options.php:355
+msgid "+1 (062) 109-9222"
+msgstr ""
+
+#: inc/front-template-functions.php:2248
+msgid "153 Williamson Plaza, 09514"
+msgstr ""
+
+#: inc/front-template-functions.php:2427
+msgid "User"
+msgstr ""
+
+#: inc/front-template-functions.php:2464
+msgid "Job Dashboard"
+msgstr ""
+
+#: inc/front-template-functions.php:2471 job_manager/job-dashboard.php:31
+msgid "Candidate Dashboard"
+msgstr ""
+
+#: inc/front-template-functions.php:2478 job_manager/job-dashboard.php:38
+msgid "Company Dashboard"
+msgstr ""
+
+#: inc/front-template-functions.php:2516 inc/front-template-functions.php:3024
+#: inc/front-template-functions.php:3047
+msgid "Logout"
+msgstr ""
+
+#: inc/front-template-functions.php:2635 inc/front-template-functions.php:3081
+msgid "Login to %s"
+msgstr ""
+
+#: inc/front-template-functions.php:2643 inc/front-template-functions.php:2649
+#: inc/front-template-functions.php:3089 inc/front-template-functions.php:3095
+msgid "Welcome Back!"
+msgstr ""
+
+#: inc/front-template-functions.php:2650 inc/front-template-functions.php:3096
+#: inc/front-template-functions.php:3637
+#: inc/redux-framework/options/general-options.php:56
+#: woocommerce/myaccount/form-login.php:52
+msgid "Login to manage your account."
+msgstr ""
+
+#: inc/front-template-functions.php:2665 inc/front-template-functions.php:2672
+#: inc/front-template-functions.php:2769 inc/front-template-functions.php:2776
+#: inc/front-template-functions.php:3111 inc/front-template-functions.php:3118
+#: inc/front-template-functions.php:3303 inc/front-template-functions.php:3310
+#: mas-wp-job-manager-company/comments.php:145
+#: templates/shop/single-product-advanced-reviews.php:148
+msgid "Email"
+msgstr ""
+
+#: inc/front-template-functions.php:2678 inc/front-template-functions.php:2685
+#: inc/front-template-functions.php:2783 inc/front-template-functions.php:2790
+#: inc/front-template-functions.php:3124 inc/front-template-functions.php:3131
+#: inc/front-template-functions.php:3317 inc/front-template-functions.php:3324
+#: inc/front-template-functions.php:3652 inc/front-template-functions.php:3727
+#: woocommerce/myaccount/form-login.php:67
+#: woocommerce/myaccount/form-login.php:131
+msgid "Password"
+msgstr ""
+
+#: inc/front-template-functions.php:2691 inc/front-template-functions.php:3137
+#: inc/front-template-functions.php:3653
+#: woocommerce/myaccount/form-login.php:68
+msgid "Forgot Password?"
+msgstr ""
+
+#: inc/front-template-functions.php:2701 inc/front-template-functions.php:3149
+#: inc/front-template-functions.php:3681 inc/front-template-functions.php:3689
+#: woocommerce/myaccount/form-login.php:87
+#: woocommerce/myaccount/form-login.php:93
+msgid "Log in"
+msgstr ""
+
+#: inc/front-template-functions.php:2701 inc/front-template-functions.php:2834
+#: inc/front-template-functions.php:3149 inc/front-template-functions.php:3369
+#: inc/front-template-functions.php:3772
+#: woocommerce/myaccount/form-login.php:171
+msgid "Login"
+msgstr ""
+
+#: inc/front-template-functions.php:2705 inc/front-template-functions.php:3153
+msgid "Don't have an account?"
+msgstr ""
+
+#: inc/front-template-functions.php:2707 inc/front-template-functions.php:3155
+#: inc/front-template-functions.php:3674
+#: woocommerce/myaccount/form-login.php:82
+msgid "Signup"
+msgstr ""
+
+#: inc/front-template-functions.php:2734 inc/front-template-functions.php:2740
+#: inc/front-template-functions.php:3268 inc/front-template-functions.php:3274
+msgid "Welcome to Front."
+msgstr ""
+
+#: inc/front-template-functions.php:2741 inc/front-template-functions.php:3275
+#: inc/front-template-functions.php:3703
+#: inc/redux-framework/options/general-options.php:72
+#: woocommerce/myaccount/form-login.php:107
+msgid "Fill out the form to get started."
+msgstr ""
+
+#: inc/front-template-functions.php:2747 inc/front-template-functions.php:3281
+msgid "Create a free Front account"
+msgstr ""
+
+#: inc/front-template-functions.php:2756 inc/front-template-functions.php:2763
+#: inc/front-template-functions.php:3290 inc/front-template-functions.php:3297
+#: inc/front-template-functions.php:3713
+#: woocommerce/myaccount/form-login.php:117
+msgid "Username"
+msgstr ""
+
+#: inc/front-template-functions.php:2776 inc/front-template-functions.php:2884
+#: inc/front-template-functions.php:3310 inc/front-template-functions.php:3563
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: inc/front-template-functions.php:2791 inc/front-template-functions.php:3729
+msgid "Please enter your password."
+msgstr ""
+
+#: inc/front-template-functions.php:2803 inc/front-template-functions.php:2810
+#: inc/front-template-functions.php:3330 inc/front-template-functions.php:3337
+#: inc/front-template-functions.php:3740
+#: woocommerce/myaccount/form-login.php:144
+msgid "Confirm Password"
+msgstr ""
+
+#: inc/front-template-functions.php:2810 inc/front-template-functions.php:3337
+msgid "Password does not match the confirm password."
+msgstr ""
+
+#: inc/front-template-functions.php:2815 inc/front-template-functions.php:3342
+#: inc/front-template-functions.php:3746
+#: woocommerce/myaccount/form-login.php:150
+msgid "A password will be sent to your email address."
+msgstr ""
+
+#: inc/front-template-functions.php:2829 inc/front-template-functions.php:3364
+#: inc/front-template-functions.php:3779
+#: woocommerce/myaccount/form-login.php:176
+msgid "Register"
+msgstr ""
+
+#: inc/front-template-functions.php:2829 inc/front-template-functions.php:3364
+#: inc/front-template-functions.php:3681 inc/front-template-functions.php:3689
+#: inc/front-template-functions.php:3779
+#: woocommerce/myaccount/form-login.php:87
+#: woocommerce/myaccount/form-login.php:93
+#: woocommerce/myaccount/form-login.php:176
+msgid "Get Started"
+msgstr ""
+
+#: inc/front-template-functions.php:2832 inc/front-template-functions.php:3367
+#: inc/front-template-functions.php:3771
+#: woocommerce/myaccount/form-login.php:170
+msgid "Already have an account?"
+msgstr ""
+
+#: inc/front-template-functions.php:2856 inc/front-template-functions.php:2862
+#: inc/front-template-functions.php:3535 inc/front-template-functions.php:3541
+msgid "Recover Password."
+msgstr ""
+
+#: inc/front-template-functions.php:2863 inc/front-template-functions.php:3542
+msgid "Enter your email address and an email with instructions will be sent to you."
+msgstr ""
+
+#: inc/front-template-functions.php:2869 inc/front-template-functions.php:3548
+msgid "Recover password"
+msgstr ""
+
+#: inc/front-template-functions.php:2877 inc/front-template-functions.php:2884
+#: inc/front-template-functions.php:3556 inc/front-template-functions.php:3563
+msgid "Your email"
+msgstr ""
+
+#: inc/front-template-functions.php:2897 inc/front-template-functions.php:3569
+msgid "Recover Password"
+msgstr ""
+
+#: inc/front-template-functions.php:2901 inc/front-template-functions.php:3572
+msgid "Remember your password?"
+msgstr ""
+
+#: inc/front-template-functions.php:2967
+#: inc/redux-framework/options/general-options.php:36
+msgid "My Account"
+msgstr ""
+
+#: inc/front-template-functions.php:3181
+msgid "Invalid username or email address"
+msgstr ""
+
+#: inc/front-template-functions.php:3189
+msgid "Please enter a password"
+msgstr ""
+
+#: inc/front-template-functions.php:3196
+msgid "Incorrect password"
+msgstr ""
+
+#: inc/front-template-functions.php:3324
+msgid "Your password is invalid. Please try again."
+msgstr ""
+
+#: inc/front-template-functions.php:3347 inc/front-template-functions.php:3754
+msgid "I want to register as"
+msgstr ""
+
+#: inc/front-template-functions.php:3349 inc/front-template-functions.php:3756
+msgid "Candidate"
+msgstr ""
+
+#: inc/front-template-functions.php:3350 inc/front-template-functions.php:3757
+msgid "Employer"
+msgstr ""
+
+#: inc/front-template-functions.php:3418
+msgid "Username already taken"
+msgstr ""
+
+#: inc/front-template-functions.php:3422
+msgid "Invalid username"
+msgstr ""
+
+#: inc/front-template-functions.php:3426
+msgid "Please enter a username"
+msgstr ""
+
+#: inc/front-template-functions.php:3430
+msgid "Invalid email"
+msgstr ""
+
+#: inc/front-template-functions.php:3434
+msgid "Email already registered"
+msgstr ""
+
+#: inc/front-template-functions.php:3448
+msgid "Password you entered is mismatched"
+msgstr ""
+
+#: inc/front-template-functions.php:3619
+#: inc/redux-framework/options/general-options.php:48
+#: woocommerce/myaccount/form-login.php:33
+msgid "Welcome"
+msgstr ""
+
+#: inc/front-template-functions.php:3619
+#: inc/redux-framework/options/general-options.php:48
+#: woocommerce/myaccount/form-login.php:33
+msgid "back"
+msgstr ""
+
+#: inc/front-template-functions.php:3620
+#: inc/redux-framework/options/general-options.php:64
+#: woocommerce/myaccount/form-login.php:34
+msgid "Welcome to"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Front"
+msgstr ""
+
+#: inc/front-template-functions.php:3645
+#: inc/redux-framework/options/portfolio-options.php:336
+#: woocommerce/myaccount/form-login.php:60
+#: woocommerce/myaccount/form-lost-password.php:36
+msgid "Email Address"
+msgstr ""
+
+#: inc/front-template-functions.php:3673
+#: woocommerce/myaccount/form-login.php:81
+msgid "Don&#039;t have an account?"
+msgstr ""
+
+#: inc/front-template-functions.php:3728
+msgid "Enter your password"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:19
+#: inc/wedocs/front-wedocs-functions.php:77
+msgid "Home"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:105
+msgid "App info"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:115
+#: mas-wp-job-manager-company/comments.php:33
+msgid "Review"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:125
+msgid "Pricing"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:135
+msgid "Additional Info"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:174
+#: mas-wp-job-manager-company/comments.php:150
+msgid "Submit Review"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:197
+msgid "Reviews"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:326
+msgid "Install Now"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:343
+#: wp-job-manager-alerts/my-alerts.php:26
+msgid "Categories"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:368
+msgid "Developer"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:417
+msgid "Developer Links"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:471
+msgid "View More"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:601
+msgid "Search for apps"
+msgstr ""
+
+#: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:659
+msgid "Listings Navigation"
+msgstr ""
+
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:23
+#: inc/redux-framework/options/portfolio-options.php:99
+msgid "Boxed"
+msgstr ""
+
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:45
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:81
+#: inc/redux-framework/options/portfolio-options.php:82
+msgid "Portfolio View"
+msgstr ""
+
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:56
+#: inc/jetpack/class-front-jetpack-portfolio-taxonomies.php:97
+#: inc/redux-framework/options/portfolio-options.php:96
+msgid "Portfolio Layout"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:13
+#: inc/redux-framework/options/portfolio-options.php:168
+msgid "Portfolio %s card %s"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:15
+#: inc/redux-framework/options/portfolio-options.php:178
+msgid "Your portfolio should tell your story."
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:97
+#: inc/wp-job-manager/front-wpjm-functions.php:134
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:250
+msgid "All"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:203
+#: inc/jetpack/front-jetpack-template-functions.php:228
+#: inc/jetpack/front-jetpack-template-functions.php:262
+#: inc/jetpack/front-jetpack-template-functions.php:294
+msgid "by %s"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:332
+msgid "You wish us %s to talk about %s your project %s?"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:410
+msgid "Portfolio Navigation"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:539
+#: inc/redux-framework/options/portfolio-options.php:4
+#: inc/redux-framework/options/portfolio-options.php:239
+msgid "Portfolio"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:541
+msgid "Our %s Branding %s works"
+msgstr ""
+
+#: inc/jetpack/front-jetpack-template-functions.php:542
+#: inc/redux-framework/options/portfolio-options.php:286
+msgid "Experience a level of our quality in both design & customization works."
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:36
+msgid "Company name or job title"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:37
+msgid "Company or title"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:38
+#: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:39
+#: inc/wp-job-manager/front-wpjm-functions.php:1076
+#: inc/wp-job-manager/front-wpjm-template-functions.php:962
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:831
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:516
+#: job_manager/job-filters.php:28
+msgid "City, state, or zip"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:40
+#: inc/redux-framework/options/header-options.php:709
+#: templates/header/topbar-search-form.php:18
+msgid "Search"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:58
+msgid "About Company"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:90
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:285
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:363
+#: inc/wp-job-manager/front-wpjm-template-functions.php:364
+#: mas-wp-job-manager-company/comments.php:65
+#: templates/shop/single-product-advanced-reviews.php:37
+msgid "%s review"
+msgid_plural "%s reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:137
+msgid "%s Open Job"
+msgid_plural "%s Open Jobs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:149
+msgid "Headquarters"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:154
+msgid "Founded"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:159
+msgid "Employees"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:164
+msgid "Industry"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:169
+msgid "Revenue"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:174
+msgid "Avg. Salary"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:200
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:20
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:55
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:480
+msgid "Twitter"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:205
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:27
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:485
+msgid "Facebook"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:215
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:495
+msgid "Linked Accounts"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:261
+msgid "Job Seekers Also Viewed"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:373
+msgid "Salaries"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:376
+msgid "Q&A"
+msgstr ""
+
+#: inc/mas-wp-job-manager-company/front-wpjmc-template-functions.php:390
+msgid "Open Job - %s"
+msgid_plural "Open Jobs - %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/ocdi/functions.php:370
+msgid ""
+"Import process may take %s minutes. If you facing any issues please contact "
+"our support."
+msgstr ""
+
+#: inc/ocdi/functions.php:371
+msgid "Before you begin, make sure all the required plugins are activated."
+msgstr ""
+
+#: inc/ocdi/functions.php:420 inc/redux-framework/options/blog-options.php:60
+msgid "Simple"
+msgstr ""
+
+#: inc/ocdi/functions.php:422 inc/redux-framework/options/job-options.php:7
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1007
+msgid "Jobs"
+msgstr ""
+
+#: inc/ocdi/functions.php:423
+msgid "Crypto"
+msgstr ""
+
+#: inc/ocdi/functions.php:424
+msgid "Help Desk"
+msgstr ""
+
+#: inc/ocdi/functions.php:425
+msgid "App Marketplace"
+msgstr ""
+
+#: inc/ocdi/functions.php:429
+msgid "Front Select Demo"
+msgstr ""
+
+#: inc/ocdi/functions.php:429
+msgid "We should select any one demo here to install recommended plugins."
+msgstr ""
+
+#: inc/redux-framework/functions/shop-functions.php:30
+msgid "View Product"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:7
+msgid "404 Page"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:13
+msgid "Use separate header for 404 page"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:14
+msgid "Do you want to display a separate header for 404 page ?"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:15
+#: inc/redux-framework/options/blog-options.php:70
+#: inc/redux-framework/options/blog-options.php:81
+#: inc/redux-framework/options/blog-options.php:92
+#: inc/redux-framework/options/blog-options.php:102
+#: inc/redux-framework/options/blog-options.php:113
+#: inc/redux-framework/options/blog-options.php:135
+#: inc/redux-framework/options/customer-story-options.php:25
+#: inc/redux-framework/options/customer-story-options.php:56
+#: inc/redux-framework/options/customer-story-options.php:90
+#: inc/redux-framework/options/docs-options.php:25
+#: inc/redux-framework/options/docs-options.php:56
+#: inc/redux-framework/options/footer-options.php:77
+#: inc/redux-framework/options/footer-options.php:96
+#: inc/redux-framework/options/header-options.php:65
+#: inc/redux-framework/options/header-options.php:74
+#: inc/redux-framework/options/header-options.php:112
+#: inc/redux-framework/options/header-options.php:163
+#: inc/redux-framework/options/header-options.php:173
+#: inc/redux-framework/options/header-options.php:210
+#: inc/redux-framework/options/header-options.php:234
+#: inc/redux-framework/options/header-options.php:258
+#: inc/redux-framework/options/header-options.php:268
+#: inc/redux-framework/options/header-options.php:311
+#: inc/redux-framework/options/header-options.php:321
+#: inc/redux-framework/options/header-options.php:332
+#: inc/redux-framework/options/header-options.php:343
+#: inc/redux-framework/options/header-options.php:356
+#: inc/redux-framework/options/header-options.php:387
+#: inc/redux-framework/options/header-options.php:463
+#: inc/redux-framework/options/header-options.php:483
+#: inc/redux-framework/options/header-options.php:584
+#: inc/redux-framework/options/header-options.php:602
+#: inc/redux-framework/options/header-options.php:670
+#: inc/redux-framework/options/job-options.php:25
+#: inc/redux-framework/options/job-options.php:48
+#: inc/redux-framework/options/job-options.php:79
+#: inc/redux-framework/options/portfolio-options.php:22
+#: inc/redux-framework/options/portfolio-options.php:53
+#: inc/redux-framework/options/shop-options.php:25
+#: inc/redux-framework/options/shop-options.php:56
+#: inc/redux-framework/options/style-options.php:44
+#: inc/redux-framework/options/typography-options.php:16
+#: wedocs/content-feedback.php:16
+msgid "Yes"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:16
+#: inc/redux-framework/options/blog-options.php:71
+#: inc/redux-framework/options/blog-options.php:82
+#: inc/redux-framework/options/blog-options.php:93
+#: inc/redux-framework/options/blog-options.php:103
+#: inc/redux-framework/options/blog-options.php:114
+#: inc/redux-framework/options/blog-options.php:136
+#: inc/redux-framework/options/customer-story-options.php:26
+#: inc/redux-framework/options/customer-story-options.php:57
+#: inc/redux-framework/options/customer-story-options.php:91
+#: inc/redux-framework/options/docs-options.php:26
+#: inc/redux-framework/options/docs-options.php:57
+#: inc/redux-framework/options/footer-options.php:78
+#: inc/redux-framework/options/footer-options.php:97
+#: inc/redux-framework/options/header-options.php:66
+#: inc/redux-framework/options/header-options.php:75
+#: inc/redux-framework/options/header-options.php:113
+#: inc/redux-framework/options/header-options.php:164
+#: inc/redux-framework/options/header-options.php:174
+#: inc/redux-framework/options/header-options.php:211
+#: inc/redux-framework/options/header-options.php:235
+#: inc/redux-framework/options/header-options.php:259
+#: inc/redux-framework/options/header-options.php:269
+#: inc/redux-framework/options/header-options.php:312
+#: inc/redux-framework/options/header-options.php:322
+#: inc/redux-framework/options/header-options.php:333
+#: inc/redux-framework/options/header-options.php:344
+#: inc/redux-framework/options/header-options.php:357
+#: inc/redux-framework/options/header-options.php:388
+#: inc/redux-framework/options/header-options.php:464
+#: inc/redux-framework/options/header-options.php:484
+#: inc/redux-framework/options/header-options.php:585
+#: inc/redux-framework/options/header-options.php:603
+#: inc/redux-framework/options/header-options.php:671
+#: inc/redux-framework/options/job-options.php:26
+#: inc/redux-framework/options/job-options.php:49
+#: inc/redux-framework/options/job-options.php:80
+#: inc/redux-framework/options/portfolio-options.php:23
+#: inc/redux-framework/options/portfolio-options.php:54
+#: inc/redux-framework/options/shop-options.php:26
+#: inc/redux-framework/options/shop-options.php:57
+#: inc/redux-framework/options/style-options.php:45
+#: inc/redux-framework/options/typography-options.php:17
+#: wedocs/content-feedback.php:23
+msgid "No"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:22
+msgid "404 Page Header"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:23
+msgid "Choose a static block header for 404 page"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:34
+msgid "Background Image"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:35
+msgid "Upload your 404 page background image."
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:41
+msgid "Page Title"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:48
+msgid "Sub Title"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:52
+msgid "Oops! Looks like you followed a bad link"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:53
+msgid "If you think this is a problem with us, please <a href=\"#\">tell us</a>."
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:58
+msgid "Button Text"
+msgstr ""
+
+#: inc/redux-framework/options/404-options.php:65
+msgid "Button Link"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:5
+msgid "Options available for your Blog, Single Post and Post Archive pages"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:12
+#: inc/redux-framework/options/footer-options.php:417
+#: inc/redux-framework/options/general-options.php:17
+#: inc/redux-framework/options/header-options.php:30
+#: inc/redux-framework/options/portfolio-options.php:74
+#: inc/redux-framework/options/shop-options.php:77
+#: inc/redux-framework/options/style-options.php:37
+msgid "General"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:20
+#: inc/redux-framework/options/blog-options.php:56
+msgid "Style"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:21
+msgid "Select your Blog style"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:35
+msgid "Layout"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:36
+msgid "Select your Blog layout"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:48
+msgid "Single Post"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:57
+msgid "Select the style for single post"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:68
+msgid "Enable Tags"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:69
+msgid "Do you want to enable tags in Single Post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:79
+msgid "Enable Sharing"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:80
+msgid "Do you want to enable share block in Single Post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:90
+msgid "Enable Author Info"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:91
+msgid "Do you want to enable author info block in Single Post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:100
+msgid "Enable Single Post Navigation"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:101
+msgid "Do you want to enable post navigation in Single Post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:111
+msgid "Enable Related Posts"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:112
+msgid "Do you want to enable related posts in Single Post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:120
+msgid "Footer Before Content"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:121
+msgid "Choose a Static Block to display above footer in Single Blog Post"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:133
+msgid "Use separate header for single post"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:134
+msgid "Do you want to display a separate header for single post ?"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:142
+msgid "Single Post Header"
+msgstr ""
+
+#: inc/redux-framework/options/blog-options.php:143
+msgid "Choose a static block header for single post"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:7
+msgid "Customer Story"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:8
+msgid "Options available for your customer stories"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:15
+#: inc/redux-framework/options/docs-options.php:15
+#: inc/redux-framework/options/header-options.php:21
+#: inc/redux-framework/options/job-options.php:15
+#: inc/redux-framework/options/portfolio-options.php:12
+#: inc/redux-framework/options/shop-options.php:15
+msgid "Header"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:23
+msgid "Use separate header for customer stories"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:24
+msgid "Do you want to display a separate header for customer stories ?"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:32
+msgid "Customer Story Header"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:33
+msgid "Choose a static block header for customer stories"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:46
+msgid "Single"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:54
+msgid "Enable Customer Story Single Pretitle"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:55
+msgid "Do you want to display a Customer Story Single Pretitle ?"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:64
+msgid "Customer Story Single Pretitle Text"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:65
+msgid "Enter the customer story single Pretitle Text"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:73
+msgid "Customer Story Single Background Image"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:74
+msgid "Upload your customer story single page background image."
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:80
+#: inc/redux-framework/options/docs-options.php:46
+#: inc/redux-framework/options/footer-options.php:409
+#: inc/redux-framework/options/job-options.php:69
+#: inc/redux-framework/options/portfolio-options.php:43
+#: inc/redux-framework/options/shop-options.php:46
+msgid "Footer"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:88
+msgid "Use separate footer for customer stories"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:89
+msgid "Do you want to display a separate footer for customer stories ?"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:97
+msgid "Customer Story Footer"
+msgstr ""
+
+#: inc/redux-framework/options/customer-story-options.php:98
+msgid "Choose a static block footer for customer stories"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:7
+#: inc/wedocs/front-wedocs-functions.php:100
+msgid "Docs"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:8
+msgid "Options available for your docs"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:23
+msgid "Use separate header for docs"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:24
+msgid "Do you want to display a separate header for docs ?"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:32
+msgid "Docs Header"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:33
+msgid "Choose a static block header for docs"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:54
+msgid "Use separate footer for docs"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:55
+msgid "Do you want to display a separate footer for docs ?"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:63
+msgid "Docs Footer"
+msgstr ""
+
+#: inc/redux-framework/options/docs-options.php:64
+msgid "Choose a static block footer for docs"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:12
+msgid "Footer Contact Info "
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:22
+msgid "Footer Contact Info Icon "
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:23
+msgid "Enter footer contact info icon class"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:29
+msgid "Footer Contact Title"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:30
+msgid "Enter footer contact info title"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:36
+msgid "Footer Contact Details Link"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:37
+msgid "Enter footer contact info description link"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:43
+msgid "Footer Contact Details"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:44
+msgid "Enter footer contact info description"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:67
+#: inc/redux-framework/options/footer-options.php:85
+msgid "Footer Logo"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:74
+msgid "Use separate logo for Footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:75
+msgid "Do you want to display a separate logo for footer ?"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:76
+msgid ""
+"By default the logo uploaded to Appearance > Customize > Site Identity > "
+"Site Logo is displayed in footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:86
+msgid "Upload an image file. Recommended Size : 150x57 pixels"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:87
+msgid "Upload a separate logo that you want to be displayed in footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:94
+msgid "Use Light SVG logo for Footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:95
+msgid "Do you want to display a light svg logo for footer ?"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:123
+msgid "Footer Style"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:124
+msgid "Select the style for footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:126
+#: inc/redux-framework/options/header-options.php:287
+#: inc/redux-framework/options/header-options.php:648
+#: inc/redux-framework/options/header-options.php:660
+msgid "Default"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:127
+msgid "Dark Background"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:128
+#: inc/redux-framework/options/footer-options.php:194
+msgid "Primary Background"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:136
+#: inc/redux-framework/options/footer-options.php:164
+#: inc/redux-framework/options/footer-options.php:179
+msgid "Footer Version"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:137
+#: inc/redux-framework/options/footer-options.php:165
+#: inc/redux-framework/options/footer-options.php:180
+msgid "Select the version for footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:139
+#: inc/redux-framework/options/footer-options.php:167
+#: inc/redux-framework/options/footer-options.php:182
+msgid "Version 1"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:140
+#: inc/redux-framework/options/footer-options.php:168
+#: inc/redux-framework/options/footer-options.php:183
+msgid "Version 2"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:141
+#: inc/redux-framework/options/footer-options.php:169
+#: inc/redux-framework/options/footer-options.php:184
+msgid "Version 3"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:142
+#: inc/redux-framework/options/footer-options.php:170
+#: inc/redux-framework/options/footer-options.php:185
+msgid "Version 4"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:143
+#: inc/redux-framework/options/footer-options.php:186
+msgid "Version 5"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:144
+#: inc/redux-framework/options/footer-options.php:187
+msgid "Version 6"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:145
+msgid "Version 7"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:146
+msgid "Version 8"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:147
+msgid "Version 9"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:148
+msgid "Version 10"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:149
+msgid "Version 11"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:150
+msgid "Version 12"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:151
+msgid "Version 13"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:152
+msgid "Version 14"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:153
+msgid "Version 15"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:154
+msgid "Version 16"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:155
+msgid "Version 17"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:195
+msgid "Enable to add primary background in footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:198
+#: inc/redux-framework/options/general-options.php:28
+#: inc/redux-framework/options/header-options.php:600
+#: wp-job-manager-alerts/my-alerts.php:66
+msgid "Enable"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:199
+#: inc/redux-framework/options/general-options.php:29
+#: wp-job-manager-alerts/my-alerts.php:66
+msgid "Disable"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:210
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:211
+msgid "Enter the footer copyright text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:217
+msgid "Footer Site Description"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:218
+msgid "Enter the footer site description"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:227
+msgid "Show Static Blocks"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:237
+msgid "Footer Before Static Block"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:238
+msgid "Choose a static block for footer before"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:252
+msgid "Footer Button Text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:253
+msgid "Enter the footer button text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:263
+msgid "Footer Button URL"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:264
+msgid "Enter the footer button url"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:274
+msgid "Footer Goto Icon Class"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:275
+msgid "Enter the footer goto icon class"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:285
+msgid "Footer Form Shortcode"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:286
+msgid "Enter the footer form shortcode"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:295
+msgid "Footer Title"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:296
+msgid "Enter the footer title"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:305
+msgid "Footer Description"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:306
+msgid "Enter the footer description"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:315
+msgid "Footer Description Link Text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:316
+msgid "Enter the footer description link text"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:325
+msgid "Footer Description Link"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:326
+msgid "Enter the footer description link"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:335
+msgid "Footer No Of Contact Infos"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:336
+msgid "How many contact info should be shown in footer?"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:349
+msgid "Footer Contact Block"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:350
+msgid ""
+"The Footer Contact Block is part of Footer widgets. However it is not "
+"available as a separate widget but are fully customizable with the options "
+"given below."
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:359
+msgid "Show Footer Contact Block"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:366
+msgid "Contact Block Title"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:374
+msgid "Call us Number"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:382
+msgid "Mail Us"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:390
+msgid "Mail URL"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:411
+msgid ""
+"Options available for your footer. Please note these options will not work "
+"on pages that have custom Footer assigned."
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:419
+msgid "Use the options below to set the general behaviour of your website's footer"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:426
+#: inc/redux-framework/options/header-options.php:473
+msgid "Logo"
+msgstr ""
+
+#: inc/redux-framework/options/footer-options.php:428
+msgid "Use the options below to set the logo behaviour of your website's footer"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:18
+msgid "General Options available in theme"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:24
+msgid "Scroll To Top"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:25
+msgid "Enable to display the scroll to top arrow"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:44
+msgid "My Account Login Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:45
+msgid "Enter my account login form title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:52
+msgid "My Account Login Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:53
+msgid "Enter my account login form description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:60
+msgid "My Account Register Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:61
+msgid "Enter my account register form title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:68
+msgid "My Account Register Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:69
+msgid "Enter my account register form description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:76
+msgid "My Account Reset Password Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:77
+msgid "Enter my account reset password form title"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:80
+#: woocommerce/myaccount/form-lost-password.php:20
+msgid "Forgot your"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:80
+#: woocommerce/myaccount/form-lost-password.php:20
+msgid "password?"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:84
+msgid "My Account Reset Password Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:85
+msgid "Enter my account reset password form description"
+msgstr ""
+
+#: inc/redux-framework/options/general-options.php:88
+#: woocommerce/myaccount/form-lost-password.php:32
+msgid "Enter your email address below and well get you back on track."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:23
+msgid "Options available for your header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:26
+msgid "These settings are not applied to pages that have Custom Header."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:32
+msgid "Use the options below to set the general behaviour of your website's header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:39
+msgid "Menu Style"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:41
+msgid "Navbar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:42
+msgid "Off Screen"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:43
+msgid "Full Screen"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:44
+msgid "Logo Only"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:52
+msgid "Full Screen Nav Style"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:54
+#: inc/redux-framework/options/header-options.php:372
+#: inc/redux-framework/options/header-options.php:403
+msgid "Modal"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sidebar Right"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Sidebar Left"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:63
+msgid "Is Container Fluid ?"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:72
+msgid "Enable Postion"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:83
+msgid "Position"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:85
+msgid "Absolute Top"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:86
+msgid "Absolute Bottom"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:87
+msgid "Second Screen"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:88
+msgid "Floating"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:97
+msgid "Position Only in"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:99
+#: inc/redux-framework/options/header-options.php:135
+#: inc/redux-framework/options/header-options.php:184
+#: inc/redux-framework/options/header-options.php:221
+#: inc/redux-framework/options/header-options.php:245
+#: inc/redux-framework/options/header-options.php:507
+msgid "All Screens"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:100
+#: inc/redux-framework/options/header-options.php:136
+#: inc/redux-framework/options/header-options.php:185
+#: inc/redux-framework/options/header-options.php:222
+#: inc/redux-framework/options/header-options.php:246
+#: inc/redux-framework/options/header-options.php:508
+#: inc/redux-framework/options/header-options.php:549
+msgid "sm"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:101
+#: inc/redux-framework/options/header-options.php:137
+#: inc/redux-framework/options/header-options.php:186
+#: inc/redux-framework/options/header-options.php:223
+#: inc/redux-framework/options/header-options.php:247
+#: inc/redux-framework/options/header-options.php:509
+#: inc/redux-framework/options/header-options.php:550
+msgid "md"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:102
+#: inc/redux-framework/options/header-options.php:138
+#: inc/redux-framework/options/header-options.php:187
+#: inc/redux-framework/options/header-options.php:224
+#: inc/redux-framework/options/header-options.php:248
+#: inc/redux-framework/options/header-options.php:510
+#: inc/redux-framework/options/header-options.php:551
+msgid "lg"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:103
+#: inc/redux-framework/options/header-options.php:139
+#: inc/redux-framework/options/header-options.php:188
+#: inc/redux-framework/options/header-options.php:225
+#: inc/redux-framework/options/header-options.php:249
+#: inc/redux-framework/options/header-options.php:511
+#: inc/redux-framework/options/header-options.php:552
+msgid "xl"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:110
+msgid "Enable Sticky"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:121
+msgid "Sticky Position"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:123
+msgid "Top"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:124
+msgid "Bottom"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:133
+msgid "Sticky Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:148
+msgid "Sticky On scroll behavior"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:150
+#: inc/redux-framework/options/header-options.php:199
+#: inc/redux-framework/options/header-options.php:537
+msgid "None"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:151
+#: inc/redux-framework/options/header-options.php:200
+msgid "Hide topbar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:152
+msgid "Toggle topbar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:153
+#: inc/redux-framework/options/header-options.php:201
+msgid "Changing logo on scroll"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:154
+msgid "White Background on Scroll"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:161
+msgid "Enable Toggle Section"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:171
+msgid "Enable Show/Hide"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:182
+msgid "Show/Hide Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:197
+msgid "Show/Hide On scroll behavior"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:208
+msgid "Enable White Nav Links"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:219
+msgid "White Nav Links Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:232
+msgid "Enable Transparent"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:243
+msgid "Transparent Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:256
+msgid "Enable Border"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:266
+msgid "Enable Fix Effect"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:277
+#: inc/redux-framework/options/header-options.php:285
+msgid "Background"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:289
+msgid "Navbar Primary"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:290
+msgid "Navbar Gradient"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:291
+msgid "Navbar Dark"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:292
+msgid "White-to-dark on scroll"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:293
+msgid "Dark-to-white on scroll"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:294
+msgid "Submenu dark"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:302
+msgid "Topbar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:308
+msgid "Enable Topbar"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:310
+msgid "Enable to display top bar in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:318
+msgid "Enable Topbar Left"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:320
+msgid "Enable to display top bar left in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:329
+msgid "Enable Topbar Right"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:331
+msgid "Enable to display top bar right in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:340
+msgid "Enable Search"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:342
+msgid "Enable to display Search in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:353
+msgid "Enable Mini Cart"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:355
+msgid "Enable to display Mini Cart in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:368
+msgid "Mini Cart View"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:369
+msgid "Select the view for mini cart"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:371
+#: inc/redux-framework/options/header-options.php:402
+msgid "Dropdown"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:375
+#: inc/redux-framework/options/header-options.php:616
+msgid "Link"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:384
+msgid "Enable User Account"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:386
+msgid "Enable to display User Account in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:399
+msgid "Header User Account View"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:400
+msgid ""
+"Select the view for user account. To view meta box option for header form "
+"save & refresh the page."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:412
+msgid "Header Login Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:413
+msgid "Enter header my account login form title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:420
+msgid "Header Login Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:421
+msgid "Enter header my account login form description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:428
+msgid "Header Register Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:429
+msgid "Enter header my account register form title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:436
+msgid "Header Register Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:437
+msgid "Enter header my account register form description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:444
+msgid "Header Reset Password Form Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:445
+msgid "Enter header my account reset password form title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:452
+msgid "Header Reset Password Form Description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:453
+msgid "Enter header my account reset password form description"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:460
+msgid "Header My Account Username"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:462
+msgid "Enable to show username in my account in header"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:474
+msgid ""
+"Please use Appearance > Customize > Site Identity > Site Logo to upload "
+"your Site Logo & Favicon"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:480
+msgid "Enable Logo White"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:482
+msgid "Use this option to enable to display White Logo for darker backgrounds."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:493
+msgid "Logo Align"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:494
+msgid "If you select \"Center\" option, the navbar will appear in the next line."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:497
+#: inc/redux-framework/options/header-options.php:565
+msgid "Center"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:505
+msgid "Logo Align Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:518
+msgid "Upload Scroll Logo"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:519
+msgid ""
+"Scroll Logo is the Logo that you want to appear when the user scrolls down "
+"and the header sticks."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:527
+msgid "Primary Menu ( Navbar )"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:535
+msgid "Responsive Type"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:538
+msgid "Collapse"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:539
+msgid "Scroll"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:547
+msgid "Collapse Breakpoint"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:561
+msgid "Align"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:573
+msgid "Dropdown Trigger"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:575
+msgid "Hover"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:576
+msgid "Click"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:582
+msgid "Enable Scroll Nav"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:593
+msgid "Header Action Button"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:597
+msgid ""
+"This is the button that appears to the right of the Header when there is no "
+"Primary Menu ( navbar ) or if it is center aligned."
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:609
+msgid "Text"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:625
+msgid "Background Color"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:644
+msgid "Size"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:646
+msgid "Extra Small"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:647
+msgid "Small"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:649
+msgid "Large"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:657
+msgid "Border Radius"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:659
+msgid "Rounded 0"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:661
+msgid "Pill"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:662
+msgid "Circle"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:668
+msgid "Enable Transition"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:679
+msgid "Fullscreen Modal"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:685
+msgid "Address Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:695
+msgid "Add Address"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:696
+msgid "153 Williamson Plaza, Maggieberg, MT 09514"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:700
+msgid "Social Title"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:716
+msgid "Push Top Static Content"
+msgstr ""
+
+#: inc/redux-framework/options/header-options.php:717
+msgid "Choose a static content for search push top"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:8
+msgid "Options available for your jobs"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:23
+msgid "Use separate header for job"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:24
+msgid "Do you want to display a separate header for job ?"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:32
+msgid "Job Header"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:33
+msgid "Choose a static block header for job"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:46
+msgid "Use separate header for single job"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:47
+msgid "Do you want to display a separate header for single job ?"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:55
+msgid "Job Single Header"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:56
+msgid "Choose a static block header for single job"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:77
+msgid "Use separate footer for job"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:78
+msgid "Do you want to display a separate footer for job ?"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:86
+msgid "Job Footer"
+msgstr ""
+
+#: inc/redux-framework/options/job-options.php:87
+msgid "Choose a static block footer for job"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:5
+msgid "Options available for your portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:20
+msgid "Use separate header for portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:21
+msgid "Do you want to display a separate header for portfolio ?"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:29
+msgid "Portfolio Header"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:30
+msgid "Choose a static block header for portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:51
+msgid "Use separate footer for portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:52
+msgid "Do you want to display a separate footer for portfolio ?"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:60
+msgid "Portfolio Footer"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:61
+msgid "Choose a static block footer for portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:83
+msgid "Select your portfolio view"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:97
+msgid "Select your portfolio layout"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:108
+msgid "Projects per page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:109
+msgid "How many projects should be shown per page?"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:118
+msgid "Enable Portfolio Type Filters"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:119
+msgid "Please choose if you want to enable Filters in Portfolio page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:121
+#: inc/redux-framework/options/portfolio-options.php:131
+#: inc/redux-framework/options/portfolio-options.php:141
+#: inc/redux-framework/options/portfolio-options.php:159
+#: inc/redux-framework/options/portfolio-options.php:197
+#: inc/redux-framework/options/portfolio-options.php:207
+#: inc/redux-framework/options/portfolio-options.php:218
+#: inc/redux-framework/options/portfolio-options.php:229
+#: inc/redux-framework/options/portfolio-options.php:320
+msgid "Enabled"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:122
+#: inc/redux-framework/options/portfolio-options.php:132
+#: inc/redux-framework/options/portfolio-options.php:142
+#: inc/redux-framework/options/portfolio-options.php:160
+#: inc/redux-framework/options/portfolio-options.php:198
+#: inc/redux-framework/options/portfolio-options.php:208
+#: inc/redux-framework/options/portfolio-options.php:219
+#: inc/redux-framework/options/portfolio-options.php:230
+#: inc/redux-framework/options/portfolio-options.php:321
+msgid "Disabled"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:128
+msgid "Enable Portfolio Author"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:129
+msgid "Please choose if you want to show Author in Portfolio"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:138
+msgid "Enable Portfolio Content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:139
+msgid "Please choose if you want to show portfolio content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:148
+msgid "Hero Block"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:156
+msgid "Enable Hero"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:157
+msgid "Please choose if you want to enable Hero block in Portfolio page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:166
+#: inc/redux-framework/options/portfolio-options.php:274
+#: inc/redux-framework/options/portfolio-options.php:327
+msgid "Title"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:167
+msgid "Enter the hero title. HTML tags permitted."
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:176
+#: inc/redux-framework/options/portfolio-options.php:284
+msgid "Subtitle"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:177
+msgid "Enter the text that you want to appear below hero title."
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:186
+msgid "Related Projects"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:194
+msgid "Enable Related Works"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:195
+msgid ""
+"Please choose if you want to enable related works block in Single Portfolio "
+"page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:204
+msgid "Enable Portfolio Related Works Author"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:205
+msgid "Please choose if you want to show Author in Portfolio Related Works"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:215
+msgid "Enable Portfolio Related Works Content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:216
+msgid "Please choose if you want to show Portfolio Related Works Content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:226
+msgid "Enable Related Works Pretitle"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:227
+msgid ""
+"Please choose if you want to enable related works block pretitle in Single "
+"Portfolio page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:237
+msgid "Pre-Title"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:238
+msgid "Enter the text that you want to appear above the section title"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:246
+msgid "Pretitle Color"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:257
+msgid "white"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:258
+msgid "Soft Primary"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:259
+msgid "Soft Secondary"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:260
+msgid "Soft Success"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:261
+msgid "Soft Danger"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:262
+msgid "Soft Warning"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:263
+msgid "Soft Indigo"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:264
+msgid "Soft Info"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:265
+msgid "Soft Dark"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:275
+msgid "Enter the section title. HTML tags permitted."
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:276
+msgid "Our %s branding %s works"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:285
+msgid "Enter the text that you want to appear below title."
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:294
+msgid "Projects View"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:295
+msgid "Select the view for related projects"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:309
+#: wp-job-manager-resumes/contact-details.php:30
+#: wp-job-manager-resumes/contact-details.php:36
+msgid "Contact"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:317
+msgid "Enable Contact Block in Portfolio Page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:318
+msgid "Please choose if you want to enable contact block in Portfolio page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:328
+msgid "Enter the contact section title. HTML tags permitted."
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:329
+msgid "You wish us %s to talk about %s your project %s"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:337
+msgid "Enter your contact email address"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:338
+msgid "support@htmlstream.com"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:344
+msgid "Social Network Menu"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:345
+msgid "Select the menu that displays your social networks"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:354
+msgid "Enter your phone number "
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:7
+msgid "Shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:8
+msgid "Options available for your shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:23
+msgid "Use separate header for shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:24
+msgid "Do you want to display a separate header for shop ?"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:32
+msgid "Shop Header"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:33
+msgid "Choose a static block header for shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:54
+msgid "Use separate footer for shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:55
+msgid "Do you want to display a separate footer for shop ?"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:63
+msgid "Shop Footer"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:64
+msgid "Choose a static block footer for shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:84
+msgid "Shop Page Jumbotron"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:85
+msgid "Choose a static block that will be the jumbotron element for shop page"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:97
+msgid "Shop Layout"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:98
+msgid "Select from the two available layouts for shop"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:110
+msgid "Product archive views"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:111
+msgid "Please drag and arrange the views. Top most view will be the default view"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:124
+msgid "Single Product"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:131
+msgid "Enable Related Products"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:138
+msgid "Single Product Before Footer Content"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:139
+msgid ""
+"Choose a static block that will be the jumbotron element for single product "
+"page"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:150
+msgid "Show Single Product Features List"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:157
+msgid "Feature List Icon"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:158
+msgid "Upload Image"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:161
+msgid "fgb-icon-65"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:162
+msgid "fgb-icon-64"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:171
+msgid "Feature List Title"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:172
+msgid "Add Title"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:174
+#: inc/woocommerce/template-tags/single-product.php:184
+msgid "Free Shipping"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:175
+#: inc/woocommerce/template-tags/single-product.php:189
+msgid "30 Days return"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:183
+msgid "Feature List Text"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:184
+msgid "Add Description"
+msgstr ""
+
+#: inc/redux-framework/options/shop-options.php:186
+#: inc/redux-framework/options/shop-options.php:187
+#: inc/woocommerce/template-tags/single-product.php:185
+#: inc/woocommerce/template-tags/single-product.php:190
+msgid ""
+"We offer free shipping anywhere in the U.S. A skilled delivery team will "
+"bring the boxes into your office."
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:10
+msgid "How to include custom color ?"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:14
+msgid "Inline"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:15
+msgid "External File"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:24
+msgid "Custom Primary Color CSS"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:25
+msgid ""
+"Please activate child theme to load custom color CSS using \"External "
+"File\". Also you need to make custom-color.css file writable."
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:31
+msgid "Styling"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:38
+msgid "General Theme Style Settings"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:43
+msgid "Use a predefined color scheme"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:65
+msgid "Custom Primary Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:75
+msgid "Custom Secondary Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:85
+msgid "Custom Indigo Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:95
+msgid "Custom Info Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:105
+msgid "Custom Warning Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:115
+msgid "Custom Danger Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:125
+msgid "Custom White Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/style-options.php:135
+msgid "Custom Dark Gradient Color"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:8
+msgid "Typography"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:9
+msgid "Typography Options available in theme"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:15
+msgid "Use default font scheme ?"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:24
+msgid "Title Font Family"
+msgstr ""
+
+#: inc/redux-framework/options/typography-options.php:43
+msgid "Content Font Family"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:33
+msgid "Documentation Search &hellip;"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:71
+#: templates/docs/content-docs.php:61 wedocs/shortcode.php:64
+msgid "Written by"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:77
+msgid "Updated on %s"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:94
+#. translators: %s: Name of current post.
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:267
+#: inc/wedocs/front-wedocs-template-functions.php:273
+#: inc/wedocs/front-wedocs-template-functions.php:281
+msgid "post thumbnail"
+msgstr ""
+
+#: inc/woocommerce/classes/class-front-categories.php:51
+#: inc/woocommerce/classes/class-front-categories.php:227
+msgid "Jumbotron"
+msgstr ""
+
+#: inc/woocommerce/classes/class-front-categories.php:53
+#: inc/woocommerce/classes/class-front-categories.php:65
+#: inc/woocommerce/classes/class-front-categories.php:77
+#: inc/woocommerce/classes/class-front-categories.php:122
+#: inc/woocommerce/classes/class-front-categories.php:151
+#: inc/woocommerce/classes/class-front-categories.php:180
+msgid "Select a Static Block"
+msgstr ""
+
+#: inc/woocommerce/classes/class-front-categories.php:63
+#: inc/woocommerce/classes/class-front-categories.php:135
+#: inc/woocommerce/classes/class-front-categories.php:228
+msgid "Middle Jumbotron"
+msgstr ""
+
+#: inc/woocommerce/classes/class-front-categories.php:75
+#: inc/woocommerce/classes/class-front-categories.php:164
+#: inc/woocommerce/classes/class-front-categories.php:229
+msgid "Bottom Jumbotron"
+msgstr ""
+
+#: inc/woocommerce/classes/class-front-categories.php:107
+msgid "Top Jumbotron"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:47
+#: woocommerce/loop/sale-flash.php:27
+#: woocommerce/single-product/sale-flash.php:27
+msgid "Sale!"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:51
+#: inc/woocommerce/template-tags/product-item.php:141
+msgid "Sold Out"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:99
+msgid "View cart"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:106
+msgid "Checkout"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:216
+msgid "required"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:280
+#: woocommerce/cart/shipping-calculator.php:31
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:288
+msgid "Update country"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:306
+#: inc/woocommerce/front-wc-template-functions-overrides.php:307
+#: woocommerce/cart/shipping-calculator.php:55
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: inc/woocommerce/front-wc-template-functions-overrides.php:355
+msgid "Choose an option"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:187
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:258
+#: woocommerce/cart/mini-cart.php:35 woocommerce/cart/mini-cart.php:42
+#: woocommerce/cart/mini-cart.php:73
+msgid "Your Shopping Cart"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:354
+#: woocommerce/cart/cart.php:131
+msgid "Remove this item"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:368
+msgid "Quantity: %s"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:400
+msgid "Order Subtotal"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-functions.php:449
+msgid "Review Bag and Checkout"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-hooks.php:72
+msgid "Your cart is currently empty"
+msgstr ""
+
+#: inc/woocommerce/front-woocommerce-template-hooks.php:73
+msgid ""
+"Before proceed to checkout you must add some products to your shopping "
+"cart. You will find a lot of interesting products on our \"Shop\" page."
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:64
+msgid "Howdy, %s!"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:131
+msgid "Front partners"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:134
+#: inc/woocommerce/template-tags/my-account.php:137
+#: inc/woocommerce/template-tags/my-account.php:140
+#: inc/woocommerce/template-tags/my-account.php:219
+msgid "Image Description"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:161
+msgid "privacy policy"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:162
+msgid "terms and conditions"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:176
+msgid "Passwords do not match."
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:223
+msgid "Change profile picture"
+msgstr ""
+
+#: inc/woocommerce/template-tags/my-account.php:228
+msgid "Upload JPG, GIF or PNG image."
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:260
+msgid "Grid View"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:266
+msgid "List View"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:392
+msgid "Page:"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:399
+msgid "of"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:400
+msgid "%s"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:431
+msgid "Sort by"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:432
+msgid "Popularity"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:433
+msgid "Average rating"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:434
+msgid "Newness"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:435
+msgid "Price (high - low)"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:436
+msgid "Price (low - high)"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:581
+msgid "%s Categories"
+msgstr ""
+
+#: inc/woocommerce/template-tags/product-item.php:696
+msgid "View All"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:96
+#: templates/shop/single-product-advanced-reviews.php:106
+msgid "Write a review"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:98
+msgid "Read %s review"
+msgid_plural "Read all %s reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce/template-tags/single-product.php:123
+msgid "Total price:"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:141
+msgid "Select quantity"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:317
+#: inc/woocommerce/template-tags/single-product.php:347
+msgid "Awaiting product image"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:466
+msgid "Upsell Products"
+msgstr ""
+
+#: inc/woocommerce/template-tags/single-product.php:473
+msgid "Related Products"
+msgstr ""
+
+#: inc/wp-job-manager/class-front-wpjm.php:115
+msgid "Jobs Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager/class-front-wpjm.php:117
+msgid "Widgets added to this region will appear in the jobs page."
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:129
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:245
+msgid "Last Hour"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:130
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:246
+msgid "Last 24 Hours"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:131
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:247
+msgid "Last 7 Days"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:132
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:248
+msgid "Last 14 Days"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:133
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:249
+msgid "Last 30 Days"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:785
+msgid "Please select a form"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:848
+msgid "User Can't Apply for this Job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:970
+msgid "New Job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:971
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:774
+msgid "Menu Order"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:972
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:775
+msgid "Name: Ascending"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:973
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:776
+msgid "Name: Descending"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:980
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:783
+msgid "Relevance"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1071
+#: inc/wp-job-manager/front-wpjm-template-functions.php:957
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:826
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:511
+#: job_manager/job-filters.php:23
+msgid "what"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1072
+#: inc/wp-job-manager/front-wpjm-template-functions.php:958
+#: job_manager/job-filters.php:24
+msgid "job title, keywords, or company"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1073
+#: inc/wp-job-manager/front-wpjm-template-functions.php:959
+#: job_manager/job-filters.php:25
+msgid "Keyword or title"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1074
+#: inc/wp-job-manager/front-wpjm-template-functions.php:960
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:829
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:514
+#: job_manager/job-filters.php:26
+msgid "where"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1075
+#: inc/wp-job-manager/front-wpjm-template-functions.php:961
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:830
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:515
+#: job_manager/job-filters.php:27
+msgid "city, state, or zip code"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1077
+#: inc/wp-job-manager/front-wpjm-template-functions.php:963
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:832
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:517
+#: job_manager/job-filters.php:29
+msgid "which"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1078
+#: inc/wp-job-manager/front-wpjm-template-functions.php:964
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:833
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:518
+#: job_manager/job-filters.php:30
+msgid "department, industry, or specialism"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1079
+#: inc/wp-job-manager/front-wpjm-template-functions.php:965
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:834
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:519
+#: job_manager/job-filters.php:31
+msgid "All Category"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-functions.php:1080
+#: inc/wp-job-manager/front-wpjm-template-functions.php:966
+#: job_manager/job-filters.php:32
+msgid "Find Jobs"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:6
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:6
+msgid "Maximum of %d."
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:10
+msgid "Branch/Contact Email"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:13
+msgid "you@yourdomain.com"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:18
+msgid "Branch/Contact No."
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:21
+msgid "Branch/Contact phome no"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:26
+msgid "Job Qualification"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:29
+msgid "Qualification required to apply this job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:36
+#: inc/wp-job-manager/front-wpjm-template-functions.php:39
+msgid "Branch/Contact Address"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:45
+msgid "Job Skills"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:48
+msgid "Relevant skills to this Job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:49
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:10
+msgid "list of relevant skills seperate with Enter key"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:56
+msgid "Job Salary"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:60
+msgid "Choose a salary &hellip;"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:67
+msgid "Project Length"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:71
+msgid "Choose a project length &hellip;"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:78
+msgid "Working Environment"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:82
+msgid "Choose a Job Working environment &hellip;"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:88
+msgid "Short Desciption"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:91
+msgid "short description about job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:96
+msgid "Job Resposibility"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:97
+msgid "Add Resposibility"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:104
+#: inc/wp-job-manager/front-wpjm-template-functions.php:121
+#: inc/wp-job-manager/front-wpjm-template-functions.php:138
+msgid "Notes"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:113
+msgid "Job Requirement"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:114
+msgid "Add Requirement"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:130
+#: inc/wp-job-manager/front-wpjm-template-functions.php:570
+msgid "Bonus Points"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:131
+msgid "Add Bonus Points"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:147
+msgid "About Branch"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:147
+msgid "About Company / Branch"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:150
+msgid "short description about branch"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:150
+msgid "short description about company/branch"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:171
+msgid "Please enter no more than %d skills."
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:456
+msgid "Job Description"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:496
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:331
+msgid "Skills:"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:514
+msgid "Responsibilities"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:542
+msgid "Requirements"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:606
+msgid "Job Summary"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:648
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1193
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1301
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:767
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:904
+#: indeed/content-imported-job-listing.php:30
+#: indeed/content-imported-job-listing.php:77
+#: wp-job-manager-alerts/my-alerts.php:31
+#: ziprecruiter/content-imported-job-listing.php:30
+#: ziprecruiter/content-imported-job-listing.php:77
+msgid "Location"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:653
+msgid "Job Type"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:658
+msgid "Project length"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:662
+#: inc/wp-job-manager/front-wpjm-template-functions.php:999
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1203
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1306
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:34
+msgid "Salary"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:667
+msgid "Entry level"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:713
+msgid "About"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:719
+msgid "View company profile"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:735
+msgid "Contacts"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:741
+msgid "Email:"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:744
+msgid "Phone:"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:766
+msgid "Similar Jobs"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:767
+msgid ""
+"The largest community on the web to find and list jobs that aren't "
+"restricted by commutes or a specific location."
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:827
+msgid "See All Jobs"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:881
+msgid "Apply Now"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:924
+msgid "Join %s"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:925
+msgid "Apply for this Job"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:996
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:549
+msgid "Category"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1005
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:555
+msgid "Search results"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1056
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:606
+msgid "Clear All"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1198
+#: indeed/content-imported-job-listing.php:35
+#: ziprecruiter/content-imported-job-listing.php:35
+msgid "Posted"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1199
+#: indeed/content-imported-job-listing.php:38
+#: ziprecruiter/content-imported-job-listing.php:38
+msgid "%s ago"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1401
+msgid "Overal Rating"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1403
+msgid "Based on %s review"
+msgid_plural "Based on %s reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1412
+msgid "NaN"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1539
+#: indeed/content-imported-job-listing.php:117
+#: ziprecruiter/content-imported-job-listing.php:117
+msgid "View Details"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1584
+#: wp-job-manager-alerts/my-alerts.php:38
+msgid "Add alert"
+msgstr ""
+
+#: inc/wp-job-manager/front-wpjm-template-functions.php:1628
+msgid "Alert me to jobs like this"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-front-wpjmr.php:80
+msgid "Resume Sidebar"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-front-wpjmr.php:82
+msgid "Widgets added to this region will appear in the Resume page."
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:56
+msgid "Showing %s - %s of %s resumes"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:58
+msgid "Showing one job"
+msgid_plural "Showing all %s resumes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:63
+msgid "%s matching <span class=\"highlight\">%s</span>"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:67
+msgid "%s in <span class=\"highlight\">%s</span>"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:79
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:557
+msgid "Candidates"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:773
+msgid "New Resume"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:827
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:512
+msgid "candidate name, position or keywords"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:828
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:513
+msgid "Keyword or name"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-functions.php:835
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:520
+msgid "Find Candidate"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:9
+msgid "List of Relevant skills"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:15
+msgid "your website link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:22
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:57
+msgid "your twitter page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:29
+msgid "your facebook page link"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:36
+msgid "expected salery per hr/m/a"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:41
+msgid "Jobs Done"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:43
+msgid "works done yet"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:48
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:238
+msgid "Success rate"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:50
+msgid "rate of successful jobs yet"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:62
+msgid "Candidate Bio"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:64
+msgid "short notes about your self"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:69
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:357
+msgid "Rewards"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:70
+msgid "Add Rewards"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:77
+msgid "Reward Title"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:84
+msgid "Image"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:93
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:287
+msgid "Languages"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:94
+msgid "Add Languages"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:101
+msgid "Language"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:108
+msgid "Level of known"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:178
+msgid "About Candidate"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:206
+msgid "Joined %s"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:228
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:772
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:909
+msgid "Working rate"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:233
+msgid "Jobs done"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:243
+msgid "Repeat clients"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:273
+msgid "Bio"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:374
+msgid "Industry expertise: %s"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:389
+msgid "Education"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:429
+msgid "Work experience"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/front-wpjmr-template-functions.php:777
+msgid "Projects"
+msgstr ""
+
+#: job_manager/content-single-job_listing.php:24
+msgid "This listing has expired."
+msgstr ""
+
+#: job_manager/form-fields/repeated-field.php:24
+#: job_manager/form-fields/repeated-field.php:49
+#: wp-job-manager-resumes/form-fields/repeated-field.php:25
+#: wp-job-manager-resumes/form-fields/repeated-field.php:49
+#: wp-job-manager-resumes/resume-submit.php:37
+msgid "(optional)"
+msgstr ""
+
+#: job_manager/form-fields/repeated-field.php:63
+msgid "Add Row"
+msgstr ""
+
+#: job_manager/job-application.php:24
+msgid "Apply for job"
+msgstr ""
+
+#: job_manager/job-application.php:30
+msgid "Apply For Job"
+msgstr ""
+
+#: job_manager/job-dashboard.php:19
+msgid "Your listings are shown in the table below."
+msgstr ""
+
+#: job_manager/job-dashboard.php:56
+msgid "You do not have any active listings."
+msgstr ""
+
+#: job_manager/job-dashboard.php:69
+msgid "Featured Job"
+msgstr ""
+
+#: job_manager/job-dashboard.php:80
+msgid "Mark not filled"
+msgstr ""
+
+#: job_manager/job-dashboard.php:82
+msgid "Mark filled"
+msgstr ""
+
+#: job_manager/job-dashboard.php:85
+msgid "Duplicate"
+msgstr ""
+
+#: job_manager/job-dashboard.php:89
+#: mas-wp-job-manager-company/company-dashboard.php:65
+#: wp-job-manager-resumes/candidate-dashboard.php:62
+msgid "Relist"
+msgstr ""
+
+#: job_manager/job-dashboard.php:100
+msgid "Continue Submission"
+msgstr ""
+
+#: job_manager/job-dashboard.php:104
+#: mas-wp-job-manager-company/company-dashboard.php:70
+#: wp-job-manager-alerts/my-alerts.php:70
+#: wp-job-manager-resumes/candidate-dashboard.php:67
+msgid "Delete"
+msgstr ""
+
+#: job_manager/job-filters.php:47
+msgid "Search Jobs"
+msgstr ""
+
+#: job_manager/job-filters.php:62
+msgid "Search Locations"
+msgstr ""
+
+#: job_manager/job-filters.php:82
+msgid "Select Category"
+msgstr ""
+
+#: job_manager/job-filters.php:103
+msgid ""
+"Your browser does not support JavaScript, or it is disabled. JavaScript "
+"must be enabled in order to view listings."
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:35
+msgid "Be a First Reviewer"
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:72
+msgid "Newest First"
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:73
+msgid "Oldest First"
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:134
+msgid "Leave a review"
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:135
+#: templates/shop/single-product-advanced-reviews.php:142
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: mas-wp-job-manager-company/comments.php:152
+#: templates/shop/single-product-advanced-reviews.php:171
+msgid "Your Review"
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:22
+msgid "Your company can be viewed, edited or removed below."
+msgid_plural "Your companies can be viewed, edited or removed below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:34
+msgid "You do not have any active company listings."
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:54
+#: wp-job-manager-resumes/candidate-dashboard.php:54
+msgid "Hide"
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:57
+#: mas-wp-job-manager-company/company-dashboard.php:61
+#: wp-job-manager-resumes/candidate-dashboard.php:58
+msgid "Publish"
+msgstr ""
+
+#: mas-wp-job-manager-company/company-dashboard.php:99
+msgid "Add Company"
+msgstr ""
+
+#: searchform.php:8
+msgid "Search for:"
+msgstr ""
+
+#: templates/blog/home/business/content-gallery.php:19
+#: templates/blog/home/business/content.php:33
+msgid "on %s"
+msgstr ""
+
+#: templates/blog/home/startup/content.php:31
+msgid "%s Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: templates/blog/home/startup/content.php:32
+msgid "%s 1 comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: templates/contents/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: templates/contents/content-none.php:22
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: templates/contents/content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: templates/contents/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: templates/docs/content-docs.php:55 wedocs/shortcode.php:58
+msgid "%s section in this topic"
+msgid_plural "%s sections in this topic"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/docs/content-docs.php:60 wedocs/shortcode.php:63
+msgid "and"
+msgstr ""
+
+#: templates/footer/primary-background/v6.php:10
+msgid "We're here to help"
+msgstr ""
+
+#: templates/footer/primary-background/v6.php:11
+msgid ""
+"Find the right solution and get tailored pricing options. Or, find fast "
+"answers in our"
+msgstr ""
+
+#: templates/footer/primary-background/v6.php:11
+msgid "Help Center."
+msgstr ""
+
+#: templates/header/topbar-search-form.php:12
+msgid "Search %s"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:30
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:41
+msgid "Rating breakdown"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:47
+msgid "%s stars"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:100
+msgid "There are no reviews yet."
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:110
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:128
+#: templates/shop/single-product-advanced-reviews.php:141
+msgid "Add a review"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:141
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:151
+#: woocommerce/myaccount/form-reset-password.php:47
+msgid "Save"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:157
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:161
+msgid "Your Rating"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:162
+msgid "Rate&hellip;"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:163
+msgid "Perfect"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:164
+msgid "Good"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:165
+msgid "Average"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:166
+msgid "Not that bad"
+msgstr ""
+
+#: templates/shop/single-product-advanced-reviews.php:167
+msgid "Very Poor"
+msgstr ""
+
+#: templates/widgets/front-posts-widget.php:32
+msgid "No posts found."
+msgstr ""
+
+#: wedocs/content-feedback.php:8
+msgid "%d person found this useful"
+msgid_plural "%d persons found this useful"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wedocs/content-feedback.php:8 wedocs/content-feedback.php:9
+msgid "No votes yet"
+msgstr ""
+
+#: wedocs/content-feedback.php:9
+msgid "%d person found this not useful"
+msgid_plural "%d persons found this not useful"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wedocs/content-feedback.php:12
+msgid "Was this article helpful to you?"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:32
+msgid "Start Shopping"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:73
+#. Translators: $s shipping destination.
+msgid "Shipping to %s."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:74
+msgid "Change address"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:76
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:83
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:85
+msgid ""
+"There are no shipping options available. Please ensure that your address "
+"has been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:88
+#. Translators: $s shipping destination.
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:89
+msgid "Enter a different address"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:28
+#: woocommerce/checkout/form-checkout.php:42
+msgid "Order Summary"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:33
+msgid "Cart subtotal (%s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:60
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:80
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:105 woocommerce/cart/cart.php:44
+#: woocommerce/checkout/review-order.php:119
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:29
+msgid "%s items"
+msgstr ""
+
+#: woocommerce/cart/cart.php:41
+msgid "Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:42
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:43 woocommerce/global/quantity-input.php:28
+#: woocommerce/global/quantity-input.php:51
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:97
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:160
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:202 woocommerce/cart/cart.php:209
+msgid "Promo Code?"
+msgstr ""
+
+#: woocommerce/cart/cart.php:210
+msgid "Promo code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:212
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:212
+msgid "Apply"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:24
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:66
+msgid "Your cart is empty."
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Proceed to checkout"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:24
+msgid "Calculate shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:50
+#: woocommerce/cart/shipping-calculator.php:54
+#: woocommerce/cart/shipping-calculator.php:65
+msgid "State / County"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:74
+msgid "City"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:80
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:27
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:31
+msgid "Billing details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:78
+msgid "Additional information"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:110
+msgid "My Shipping address is different than my billing address."
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:131
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:24
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:27
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:27
+msgid "Payment Method"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:36
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:36
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:45
+#. translators: $1 and $2 opening and closing emphasis tags respectively
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:47
+msgid "Update totals"
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:42
+msgid "Price: "
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:58
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:29
+msgid ""
+"Unfortunately your order cannot be processed as the originating "
+"bank/merchant has declined your transaction. Please attempt your purchase "
+"again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:32
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:34
+msgid "My account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:40
+msgid "Your order is completed!"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:41
+msgid ""
+"Thank you for your order! Your order is being processed. You will receive "
+"an email confirmation when your order is completed."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:53
+msgid "Continue Shopping"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:70
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:21
+#. translators: %s: Quantity.
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:24
+msgid "Shop order"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:28
+#. translators: %d: total results
+msgid "Showing the single result"
+msgid_plural "%d products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/dashboard.php:34
+msgid "Your Order"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:35
+msgid "Track, return or buy things again"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:50
+msgid "Login & Security"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:51
+msgid "Edit login, name and mobile number"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:66
+msgid "Your Address"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:67
+msgid "Edit Addresses for orders and gifts"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:40 woocommerce/myaccount/orders.php:158
+msgid "Go shop"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:42 woocommerce/myaccount/orders.php:160
+msgid "No order has been made yet."
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:28
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:34
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:43
+msgid "Display name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:45
+msgid ""
+"This will be how your name will be displayed in the account section and in "
+"reviews"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:62
+msgid "Password change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:66
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:72
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:76
+msgid "Confirm new password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:87
+msgid "Save changes"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:26
+#: woocommerce/myaccount/my-address.php:31
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:27
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:69
+msgid "Save address"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:46
+msgid "Back to sign in"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:51
+msgid "Reset password"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:51
+msgid "Request Reset Link"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:27
+msgid "Enter a new password below."
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:30
+msgid "New password"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:34
+msgid "Re-enter new password"
+msgstr ""
+
+#: woocommerce/myaccount/lost-password-confirmation.php:26
+msgid "Password reset email has been sent."
+msgstr ""
+
+#: woocommerce/myaccount/lost-password-confirmation.php:28
+msgid ""
+"A password reset email has been sent to the email address on file for your "
+"account, but may take several minutes to show up in your inbox. Please wait "
+"at least 10 minutes before attempting another reset."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:40
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:97
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:117
+#. translators: 1: formatted order total 2: total order items
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/view-order.php:26
+msgid "Order details"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:29
+msgid "Order Number:"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:33
+msgid "Order Date:"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:37
+msgid "Order Status:"
+msgstr ""
+
+#: woocommerce/myaccount/view-order.php:43
+msgid "Order updates"
+msgstr ""
+
+#: woocommerce/order/order-again.php:22
+msgid "Order again"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:30
+msgid "Billing address:"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:55
+#: woocommerce/order/order-details-customer.php:99
+#: woocommerce/single-product/meta.php:30
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:74
+msgid "Shipping address:"
+msgstr ""
+
+#: woocommerce/order/order-details-item.php:27
+msgid "Product Info:"
+msgstr ""
+
+#: woocommerce/order/order-details-item.php:30
+msgid "Product Name:"
+msgstr ""
+
+#: woocommerce/order/order-details-item.php:58
+msgid "Product Quantity:"
+msgstr ""
+
+#: woocommerce/order/order-details-item.php:65
+msgid "Product Total:"
+msgstr ""
+
+#: woocommerce/order/order-details.php:64
+msgid "Transaction details:"
+msgstr ""
+
+#: woocommerce/order/order-details.php:78
+msgid "Note:"
+msgstr ""
+
+#: woocommerce/order/order-downloads.php:24
+msgid "Downloads"
+msgstr ""
+
+#: woocommerce/order/order-downloads.php:90
+msgid "&infin;"
+msgstr ""
+
+#: woocommerce/order/order-downloads.php:96
+msgid "Never"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:40
+msgid "Clear"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:30
+msgid "SKU:"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:34
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/meta.php:36
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/related.php:26
+msgid "Related products"
+msgstr ""
+
+#: woocommerce/single-product/review-meta.php:27
+msgid "Your review is awaiting approval"
+msgstr ""
+
+#: woocommerce/single-product/review-meta.php:37
+msgid "verified owner"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:27
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:19
+msgid "Your job alerts are shown in the table below and will be emailed to %s."
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:23
+msgid "Alert Name"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:24
+msgid "Keywords"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:29
+msgid "Tags"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:32
+msgid "Frequency"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:54
+msgid "Results"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:58
+msgid "Send&nbsp;Now"
+msgstr ""
+
+#: wp-job-manager-alerts/my-alerts.php:148
+msgid "Next: %s at %s"
+msgstr ""
+
+#: wp-job-manager-bookmarks/bookmark-form.php:29
+msgid "Notes:"
+msgstr ""
+
+#: wp-job-manager-bookmarks/bookmark-form.php:35
+msgid "Update Bookmark"
+msgstr ""
+
+#: wp-job-manager-bookmarks/bookmark-form.php:35
+msgid "Add Bookmark"
+msgstr ""
+
+#: wp-job-manager-bookmarks/bookmark-form.php:41
+msgid "Remove Bookmark"
+msgstr ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:22
+msgid "Your resume can be viewed, edited or removed below."
+msgid_plural "Your resume(s) can be viewed, edited or removed below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:34
+msgid "You do not have any active resume listings."
+msgstr ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:90
+msgid "Expires %s"
+msgstr ""
+
+#: wp-job-manager-resumes/candidate-dashboard.php:108
+msgid "Add Resume"
+msgstr ""
+
+#: wp-job-manager-resumes/form-fields/repeated-field.php:62
+msgid "Add URL"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://demo2.madrasthemes.com/front-demos/main/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Front - Multipurpose Business WordPress Theme is an incredibly beautiful, "
+"fully responsive and cleanly coded WordPress theme. It is the perfect "
+"starting point for your creative business."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MadrasThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://themeforest.net/user/madrasthemes/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blog Agency"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blog Business"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blog Start-up"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Login & My Account"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Privacy Policy"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Terms & Conditions"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:1206
+#: classes/class-tgm-plugin-activation.php:3033
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2427
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: classes/class-tgm-plugin-activation.php:2473
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: classes/class-tgm-plugin-activation.php:2567
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: comments.php:33
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:43 mas-wp-job-manager-company/comments.php:40
+#. translators: %s: post title
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:47 mas-wp-job-manager-company/comments.php:44
+#. translators: 1: number of comments, 2: post title
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/front-functions.php:276
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/front-functions.php:278
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/front-template-functions.php:957
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: inc/wedocs/front-wedocs-template-functions.php:122
+msgctxt "Used before tag names."
+msgid "Tags:"
+msgstr ""
+
+#: inc/wp-job-manager-resumes/class-front-wpjmr.php:37
+msgctxt "Resume permalink - resave permalinks after changing this"
+msgid "resume"
+msgstr ""
+
+#: searchform.php:10
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:12
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:61
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:33
+#. translators: 1: first result 2: last result 3: total results
+msgctxt "with first and last result"
+msgid "Showing the single result"
+msgid_plural "%3$d products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/orders.php:103
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""

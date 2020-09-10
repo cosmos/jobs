@@ -1,0 +1,52 @@
+table.wp-job-manager-repeated-rows {
+    border-color: #dfdfdf;
+    background-color: #f9f9f9;
+    margin: 0;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    thead {
+        th {
+            padding: 5px 8px 8px;
+            background-color: #f1f1f1;
+        }
+    }
+    tbody {
+        td.left {
+            width: 38%;
+        }
+        td.sort-column {
+            cursor: move;
+            color: #ccc;
+            &:before {
+                content: "\f333";
+                font-family: 'dashicons';
+            }
+        }
+        td {
+            padding: 8px 0 0 8px;
+            vertical-align: middle;
+            input, textarea {
+                width: 100%;
+            }
+            &:last-child {
+                padding-right: 8px;
+            }
+            label {
+                display: none;
+            }
+            p {
+                margin:0;
+            }
+        }
+    }
+    tfoot {
+        .submit {
+            border: 0 none;
+            float: none !important;
+            padding: 8px !important;
+        }
+    }
+}

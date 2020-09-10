@@ -1,0 +1,25 @@
+.site-footer {
+    &.style-v15 {
+        .footer-primary-menu {
+            margin-bottom: 0 !important;
+
+            li {
+                @extend .pl-3;
+            }
+            a {
+                @extend .font-size-1;
+                padding: 0 !important;
+            }
+        }
+
+        .footer-logo {
+            a {
+                @extend .mb-lg-auto;
+            }
+        }
+
+        &.site-footer__default .widget.widget_nav_menu ul.menu span + .menu-text {
+            @extend .ml-3;
+        }
+    }
+}

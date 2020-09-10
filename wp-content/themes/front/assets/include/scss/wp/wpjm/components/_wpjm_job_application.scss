@@ -1,0 +1,196 @@
+.job_application_details {
+    label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 80%;
+        font-weight: 500;
+    }
+
+    textarea,
+    textarea.input-text {
+        height: auto;
+    }
+
+    select {
+        &:focus::-ms-value {
+            // Suppress the nested default white text on blue background highlight given to
+            // the selected option text when the (still closed) <select> receives focus
+            // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+            // match the appearance of the native widget.
+            // See https://github.com/twbs/bootstrap/issues/19398.
+            color: $input-color;
+            background-color: $input-bg;
+        }
+
+        &[size],
+        &[multiple] {
+            height: auto;
+        }
+    }
+
+    .job-manager-application-form {
+        @include make-row;
+
+        > fieldset {
+            @include media-breakpoint-up(md) {
+                @include make-col-ready;
+                @include make-col(12);
+            }
+            margin-bottom: ($spacer * 2) !important;
+        }
+
+        > p {
+            @include media-breakpoint-up(md) {
+                @include make-col-ready;
+                @include make-col(12);
+            }
+        }
+    }
+
+    &:not( .modal ) .job-manager-application-form {
+        > fieldset {
+            &:not( .fieldset-message ):not( .fieldset-application_message ):not( .fieldset-application-message ) {
+                @include media-breakpoint-up(md) {
+                    @include make-col(6);
+                }
+            }
+        }
+
+        > p {
+            text-align: center !important;
+        }
+    }
+
+    .fieldset-message,
+    .fieldset-application_message,
+    .fieldset-application-message,
+    .job-manager-application-form > p {
+        order: 2;
+    }
+
+    .fieldset-application_attachment {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0;
+        height: 100% !important;
+
+        .field {
+
+            > .input-text {
+                width: 100% !important;
+            }
+
+            > input[type=file] {
+                border-radius: $input-border-radius !important;
+            }
+        }
+    }
+}
+
+#job-manager-job-applications div.job-applications ul.job-applications li.job-application {
+    header {
+        .job-application-rating {
+            font-size: ($spacer * 0.875);
+            color: $warning;
+
+            &:before,
+            span:before {
+                font-family: $font-family-font-awesome-icon;
+                content: "\f005\f005\f005\f005\f005";
+                font-weight: 400;
+                letter-spacing: 0;
+            }
+
+            span {
+                word-break: keep-all;
+
+                &:before {
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    fieldset:not(:last-child) {
+        margin-bottom: $spacer;
+    }
+
+    .fieldset-rating {
+        input {
+            @include make-form-control;
+        }
+    }
+
+    .job-application-notes .button {
+        @include make-button;
+        @extend %make-button-primary;
+    }
+
+    .job-application-edit input[type="submit"],
+    .job-application-notes .button {
+        @include make-button-sm;
+    }
+
+    section.job-application-content,
+    section.job-application-edit,
+    section.job-application-notes {
+        a.hide_section {
+            color: initial;
+
+            @include hover-focus {
+                color: $danger;
+            }
+
+            &:before {
+                font-family: $font-family-font-awesome-icon;
+                content: "\f057";
+            }
+        }
+    }
+
+    footer ul.actions {
+        margin: 0;
+
+        li {
+            a {
+                padding: 0;
+                width: ($spacer * 2.6);
+                height: ($spacer * 3);
+                text-indent: -9999px;
+
+                &:before {
+                    font-family: $font-family-font-awesome-icon;
+                    font-size: $spacer;
+                    padding: ($spacer * 0.9);
+                    text-indent: 0;
+                }
+            }
+
+            &.edit a:before {
+                content: "\f044";
+            }
+
+            &.notes a:before {
+                content: "\f075";
+            }
+
+            &.email a:before {
+                content: "\f0e0";
+            }
+
+            &.resume a:before {
+                content: "\f007";
+            }
+
+            &.content a:before {
+                content: "\f15c";
+            }
+
+            &.attachment a:before {
+                content: "\f0c6";
+                font-weight: 900;
+            }
+        }
+    }
+}

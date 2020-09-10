@@ -1,0 +1,38 @@
+.comment-respond {
+	.comment-reply-title {
+		@include font-size($h4-font-size);
+		display: none;
+	}
+
+	form.comment-form {
+		display: flex;
+		flex-direction: column;
+
+		label {
+			color: #1e2022;
+		}
+
+		.comment-form-author,
+		.comment-form-email {
+			order: 1;
+		}
+
+		.comment-form-comment {
+			order: 2;
+		}
+
+		.form-submit {
+			order: 3;
+		}
+
+		.comment-form-cookies-consent {
+			display: none;
+		}
+
+		.form-submit {
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 0;
+		}
+	}
+}

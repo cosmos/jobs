@@ -1,0 +1,400 @@
+# Copyright (C) 2020 Front Gutenberg Blocks
+# This file is distributed under the same license as the Front Gutenberg Blocks package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Front Gutenberg Blocks\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/init.php:410
+msgid "FrontGB"
+msgstr ""
+
+#: src/init.php:414
+msgid "FrontGB Products"
+msgstr ""
+
+#: src/init.php:418
+msgid "FrontGB Info Blocks"
+msgstr ""
+
+#: src/init.php:422
+msgid "FrontGB Jobs"
+msgstr ""
+
+#: src/init.php:426
+msgid "FrontGB Hero"
+msgstr ""
+
+#: src/init.php:430
+msgid "FrontGB Hero Carousel"
+msgstr ""
+
+#: src/init.php:434
+msgid "FrontGB Hero Form"
+msgstr ""
+
+#: src/init.php:438
+msgid "FrontGB Pricing"
+msgstr ""
+
+#: src/init.php:442
+msgid "FrontGB Gallery"
+msgstr ""
+
+#: src/init.php:446
+msgid "FrontGB Contact Form"
+msgstr ""
+
+#: src/init.php:450
+msgid "FrontGB Docs"
+msgstr ""
+
+#: src/init.php:454
+msgid "FrontGB Listing"
+msgstr ""
+
+#: src/init.php:458
+msgid "FrontGB Footer"
+msgstr ""
+
+#: src/init.php:462
+msgid "FrontGB Portfolio"
+msgstr ""
+
+#: src/init.php:466
+msgid "FrontGB Stats"
+msgstr ""
+
+#: src/block/disabled-blocks.php:72
+msgid "Security error, please refresh the page and try again."
+msgstr ""
+
+#: src/block/case-studies-simple-footer/index.php:102, src/block/more-projects/index.php:135, src/block/portfolio/index.php:403
+msgid "Portfolio projects is empty"
+msgstr ""
+
+#: src/block/case-studies-simple-footer/index.php:100, src/block/more-projects/index.php:133, src/block/portfolio/index.php:401
+msgid "Portfolio post type is not available"
+msgstr ""
+
+#: src/block/companies-content/index.php:30, src/block/companies-search-form/index.php:28
+msgid "MAS WP Job Manager Company is not activated"
+msgstr ""
+
+#: src/block/companies-content/index.php:28, src/block/companies-search-form/index.php:26, src/block/jobs-content/index.php:26, src/block/jobs-hero-search-form/index.php:26
+msgid "WP Job Manager is not activated"
+msgstr ""
+
+#: src/block/companies-content/index.php:26, src/block/customer-stories-content/index.php:26, src/block/products-block-content/index.php:72, src/block/products-carousel-block/index.php:87, src/block/products-category-content/index.php:73, src/block/shop-hero-slider/index.php:72
+msgid "Front is not activated"
+msgstr ""
+
+#: src/block/companies-content/index.php:89
+msgid "%s review"
+msgid_plural "%s reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/block/companies-content/index.php:101
+msgid "Salaries"
+msgstr ""
+
+#: src/block/companies-content/index.php:107
+msgid "Q&A"
+msgstr ""
+
+#: src/block/companies-content/index.php:122
+msgid "Open Job - %s"
+msgid_plural "Open Jobs - %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/block/companies-search-form/index.php:99
+msgid "Get access to millions of company reviews"
+msgstr ""
+
+#: src/block/companies-search-form/index.php:103
+msgid "Find great places to work"
+msgstr ""
+
+#: src/block/companies-search-form/index.php:111
+msgid "Company name or job title"
+msgstr ""
+
+#: src/block/companies-search-form/index.php:115
+msgid "Company or title"
+msgstr ""
+
+#: src/block/companies-search-form/index.php:119, src/block/companies-search-form/index.php:123, src/block/jobs-hero-search-form/index.php:81
+msgid "City, state, or zip"
+msgstr ""
+
+#: src/block/companies-search-form/index.php:127
+msgid "Search"
+msgstr ""
+
+#: src/block/customer-stories-content/index.php:30
+msgid "\"customer_story\" post type is not available"
+msgstr ""
+
+#: src/block/customer-stories-content/index.php:88
+msgid "Customer Stories is empty"
+msgstr ""
+
+#: src/block/customer-stories-content/index.php:79
+msgid "Read Story"
+msgstr ""
+
+#: src/block/default-footer/index.php:270, src/block/default-footer/index.php:270, src/block/default-footer/index.php:351, src/block/default-footer/index.php:351, src/block/default-footer/index.php:415, src/block/default-footer/index.php:415, src/block/default-footer/index.php:460, src/block/default-footer/index.php:460, src/block/default-footer/index.php:580, src/block/default-footer/index.php:580, src/block/default-footer/index.php:704, src/block/default-footer/index.php:704, src/block/default-footer/index.php:775, src/block/default-footer/index.php:775, src/block/default-footer/index.php:855, src/block/default-footer/index.php:855, src/block/default-footer/index.php:895, src/block/default-footer/index.php:895, src/block/default-footer/index.php:966, src/block/default-footer/index.php:966, src/block/primary-footer/index.php:188, src/block/primary-footer/index.php:188, src/block/primary-footer/index.php:268, src/block/primary-footer/index.php:268, src/block/primary-footer/index.php:399, src/block/primary-footer/index.php:399
+msgid "Add a social menu"
+msgstr ""
+
+#: src/block/default-footer/index.php:614
+msgid "call us: "
+msgstr ""
+
+#: src/block/default-footer/index.php:615
+msgid "email us: "
+msgstr ""
+
+#: src/block/docs-content/index.php:26
+msgid "WeDocs is not activated"
+msgstr ""
+
+#: src/block/docs-content/index.php:34
+msgid "View Details"
+msgstr ""
+
+#: src/block/docs-content/index.php:135
+msgid "%s section in this topic"
+msgid_plural "%s sections in this topic"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/block/docs-content/index.php:140
+msgid "and"
+msgstr ""
+
+#: src/block/docs-content/index.php:141
+msgid "Written by"
+msgstr ""
+
+#: src/block/docs-posts-list/index.php:111
+msgid "See all"
+msgstr ""
+
+#: src/block/header/index.php:245
+msgid "Buy Now"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:68, src/block/hero-post-subblock/index.php:92, src/block/news-blogs/index.php:167
+msgid "Read More"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:194, src/block/hero-post-subblock/index.php:198
+msgid "Different sized featured images"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:206, src/block/hero-post-subblock/index.php:210, src/block/news-blogs/index.php:676
+msgid "Post excerpt for FrontGB"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:218, src/block/hero-post-subblock/index.php:222
+msgid "Category list links"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:230, src/block/hero-post-subblock/index.php:234, src/block/more-projects/index.php:248, src/block/news-blogs/index.php:712, src/block/portfolio/index.php:540
+msgid "Author information"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:242, src/block/hero-post-subblock/index.php:246
+msgid "Number of comments"
+msgstr ""
+
+#: src/block/hero-post-1/index.php:284, src/block/hero-post-subblock/index.php:288
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/block/hero-post-1/index.php:295, src/block/hero-post-subblock/index.php:299, src/block/news-blogs/index.php:65
+msgid ", "
+msgstr ""
+
+#: src/block/jobs-content/index.php:42
+msgid "%d Open Position."
+msgid_plural "%d Open Positions."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/block/jobs-hero-search-form/index.php:61
+msgid "what"
+msgstr ""
+
+#: src/block/jobs-hero-search-form/index.php:65
+msgid "job title, keywords, or company"
+msgstr ""
+
+#: src/block/jobs-hero-search-form/index.php:69
+msgid "Keyword or title"
+msgstr ""
+
+#: src/block/jobs-hero-search-form/index.php:73
+msgid "where"
+msgstr ""
+
+#: src/block/jobs-hero-search-form/index.php:77
+msgid "city, state, or zip code"
+msgstr ""
+
+#: src/block/jobs-hero-search-form/index.php:85
+msgid "Find Jobs"
+msgstr ""
+
+#: src/block/more-projects/index.php:260, src/block/news-blogs/index.php:688, src/block/news-blogs/index.php:700, src/block/portfolio/index.php:561
+msgid "Category"
+msgstr ""
+
+#: src/block/news-blogs/designs.php:95
+msgid "Read Now"
+msgstr ""
+
+#: src/block/news-blogs/designs.php:113, src/block/news-blogs/designs.php:236, src/block/news-blogs/designs.php:303, src/block/testimonials-static/designs.php:160, src/block/testimonials-static/designs.php:166, src/block/testimonials-static/designs.php:190, src/block/testimonials-static/designs.php:316
+msgid "Img"
+msgstr ""
+
+#: src/block/news-blogs/designs.php:133
+msgid "Image"
+msgstr ""
+
+#: src/block/news-blogs/designs.php:324
+msgid "by "
+msgstr ""
+
+#: src/block/news-blogs/index.php:351
+msgid "News & Blog"
+msgstr ""
+
+#: src/block/news-blogs/index.php:354, src/block/news-blogs/index.php:410
+msgid "Read our latest news"
+msgstr ""
+
+#: src/block/news-blogs/index.php:357, src/block/news-blogs/index.php:380, src/block/news-blogs/index.php:475
+msgid "Our duty towards you is to share our experience we're reaching in our work path with you."
+msgstr ""
+
+#: src/block/news-blogs/index.php:374, src/block/news-blogs/index.php:407
+msgid "News"
+msgstr ""
+
+#: src/block/news-blogs/index.php:377
+msgid "Read our <span class=\"font-weight-semi-bold\">news & blogs</span>"
+msgstr ""
+
+#: src/block/news-blogs/index.php:421
+msgid "Load More"
+msgstr ""
+
+#: src/block/news-blogs/index.php:426
+msgid "Loading..."
+msgstr ""
+
+#: src/block/news-blogs/index.php:427
+msgid "No more works"
+msgstr ""
+
+#: src/block/news-blogs/index.php:472
+msgid "Bitcoin news"
+msgstr ""
+
+#: src/block/news-blogs/index.php:664
+msgid "Featured Image"
+msgstr ""
+
+#: src/block/news-blogs/index.php:724
+msgid "Post Date"
+msgstr ""
+
+#: src/block/news-blogs/index.php:736
+msgid "Post Time Ago"
+msgstr ""
+
+#: src/block/portfolio/index.php:376
+msgid "Our <span class=\"font-weight-semi-bold\">branding</span> works"
+msgstr ""
+
+#: src/block/primary-footer/index.php:438, src/block/testimonials-carousel/index.php:238, src/block/testimonials-carousel/index.php:329, src/block/testimonials-carousel/index.php:351, src/block/testimonials-carousel/index.php:401, src/block/testimonials-carousel/index.php:417, src/block/testimonials-carousel/index.php:437, src/block/testimonials-carousel/index.php:469, src/block/testimonials-carousel/index.php:481
+msgid "SVG"
+msgstr ""
+
+#: src/block/products-block-content/index.php:74, src/block/products-carousel-block/index.php:89, src/block/products-category-content/index.php:75, src/block/shop-hero-slider/index.php:74
+msgid "WooCommerce is not activated"
+msgstr ""
+
+#: src/block/products-category-content/index.php:162, src/block/products-category-content/index.php:160
+msgid "View All"
+msgstr ""
+
+#: src/block/sidebar/index.php:42
+msgid "Sidebar not available"
+msgstr ""
+
+#: src/block/sidebar/index.php:29
+msgid "Toggle navigation"
+msgstr ""
+
+#: src/block/sidebar/index.php:31
+msgid "View all categories"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:242
+msgid "Review from our experts"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:375
+msgid "Testimonials"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:378
+msgid "100+ companies are using Front"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:405
+msgid "Satisfied customers on Front"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:441
+msgid "What Front users say about us."
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:495, src/block/testimonials-static/index.php:226
+msgid "Testimonials is empty"
+msgstr ""
+
+#: src/block/testimonials-carousel/index.php:493, src/block/testimonials-static/index.php:224
+msgid "Testimonial post type is not available"
+msgstr ""
+
+#: src/block/testimonials-static/index.php:204
+msgid "Loved by business and individuals across the globe."
+msgstr ""
+
+#: src/block/testimonials-static/index.php:204
+msgid "Front workflow is loved by users worldwide"
+msgstr ""
+
+#: src/block/testimonials-static/index.php:215
+msgid "What people are saying"
+msgstr ""
+
+#: src/block/testimonials-static/index.php:456
+msgid "Star Ratings"
+msgstr ""

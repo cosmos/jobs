@@ -1,0 +1,106 @@
+/**
+ * Blue color styles
+ */
+
+ // Bootstrap core
+@import '../../vendor/bootstrap/scss/functions';
+@import '../../vendor/bootstrap/scss/mixins';
+@import '../../vendor/bootstrap/scss/variables';
+
+// Front setup
+@import '../../include/scss/front/variables';
+@import '../../include/scss/front/mixins';
+
+
+$primary:                                                   #377dff;
+$primary-darker:                                            darken($primary,5.8%);/*196aff*/
+$primary-lighter:          								    darken($primary,5.6%);/*1a6aff*/
+
+$gradient-overlay-half-primary-lighter:                     $primary-lighter;
+$gradient-half-primary-lighter:                             $primary-lighter;
+$gradient-overlay-half-primary-darker:                      $primary-darker;
+$gradient-half-info:                                        #00dffc;
+$secondary:                                                 #77838f;
+
+$gradient-overlay-half-primary:                             $primary ;
+$gradient-overlay-half-primary-darker:                      $primary-darker;
+$gradient-overlay-half-info:                                #00dffc;
+$gradient-half-indigo:                                      #2d1582;
+$gradient-overlay-half-indigo:                              #2d1582;
+$gradient-overlay-half-white:                               #fff;
+$gradient-overlay-half-dark:                                #1e2022;
+$gradient-overlay-half-gray-700:                            #77838f;
+
+$link-color:                                                $primary;
+$link-hover-color:                                          darken($link-color, 15%);
+$gradient-half-primary:                                     $primary;
+$gradient-overlay-half-primary:                             $primary;
+$link-icon-color:                                           $primary;
+$form-focus-addon-color:                                    $primary;
+$nav-classic-nav-link-state-color:                          $primary;
+$nav-white-nav-link-active-color:                           $primary;
+$nav-icon-nav-item-active-color:                            $primary;
+$nav-icon-nav-item-active-nia-bg-color:                     $primary;
+$nav-box-nav-link-active-color:                             $primary;
+$header-nav-link-active-color:     						    $primary;
+$header-nav-link-hover-color:            				    $primary;
+$header-sub-menu-border-color:                              $primary;
+$hamburger-layer-hover-color:             					$primary;
+$go-to-modern-color:                                        $primary;
+$go-to-ver-arrow-color:                                     $primary;
+$go-to-bg:                                                  $primary;
+$card-text-dark-hover-color:                                $primary;
+$card-btn-arrow-color:                                      $primary;
+$tooltip-bg:                                                $primary;
+$pagination-hover-color:                                    $primary;
+$dropdown-item-states:                                      $primary;
+$btn-custom-toggle-primary-hover-color:                     $primary;
+$btn-custom-toggle-white-active-color:                      $primary;
+$btn-custom-toggle-primary-active-bg-color:                 $primary;
+$btn-custom-toggle-primary-hover-border-color:              $primary;
+$btn-custom-toggle-primary-active-border-color:             $primary;
+$custom-select-focus-text-color:                            $primary;
+$list-group-action-hover-color:                             $primary;
+$slick-arrow-color:                                         $primary;
+$slick-arrow-flat-white-hover-color:                        $primary;
+$slick-arrow-hover-bg-color:                                $primary;
+$slick-pagination-dot-bg-color:                             $primary;
+$slick-pagination-dot-border-active-color:                  $primary;
+$brand-primary-color:                                       $primary;
+$checkbox-outline-input-checked-border-color:               $primary;
+$bookmark-checkbox-checked-bg-color:                        $primary;
+$media-viewer-icon-bg-color:                                $primary;
+$dropzone-abbr-color:                                       $primary;
+$slick-arrow-classic-hover-bg-color:                        $primary;
+
+$box-shadow-primary-lg:                                     0 0 50px rgba($primary, .4);
+$link-icon-bg-color:                                        rgba($primary, .1);
+$form-focus-border-color:                                   rgba($primary, .5);
+$form-focus-box-shadow:                                     0 0 10px rgba($primary, .1) !default;
+$header-submenu-box-shadow:                                 0 8px 20px rgba($primary, .075) !default;
+$go-to-ver-arrow-bg-color:                                  rgba($primary, .1) !default;
+$card-frame-hover-border-color:                             rgba($primary, .3) !default;
+$card-frame-hover-box-shadow:                               0 0 35px rgba($primary, .125) !default;
+$pagination-hover-bg:                                       rgba($primary, .1) !default;
+$pagination-hover-border-color:                             rgba($primary, .1) !default;
+//$dropdown-box-shadow:                                       0 5px 9px rgba($primary, .075), 0 5px 9px rgba($gray-700, .075) !default;
+$bs-input-btn-focus-color:                                  rgba($primary, .25) !default;
+$custom-control-indicator-checked-disabled-border:          rgba($primary, 0) !default;
+$slick-arrow-bg-color:                                      rgba($primary, .1) !default;
+$slick-arrow-flat-bg-color:                                 rgba($primary, .8) !default;
+$bookmark-checkbox-checked-box-shadow:                      0 3px 6px 0 rgba($primary, .25) !default;
+$dropzone-abbr-bg-color:                                    rgba($primary, .1) !default;
+
+/*secondary*/
+$nav-icon-action-color:                                     $secondary;
+$pagination-color:                                          $secondary;
+$pagination-border-color:                                   $secondary;
+$bookmark-checkbox-color:                                   $secondary;
+$dropzone-size-color:                                       $secondary;
+
+
+
+$nav-icon-action-bg-color:                                  rgba($secondary, .1) !default;
+
+
+@import 'color';

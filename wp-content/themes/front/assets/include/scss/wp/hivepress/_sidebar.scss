@@ -1,0 +1,16 @@
+.hp-listing-sidebar {
+    .widget {
+        &.front_hp_listings_categories_widget {
+            .cat-item-inner > a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                > .count {
+                    border: 1px solid $border-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

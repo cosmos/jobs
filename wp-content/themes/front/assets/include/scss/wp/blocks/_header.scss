@@ -1,0 +1,158 @@
+.u-header__sub-menu:not(.hs-mega-menu) {
+    min-width: 230px;
+}
+
+@include media-breakpoint-down(sm) {
+    .container > .u-header--floating__inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.offcanvas-menu-sidebar.u-header-collapse__nav {
+    .u-header-collapse__nav-link.text-secondary-color {
+        &:not( :hover ) {
+            color: #77838f;
+        }
+    }
+
+    ul li:not( .u-has-submenu ) {
+        a {
+            padding: 8px 16px 8px 0px !important; 
+            display: inline-block;
+        }
+    }
+
+    .u-header-collapse__nav-pointer {
+        &:after {
+            transform: rotate(-180deg);
+        }
+
+        &.collapsed:after {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.offcanvas-sidebar-footer-menu .front-user-account-sidebar-footer-menu a {
+    font-size: 12px;
+}
+
+.offcanvas-menu-modal.u-fullscreen__nav {
+
+    .u-fullscreen__nav-list {
+        a {
+            font-size: 16px;
+        }
+    }
+
+    ul li:not( .u-has-submenu ) {
+        a {
+            padding: 8px 16px !important; 
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+header .menu-image-title-after.menu-image-not-hovered img {
+    padding-right: 0 !important;
+    @extend .dropdown-item-icon;
+    [dir="rtl"] & {
+        padding-left: 0 !important;
+    }
+}
+
+
+
+header .menu-image-title-after.menu-image-title {
+    padding-left: 0 !important;
+}
+
+aside#sidebarMyAccountContent.u-sidebar.my-account-sidebar-left {
+    box-shadow: 13px 0 20px rgba(119, 131, 143, 0.08) !important;
+}
+
+.admin-bar {
+    header.u-header--sticky-top,
+    header.u-header--sticky-top-md,
+    header.js-header-fix-moment,
+    aside#sidebarContent.sidebar-cart,
+    aside#sidebarMyAccountContent.myaccount-sidebar {
+        top: 32px !important;
+
+        @media (max-width: 768px) {
+            top: 46px !important;
+        }
+    }
+}
+
+@media screen and ( max-width: 600px ) {
+    div[id*="wpadminbar"] {
+        margin-top: -46px;
+    }
+}
+
+// Special pages header fixes
+.single-post .u-header--bg-transparent {
+    background-color: #fff;
+}
+
+.single-customer_story,
+.front-docs-pages,
+.front-wpjm-pages:not(.single-job_listing--style-2),
+.front-wpjmr-pages,
+.mas-wpjmc-pages,
+.woocommerce-page {
+    .u-header--abs-top + #content,
+    .u-header--abs-top-sm + #content,
+    .u-header--abs-top-md + #content,
+    .u-header--abs-top-lg + #content,
+    .u-header--abs-top-xl + #content {
+        @extend .space-top-2;
+        @extend .space-top-md-3;
+    }
+
+    .u-header--bg-transparent {
+        background-color: #fff;
+    }
+}
+
+header,
+#loginModal {
+    .wc-social-login {
+        @extend .px-5;
+        @extend .pb-5;
+        @extend .text-center;
+
+        p {
+            @extend .text-left;
+        }
+    }
+}
+
+aside {
+    .wc-social-login {
+        @extend .text-center;
+
+        p {
+            @extend .text-left;
+        }
+    }
+}
+
+#account-dropdown.user-not-loggedin {
+    width: 280px;
+
+    @media (min-width: 375px) {
+        width: 320px;
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 350px;
+    }
+}

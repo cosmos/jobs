@@ -1,0 +1,14 @@
+.site-footer {
+    &.style-v1 {
+    	.widget {
+    		&:last-child {
+                margin-bottom: 0 !important;
+    		}
+    	}
+    	.container {
+    		> a {
+    			@extend .mb-2;
+    		}
+    	}
+    }
+}

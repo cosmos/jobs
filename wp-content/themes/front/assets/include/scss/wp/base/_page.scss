@@ -1,0 +1,5 @@
+.article {
+    &__content--page {
+        @extend .clearfix;
+    }
+}

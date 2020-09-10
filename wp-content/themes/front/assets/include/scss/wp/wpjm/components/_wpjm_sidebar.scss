@@ -1,0 +1,14 @@
+.sidebar-job,
+.sidebar-resume {
+    .widgettitle {
+        font-size: ($font-size-base * .875);
+        font-weight: $font-weight-semi-bold !important;
+        text-transform: uppercase;
+        margin-bottom: $spacer !important;
+    }
+
+    .widget:not(:last-child) {
+        border-bottom: $border-width solid $border-color !important;
+        padding-bottom: ($spacer * 1.5) !important;
+    }
+}

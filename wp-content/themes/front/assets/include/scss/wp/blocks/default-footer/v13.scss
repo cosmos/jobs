@@ -1,0 +1,12 @@
+.site-footer {
+    &.style-v13 {
+
+        .footer-logo > a {
+    		@extend .mb-5;
+        }
+
+        .footer-social-menu li {
+        	margin-right: 0 !important;	
+        }
+    }
+}

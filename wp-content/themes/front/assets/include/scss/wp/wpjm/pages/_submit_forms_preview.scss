@@ -1,0 +1,65 @@
+#job_preview,
+#resume_preview,
+#company_preview {
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+#job_preview .job_listing_preview,
+#resume_preview .resume_listing_preview,
+#company_preview .company_listing_preview {
+    .sharing-screen-reader-text {
+        @include sr-only;
+    }
+
+    > h1 {
+        display: none !important;
+    }
+
+    &_title {
+        display: flex !important;
+        flex-direction: column !important;
+        @include list-unstyled;
+        padding-bottom: $content-space * 2;
+        border-bottom: $border-width solid $border-color !important;
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row !important;
+            align-items: center !important;
+        }
+
+        > * {
+            margin-right: 0 !important;
+            display: inline-block;
+
+            &:not( :nth-last-child(2) ) {
+                @include media-breakpoint-up(md) {
+                    margin-right: ($spacer * .5) !important;
+                }
+            }
+
+            &:not( h2 ) {
+                order: 1;
+                margin-bottom: ($spacer * .5) !important;
+            }
+
+            &:first-child {
+                @include media-breakpoint-up(md) {
+                    margin-left: auto !important;
+                }
+            }
+        }
+
+        > h2 {
+            text-align: center;
+            margin-bottom: ($spacer * 1.5) !important;
+
+            @include media-breakpoint-up(md) {
+                text-align: left;
+                margin-bottom: ($spacer * .5) !important;
+            }
+        }
+    }
+}

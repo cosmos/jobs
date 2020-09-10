@@ -1,0 +1,114 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Job Manager - Embeddable Job Widget 1.1.2\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/wp-job-manager-embeddable-job-widget\n"
+"POT-Creation-Date: 2020-08-10 19:58:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: templates/form-embed-code-generator.php:20
+msgid "Keyword"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:22
+msgid "Optionally choose a keyword to search"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:26
+msgid "Location"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:28
+msgid "Optionally choose a location to search"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:32
+msgid "Display Count"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:38
+msgid "Show Pagination?"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:45
+msgid "Categories"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:56
+msgid "Any category"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:63
+msgid "Job Type"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:65
+msgid "Any job type"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:76
+msgid "Get Widget Embed Code"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:80
+msgid "Preview"
+msgstr ""
+
+#: templates/form-embed-code-generator.php:83
+msgid "Code"
+msgstr ""
+
+#: wp-job-manager-embeddable-job-widget.php:69
+msgid ""
+"<em>WP Job Manager - Embeddable Job Widget</em> requires WP Job Manager to "
+"be installed and activated."
+msgstr ""
+
+#: wp-job-manager-embeddable-job-widget.php:83
+msgid ""
+"<em>WP Job Manager - Embeddable Job Widget</em> requires WP Job Manager %s "
+"(you are using %s)."
+msgstr ""
+
+#: wp-job-manager-embeddable-job-widget.php:162
+msgid "No matching jobs found"
+msgstr ""
+
+#: wp-job-manager-embeddable-job-widget.php:170
+msgid "Previous"
+msgstr ""
+
+#: wp-job-manager-embeddable-job-widget.php:173
+msgid "Next"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Job Manager - Embeddable Job Widget"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpjobmanager.com/add-ons/embeddable-job-widget"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Lets users generate and embed a widget containing your job listings on "
+"their own sites via a form added to your site with the shortcode "
+"[embeddable_job_widget_generator]."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpjobmanager.com"
+msgstr ""

@@ -1,0 +1,11 @@
+body {
+    word-break: break-word;
+}
+
+table {
+    @extend .table;
+}
+
+.li-pb-2 li {
+    @extend .pb-2
+}

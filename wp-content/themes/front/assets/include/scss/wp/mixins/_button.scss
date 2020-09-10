@@ -1,0 +1,237 @@
+@mixin make-button {
+    display: inline-block;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    color: $body-color;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: $btn-border-width solid transparent;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    @include transition($btn-transition);
+
+    @include hover {
+        color: $body-color;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: $btn-focus-box-shadow;
+    }
+
+    // Disabled comes first so active can properly restyle
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        @include box-shadow($btn-active-box-shadow);
+
+        &:focus {
+            @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        }
+    }
+
+    &[href] {
+        cursor: pointer;
+    }
+
+    &:not([href]):not([type]):not(:disabled):not(.disabled) {
+        cursor: default;
+    }
+
+    &:focus,
+    &.focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus,
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+        @if $enable-accessibility {
+            box-shadow: $bs-input-btn-focus-box-shadow;
+        } @else {
+            box-shadow: $input-btn-focus-box-shadow-disabled;
+        }
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+        &:focus {
+            @if $enable-accessibility {
+                box-shadow: $bs-input-btn-focus-box-shadow;
+            } @else {
+                box-shadow: $input-btn-focus-box-shadow-disabled;
+            }
+        }
+    }
+}
+
+@mixin make-button-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+@mixin make-button-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+@mixin make-button-wide {
+    min-width: $input-btn-min-width;
+}
+
+@mixin make-button-sm-wide {
+    min-width: $input-btn-min-width-sm;
+}
+
+/* Extra Small */
+@mixin make-button-xs {
+    font-size: $btn-font-size-xs;
+    font-weight: $font-weight-normal;
+    padding: $input-btn-paddingY-xs $input-btn-paddingX-xs;
+}
+
+@mixin make-button-block {
+    display: block;
+    width: 100%;
+}
+
+@mixin make-button-pill {
+    @include border-radius($border-radius-pill);
+}
+
+@mixin make-button-icon {
+    position: relative;
+    line-height: 0;
+    font-size: $btn-icon-font-size;
+    width: $btn-width;
+    height: $btn-height;
+    padding: 0;
+}
+
+@mixin make-button-icon__inner {
+    @include content-centered;
+}
+
+@mixin make-button-icon__inner-bottom-minus {
+    top: 80%;
+}
+
+@mixin make-button-icon-xs {
+    font-size: $btn-icon-font-size-xs;
+    width: $btn-width-xs;
+    height: $btn-height-xs;
+}
+
+@mixin make-button-icon-sm {
+    font-size: $btn-icon-font-size-sm;
+    width: $btn-width-sm;
+    height: $btn-height-sm;
+}
+
+@mixin make-button-icon-lg {
+    font-size: $btn-icon-font-size-lg;
+    width: $btn-width-lg;
+    height: $btn-height-lg;
+}
+
+@each $color, $value in $theme-colors {
+    %make-button-#{$color} {
+        @include button-variant($value, $value);
+
+        &:not(:hover) {
+            color: color-yiq($value);
+            background-color: $value;
+        }
+
+        &[href],
+        &[type] {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $btn-box-shadow-value rgba($value, 0.35);
+            }
+        }
+
+        &:not(label.btn),
+        &:not([href]) {
+            &,
+            &:not([href]):not(:disabled):not(.disabled) {
+                background-color: $value;
+                border-color: $value;
+            }
+        }
+
+        &:hover {
+            color: color-yiq($value) !important;
+            background-color: $value;
+            border-color: $value;
+        }
+    }
+
+    %make-button-outline-#{$color} {
+        @include button-outline-variant($value);
+    }
+
+    /* #{$color} air */
+    %make-button-soft-#{$color} {
+        @include button-soft($value, $value, $value, $value, $value);
+
+        &:not(:hover) {
+            color: ($value);
+            background: rgba($value, .1);
+        }
+    }
+}
+
+@each $color, $value in $secondary-colors {
+    %make-button-#{$color} {
+        @include button-variant($value, $value);
+
+        &:not(:hover) {
+            color: color-yiq($value);
+            background-color: $value;
+        }
+
+        &[href],
+        &[type] {
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: $btn-box-shadow-value rgba($value, 0.35);
+            }
+        }
+
+        &:not(label.btn),
+        &:not([href]) {
+            &,
+            &:not([href]):not(:disabled):not(.disabled) {
+                background-color: $value;
+                border-color: $value;
+            }
+        }
+
+        &:hover {
+            background-color: $value;
+            border-color: $value;
+        }
+    }
+
+    %make-button-outline-#{$color} {
+        @include button-outline-variant($value);
+    }
+
+    /* #{$color} air */
+    %make-button-soft-#{$color} {
+        @include button-soft($value, $value, $value, $value, $value);
+
+        &:not(:hover) {
+            color: ($value);
+            background: rgba($value, .1);
+        }
+    }
+}

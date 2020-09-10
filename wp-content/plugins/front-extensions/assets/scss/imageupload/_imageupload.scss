@@ -1,0 +1,32 @@
+.block-editor {
+    .ugb-placeholder {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f1f1f1;
+        margin-bottom: 12px;
+        margin-top: .6rem;
+    }
+
+    .ugb-image-preview-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f1f1f1;
+        margin-top: .6rem;
+        border-radius: 4px;
+    }
+
+    .ugb-image-control .ugb-image-preview:hover, 
+    .ugb-image-control .ugb-placeholder:hover {
+        background: #fafafa;
+    }
+
+    .ugb-image-control .ugb-image-preview:focus,
+    .ugb-image-control .ugb-placeholder:focus {
+        background: #fafafa;
+        box-shadow: 0 0 0 2px rgba(30,140,190,.8);
+    }
+}

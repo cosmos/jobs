@@ -1,0 +1,161 @@
+.front_widget_price_filter{
+	.u-range-slider {
+        margin-bottom: 25px;
+
+		.ui-slider-horizontal {
+			top: 3.875rem;
+			height: 0.25rem;
+    		background-color: #e7eaf3;
+    		position: absolute;
+    	}
+
+		.ui-slider-range {
+			top: .0;
+			height: 0.25rem;
+			position: absolute;
+		}
+
+		.ui-slider-handle {
+			  top: 0;
+			  width: 1.5rem;
+			  height: 1.5rem;
+			  background-color: #fff;
+			  cursor: pointer;
+			  border-radius: 50%;
+			  box-shadow: 0 0.1875rem 0.75rem rgba(140, 152, 164, 0.3125);
+			  position: absolute;
+    		  display: block;
+    		  margin-top: -10px;
+
+			&.type_last {
+				z-index: 2;
+			}
+
+			&:last-child {
+				margin-left: -1.5em;
+			}
+		}
+
+		.irs-from {
+			position: relative;
+		}
+	}
+}
+
+/**
+ * Price filter widget styles
+ */
+.widget_price_filter {
+	.price_slider_wrapper {
+		margin-top: 30px;
+        width: 100%;
+	}
+	
+    .price_slider {
+        margin-bottom: 25px;
+    }
+
+    .price_slider_amount {
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            @include button-size(6px, 26px, 15px, 1.7, $btn-border-radius);
+            order: 2;
+            width: fit-content;
+            margin-bottom: 0 !important;
+
+        }
+    }
+
+    .ui-slider {
+        position: relative;
+        text-align: left;
+    }
+
+    .ui-slider .ui-slider-handle {
+        
+        top: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: #fff;
+		border-radius: 50%;
+		box-shadow: 0 0.1875rem 0.75rem rgba(140, 152, 164, 0.3125);
+		position: absolute;
+		display: block;
+		margin-top: -10px;
+		z-index: 2;
+		cursor: ew-resize;
+        box-sizing: border-box;
+
+        &:last-child {
+            margin-left: -1em;
+        }
+    }
+
+    .ui-slider .ui-slider-range {
+        position: absolute;
+	    z-index: 1;
+	    font-size: .7em;
+	    display: block;
+	    border: 0;
+    }
+
+    .price_slider_wrapper .ui-widget-content {
+        background: #e7eaf3;
+    }
+
+    .ui-slider-horizontal {
+        height: 0.25rem;
+    }
+
+    .ui-slider-horizontal .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-slider-horizontal .ui-slider-range-min {
+        left: -1px;
+    }
+
+    .ui-slider-horizontal .ui-slider-range-max {
+        right: -1px;
+    }
+
+    .price_label {
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        justify-content: space-between !important;
+        margin-bottom: ($spacer * 1.5) !important;
+
+        .from, .to {
+            padding-left: ($spacer * .25) !important;
+            padding-right: ($spacer * .25) !important;
+            text-align: center !important;
+            max-width: 4.5rem;
+            height: $input-height-sm;
+            padding: $input-padding-y-sm $input-padding-x-sm;
+            @include font-size($input-font-size-sm);
+            line-height: $input-line-height-sm;
+            @include border-radius($input-border-radius-sm);
+        }
+
+        .from {
+            margin-right: auto;
+        }
+    }
+}
+
+.widget_price_filter.front_widget_price_filter .price_slider_wrapper {
+    margin-top: 0;
+}
+
+.widget_price_filter.front_widget_price_filter .price_slider_amount{
+    position: relative;
+    top: -28px;
+}
+
+.widget_price_filter.front_widget_price_filter .price_label {
+    margin-bottom: 0 !important;
+}

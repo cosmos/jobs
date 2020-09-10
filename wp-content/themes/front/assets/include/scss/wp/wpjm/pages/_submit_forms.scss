@@ -1,0 +1,79 @@
+#submit-job-form,
+#submit-resume-form,
+#submit-company-form,
+.job-manager-alert-pages .job-manager-form {
+    @include make-row;
+
+    > * {
+        @include make-col-ready;
+        @include make-col(12);
+        margin-bottom: ($spacer * 2) !important;
+    }
+
+    fieldset {
+        margin-bottom: ($spacer * 2) !important;
+    }
+
+    .fieldset-type-text,
+    .fieldset-type-date {
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+    }
+
+    label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 80%;
+        font-weight: 500;
+    }
+
+    .job-manager-uploaded-file-preview {
+        img {
+            margin-right: $spacer !important;
+            margin-bottom: $spacer !important;
+            @include img-fluid;
+            width: $avatar-lg;
+            height: $avatar-lg;
+            border-radius: 50%;
+        }
+    } 
+
+    .bootstrap-tagsinput {
+        min-height: $custom-select-height;
+        padding-top: ($spacer * .5) !important;
+    }
+
+    .fieldset-type-repeated {
+        .wp-job-manager-add-row,
+        .resume-manager-add-row {
+            transition: all $transition-timing-sm $transition-function;
+            margin-bottom: ($spacer * .25) !important;
+
+            @include hover-focus {
+                transform: translateY(-3px);
+            }
+
+            @include media-breakpoint-up(sm) {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .wp-job-manager-data-row,
+        .resume-manager-data-row {
+            position: relative !important;
+        }
+
+        .wp-job-manager-remove-row,
+        .resume-manager-remove-row {
+            position: absolute !important;
+            right: 0 !important;
+            color: $danger;
+
+            @include hover-focus {
+                color: darken($danger, $emphasized-link-hover-darken-percentage);
+            }
+        }
+    }
+}
