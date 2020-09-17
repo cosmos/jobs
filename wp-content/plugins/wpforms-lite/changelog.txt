@@ -1,5 +1,17 @@
 == Changelog ==
 
+= 1.6.2.3 =
+- Changed: Added shortcode access to a form embed modal and enhanced modal navigation.
+- Changed: Improved empty states for All Forms and Builder no fields preview panel.
+- Changed: Improved Email Summaries footer text.
+- Fixed: Custom validation messages for the fields appear correctly with Ajax form submission enabled.
+- Fixed: Base style CSS introduces no additional scrollbars now.
+- Fixed: Correct cursor for image choices validation messages.
+- Fixed: Getting the license details from DB works as expected regardless of a context.
+- Fixed: Getting the list of WPForms addons for user license level works as expected regardless of a context.
+- Fixed: Number Slider field increment is checked to be more than zero.
+- Fixed: Modern Dropdown validation works as expected for AJAX forms.
+
 = 1.6.2.2 =
 - Added: Caching friendly anti-spam protection (form tokens).
 - Added: Native integration with Elementor: add to the page and create new forms right inside its builder.

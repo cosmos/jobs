@@ -2113,6 +2113,26 @@ function wpforms_get_license_type() {
 }
 
 /**
+ * Get the current installation license key.
+ *
+ * @since 1.6.2.3
+ *
+ * @return string
+ */
+function wpforms_get_license_key() {
+
+	// Check for license key.
+	$key = wpforms_setting( 'key', '', 'wpforms_license' );
+
+	// Allow wp-config constant to pass key.
+	if ( empty( $key ) && defined( 'WPFORMS_LICENSE_KEY' ) ) {
+		$key = WPFORMS_LICENSE_KEY;
+	}
+
+	return $key;
+}
+
+/**
  * Get when WPForms was first installed.
  *
  * @since 1.6.0
@@ -2415,4 +2435,40 @@ function wpforms_is_gutenberg_active() {
 	}
 
 	return true;
+}
+
+/**
+ * Determine if the plugin/addon installations are allowed.
+ *
+ * @since 1.6.2.3
+ *
+ * @param string $type Should be `plugin` or `addon`.
+ *
+ * @return bool
+ */
+function wpforms_can_install( $type ) {
+
+	if ( ! in_array( $type, [ 'plugin', 'addon' ], true ) ) {
+		return false;
+	}
+
+	if ( ! current_user_can( 'install_plugins' ) ) {
+		return false;
+	}
+
+	// Determine whether file modifications are allowed.
+	if ( ! wp_is_file_mod_allowed( 'wpforms_can_install' ) ) {
+		return false;
+	}
+
+	// All plugin checks are done.
+	if ( 'plugin' === $type ) {
+		return true;
+	}
+
+	// Addons require additional license checks.
+	$license = get_option( 'wpforms_license', [] );
+
+	// Allow addons installation if license is not expired, enabled and valid.
+	return empty( $license['is_expired'] ) && empty( $license['is_disabled'] ) && empty( $license['is_invalid'] );
 }

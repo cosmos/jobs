@@ -142,14 +142,17 @@ var WPFormsPagesSMTP = window.WPFormsPagesSMTP || ( function( document, window, 
 		 */
 		stepInstallDone: function( res, $btn, action ) {
 
-			if ( res.success ) {
+			var success = 'install' === action ? res.success && res.data.is_activated : res.success;
+
+			if ( success ) {
 				el.$stepInstallNum.attr( 'src', el.$stepInstallNum.attr( 'src' ).replace( 'step-1.', 'step-complete.' ) );
 				$btn.addClass( 'grey' ).text( wpforms_pluginlanding.activated );
 				app.stepInstallPluginStatus();
 			} else {
-				var url = 'install' === action ? wpforms_pluginlanding.manual_install_url : wpforms_pluginlanding.manual_activate_url,
-					msg = 'install' === action ? wpforms_pluginlanding.error_could_not_install : wpforms_pluginlanding.error_could_not_activate,
-					btn = 'install' === action ? wpforms_pluginlanding.download_now : wpforms_pluginlanding.plugins_page;
+				var activationFail = ( 'install' === action && res.success && ! res.data.is_activated ) || 'activate' === action,
+					url            = ! activationFail ? wpforms_pluginlanding.manual_install_url : wpforms_pluginlanding.manual_activate_url,
+					msg            = ! activationFail ? wpforms_pluginlanding.error_could_not_install : wpforms_pluginlanding.error_could_not_activate,
+					btn            = ! activationFail ? wpforms_pluginlanding.download_now : wpforms_pluginlanding.plugins_page;
 
 				$btn.removeClass( 'grey disabled' ).text( btn ).attr( 'data-action', 'goto-url' ).attr( 'data-url', url );
 				$btn.after( '<p class="error">' + msg + '</p>' );

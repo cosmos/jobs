@@ -311,8 +311,9 @@ class WPForms_About {
 			return;
 		}
 
-		$all_plugins = get_plugins();
-		$am_plugins  = $this->get_am_plugins();
+		$all_plugins         = get_plugins();
+		$am_plugins          = $this->get_am_plugins();
+		$can_install_plugins = wpforms_can_install( 'plugin' );
 
 		?>
 		<div id="wpforms-admin-addons">
@@ -347,9 +348,16 @@ class WPForms_About {
 									</strong>
 								</div>
 								<div class="action-button">
-									<button class="<?php echo esc_attr( $plugin_data['action_class'] ); ?>" data-plugin="<?php echo esc_attr( $plugin_data['plugin_src'] ); ?>" data-type="plugin">
-										<?php echo wp_kses_post( $plugin_data['action_text'] ); ?>
-									</button>
+									<?php if ( $can_install_plugins ) { ?>
+										<button class="<?php echo esc_attr( $plugin_data['action_class'] ); ?>" data-plugin="<?php echo esc_attr( $plugin_data['plugin_src'] ); ?>" data-type="plugin">
+											<?php echo wp_kses_post( $plugin_data['action_text'] ); ?>
+										</button>
+									<?php } else { ?>
+										<a href="<?php echo esc_url( $details['wporg'] ); ?>" target="_blank" rel="noopener noreferrer">
+											<?php esc_html_e( 'WordPress.org', 'wpforms-lite' ); ?>
+											<span aria-hidden="true" class="dashicons dashicons-external"></span>
+										</a>
+									<?php } ?>
 								</div>
 							</div>
 						</div>
@@ -848,11 +856,12 @@ class WPForms_About {
 		return array(
 
 			'google-analytics-for-wordpress/googleanalytics.php' => array(
-				'icon' => $images_url . 'plugin-mi.png',
-				'name' => esc_html__( 'MonsterInsights', 'wpforms-lite' ),
-				'desc' => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'wpforms-lite' ),
-				'url'  => 'https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.zip',
-				'pro'  => array(
+				'icon'  => $images_url . 'plugin-mi.png',
+				'name'  => esc_html__( 'MonsterInsights', 'wpforms-lite' ),
+				'desc'  => esc_html__( 'MonsterInsights makes it “effortless” to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business.', 'wpforms-lite' ),
+				'wporg' => 'https://wordpress.org/plugins/google-analytics-for-wordpress/',
+				'url'   => 'https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.zip',
+				'pro'   => array(
 					'plug' => 'google-analytics-premium/googleanalytics-premium.php',
 					'icon' => $images_url . 'plugin-mi.png',
 					'name' => esc_html__( 'MonsterInsights Pro', 'wpforms-lite' ),
@@ -863,18 +872,20 @@ class WPForms_About {
 			),
 
 			'optinmonster/optin-monster-wp-api.php' => array(
-				'icon' => $images_url . 'plugin-om.png',
-				'name' => esc_html__( 'OptinMonster', 'wpforms-lite' ),
-				'desc' => esc_html__( 'Our high-converting optin forms like Exit-Intent® popups, Fullscreen Welcome Mats, and Scroll boxes help you dramatically boost conversions and get more email subscribers.', 'wpforms-lite' ),
-				'url'  => 'https://downloads.wordpress.org/plugin/optinmonster.zip',
+				'icon'  => $images_url . 'plugin-om.png',
+				'name'  => esc_html__( 'OptinMonster', 'wpforms-lite' ),
+				'desc'  => esc_html__( 'Our high-converting optin forms like Exit-Intent® popups, Fullscreen Welcome Mats, and Scroll boxes help you dramatically boost conversions and get more email subscribers.', 'wpforms-lite' ),
+				'wporg' => 'https://wordpress.org/plugins/optinmonster/',
+				'url'   => 'https://downloads.wordpress.org/plugin/optinmonster.zip',
 			),
 
 			'wp-mail-smtp/wp_mail_smtp.php' => array(
-				'icon' => $images_url . 'plugin-smtp.png',
-				'name' => esc_html__( 'WP Mail SMTP', 'wpforms-lite' ),
-				'desc' => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'wpforms-lite' ),
-				'url'  => 'https://downloads.wordpress.org/plugin/wp-mail-smtp.zip',
-				'pro'  => array(
+				'icon'  => $images_url . 'plugin-smtp.png',
+				'name'  => esc_html__( 'WP Mail SMTP', 'wpforms-lite' ),
+				'desc'  => esc_html__( 'Make sure your website\'s emails reach the inbox. Our goal is to make email deliverability easy and reliable. Trusted by over 1 million websites.', 'wpforms-lite' ),
+				'wporg' => 'https://wordpress.org/plugins/wp-mail-smtp/',
+				'url'   => 'https://downloads.wordpress.org/plugin/wp-mail-smtp.zip',
+				'pro'   => array(
 					'plug' => 'wp-mail-smtp-pro/wp_mail_smtp.php',
 					'icon' => $images_url . 'plugin-smtp.png',
 					'name' => esc_html__( 'WP Mail SMTP Pro', 'wpforms-lite' ),
@@ -885,11 +896,12 @@ class WPForms_About {
 			),
 
 			'rafflepress/rafflepress.php' => array(
-				'icon' => $images_url . 'plugin-rp.png',
-				'name' => esc_html__( 'RafflePress', 'wpforms-lite' ),
-				'desc' => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'wpforms-lite' ),
-				'url'  => 'https://downloads.wordpress.org/plugin/rafflepress.zip',
-				'pro'  => array(
+				'icon'  => $images_url . 'plugin-rp.png',
+				'name'  => esc_html__( 'RafflePress', 'wpforms-lite' ),
+				'desc'  => esc_html__( 'Turn your visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with powerful viral giveaways & contests.', 'wpforms-lite' ),
+				'wporg' => 'https://wordpress.org/plugins/rafflepress/',
+				'url'   => 'https://downloads.wordpress.org/plugin/rafflepress.zip',
+				'pro'   => array(
 					'plug' => 'rafflepress-pro/rafflepress-pro.php',
 					'icon' => $images_url . 'plugin-rp.png',
 					'name' => esc_html__( 'RafflePress Pro', 'wpforms-lite' ),
@@ -1018,7 +1030,7 @@ class WPForms_About {
 				'pro'   => [
 					'status' => 'full',
 					'text'   => [
-						'<strong>' . esc_html__( 'All Form Templates including Bonus 150+ pre-made form templates.', 'wpforms-lite' ) . '</strong>',
+						'<strong>' . esc_html__( 'All Form Templates including Bonus 100+ pre-made form templates.', 'wpforms-lite' ) . '</strong>',
 					],
 				],
 			],

@@ -10,7 +10,7 @@ if ( ! \defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div class="wpforms-elementor wpforms-admin-no-forms-container">
+<div class="wpforms-admin-empty-state-container wpforms-elementor-no-forms">
 
 	<img src="<?php echo esc_url( WPFORMS_PLUGIN_URL . 'assets/images/empty-states/no-forms.svg' ); ?>" alt=""/>
 

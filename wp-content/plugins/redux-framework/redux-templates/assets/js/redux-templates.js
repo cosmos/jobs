@@ -4219,6 +4219,44 @@ function TabHeader(props) {
 
 /***/ }),
 
+/***/ "./redux-templates/src/components/template-change/index.js":
+/*!*****************************************************************!*\
+  !*** ./redux-templates/src/components/template-change/index.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+const compose = wp.compose.compose;
+const withSelect = wp.data.withSelect;
+
+
+function TemplateChange(props) {
+  const template = props.template;
+  Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (template.includes('redux-templates_')) {
+      document.body.className += ' redux-template';
+    } else {
+      document.querySelector('body').classList.remove('redux-template');
+    }
+  }, [template]);
+  return wp.element.createElement("div", null);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (compose([withSelect(select => {
+  const _select = select('core/editor'),
+        getEditedPostAttribute = _select.getEditedPostAttribute;
+
+  return {
+    template: getEditedPostAttribute('template')
+  };
+})])(TemplateChange));
+
+/***/ }),
+
 /***/ "./redux-templates/src/components/template-list-subheader/images/view-few.svg":
 /*!************************************************************************************!*\
   !*** ./redux-templates/src/components/template-list-subheader/images/view-few.svg ***!
@@ -6834,8 +6872,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _challenge__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./challenge */ "./redux-templates/src/challenge/index.js");
 /* harmony import */ var _modal_manager__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modal-manager */ "./redux-templates/src/modal-manager/index.js");
 /* harmony import */ var _modal_library__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modal-library */ "./redux-templates/src/modal-library/index.js");
-/* harmony import */ var _custom_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./custom-css */ "./redux-templates/src/custom-css/index.js");
-/* harmony import */ var _components_welcome_guide__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/welcome-guide */ "./redux-templates/src/components/welcome-guide/index.js");
+/* harmony import */ var _components_welcome_guide__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/welcome-guide */ "./redux-templates/src/components/welcome-guide/index.js");
+/* harmony import */ var _components_template_change__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/template-change */ "./redux-templates/src/components/template-change/index.js");
+/* harmony import */ var _custom_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./custom-css */ "./redux-templates/src/custom-css/index.js");
 /**
  * Library Button
  */
@@ -6848,6 +6887,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * External dependencies
  */
+
 
 
 
@@ -6889,7 +6929,8 @@ Object(_wordpress_dom_ready__WEBPACK_IMPORTED_MODULE_0__["default"])(() => {
 
     Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["render"])(wp.element.createElement(_challenge__WEBPACK_IMPORTED_MODULE_11__["default"], null), challengeWrapperDiv);
     Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["render"])(wp.element.createElement(_challenge_tooltip_TooltipBox__WEBPACK_IMPORTED_MODULE_9__["default"], null), challengeDiv);
-    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["render"])(wp.element.createElement(_components_welcome_guide__WEBPACK_IMPORTED_MODULE_15__["default"], null), challengeDiv);
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["render"])(wp.element.createElement(_components_welcome_guide__WEBPACK_IMPORTED_MODULE_14__["default"], null), challengeDiv);
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["render"])(wp.element.createElement(_components_template_change__WEBPACK_IMPORTED_MODULE_15__["default"], null), challengeDiv);
     Object(_stores_helper__WEBPACK_IMPORTED_MODULE_10__["handlingLocalStorageData"])();
   }, 500);
 });
@@ -8306,6 +8347,7 @@ function DependencyFilter(props) {
         activeItemType = props.activeItemType,
         loading = props.loading,
         wholePlugins = props.wholePlugins,
+        thirdPartyPlugins = props.thirdPartyPlugins,
         dependencyFilterRule = props.dependencyFilterRule;
   const setDependencyFilters = props.setDependencyFilters,
         selectDependencies = props.selectDependencies,
@@ -8333,8 +8375,8 @@ function DependencyFilter(props) {
       float: 'right'
     }
   }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    text: __('Find templates which contain blocks from any of the selected plugins.', redux_templates.i18n),
-    position: "top right"
+    text: __('Templates which contain blocks from any of the selected plugins.', redux_templates.i18n),
+    position: "top center"
   }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Button"], {
     isSmall: true,
     isPrimary: dependencyFilterRule === false,
@@ -8342,8 +8384,8 @@ function DependencyFilter(props) {
     onClick: () => setDependencyFilterRule(false),
     disabled: activeItemType === 'collection'
   }, __('Any', redux_templates.i18n))), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    text: __('Find templates that only contain blocks from the selected plugins.', redux_templates.i18n),
-    position: "top right"
+    text: __('Templates that only contain blocks from the selected plugins.', redux_templates.i18n),
+    position: "top center"
   }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Button"], {
     isSmall: true,
     isSecondary: dependencyFilterRule === false,
@@ -8354,31 +8396,23 @@ function DependencyFilter(props) {
     className: "redux-templates-select-actions"
   }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
     text: __('Select All', redux_templates.i18n),
-    position: "top right"
+    position: "top center"
   }, wp.element.createElement("a", {
     href: "#",
     onClick: () => selectDependencies('all')
   }, __('All', redux_templates.i18n))), wp.element.createElement("span", null, "\xA0 / \xA0"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    text: __('Native Blocks Only', redux_templates.i18n),
-    position: "top right"
-  }, wp.element.createElement("a", {
-    href: "#",
-    onClick: () => selectDependencies('none')
-  }, __('None', redux_templates.i18n))), wp.element.createElement("span", null, "\xA0 / \xA0"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
     text: __('Installed Dependencies', redux_templates.i18n),
-    position: "top right"
+    position: "top center"
   }, wp.element.createElement("a", {
     href: "#",
     onClick: () => selectDependencies('installed')
   }, __('Installed', redux_templates.i18n))), wp.element.createElement("span", null, "\xA0 / \xA0"), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    text: __('Reset Dependencies', redux_templates.i18n),
-    position: "top right"
+    text: __('Native Blocks Only', redux_templates.i18n),
+    position: "top center"
   }, wp.element.createElement("a", {
     href: "#",
-    onClick: () => selectDependencies('default')
-  }, wp.element.createElement("i", {
-    className: "fas fa-undo"
-  }))), wp.element.createElement(_redux_templates_challenge_tooltip_ChallengeDot__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    onClick: () => selectDependencies('none')
+  }, __('None', redux_templates.i18n))), wp.element.createElement(_redux_templates_challenge_tooltip_ChallengeDot__WEBPACK_IMPORTED_MODULE_0__["default"], {
     step: 2
   })), wp.element.createElement("ul", {
     className: "redux-templates-sidebar-dependencies"
@@ -8392,7 +8426,7 @@ function DependencyFilter(props) {
     onChange: toggleNoneChecked
   }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
     text: __('Only default WordPress blocks used.', redux_templates.i18n),
-    position: "right"
+    position: "top center"
   }, wp.element.createElement("span", {
     style: {
       float: 'right',
@@ -8403,8 +8437,36 @@ function DependencyFilter(props) {
   })))), Object.keys(dependencyFilters).filter(pluginKey => wholePlugins.indexOf(pluginKey) !== -1 || pluginKey === _redux_templates_stores_helper__WEBPACK_IMPORTED_MODULE_4__["REDUXTEMPLATES_PRO_KEY"]).sort((a, b) => {
     const pluginInstanceA = Object(_redux_templates_stores_dependencyHelper__WEBPACK_IMPORTED_MODULE_3__["pluginInfo"])(a);
     const pluginInstanceB = Object(_redux_templates_stores_dependencyHelper__WEBPACK_IMPORTED_MODULE_3__["pluginInfo"])(b);
-    if (pluginInstanceA.name < pluginInstanceB.name) return -1;
-    if (pluginInstanceA.name > pluginInstanceB.name) return 1;
+    if (!pluginInstanceB.name || pluginInstanceA.name < pluginInstanceB.name) return -1;
+    if (!pluginInstanceA.name || pluginInstanceA.name > pluginInstanceB.name) return 1;
+    return 0;
+  }).map(pluginKey => wp.element.createElement(_dependencyFilterRow__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    key: pluginKey,
+    pluginKey: pluginKey
+  }))), wp.element.createElement("div", {
+    role: "group",
+    className: "components-button-group",
+    style: {
+      float: 'right'
+    }
+  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
+    text: __('Third-party premium plugins required.', redux_templates.i18n),
+    position: "top center"
+  }, wp.element.createElement("span", {
+    style: {
+      float: 'right',
+      marginRight: '15px',
+      cursor: 'pointer'
+    }
+  }, wp.element.createElement("i", {
+    className: "fa fa-info-circle"
+  })))), wp.element.createElement("h3", null, "Third-Party Premium"), wp.element.createElement("ul", {
+    class: "redux-templates-sidebar-dependencies"
+  }, thirdPartyPlugins.sort((a, b) => {
+    const pluginInstanceA = Object(_redux_templates_stores_dependencyHelper__WEBPACK_IMPORTED_MODULE_3__["pluginInfo"])(a);
+    const pluginInstanceB = Object(_redux_templates_stores_dependencyHelper__WEBPACK_IMPORTED_MODULE_3__["pluginInfo"])(b);
+    if (!pluginInstanceB.name || pluginInstanceA.name < pluginInstanceB.name) return -1;
+    if (!pluginInstanceA.name || pluginInstanceA.name > pluginInstanceB.name) return 1;
     return 0;
   }).map(pluginKey => wp.element.createElement(_dependencyFilterRow__WEBPACK_IMPORTED_MODULE_2__["default"], {
     key: pluginKey,
@@ -8429,12 +8491,14 @@ function DependencyFilter(props) {
         getLoading = _select.getLoading,
         getActiveItemType = _select.getActiveItemType,
         getWholePlugins = _select.getWholePlugins,
+        getThirdPartyPlugins = _select.getThirdPartyPlugins,
         getDependencyFilterRule = _select.getDependencyFilterRule;
 
   return {
     loading: getLoading(),
     dependencyFilters: getDependencyFiltersStatistics(),
     wholePlugins: getWholePlugins(),
+    thirdPartyPlugins: getThirdPartyPlugins(),
     dependencyFilterRule: getDependencyFilterRule(),
     activeItemType: getActiveItemType()
   };
@@ -8587,7 +8651,7 @@ function DependencyFilterRow(props) {
     checked: isChecked,
     onChange: toggleChecked
   }), pluginInstanceURL ? wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    position: 'top right',
+    position: 'top center',
     text: __('Visit Plugin Website', redux_templates.i18n)
   }, wp.element.createElement("span", null, wp.element.createElement("a", {
     href: pluginInstanceURL,
@@ -8595,7 +8659,7 @@ function DependencyFilterRow(props) {
   }, wp.element.createElement("i", {
     className: "fas fa-external-link-alt"
   })))) : null, pluginClassname.includes('missing-dependency') && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Tooltip"], {
-    position: 'top right',
+    position: 'top center',
     text: __('Not Installed', redux_templates.i18n)
   }, wp.element.createElement("span", {
     className: "redux-icon-wrapper"
@@ -9777,35 +9841,25 @@ function SidebarContent(props) {
     className: "redux-templates-pro-badge"
   }, __('Premium', redux_templates.i18n)) : ''), wp.element.createElement("h5", {
     className: "theme-hash"
+  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["Tooltip"], {
+    position: 'top center',
+    text: __('Copy the template identifier', redux_templates.i18n)
   }, wp.element.createElement("div", {
-    className: "button-container"
+    className: "button-container",
+    onClick: copyHash
   }, wp.element.createElement("span", {
-    className: "button button-secondary the-copy",
-    onClick: copyHash,
-    title: __('Copy Identifier', redux_templates.i18n)
+    className: "button button-secondary the-copy"
   }, wp.element.createElement("i", {
     className: "fa fa-copy",
     "aria-hidden": "true"
   })), wp.element.createElement("span", {
-    onClick: copyHash,
-    className: "button button-secondary the-hash",
-    title: __('Identifier', redux_templates.i18n)
+    className: "button button-secondary the-hash"
   }, hash.substring(0, 7)), copied && wp.element.createElement("span", {
     className: "copied hideMe"
-  }, wp.element.createElement("br", null), __('copied', redux_templates.i18n))))), blocks && blocks.length > 0 && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
-    title: __('Blocks Used', redux_templates.i18n),
-    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__["more"],
-    initialOpen: false
-  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelRow"], {
-    className: "redux-block-pills"
-  }, wp.element.createElement("ul", null, blocks.map((block, i) => {
-    return wp.element.createElement("li", {
-      key: i
-    }, wp.element.createElement("span", null, block));
-  })))), installDependencies && installDependencies.length > 0 && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
+  }, wp.element.createElement("br", null), __('copied', redux_templates.i18n)))))), installDependencies && installDependencies.length > 0 && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
     title: __('Required Plugins', redux_templates.i18n),
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__["more"],
-    initialOpen: false
+    initialOpen: true
   }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelRow"], {
     className: "requirements-list-div"
   }, wp.element.createElement("div", {
@@ -9847,7 +9901,17 @@ function SidebarContent(props) {
     }, wp.element.createElement("i", {
       className: "fas fa-external-link-alt"
     })))) : null);
-  }))))), 'redux' !== source && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
+  }))))), blocks && blocks.length > 0 && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
+    title: __('Blocks Used', redux_templates.i18n),
+    icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__["more"],
+    initialOpen: true
+  }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelRow"], {
+    className: "redux-block-pills"
+  }, wp.element.createElement("ul", null, blocks.map((block, i) => {
+    return wp.element.createElement("li", {
+      key: i
+    }, wp.element.createElement("span", null, block));
+  })))), 'redux' !== source && wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__["PanelBody"], {
     title: __('Template Details', redux_templates.i18n),
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_1__["more"],
     initialOpen: false
@@ -11645,7 +11709,7 @@ const isReduxProInstalled = () => {
 /*!***********************************************!*\
   !*** ./redux-templates/src/stores/filters.js ***!
   \***********************************************/
-/*! exports provided: applyCategoryFilter, applySearchFilter, applyHashFilter, applyPriceFilter, applyDependencyFilters, valueOfDependencyFilter */
+/*! exports provided: applyCategoryFilter, applySearchFilter, applyHashFilter, applyPriceFilter, applyDependencyFilters, valueOfDependencyFilter, flattenPageData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11656,6 +11720,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyPriceFilter", function() { return applyPriceFilter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyDependencyFilters", function() { return applyDependencyFilters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "valueOfDependencyFilter", function() { return valueOfDependencyFilter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flattenPageData", function() { return flattenPageData; });
 /* harmony import */ var _dependencyHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dependencyHelper */ "./redux-templates/src/stores/dependencyHelper.js");
 /* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper */ "./redux-templates/src/stores/helper.js");
 
@@ -11770,6 +11835,22 @@ const valueOfDependencyFilter = dependencyFilter => {
 
 const truthyDependencyFiltersList = dependencyFilters => {
   return Object.keys(dependencyFilters).filter(key => dependencyFilters[key].value === true);
+};
+
+const flattenPageData = pageData => {
+  const currentPageData = [];
+
+  if (Array.isArray(pageData) === false) {
+    for (let key in pageData) {
+      Array.isArray(pageData[key]) && pageData[key].map(value => {
+        currentPageData.push(value);
+      });
+    }
+
+    return currentPageData;
+  }
+
+  return pageData;
 };
 
 /***/ }),
@@ -11899,9 +11980,18 @@ const categorizeData = list => {
     data
   };
 };
+/* Parse section data */
+// - convert `sections` object to array
+// - make fullPluginsList from dependency, like ['redux-pro', 'qubely', 'getwid', ...]
+// -- filter wholePlugins from fullPluginsList
+// -- filter thirdPartyPlugins from fullPluginsList
+// - categorize the plugin information and save it to local storage
+
 const parseSectionData = sections => {
   const librarySectionData = convertObjectToArray(sections);
-  const wholePlugins = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(librarySectionData, 'dependencies')));
+  const fullPluginsList = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(librarySectionData, 'dependencies')));
+  const wholePlugins = fullPluginsList.filter(pluginKey => !isThirdPartyPlugin(pluginKey));
+  const thirdPartyPlugins = fullPluginsList.filter(pluginKey => isThirdPartyPlugin(pluginKey));
   const toBeReturned = categorizeData(librarySectionData);
   const categoriesList = toBeReturned.categories.map(category => {
     return {
@@ -11911,12 +12001,15 @@ const parseSectionData = sections => {
   });
   setWithExpiry('section_categories_list', categoriesList, EXIPRY_TIME);
   return _objectSpread(_objectSpread({}, toBeReturned), {}, {
-    wholePlugins
+    wholePlugins,
+    thirdPartyPlugins
   });
 };
 const parsePageData = pages => {
   const libraryPageData = convertObjectToArray(pages);
-  const wholePlugins = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(libraryPageData, 'dependencies')));
+  const fullPluginsList = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(libraryPageData, 'dependencies')));
+  const wholePlugins = fullPluginsList.filter(pluginKey => !isThirdPartyPlugin(pluginKey));
+  const thirdPartyPlugins = fullPluginsList.filter(pluginKey => isThirdPartyPlugin(pluginKey));
   const toBeReturned = categorizeData(libraryPageData);
   const categoriesList = toBeReturned.categories.map(category => {
     return {
@@ -11926,7 +12019,8 @@ const parsePageData = pages => {
   });
   setWithExpiry('page_categories_list', categoriesList, EXIPRY_TIME);
   return _objectSpread(_objectSpread({}, toBeReturned), {}, {
-    wholePlugins
+    wholePlugins,
+    thirdPartyPlugins
   });
 };
 const parseCollectionData = library => {
@@ -11946,12 +12040,15 @@ const parseCollectionData = library => {
 
     return collection;
   });
-  const wholePlugins = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(libraryCollectionData, 'dependencies')));
+  const fullPluginsList = lodash_uniq__WEBPACK_IMPORTED_MODULE_1___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(libraryCollectionData, 'dependencies')));
+  const wholePlugins = fullPluginsList.filter(pluginKey => !isThirdPartyPlugin(pluginKey));
+  const thirdPartyPlugins = fullPluginsList.filter(pluginKey => isThirdPartyPlugin(pluginKey));
   return _objectSpread(_objectSpread({}, categorizeData(libraryCollectionData)), {}, {
     dependencyFilters: _objectSpread({
       [NONE_KEY]: true
     }, library.dependencies),
-    wholePlugins
+    wholePlugins,
+    thirdPartyPlugins
   });
 }; // one of important function
 // get collection children data upon clicking on collection in collections tab
@@ -12160,6 +12257,11 @@ const saveChallengeStep = step => {
   localStorage.setItem('reduxChallengeStep', step);
 };
 
+const isThirdPartyPlugin = pluginKey => {
+  const pluginInstance = Object(_dependencyHelper__WEBPACK_IMPORTED_MODULE_8__["getPluginInstance"])(pluginKey);
+  return pluginInstance.free_slug && !pluginInstance.redux_pro && !pluginInstance.version;
+};
+
 /***/ }),
 
 /***/ "./redux-templates/src/stores/index.js":
@@ -12268,7 +12370,8 @@ const getDependencyFilters = state => {
 };
 
 const getAllDependencFilters = state => {
-  return state[state.activeItemType || 'section'].wholePlugins.reduce((acc, cur) => {
+  const activeState = state[state.activeItemType || 'section'];
+  return [...activeState.wholePlugins, ...activeState.thirdPartyPlugins].reduce((acc, cur) => {
     return _objectSpread(_objectSpread({}, acc), {}, {
       [cur]: {
         value: false
@@ -12278,7 +12381,7 @@ const getAllDependencFilters = state => {
 };
 
 const getDependencyFiltersStatistics = state => {
-  const pageData = getPageData(state, false);
+  const pageData = Object(_filters__WEBPACK_IMPORTED_MODULE_9__["flattenPageData"])(getOriginalPageData(state));
   const dependentPluginsArray = lodash_uniq__WEBPACK_IMPORTED_MODULE_7___default()(lodash_flattenDeep__WEBPACK_IMPORTED_MODULE_6___default()(lodash_map__WEBPACK_IMPORTED_MODULE_5___default()(pageData, 'dependencies')));
   let dependencyFilters = getDependencyFilters(state);
   Object.keys(dependencyFilters).forEach(plugin => {
@@ -12320,6 +12423,10 @@ registerStore('redux-templates/sectionslist', {
 
     getWholePlugins(state) {
       return state.activeItemType !== 'saved' ? Object(_helper__WEBPACK_IMPORTED_MODULE_10__["getCurrentState"])(state).wholePlugins : null;
+    },
+
+    getThirdPartyPlugins(state) {
+      return state.activeItemType !== 'saved' ? Object(_helper__WEBPACK_IMPORTED_MODULE_10__["getCurrentState"])(state).thirdPartyPlugins : null;
     },
 
     // get categories from currentState, sortBy alphabetically, with the count of pageData within the current category
@@ -12524,6 +12631,7 @@ const initialState = {
     dependencyFilterRule: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('section_filterRule', true),
     searchContext: '',
     wholePlugins: [],
+    thirdPartyPlugins: [],
     sortBy: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('section_sort', 'name'),
     currentPage: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('section_page', 0)
   },
@@ -12536,6 +12644,7 @@ const initialState = {
     dependencyFilterRule: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('page_filterRule', true),
     searchContext: '',
     wholePlugins: [],
+    thirdPartyPlugins: [],
     sortBy: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('page_sort', 'name'),
     currentPage: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('page_page', 0)
   },
@@ -12548,6 +12657,7 @@ const initialState = {
     dependencyFilterRule: false,
     searchContext: '',
     wholePlugins: [],
+    thirdPartyPlugins: [],
     activeCollection: null,
     sortBy: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('collection_sort', 'name'),
     currentPage: Object(_helper__WEBPACK_IMPORTED_MODULE_0__["getWithExpiry"])('collection_page', 0)
@@ -12834,13 +12944,13 @@ const reducer = (state = initialState, action) => {
 
       const filtered = types.reduce((acc, cur) => {
         // save to the local storage as well
-        Object(_helper__WEBPACK_IMPORTED_MODULE_0__["setWithExpiry"])(cur + '_plugin', atomHandler(state[cur].wholePlugins), EXIPRY_TIME);
+        Object(_helper__WEBPACK_IMPORTED_MODULE_0__["setWithExpiry"])(cur + '_plugin', _objectSpread(_objectSpread({}, state[cur].dependencyFilters), atomHandler(state[cur].wholePlugins)), EXIPRY_TIME);
         return _objectSpread(_objectSpread({}, acc), {}, {
           [cur]: _objectSpread(_objectSpread({}, state[cur]), {}, {
             searchContext: '',
             dependencyFilterRule: cur !== 'collection',
             // We must always use false for collection to get template kits to work.
-            dependencyFilters: atomHandler(state[cur].wholePlugins)
+            dependencyFilters: _objectSpread(_objectSpread({}, state[cur].dependencyFilters), atomHandler(state[cur].wholePlugins))
           })
         });
       }, {});

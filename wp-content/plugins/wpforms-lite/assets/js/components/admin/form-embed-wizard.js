@@ -74,6 +74,8 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 			if ( wpforms_admin_form_embed_wizard.is_edit_page === '1' && ! vars.isChallengeActive ) {
 				app.initTooltip();
 			}
+
+			app.initialStateToggle();
 		},
 
 		/**
@@ -85,13 +87,19 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 
 			// Caching some DOM elements for further use.
 			el = {
-				$wizardContainer: $( '#wpforms-admin-form-embed-wizard-container' ),
-				$wizard:          $( '#wpforms-admin-form-embed-wizard' ),
-				$sectionBtns:     $( '#wpforms-admin-form-embed-wizard-section-btns' ),
-				$sectionGo:       $( '#wpforms-admin-form-embed-wizard-section-go' ),
-				$newPageTitle:    $( '#wpforms-admin-form-embed-wizard-new-page-title' ),
-				$selectPage:      $( '#wpforms-admin-form-embed-wizard-select-page' ),
-				$videoTutorial:   $( '#wpforms-admin-form-embed-wizard-tutorial' ),
+				$wizardContainer:   $( '#wpforms-admin-form-embed-wizard-container' ),
+				$wizard:            $( '#wpforms-admin-form-embed-wizard' ),
+				$contentInitial:    $( '#wpforms-admin-form-embed-wizard-content-initial' ),
+				$contentSelectPage: $( '#wpforms-admin-form-embed-wizard-content-select-page' ),
+				$contentCreatePage: $( '#wpforms-admin-form-embed-wizard-content-create-page' ),
+				$sectionBtns:       $( '#wpforms-admin-form-embed-wizard-section-btns' ),
+				$sectionGo:         $( '#wpforms-admin-form-embed-wizard-section-go' ),
+				$newPageTitle:      $( '#wpforms-admin-form-embed-wizard-new-page-title' ),
+				$selectPage:        $( '#wpforms-admin-form-embed-wizard-select-page' ),
+				$videoTutorial:     $( '#wpforms-admin-form-embed-wizard-tutorial' ),
+				$sectionToggles:    $( '#wpforms-admin-form-embed-wizard-section-toggles' ),
+				$sectionGoBack:     $( '#wpforms-admin-form-embed-wizard-section-goback' ),
+				$shortcode:         $( '#wpforms-admin-form-embed-wizard-shortcode' ),
 			};
 
 			// Detect the form builder screen and store the flag.
@@ -99,6 +107,9 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 
 			// Detect the Challenge and store the flag.
 			vars.isChallengeActive = typeof WPFormsChallenge !== 'undefined';
+
+			// Are the pages exists?
+			vars.pagesExists = el.$wizard.data( 'pages-exists' ) === 1;
 		},
 
 		/**
@@ -111,6 +122,8 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 			el.$wizard
 				.on( 'click', 'button', app.popupButtonsClick )
 				.on( 'click', '.tutorial-toggle', app.tutorialToggle )
+				.on( 'click', '.shortcode-toggle', app.shortcodeToggle )
+				.on( 'click', '.initialstate-toggle', app.initialStateToggle )
 				.on( 'click', '.wpforms-admin-popup-close', app.closePopup );
 		},
 
@@ -132,16 +145,20 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 			var	$div = $btn.closest( 'div' ),
 				action = $btn.data( 'action' ) || '';
 
+			el.$contentInitial.hide();
+
 			switch ( action ) {
 
 				// Select existing page.
 				case 'select-page':
 					el.$newPageTitle.hide();
+					el.$contentSelectPage.show();
 					break;
 
 				// Create a new page.
 				case 'create-page':
 					el.$selectPage.hide();
+					el.$contentCreatePage.show();
 					break;
 
 				// Let's Go!
@@ -157,6 +174,9 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 
 			$div.hide();
 			$div.next().fadeIn();
+			el.$sectionToggles.hide();
+			el.$sectionGoBack.fadeIn();
+			app.tutorialControl( 'Stop' );
 		},
 
 		/**
@@ -170,15 +190,90 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 
 			e.preventDefault();
 
-			var iframe = el.$videoTutorial[0];
-
+			el.$shortcode.hide();
 			el.$videoTutorial.toggle();
 
-			if ( iframe.src.indexOf( '&autoplay=1' ) < 0 ) {
-				iframe.src += '&autoplay=1';
+			if ( el.$videoTutorial[0].src.indexOf( '&autoplay=1' ) < 0 ) {
+				app.tutorialControl( 'Play' );
+			} else {
+				app.tutorialControl( 'Stop' );
+			}
+		},
+
+		/**
+		 * Toggle video tutorial inside popup.
+		 *
+		 * @since 1.6.2.3
+		 *
+		 * @param {string} action One of 'Play' or 'Stop'.
+		 */
+		tutorialControl: function( action ) {
+
+			var iframe = el.$videoTutorial[0];
+
+			if ( typeof iframe === 'undefined' ) {
+				return;
+			}
+
+			if ( action !== 'Stop' ) {
+				iframe.src +=  iframe.src.indexOf( '&autoplay=1' ) < 0 ? '&autoplay=1' : '';
 			} else {
 				iframe.src = iframe.src.replace( '&autoplay=1', '' );
 			}
+		},
+
+		/**
+		 * Toggle shortcode input field.
+		 *
+		 * @since 1.6.2.3
+		 *
+		 * @param {object} e Event object.
+		 */
+		shortcodeToggle: function( e ) {
+
+			e.preventDefault();
+
+			el.$videoTutorial.hide();
+			app.tutorialControl( 'Stop' );
+			el.$shortcode.val( '[wpforms id="' + vars.formId + '" title="false" description="false"]' );
+			el.$shortcode.toggle();
+		},
+
+		/**
+		 * Toggle initial state.
+		 *
+		 * @since 1.6.2.3
+		 *
+		 * @param {object} e Event object.
+		 */
+		initialStateToggle: function( e ) {
+
+			if ( e ) {
+				e.preventDefault();
+			}
+
+			if ( vars.pagesExists ) {
+				el.$contentInitial.show();
+				el.$contentSelectPage.hide();
+				el.$contentCreatePage.hide();
+				el.$selectPage.show();
+				el.$newPageTitle.show();
+				el.$sectionBtns.show();
+				el.$sectionGo.hide();
+			} else {
+				el.$contentInitial.hide();
+				el.$contentSelectPage.hide();
+				el.$contentCreatePage.show();
+				el.$selectPage.hide();
+				el.$newPageTitle.show();
+				el.$sectionBtns.hide();
+				el.$sectionGo.show();
+			}
+			el.$shortcode.hide();
+			el.$videoTutorial.hide();
+			app.tutorialControl( 'Stop' );
+			el.$sectionToggles.show();
+			el.$sectionGoBack.hide();
 		},
 
 		/**
@@ -315,11 +410,8 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 		 */
 		closePopup: function() {
 
-			// Hide and stop video if opened.
-			if ( el.$videoTutorial.is( ':visible' ) ) {
-				el.$wizard.find( '.tutorial-toggle' ).click();
-			}
 			el.$wizardContainer.fadeOut();
+			app.initialStateToggle();
 		},
 
 		/**

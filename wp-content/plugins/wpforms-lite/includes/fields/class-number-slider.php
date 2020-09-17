@@ -42,7 +42,26 @@ class WPForms_Field_Number_Slider extends WPForms_Field {
 		$this->order = 180;
 
 		// Customize value format for HTML emails.
-		add_filter( 'wpforms_html_field_value', array( $this, 'html_email_value' ), 10, 4 );
+		add_filter( 'wpforms_html_field_value', [ $this, 'html_email_value' ], 10, 4 );
+
+		// Builder strings.
+		add_filter( 'wpforms_builder_strings', [ $this, 'add_builder_strings' ] );
+	}
+
+	/**
+	 * Add Builder strings.
+	 *
+	 * @since 1.6.2.3
+	 *
+	 * @param array $strings Form Builder strings.
+	 *
+	 * @return array Form Builder strings.
+	 */
+	public function add_builder_strings( $strings ) {
+
+		$strings['error_number_slider_increment'] = esc_html__( 'Increment value should be greater than zero. Decimal fractions allowed.', 'wpforms-lite' );
+
+		return $strings;
 	}
 
 	/**
@@ -283,7 +302,7 @@ class WPForms_Field_Number_Slider extends WPForms_Field {
 				'value' => ! empty( $field['step'] ) ? abs( $field['step'] ) : self::SLIDER_STEP,
 				'attrs' => array(
 					'min' => 0,
-					'max' => isset( $field['max'] ) && is_numeric( $field['max'] ) ? (float) $field['max'] : self::SLIDER_MAX,
+					'max' => isset( $field['max'] ) && is_numeric( $field['max'] ) ? abs( (float) $field['max'] ) : self::SLIDER_MAX,
 				),
 			),
 			false

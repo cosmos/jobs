@@ -490,7 +490,7 @@ Admin Form Builder - Fields panel
 	width: 100%;
 }
 
-#wpforms-panel-fields .wpforms-field-option-address .hide input {
+#wpforms-panel-fields .wpforms-field-option-address .wpforms-subfield-hide input {
 	margin: 8px 0 0 0;
 }
 
@@ -562,16 +562,29 @@ Admin Form Builder - Fields panel
 -------------------------------------------------------------- */
 
 #wpforms-panel-fields .no-fields-preview {
-	background: url(../images/builder-default-arrow.png) no-repeat;
-	background-size: 148px 140px;
-	background-position: 50px 40px;
+	background-image: url(../images/builder-default-arrow.png), url(../images/empty-states/no-fields.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-size: 110px 110px, 371px 260px;
+	background-position: 10px 10px, center 40px;
 	text-align: center;
-	padding-top: 210px;
+	padding-top: 40px;
 	padding-bottom: 40px;
-	font-size: 18px;
-	color: #666;
-	font-weight: 700;
-	line-height: normal;
+}
+
+#wpforms-panel-fields .no-fields-preview h4 {
+	color: #444444;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 29px;
+	margin: 290px 0 10px;
+}
+
+#wpforms-panel-fields .no-fields-preview p {
+	color: #777777;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 19px;
+	margin: 0;
 }
 
 #wpforms-panel-fields .wpforms-title-desc {

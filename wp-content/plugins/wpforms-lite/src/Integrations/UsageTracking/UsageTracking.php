@@ -143,7 +143,7 @@ class UsageTracking implements IntegrationInterface {
 			'timezone_offset'                => $this->get_timezone_offset(),
 			// WPForms-specific data.
 			'wpforms_version'                => WPFORMS_VERSION,
-			'wpforms_license_key'            => $this->get_license(),
+			'wpforms_license_key'            => wpforms_get_license_key(),
 			'wpforms_license_type'           => $this->get_license_type(),
 			'wpforms_is_pro'                 => wpforms()->pro,
 			'wpforms_entries_avg'            => $this->get_entries_avg( $forms_total, $entries_total ),
@@ -164,30 +164,6 @@ class UsageTracking implements IntegrationInterface {
 	}
 
 	/**
-	 * Get license key.
-	 *
-	 * @since 1.6.1
-	 *
-	 * @return string
-	 */
-	private function get_license() {
-
-		// Default to license being blank.
-		$license = '';
-
-		// If we're pro and have a license, use that.
-		if ( wpforms()->pro && ! is_null( wpforms()->license ) && wpforms()->license ) {
-			try {
-				$license = wpforms()->license->get();
-			} catch ( \Exception $e ) {
-				$license = '';
-			}
-		}
-
-		return $license;
-	}
-
-	/**
 	 * Get license type.
 	 *
 	 * @since 1.6.1
@@ -196,7 +172,9 @@ class UsageTracking implements IntegrationInterface {
 	 */
 	private function get_license_type() {
 
-		return wpforms()->pro && wpforms()->license ? wpforms()->license->type() : 'lite';
+		$license_type = wpforms_get_license_type();
+
+		return empty( $license_type ) ? 'lite' : $license_type;
 	}
 
 	/**
@@ -493,7 +471,7 @@ class UsageTracking implements IntegrationInterface {
 				default:
 					global $wpdb;
 					$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching
-						"SELECT SUM(meta_value) 
+						"SELECT SUM(meta_value)
 						FROM {$wpdb->postmeta}
 						WHERE meta_key = 'wpforms_entries_count';"
 					);

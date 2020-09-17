@@ -3,7 +3,7 @@ Contributors: wpforms, jaredatch, smub, slaFFik
 Tags: contact form, contact form plugin, forms, form builder, custom form, contact button, contact me, custom contact form, form manager, form, forms builder, forms creator, captcha, recaptcha, Akismet, email form, web form, feedback form, payment form, survey form, donation form, email submit form, message form, mailchimp, mailchimp form, aweber, aweber form, paypal, paypal form, stripe, stripe form, getresponse, getresponse form, email subscription, contact form widget, user registration form, wordpress registration, wordpress login form, feedback
 Requires at least: 4.9
 Tested up to: 5.5
-Stable tag: 1.6.2.2
+Stable tag: 1.6.2.3
 Requires PHP: 5.5
 License: GNU General Public License v2.0 or later
 
@@ -49,7 +49,7 @@ Whether you're looking to create a simple contact form, marketing form, request 
 
 WPForms comes with <a href="https://wpforms.com/features/form-templates/?utm_source=wprepo&utm_medium=link&utm_campaign=liteplugin" rel="friend">pre-built form templates</a> to help you save time. You can add, remove, or re-arrange fields as necessary.
 
-See <a href="https://wpforms.com/demo/?utm_source=wprepo&utm_medium=link&utm_campaign=liteplugin" rel="friend">150+ Pre-Made WPForms Form Template Demo</a>
+See <a href="https://wpforms.com/demo/?utm_source=wprepo&utm_medium=link&utm_campaign=liteplugin" rel="friend">100+ Pre-Made WPForms Form Template Demo</a>
 
 = Mobile Ready, SEO Friendly and Optimized for Speed =
 
@@ -100,7 +100,7 @@ Bloggers and publishers can use our WordPress post submission forms to accept gu
 
 = Payment Form, Donation Form, Booking Form, and More =
 
-While WPForms started out as a contact form plugin, it has evolved into a powerful forms solution that you can use to create a payment form, donation form, registration form, online booking form, and more.
+While WPForms started out as a contact form plugin, it has evolved into a powerful custom forms solution that you can use to create a payment form, donation form, registration form, online booking form, mobile form, and basically any type of custom form you need.
 
 WPForms integrates with both PayPal and Stripe, so you can easily create a credit card payment form to accept payments on your website. If you're using SSL, then you can use our Stripe Payment form to accept credit card payments. Alternatively you can use our PayPal payment form to make a donation form and accept payments online.
 
@@ -404,6 +404,18 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 1.6.2.3 =
+- Changed: Added shortcode access to a form embed modal and enhanced modal navigation.
+- Changed: Improved empty states for All Forms and Builder no fields preview panel.
+- Changed: Improved Email Summaries footer text.
+- Fixed: Custom validation messages for the fields appear correctly with Ajax form submission enabled.
+- Fixed: Base style CSS introduces no additional scrollbars now.
+- Fixed: Correct cursor for image choices validation messages.
+- Fixed: Getting the license details from DB works as expected regardless of a context.
+- Fixed: Getting the list of WPForms addons for user license level works as expected regardless of a context.
+- Fixed: Number Slider field increment is checked to be more than zero.
+- Fixed: Modern Dropdown validation works as expected for AJAX forms.
 
 = 1.6.2.2 =
 - Added: Caching friendly anti-spam protection (form tokens).

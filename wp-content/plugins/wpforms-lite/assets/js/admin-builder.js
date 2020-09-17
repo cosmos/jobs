@@ -707,6 +707,13 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 				_.debounce( app.changeNumberSliderStep, 500 )
 			);
 
+			// Check step value.
+			$builder.on(
+				'focusout',
+				'.wpforms-number-slider-step',
+				app.checkNumberSliderStep
+			);
+
 			// Change value display.
 			$builder.on(
 				'input',
@@ -798,26 +805,68 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 
 			var value = parseFloat( event.target.value );
 
-			if ( ! isNaN( value ) ) {
-				var max = parseFloat( event.target.max );
-				var min = parseFloat( event.target.min );
-				var fieldID = $( event.target ).parents( '.wpforms-field-option-row' ).data( 'fieldId' );
-
-				if ( value > max ) {
-					event.target.value = max;
-
-					return;
-				}
-
-				if ( value < min ) {
-					event.target.value = min;
-
-					return;
-				}
-
-				app.updateNumberSliderAttr( fieldID, value, 'step' )
-					.updateNumberSliderDefaultValueAttr( fieldID, value, 'step' );
+			if ( isNaN( value ) ) {
+				return;
 			}
+
+			var max = parseFloat( event.target.max );
+			var min = parseFloat( event.target.min );
+			var fieldID = $( event.target ).parents( '.wpforms-field-option-row' ).data( 'fieldId' );
+
+			if ( value <= 0 ) {
+				return;
+			}
+
+			if ( value > max ) {
+				event.target.value = max;
+
+				return;
+			}
+
+			if ( value < min ) {
+				event.target.value = min;
+
+				return;
+			}
+
+			app.updateNumberSliderAttr( fieldID, value, 'step' )
+				.updateNumberSliderDefaultValueAttr( fieldID, value, 'step' );
+		},
+
+		/**
+		 * Check number slider step option.
+		 *
+		 * @since 1.6.2.3
+		 *
+		 * @param {object} event Focusout event object.
+		 */
+		checkNumberSliderStep: function( event ) {
+
+			var value = parseFloat( event.target.value ),
+				$input = $( this );
+
+			if ( ! isNaN( value ) && value > 0 ) {
+				return;
+			}
+
+			$.confirm( {
+				title: wpforms_builder.heads_up,
+				content: wpforms_builder.error_number_slider_increment,
+				backgroundDismiss: false,
+				closeIcon: false,
+				icon: 'fa fa-exclamation-circle',
+				type: 'orange',
+				buttons: {
+					confirm: {
+						text: wpforms_builder.ok,
+						btnClass: 'btn-confirm',
+						action: function() {
+
+							$input.val( '' ).focus();
+						},
+					},
+				},
+			} );
 		},
 
 		/**
@@ -1597,7 +1646,7 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 			} );
 
 			// Display toggle for Address field hide address line 2 option
-			$builder.on('change', '.wpforms-field-option-address input.hide', function(e) {
+			$builder.on( 'change', '.wpforms-field-option-address input.wpforms-subfield-hide', function( e ) {
 				var $this    = $(this),
 					id       = $this.parent().parent().data('field-id'),
 					subfield = $this.parent().parent().data('subfield');
@@ -2161,6 +2210,7 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 									if ( $('.wpforms-field').length < 1 ) {
 										elements.$fieldOptions.append( elements.$noFieldsOptions.clone() );
 										elements.$sortableFieldsWrap.append( elements.$noFieldsPreview.clone() );
+										$builder.find( '.wpforms-field-submit' ).hide();
 									}
 									$builder.trigger('wpformsFieldDelete', [id, type ]);
 								});
@@ -2409,6 +2459,7 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 					$newField.fadeIn();
 
 					$builder.find( '.no-fields, .no-fields-preview' ).remove();
+					$builder.find( '.wpforms-field-submit' ).show();
 
 					$('#wpforms-field-id').val(res.data.field.id+1);
 

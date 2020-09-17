@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: 	  WPForms Lite
+ * Plugin Name:       WPForms Lite
  * Plugin URI:        https://wpforms.com
  * Description:       Beginner friendly WordPress contact form plugin. Use our Drag & Drop form builder to create your WordPress forms.
  * Requires at least: 4.9
  * Requires PHP:      5.5
  * Author:            WPForms
  * Author URI:        https://wpforms.com
- * Version:           1.6.2.2
+ * Version:           1.6.2.3
  * Text Domain:       wpforms-lite
  * Domain Path:       assets/languages
  *
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Plugin version.
 if ( ! defined( 'WPFORMS_VERSION' ) ) {
-	define( 'WPFORMS_VERSION', '1.6.2.2' );
+	define( 'WPFORMS_VERSION', '1.6.2.3' );
 }
 
 // Plugin Folder Path.

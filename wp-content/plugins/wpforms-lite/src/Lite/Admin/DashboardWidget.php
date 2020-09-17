@@ -362,7 +362,9 @@ class DashboardWidget {
 		<div class="wpforms-dash-widget-recommended-plugin-block">
 			<p><?php \esc_html_e( 'Recommended Plugin:', 'wpforms-lite' ); ?>
 				<b><?php \esc_html_e( 'MonsterInsights', 'wpforms-lite' ); ?></b> -
-				<a href="<?php echo \esc_url( $install_mi_url ); ?>"><?php \esc_html_e( 'Install', 'wpforms-lite' ); ?></a> &vert;
+				<?php if ( wpforms_can_install( 'plugin' ) ) { ?>
+					<a href="<?php echo \esc_url( $install_mi_url ); ?>"><?php \esc_html_e( 'Install', 'wpforms-lite' ); ?></a> &vert;
+				<?php } ?>
 				<a href="https://www.monsterinsights.com/?utm_source=wpformsplugin&utm_medium=link&utm_campaign=wpformsdashboardwidget"><?php \esc_html_e( 'Learn More', 'wpforms-lite' ); ?></a></p>
 		</div>
 		<?php

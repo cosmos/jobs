@@ -396,16 +396,15 @@ class WPForms_Lite {
 
 		$strings = array(
 			'disable_notifications' => sprintf(
-				wp_kses(
-					/* translators: %s - WPForms.com docs page URL. */
+				wp_kses( /* translators: %s - WPForms.com docs page URL. */
 					__( 'You\'ve just turned off notification emails for this form. Since entries are not stored in WPForms Lite, notification emails are recommended for collecting entry details. For setup steps, <a href="%s" target="_blank" rel="noopener noreferrer">please see our notification tutorial</a>.', 'wpforms-lite' ),
-					array(
-						'a'      => array(
-							'href'   => array(),
-							'target' => array(),
-							'rel'    => array(),
-						),
-					)
+					[
+						'a' => [
+							'href'   => [],
+							'target' => [],
+							'rel'    => [],
+						],
+					]
 				),
 				'https://wpforms.com/docs/setup-form-notification-wpforms/'
 			),
@@ -1124,11 +1123,10 @@ class WPForms_Lite {
 						<div class="addon-container">
 							<div class="addon-item">
 								<div class="details wpforms-clear" style="">
-									<img src="<?php echo WPFORMS_PLUGIN_URL; ?>assets/images/<?php echo $addon['icon']; ?>">
+									<img src="<?php echo esc_url( WPFORMS_PLUGIN_URL . 'assets/images/' . $addon['icon'] ); ?>">
 									<h5 class="addon-name">
 										<?php
-										printf(
-											/* translators: %s - addon name. */
+										printf( /* translators: %s - addon name. */
 											esc_html__( '%s Addon', 'wpforms-lite' ),
 											$addon['name']
 										);

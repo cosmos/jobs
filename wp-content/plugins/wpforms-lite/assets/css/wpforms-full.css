@@ -212,6 +212,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 div.wpforms-container-full .wpforms-form .wpforms-field-label.wpforms-label-hide,
 div.wpforms-container-full .wpforms-form .wpforms-field-sublabel.wpforms-sublabel-hide {
 	position: absolute;
+	top: -99999px;
 	left: -99999px;
 }
 
@@ -564,6 +565,7 @@ div.wpforms-container-full .wpforms-form label.wpforms-error {
 	color: #990000;
 	font-size: 12px;
 	float: none;
+	cursor: default;
 }
 
 div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
@@ -571,7 +573,8 @@ div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid,
 div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
 div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid,
 div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error,
-div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
+div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid,
+div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-has-error .choices__inner {
 	border: 1px solid #cc0000;
 }
 
@@ -1079,7 +1082,7 @@ div.wpforms-field-file-upload .wpforms-file-upload-builder-modern input[type="fi
 /* Image choices
 ----------------------------------------------------------------------------- */
 
-div.wpforms-container-full .wpforms-form ul.wpforms-image-choices label {
+div.wpforms-container-full .wpforms-form ul.wpforms-image-choices label:not(.wpforms-error) {
 	cursor: pointer;
 	position: relative;
 }

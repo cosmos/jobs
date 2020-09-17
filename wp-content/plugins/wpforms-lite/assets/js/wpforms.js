@@ -54,6 +54,9 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 				}
 			} );
 
+			// Unlock pagebreak navigation.
+			$( '.wpforms-page-button' ).prop( 'disabled', false );
+
 			$( document ).trigger( 'wpformsReady' );
 		},
 
@@ -271,6 +274,8 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 								} else if ( element.hasClass( 'wpforms-smart-phone-field' ) ) {
 									element.parent().after( error );
 								} else if ( element.hasClass( 'wpforms-validation-group-member' ) ) {
+									element.closest( '.wpforms-field' ).append( error );
+								} else if ( element.hasClass( 'choicesjs-select' ) ) {
 									element.closest( '.wpforms-field' ).append( error );
 								} else {
 									error.insertAfter( element );
@@ -675,6 +680,12 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 						$input    = $( self.input.element ),
 						sizeClass = $element.data( 'size-class' );
 
+					// Remove hidden attribute and hide `<select>` like a screen-reader text.
+					// It's important for field validation.
+					$element
+						.removeAttr( 'hidden' )
+						.addClass( self.config.classNames.input + '--hidden' );
+
 					// Add CSS-class for size.
 					if ( sizeClass ) {
 						$( self.containerOuter.element ).addClass( sizeClass );
@@ -691,13 +702,26 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 						if ( self.getValue( true ).length ) {
 							$input.addClass( self.config.classNames.input + '--hidden' );
 						}
-
-						// On change event.
-						$element.on( 'change', function() {
-
-							self.getValue( true ).length ? $input.addClass( self.config.classNames.input + '--hidden' ) : $input.removeClass( self.config.classNames.input + '--hidden' );
-						} );
 					}
+
+					// On change event.
+					$element.on( 'change', function() {
+
+						var validator;
+
+						// Listen if multiple select has choices.
+						if ( $element.prop( 'multiple' ) ) {
+							self.getValue( true ).length > 0 ? $input.addClass( self.config.classNames.input + '--hidden' ) : $input.removeClass( self.config.classNames.input + '--hidden' );
+						}
+
+						validator = $element.closest( 'form' ).data( 'validator' );
+
+						if ( ! validator ) {
+							return;
+						}
+
+						validator.element( $element );
+					} );
 				};
 
 				args.callbackOnCreateTemplates = function() {
@@ -1046,6 +1070,13 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 				// Validate.
 				if ( typeof $.fn.validate !== 'undefined' ) {
 					$page.find( ':input' ).each( function( index, el ) {
+
+						// Skip input fields without `name` attribute, which could have fields.
+						// E.g. `Placeholder` input for Modern dropdown.
+						if ( ! $( el ).attr( 'name' ) ) {
+							return;
+						}
+
 						if ( ! $( el ).valid() ) {
 							valid = false;
 						}

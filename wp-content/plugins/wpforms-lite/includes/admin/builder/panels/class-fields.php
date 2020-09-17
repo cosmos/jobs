@@ -147,8 +147,9 @@ class WPForms_Builder_Panel_Fields extends WPForms_Builder_Panel {
 				</div>
 
 				<?php
-				$submit = ! empty( $this->form_data['settings']['submit_text'] ) ? $this->form_data['settings']['submit_text'] : esc_html__( 'Submit', 'wpforms-lite' );
-				printf( '<p class="wpforms-field-submit"><input type="submit" value="%s" class="wpforms-field-submit-button"></p>', esc_attr( $submit ) );
+				$submit       = ! empty( $this->form_data['settings']['submit_text'] ) ? $this->form_data['settings']['submit_text'] : esc_html__( 'Submit', 'wpforms-lite' );
+				$submit_style = empty( $this->form_data['fields'] ) ? 'display: none;' : '';
+				printf( '<p class="wpforms-field-submit" style="%1$s"><input type="submit" value="%2$s" class="wpforms-field-submit-button"></p>', esc_attr( $submit_style ), esc_attr( $submit ) );
 				?>
 
 				<?php wpforms_debug_data( $this->form_data ); ?>
@@ -326,8 +327,12 @@ class WPForms_Builder_Panel_Fields extends WPForms_Builder_Panel {
 	public function no_fields_preview() {
 
 		printf(
-			'<p class="no-fields-preview">%s</p>',
-			esc_html__( 'You don\'t have any fields yet. Add some!', 'wpforms-lite' )
+			'<div class="no-fields-preview">
+				<h4>%1$s</h4>
+				<p>%2$s</p>
+			</div>',
+			esc_html__( 'You don\'t have any fields yet. Add some!', 'wpforms-lite' ),
+			esc_html__( 'Take your pick from our wide variety of fields and start building out your form!', 'wpforms-lite' )
 		);
 	}
 

@@ -793,8 +793,16 @@ class WPForms_Process {
 		// Transform field ids to field names for jQuery Validate plugin.
 		foreach ( $field_errors as $key => $error ) {
 
-			$props = wpforms()->frontend->get_field_properties( $fields[ $key ], $form_data );
-			$name  = isset( $props['inputs']['primary']['attr']['name'] ) ? $props['inputs']['primary']['attr']['name'] : '';
+			$field = $fields[ $key ];
+			$props = wpforms()->frontend->get_field_properties( $field, $form_data );
+			$input = isset( $props['inputs']['primary'] ) ? $props['inputs']['primary'] : end( $props['inputs'] );
+			$name  = isset( $input['attr']['name'] ) && empty( $input['hidden'] ) ? $input['attr']['name'] : '';
+			$type  = isset( $field['type'] ) ? $field['type'] : '';
+
+			// Multiple select field has a name property without [] at the end.
+			if ( $name && 'select' === $type && ! empty( $field['multiple'] ) ) {
+				$name .= '[]';
+			}
 
 			if ( $name ) {
 				$field_errors[ $name ] = $error;

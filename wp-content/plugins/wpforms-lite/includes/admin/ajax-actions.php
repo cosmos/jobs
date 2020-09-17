@@ -414,6 +414,7 @@ add_action( 'wp_ajax_wpforms_verify_ssl', 'wpforms_verify_ssl' );
  * Deactivate addon.
  *
  * @since 1.0.0
+ * @since 1.6.2.3 Updated the permissions checking.
  */
 function wpforms_deactivate_addon() {
 
@@ -421,8 +422,8 @@ function wpforms_deactivate_addon() {
 	check_ajax_referer( 'wpforms-admin', 'nonce' );
 
 	// Check for permissions.
-	if ( ! wpforms_current_user_can() ) {
-		wp_send_json_error();
+	if ( ! current_user_can( 'deactivate_plugins' ) ) {
+		wp_send_json_error( esc_html__( 'Plugin deactivation is disabled for you on this site.', 'wpforms-lite' ) );
 	}
 
 	$type = 'addon';
@@ -448,6 +449,7 @@ add_action( 'wp_ajax_wpforms_deactivate_addon', 'wpforms_deactivate_addon' );
  * Activate addon.
  *
  * @since 1.0.0
+ * @since 1.6.2.3 Updated the permissions checking.
  */
 function wpforms_activate_addon() {
 
@@ -455,8 +457,8 @@ function wpforms_activate_addon() {
 	check_ajax_referer( 'wpforms-admin', 'nonce' );
 
 	// Check for permissions.
-	if ( ! wpforms_current_user_can() ) {
-		wp_send_json_error();
+	if ( ! current_user_can( 'activate_plugins' ) ) {
+		wp_send_json_error( esc_html__( 'Plugin activation is disabled for you on this site.', 'wpforms-lite' ) );
 	}
 
 	if ( isset( $_POST['plugin'] ) ) {
@@ -485,15 +487,23 @@ add_action( 'wp_ajax_wpforms_activate_addon', 'wpforms_activate_addon' );
  * Install addon.
  *
  * @since 1.0.0
+ * @since 1.6.2.3 Updated the permissions checking.
  */
 function wpforms_install_addon() {
 
 	// Run a security check.
 	check_ajax_referer( 'wpforms-admin', 'nonce' );
 
-	// Check for permissions.
-	if ( ! wpforms_current_user_can() ) {
-		wp_send_json_error();
+	$generic_error = esc_html__( 'There was an error while performing your request.', 'wpforms-lite' );
+
+	$type = 'addon';
+	if ( ! empty( $_POST['type'] ) ) {
+		$type = sanitize_key( $_POST['type'] );
+	}
+
+	// Check if new installations are allowed.
+	if ( ! wpforms_can_install( $type ) ) {
+		wp_send_json_error( $generic_error );
 	}
 
 	$error = esc_html__( 'Could not install addon. Please download from wpforms.com and install manually.', 'wpforms-lite' );
@@ -550,35 +560,34 @@ function wpforms_install_addon() {
 
 	$plugin_basename = $installer->plugin_info();
 
-	if ( $plugin_basename ) {
-
-		$type = 'addon';
-		if ( ! empty( $_POST['type'] ) ) {
-			$type = sanitize_key( $_POST['type'] );
-		}
-
-		// Activate the plugin silently.
-		$activated = activate_plugin( $plugin_basename );
-
-		if ( ! is_wp_error( $activated ) ) {
-			wp_send_json_success(
-				array(
-					'msg'          => 'plugin' === $type ? esc_html__( 'Plugin installed & activated.', 'wpforms-lite' ) : esc_html__( 'Addon installed & activated.', 'wpforms-lite' ),
-					'is_activated' => true,
-					'basename'     => $plugin_basename,
-				)
-			);
-		} else {
-			wp_send_json_success(
-				array(
-					'msg'          => 'plugin' === $type ? esc_html__( 'Plugin installed.', 'wpforms-lite' ) : esc_html__( 'Addon installed.', 'wpforms-lite' ),
-					'is_activated' => false,
-					'basename'     => $plugin_basename,
-				)
-			);
-		}
+	if ( empty( $plugin_basename ) ) {
+		wp_send_json_error( $error );
 	}
 
-	wp_send_json_error( $error );
+	$result = array(
+		'msg'          => $generic_error,
+		'is_activated' => false,
+		'basename'     => $plugin_basename,
+	);
+
+	// Check for permissions.
+	if ( ! current_user_can( 'activate_plugins' ) ) {
+		$result['msg'] = 'plugin' === $type ? esc_html__( 'Plugin installed.', 'wpforms-lite' ) : esc_html__( 'Addon installed.', 'wpforms-lite' );
+
+		wp_send_json_success( $result );
+	}
+
+	// Activate the plugin silently.
+	$activated = activate_plugin( $plugin_basename );
+
+	if ( ! is_wp_error( $activated ) ) {
+		$result['is_activated'] = true;
+		$result['msg']          = 'plugin' === $type ? esc_html__( 'Plugin installed & activated.', 'wpforms-lite' ) : esc_html__( 'Addon installed & activated.', 'wpforms-lite' );
+
+		wp_send_json_success( $result );
+	}
+
+	// Fallback error just in case.
+	wp_send_json_error( $result );
 }
 add_action( 'wp_ajax_wpforms_install_addon', 'wpforms_install_addon' );

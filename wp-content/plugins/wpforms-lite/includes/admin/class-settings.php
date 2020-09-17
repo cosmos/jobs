@@ -434,7 +434,7 @@ class WPForms_Settings {
 						'<h4>' . esc_html__( 'Validation Messages', 'wpforms-lite' )
 						. '</h4><p>',
 						'<a href="https://wpforms.com/docs/how-to-use-smart-tags-in-wpforms/#smart-tags" target="_blank" rel="noopener noreferrer">',
-						'</>'
+						'</a>'
 					),
 					'type'     => 'content',
 					'no_label' => true,

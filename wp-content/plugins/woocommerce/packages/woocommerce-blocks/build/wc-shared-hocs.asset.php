@@ -1,1 +1,0 @@
-<?php return array('dependencies' => array('wc-shared-context', 'wp-api-fetch', 'wp-element', 'wp-polyfill'), 'version' => 'a20d9e331b46244791de114aa4e91786');

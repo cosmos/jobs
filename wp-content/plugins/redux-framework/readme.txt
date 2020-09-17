@@ -5,7 +5,7 @@ Tags: gutenberg, blocks, gutenberg blocks, editor, block, page builder, block ed
 Requires at least: 4.0
 Requires PHP: 5.3
 Tested up to: 5.5
-Stable tag: 4.1.18
+Stable tag: 4.1.19
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -19,6 +19,8 @@ Supercharge the Gutenberg editor with our ever-growing library of WordPress Bloc
 Worried that our templates may not work with your theme? We've got you covered. With our custom <em>page templates</em> option you can override any theme. Missing a plugin a template needs? No worries, we’ll even help you install what you need, all from the Gutenberg editor.
 
 Don’t waste hours trying to recreate a template you love. With a click of a button it is own website where you can start customizing it for your needs.
+
+[youtube https://www.youtube.com/watch?v=cYviuu6piaw]
 
 <h4>♥️ What the Plugin does?</h4>
 <ul>
@@ -152,14 +154,27 @@ If you want, you can use the [Gutenberg](https://wordpress.org/plugins/gutenberg
 
 == Changelog ==
 
+= 4.1.19 =
+* Added: Properly adjust the blocked editor page width based on template selected.
+* Added: Broke out third-party premium plugins for filtering to help with understanding of what comes with Redux Pro.
+* Added: Update block editor width when selecting a Redux template.
+* Fixed: Some styling issues with preview modal.
+* Fixed: Issue where plugin titles were not alphabetical.
+* Fixed: Disabled third party premium dependencies.
+* Fixed: Issue where crash would occur when Redux could not write out a file.
+* Fixed: CSS selectors with HTML entities, like >, were not getting decoded for the passed compiler values.
+* Release date: Sep 17, 2020
+
 = 4.1.18 =
 * Fixed: Bug with typography output and non-array values for CSS selectors.
 * Fixed: Bug with spacing field not adding the units when a default is provided.
 * Added: Redux Pro install and activation flow.
 * Fixed: Templates trial wasn't working properly! It works now. :)
+* Release date: Sept 9, 2020
 
 = 4.1.17 =
 * Fixed: Edge case where enable Gutenberg notice doesn't disappear. Sorry everyone!
+* Release date: Aug 27, 2020
 
 = 4.1.16 =
 * Fixed: Issue when null values were sent to Redux::set();
