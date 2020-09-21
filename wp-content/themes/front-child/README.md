@@ -9,7 +9,7 @@ Use the package manager [npm](https://www.npmjs.com/) to install Cosmos Job Boar
 ```bash	
 npm install
 ```
-Gulp is the build manager and is needed to start the dev process so run one of ther following commands
+Gulp is the build manager and is needed to start the dev process so run one of their following commands. `Gulp` and `npm run start` will start browser sync, compile assets in real time and launch a browser provided your set up is `http://localhost:8888/cosmos-job-board` otherwise change line 21 in `gulpfile.babel.js` to match your local dev URL.
 ```bash start
 gulp
 ```

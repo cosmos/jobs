@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "metropolis-regular";
+  src:
+    url("../../dist/fonts/Metropolis-Regular.woff2") format("woff2"),
+    url("../../dist/fonts/Metropolis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;	
+}
+
+$primary:																			#1D1E43!default;
+$primary-darker:                              darken($primary,5.8%);
+$primary-lighter:          								    lighten($primary,60%);

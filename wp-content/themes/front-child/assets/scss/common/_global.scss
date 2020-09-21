@@ -1,0 +1,9 @@
+body {
+	font-family: 'metropolis-regular', 'sans-serif';
+	a {
+		color: $primary;
+		&:hover {
+			color: $primary-lighter;
+		}
+	}
+}

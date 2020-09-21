@@ -1,0 +1,23 @@
+.u-header__section {
+	background-color: $primary;
+	.u-header__nav-link {
+		color: #fff;
+	}
+	.u-sidebar--account__toggle-bg {
+		background-color: rgba(255,255,255,.15);
+	}
+	.u-header__nav-item:hover .u-header__nav-link {
+		color: $primary-lighter;
+	}
+	.u-sidebar--account__toggle-bg {
+		&:hover .u-sidebar--account__toggle-text{
+			color: $primary-lighter;
+		}
+		.u-sidebar--account__toggle-text {
+			color: #fff;
+			&:hover {
+				color: $primary-lighter;
+			}
+		}
+	}
+}
