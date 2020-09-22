@@ -13,6 +13,8 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 sitemap.xml
 sitemap.xml.gz
+#added by Todd Santoro 9/22/2020
+wp-content/themes/front-child/dist
 
 # @TODO writable paths
 wp-content/cache/
