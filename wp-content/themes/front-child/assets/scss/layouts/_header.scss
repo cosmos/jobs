@@ -1,5 +1,6 @@
-.u-header__section {
-	background-color: $primary;
+.u-header__section,
+.u-header--bg-transparent:not(.js-header-fix-moment) .u-header__section {
+	background-color: $dk-purple;
 	box-shadow: none;
 	.u-header__nav-link {
 		color: #fff;

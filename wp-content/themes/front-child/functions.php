@@ -14,11 +14,14 @@
 require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
 
+// Adds the child theme compiled assets
 function cosmos_job_board_assets() {
   wp_enqueue_style( 'cosmos-job-board-stylesheet', get_stylesheet_directory_uri() . '/dist/css/main.css', array('front-style'), '1.0.0', 'all' );
   wp_enqueue_script( 'cosmos-job-board-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery'), '1.0.0', true );
 }
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
+
+
 
 // This is just stuff that will be needed but has not been customized.
 // Add field to frontend
