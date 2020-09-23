@@ -8,8 +8,7 @@
 /**
  * Include all your custom code here
  */
-// https://www.amberweinberg.com/wp-job-manager-plugin-custom-filters-functions/
-// https://wpjobmanager.com/customization-snippets/
+
 
 require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
@@ -21,6 +20,10 @@ function cosmos_job_board_assets() {
 }
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
+// Here is where you unhook anything you want to unhook from the parent theme
+function remove_parent_filters(){ //Have to do it after theme setup, because child theme functions are loaded first
+}
+add_action( 'after_setup_theme', 'remove_parent_filters' );
 
 
 // This is just stuff that will be needed but has not been customized.
@@ -73,3 +76,7 @@ function custom_submit_resume_form_fields( $fields ) {
 // }
 
 // add_action( 'wp_print_scripts', 'cosmos_print_scripts_styles' );
+
+
+
+
