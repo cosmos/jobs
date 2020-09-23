@@ -22,6 +22,7 @@ add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
 // Here is where you unhook anything you want to unhook from the parent theme
 function remove_parent_filters(){ //Have to do it after theme setup, because child theme functions are loaded first
+  // Stuff goes in here // remove_filter
 }
 add_action( 'after_setup_theme', 'remove_parent_filters' );
 

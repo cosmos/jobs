@@ -4,6 +4,7 @@
 	box-shadow: none;
 	.u-header__nav-link {
 		color: #fff;
+		font-size: 14px;
 	}
 	.u-sidebar--account__toggle-bg {
 		background-color: rgba(255,255,255,.15);
@@ -21,5 +22,12 @@
 				color: $primary-lighter;
 			}
 		}
+	}
+	.menu-item.active a {
+		border-bottom: 2px solid #fff;
+		margin-bottom: 0;
+	}
+	.menu-item a {
+		margin-bottom: 2px;
 	}
 }

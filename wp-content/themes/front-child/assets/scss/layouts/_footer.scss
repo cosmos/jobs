@@ -1,3 +1,10 @@
-.bg-dark {
-	background-color: $dk-purple!important;
+.site-footer {
+	&.bg-dark {
+		background-color: $dk-purple!important;
+	}
+	a[rel~="home"] {
+		img {
+			max-width: 100px!important;
+		}
+	}
 }
