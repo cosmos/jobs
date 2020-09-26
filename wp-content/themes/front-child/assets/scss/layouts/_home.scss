@@ -1,3 +1,8 @@
 .bg-img-hero[style] {
   background: url(../img/bg-tile-stars.a96cade5.svg),linear-gradient(135deg,#0f0d20,#040405 25%,#21224d 53%,#446eb7)!important;
 }
+
+ul.cosmos-job-listings-home .job_listing {
+	flex: 0 0 100%!important;
+  max-width: 100%!important;
+}

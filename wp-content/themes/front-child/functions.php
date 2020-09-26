@@ -9,9 +9,9 @@
  * Include all your custom code here
  */
 
-
 require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
+require(__DIR__.'/inc/functions-home.php');
 
 // Adds the child theme compiled assets
 function cosmos_job_board_assets() {
@@ -21,7 +21,7 @@ function cosmos_job_board_assets() {
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
 // Here is where you unhook anything you want to unhook from the parent theme
-function remove_parent_filters(){ //Have to do it after theme setup, because child theme functions are loaded first
+function remove_parent_filters(){
   // Stuff goes in here // remove_filter
 }
 add_action( 'after_setup_theme', 'remove_parent_filters' );
@@ -80,4 +80,41 @@ function custom_submit_resume_form_fields( $fields ) {
 
 
 
+/**
+ * Outputs the job listing class.
+ *
+ * @since 1.0.0
+ * @param string      $class (default: '').
+ * @param int|WP_Post $post_id (default: null).
+ */
+function cosmos_job_listing_class( $class = '', $post_id = null ) {
+  // Separates classes with a single space, collates classes for post DIV.
+  return 'class="' . esc_attr( join( ' ', cosmos_get_job_listing_class( $class, $post_id ) ) ) . '"';
+}
 
+/**
+ * Gets the job listing class.
+ *
+ * @since 1.0.0
+ * @param string      $class
+ * @param int|WP_Post $post_id (default: null).
+ * @return array
+ */
+function cosmos_get_job_listing_class( $class = '', $post_id = null ) {
+  $post = get_post( $post_id );
+
+  if ( empty( $post ) || 'job_listing' !== $post->post_type ) {
+    return [];
+  }
+
+  $classes = [];
+
+  if ( ! empty( $class ) ) {
+    if ( ! is_array( $class ) ) {
+      $class = preg_split( '#\s+#', $class );
+    }
+    $classes = array_merge( $classes, $class );
+  }
+
+  return get_post_class( $classes, $post->ID );
+}
