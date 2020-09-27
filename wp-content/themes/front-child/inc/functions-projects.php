@@ -1,4 +1,18 @@
 <?php
+
+
+
+
+
+// Get logos for the additional fields I added then delete this comment.
+
+
+
+
+
+
+
+
 // Edits the labels of the RESUME post_type and of it's taxonomies(2)
 add_action( 'wp_loaded', 'change_company_labels', 20 );
 
