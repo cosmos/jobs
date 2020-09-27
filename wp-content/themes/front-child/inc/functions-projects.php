@@ -184,10 +184,29 @@ if( ! function_exists( 'cosmos_single_company_linked_accounts' ) ) {
 // Adds a link to claim a project profile
 add_action( 'single_company_sidebar', 'cosmos_add_project_claim_link', 40);
 function cosmos_add_project_claim_link() {
-  echo '<a title="Claim this project" href="mailto:'.get_bloginfo('admin_email').'" class="mt-5 btn btn-sm btn-primary transition-3d-hover">Claim this project</a>';
+  global $wp;
+  $current_url = home_url( add_query_arg( array(), $wp->request ) );
+  echo '<a title="Claim this project" href="mailto:'.get_bloginfo('admin_email').'?subject=Request to claim this project: '.$current_url.'" class="mt-5 btn btn-sm btn-primary transition-3d-hover">Claim this project</a>';
 }
 
-
-
+add_action( 'single_company_content', 'cosmos_single_company_description', 10 );
+add_action( 'after_setup_theme', 'cosmos_remove_single_company_description');
+function cosmos_remove_single_company_description() {
+  remove_action( 'single_company_content', 'front_single_company_description', 10 );
+}
+if( ! function_exists( 'cosmos_single_company_description' ) ) {
+    function cosmos_single_company_description() {
+        if( !empty( get_the_content() ) ) : 
+            ?>
+            <div class="mb-4">
+                <h2 class="h5"><?php esc_html_e( 'About Project', 'front' ) ?></h2>
+            </div>
+            <div class="border-bottom pb-5 mb-5">
+                <?php the_content(); ?>
+            </div>
+            <?php
+        endif;
+    }
+}
 
 
