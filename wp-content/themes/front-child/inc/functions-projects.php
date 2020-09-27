@@ -182,9 +182,10 @@ if( ! function_exists( 'cosmos_single_company_linked_accounts' ) ) {
 }
 
 // Adds a link to claim a project profile
-add_action( 'single_company_sidebar', 'cossmos_add_project_claim_link');
-
-
+add_action( 'single_company_sidebar', 'cosmos_add_project_claim_link', 40);
+function cosmos_add_project_claim_link() {
+  echo '<a title="Claim this project" href="mailto:'.get_bloginfo('admin_email').'" class="mt-5 btn btn-sm btn-primary transition-3d-hover">Claim this project</a>';
+}
 
 
 
