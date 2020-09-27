@@ -57,13 +57,13 @@ function change_resume_labels()
 }
 
 // Edits the footer of a contributor on browse contributors
-add_filter('resume_listing_list_content_area_after', 'cosmos_resume_listing_list_card_footer', 10);
-add_action( 'after_setup_theme', 'remove_resume_listing_list_content_area_after');
-function remove_resume_listing_list_content_area_after() {
+add_filter('resume_listing_list_content_area_after', 'cosmos_add_resume_listing_list_card_footer', 10);
+add_action( 'after_setup_theme', 'cosmos_remove_resume_listing_list_content_area_after');
+function cossmos_remove_resume_listing_list_content_area_after() {
   remove_action('resume_listing_list_content_area_after', 'front_resume_listing_list_card_footer', 10);
 }
 
-function cosmos_resume_listing_list_card_footer() {
+function cosmos_add_resume_listing_list_card_footer() {
   ob_start();
   $html = null;
   cosmos_resume_listing_list_card_footer_content();

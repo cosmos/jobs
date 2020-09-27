@@ -26,6 +26,46 @@ function change_company_labels()
   return TRUE;
 }
 
+add_filter( 'submit_company_form_fields', 'cosmos_frontend_company_form_fields' );
+function cosmos_frontend_company_form_fields( $fields ) {
+  $fields['company_fields']['company_github'] = array(
+      'label' => __( 'Github', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https://github.com/', 'job_manager' ),
+      'priority' => 60
+  );
+  $fields['company_fields']['company_documentation'] = array(
+      'label' => __( 'Documentation', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https://', 'job_manager' ),
+      'priority' => 60
+  );
+  $fields['company_fields']['company_medium'] = array(
+      'label' => __( 'Medium', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https://medium.com', 'job_manager' ),
+      'priority' => 60
+  );
+  $fields['company_fields']['company_discord'] = array(
+      'label' => __( 'Discord', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https://discord.com', 'job_manager' ),
+      'priority' => 60
+  );
+  $fields['company_fields']['company_telegram'] = array(
+      'label' => __( 'Telegram', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https://telegram.org', 'job_manager' ),
+      'priority' => 60
+  );
+  return $fields;
+}
+
 // Add fields to Projects on the backend
 add_filter( 'company_manager_company_fields', 'wpjms_admin_projects_form_fields' );
 function wpjms_admin_projects_form_fields( $fields ) {
@@ -40,35 +80,35 @@ function wpjms_admin_projects_form_fields( $fields ) {
     );
     $i = $i + 10;
   }
-  $fields['_candidate_github'] = array(
+  $fields['_company_github'] = array(
       'label'     => __( 'Github', 'job_manager' ),
       'type'      => 'text',
       'placeholder'   => __( 'https://github.com/', 'job_manager' ),
       'description' => 'Full URL',
       'priority' => 80,
   );
-  $fields['_candidate_documentation'] = array(
+  $fields['_company_documentation'] = array(
       'label'     => __( 'Documentation', 'job_manager' ),
       'type'      => 'text',
       'placeholder'   => __( 'https://', 'job_manager' ),
       'description' => 'Full URL',
       'priority' => 81,
   );
-  $fields['_candidate_medium'] = array(
+  $fields['_company_medium'] = array(
       'label'     => __( 'Medium', 'job_manager' ),
       'type'      => 'text',
       'placeholder'   => __( 'https://medium.com/', 'job_manager' ),
       'description' => 'Full URL',
       'priority' => 82,
   );
-  $fields['_candidate_discord'] = array(
+  $fields['_company_discord'] = array(
       'label'     => __( 'Discord', 'job_manager' ),
       'type'      => 'text',
       'placeholder'   => __( 'https://discord.com/', 'job_manager' ),
       'description' => 'Full URL',
       'priority' => 83,
   );
-  $fields['_candidate_telegram'] = array(
+  $fields['_company_telegram'] = array(
       'label'     => __( 'Telegram', 'job_manager' ),
       'type'      => 'text',
       'placeholder'   => __( 'https://telegram.org/', 'job_manager' ),
@@ -77,3 +117,76 @@ function wpjms_admin_projects_form_fields( $fields ) {
   );
   return $fields;
 }
+
+add_action( 'single_company_sidebar', 'cosmos_single_company_linked_accounts', 30 );
+add_action( 'after_setup_theme', 'cosmos_remove_front_single_company_linked_accounts');
+function cosmos_remove_front_single_company_linked_accounts() {
+  remove_action( 'single_company_sidebar', 'front_single_company_linked_accounts', 30 );
+}
+if( ! function_exists( 'cosmos_single_company_linked_accounts' ) ) {
+    function cosmos_single_company_linked_accounts() {
+        $args = apply_filters( 'front_single_company_linked_accounts_args', array(
+            'website'   => array(
+                'text'  => get_the_title(),
+                'link'  => front_get_the_meta_data( '_company_website', null, 'company', true ),
+                'image' => get_the_company_logo( null, 'thumbnail') ? get_the_company_logo( null, 'thumbnail') : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ),
+            ),
+            'twitter'   => array(
+                'text'  => esc_html__( 'Twitter', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_twitter', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img19.png',
+            ),
+            'facebook'  => array(
+                'text'  => esc_html__( 'Facebook', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_facebook', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+            'github'  => array(
+                'text'  => esc_html__( 'Github', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_github', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+            'documentation'  => array(
+                'text'  => esc_html__( 'Documentation', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_documentation', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+            'medium'  => array(
+                'text'  => esc_html__( 'Medium', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_medium', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+            'discord'  => array(
+                'text'  => esc_html__( 'Discord', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_discord', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+            'telegram'  => array(
+                'text'  => esc_html__( 'Telegram', 'front' ),
+                'link'  => front_get_the_meta_data( '_company_telegram', null, 'company', true ),
+                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+            ),
+        ) );
+        
+        if( is_array( $args ) && count( $args ) > 0 ) {
+            if( ! empty( front_single_get_linked_accounts_content( $args ) ) ) {
+                ?>
+                <div class="border-top pt-5 mt-5">
+                    <h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3"><?php esc_html_e( 'Linked Accounts', 'front' ); ?></h4>
+                    <?php echo front_single_get_linked_accounts_content( $args ); ?>
+                </div>
+                <?php
+            }
+        }
+    }
+}
+
+// Adds a link to claim a project profile
+add_action( 'single_company_sidebar', 'cossmos_add_project_claim_link');
+
+
+
+
+
+
+
