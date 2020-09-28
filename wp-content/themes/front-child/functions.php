@@ -30,8 +30,8 @@ add_action( 'after_setup_theme', 'remove_parent_filters' );
 
 // This is just stuff that will be needed but has not been customized.
 // Add field to frontend
-add_filter( 'submit_resume_form_fields', 'wpjms_frontend_resume_form_fields' );
-function wpjms_frontend_resume_form_fields( $fields ) {
+add_filter( 'submit_resume_form_fields', 'cosmos_frontend_resume_form_fields' );
+function cosmos_frontend_resume_form_fields( $fields ) {
   $fields['resume_fields']['candidate_color'] = array(
       'label' => __( 'Favourite Color', 'job_manager' ),
       'type' => 'text',
@@ -42,6 +42,16 @@ function wpjms_frontend_resume_form_fields( $fields ) {
   return $fields;
 }
 
+// Redirects a user back to a page after login or registration
+add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
+add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);
+if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+  function cosmos_login_redirect() {
+    $location = $_GET['action'];
+    wp_safe_redirect($location);
+    exit();
+  }
+}
 
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {

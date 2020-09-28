@@ -216,8 +216,11 @@ function cosmos_add_project_claim_link() {
       $html .= '<input type="hidden" name="mailto" id="mailto" value="'.get_bloginfo('admin_email').'" />';
       $html .= '<button name="submit" type="submit" id="submit" class="btn btn-sm btn-primary transition-3d-hoverbtn btn-sm btn-primary transition-3d-hover">Claim this project</button>';
     $html .= '</form>';
-    echo $html;
+    
+  } else {
+      $html .= '<a href="'.home_url().'/my-account/?action='.$current_url.'" class="btn btn-sm btn-primary transition-3d-hoverbtn btn-sm btn-primary transition-3d-hover mt-5">Create account to claim this project</a>';    
   }
+  echo $html;
 }
 
 add_action( 'single_company_content', 'cosmos_single_company_description', 10 );
