@@ -15,7 +15,7 @@
         setTimeout(function () {
             message.fadeOut();
         }, 5000);
-        form.find('input:not([type="submit"]), textarea').val('');
+        //form.find('input:not([type="submit"]), textarea').val('');
     }
     // fail function
     function fail_func(data) {
