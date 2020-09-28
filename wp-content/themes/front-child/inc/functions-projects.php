@@ -240,4 +240,12 @@ if( ! function_exists( 'cosmos_single_company_description' ) ) {
     }
 }
 
+// Remove the comment section of the project page
+add_action( 'after_setup_theme', 'cosmos_remove_project_comments');
+function cosmos_remove_project_comments() {
+  remove_action( 'single_company_content', 'front_single_company_comment', 20 );
+}
+
+
+
 

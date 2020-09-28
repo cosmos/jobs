@@ -23,10 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $content .= "Project: $project\n";
 
   # email headers.
-  $headers = "From: $name &lt;$user_email&gt;";
+  $headers = "From: $name <$user_email>";
 
   # Send the email.
-  $success = mail($mailto, $subject, $content);
+  $success = mail($mailto, $subject, $content, $headers);
   if ($success) {
       # Set a 200 (okay) response code.
       http_response_code(200);
