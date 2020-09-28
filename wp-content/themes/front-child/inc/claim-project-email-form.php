@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $content .= "Project: $project\n";
 
   # email headers.
-  $headers = "From: $name &lt;$email&gt;";
+  $headers = "From: $name &lt;$user_email&gt;";
 
   # Send the email.
   $success = mail($mail_to, $subject, $content, $headers);
