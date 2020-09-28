@@ -12,7 +12,6 @@
 require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
 require(__DIR__.'/inc/functions-home.php');
-require(__DIR__.'/inc/functions-resumes.php');
 
 // Adds the child theme compiled assets
 function cosmos_job_board_assets() {
