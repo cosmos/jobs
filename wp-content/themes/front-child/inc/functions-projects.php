@@ -200,7 +200,24 @@ add_action( 'single_company_sidebar', 'cosmos_add_project_claim_link', 40);
 function cosmos_add_project_claim_link() {
   global $wp;
   $current_url = home_url( add_query_arg( array(), $wp->request ) );
-  echo '<a title="Claim this project" href="mailto:'.get_bloginfo('admin_email').'?subject=Request to claim this project: '.$current_url.'" class="mt-5 btn btn-sm btn-primary transition-3d-hover">Claim this project</a>';
+  $html = null;
+  if (is_user_logged_in()) {
+    $html .= '<form action="'.get_stylesheet_directory_uri().'/inc/claim-project-email-form.php" method="post" id="claim_this_project_form" class="mt-5 text-center">';
+      $html .= '<div class="row">';
+        $html .= '<div class="col-12">';
+          $html .= '<div class="alert alert-success contact__msg text-center" style="display: none" role="alert">';
+            $html .= 'You have successfully requested to claim this project.';
+          $html .= '</div>';
+        $html .= '</div>';
+      $html .= '</div>';
+      $html .= '<input type="hidden" name="project" id="project" value="'.$current_url.'" />';
+      $html .= '<input type="hidden" name="user_email" id="user_email" value="'.wp_get_current_user()->data->user_email.'" />';
+      $html .= '<input type="hidden" name="name" id="name" value="'.wp_get_current_user()->data->display_name.'" />';
+      $html .= '<input type="hidden" name="mailto" id="mailto" value="todd@toddsantoro.com" />';
+      $html .= '<button name="submit" type="submit" id="submit" class="btn btn-sm btn-primary transition-3d-hoverbtn btn-sm btn-primary transition-3d-hover">Claim this project</button>';
+    $html .= '</form>';
+    echo $html;
+  }
 }
 
 add_action( 'single_company_content', 'cosmos_single_company_description', 10 );
