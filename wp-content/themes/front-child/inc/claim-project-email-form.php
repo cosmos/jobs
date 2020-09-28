@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   # Mail Content
   $content = "Name: $name\n";
-  $content .= "Email: $user_email\n\n";
+  $content .= "Email: $user_email\n";
   $content .= "Project: $project\n";
 
   # email headers.
