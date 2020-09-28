@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -40,9 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "Oops! Something went wrong, we couldn't send your message.";
   }
 
-  } else {
-      # Not a POST request, set a 403 (forbidden) response code.
-      http_response_code(403);
-      echo "There was a problem with your submission, please try again.";
-  }
+} else {
+    # Not a POST request, set a 403 (forbidden) response code.
+    http_response_code(403);
+    echo "There was a problem with your submission, please try again.";
 }
