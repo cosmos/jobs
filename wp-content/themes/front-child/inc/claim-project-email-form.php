@@ -26,16 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $headers = "From: $name &lt;$user_email&gt;";
 
   # Send the email.
-//   $success = mail($mail_to, $subject, $content, $headers);
-//   if ($success) {
-//       # Set a 200 (okay) response code.
-//       http_response_code(200);
-//       echo "Thank You! You have successfully requested to claim this project.";
-//   } else {
-//       # Set a 500 (internal server error) response code.
-//       http_response_code(500);
-//       echo "Oops! Something went wrong, we couldn't send your message.";
-//   }
+  $success = mail($mail_to, $subject, $content, $headers);
+  // if ($success) {
+  //     # Set a 200 (okay) response code.
+  //     http_response_code(200);
+  //     echo "Thank You! You have successfully requested to claim this project.";
+  // } else {
+  //     # Set a 500 (internal server error) response code.
+  //     http_response_code(500);
+  //     echo "Oops! Something went wrong, we couldn't send your message.";
+  // }
 
 // } else {
 //     # Not a POST request, set a 403 (forbidden) response code.
