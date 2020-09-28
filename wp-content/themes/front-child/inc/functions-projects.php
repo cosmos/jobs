@@ -148,37 +148,37 @@ if( ! function_exists( 'cosmos_single_company_linked_accounts' ) ) {
             'twitter'   => array(
                 'text'  => esc_html__( 'Twitter', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_twitter', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img19.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/twitter.png',
             ),
             'facebook'  => array(
                 'text'  => esc_html__( 'Facebook', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_facebook', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/facebook.png',
             ),
             'github'  => array(
                 'text'  => esc_html__( 'Github', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_github', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/github.png',
             ),
             'documentation'  => array(
                 'text'  => esc_html__( 'Documentation', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_documentation', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/documentation.png',
             ),
             'medium'  => array(
                 'text'  => esc_html__( 'Medium', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_medium', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/medium.png',
             ),
             'discord'  => array(
                 'text'  => esc_html__( 'Discord', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_discord', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/discord.png',
             ),
             'telegram'  => array(
                 'text'  => esc_html__( 'Telegram', 'front' ),
                 'link'  => front_get_the_meta_data( '_company_telegram', null, 'company', true ),
-                'image' => get_template_directory_uri() . '/assets/img/160x160/img20.png',
+                'image' => get_stylesheet_directory_uri() . '/dist/img/160x160/telegram.png',
             ),
         ) );
         
