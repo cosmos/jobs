@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $headers = "From: $name &lt;$user_email&gt;";
 
   # Send the email.
-  $success = mail($mailto, $subject, $content, $headers);
+  $success = mail($mailto, $subject, $content);
   if ($success) {
       # Set a 200 (okay) response code.
       http_response_code(200);
