@@ -319,14 +319,23 @@ if( ! function_exists( 'cosmos_resume_listing_loop_controlbar' ) ) {
     }
 }
 
-
-
-
-
-
-
-
-
+// Add fields to frontend
+add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
+function cosmos_frontend_contributor_form_fields( $fields ) {
+	foreach (cosmos_get_projects() as $key => $value) {
+	  $projects[$value->ID] = $value->post_title;
+	}
+  $fields['resume_fields']['projects_contributed_to'] = array(
+    'label' 				=> __( 'Projects you have contributed to', 'job_manager' ),
+		'type'          => 'multiselect',
+		'options'  			=> $projects,
+		'required'      => false,
+		'placeholder'   => '',
+		'priority'      => 4,
+		'personal_data' => true,
+  );
+  return $fields;
+}
 
 
 

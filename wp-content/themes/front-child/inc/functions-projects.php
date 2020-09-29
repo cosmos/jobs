@@ -250,12 +250,12 @@ function cosmos_remove_project_comments() {
   remove_action( 'single_company_content', 'front_single_company_comment', 20 );
 }
 
-// Gets the contributors attributed to a project
-add_action('single_company_sidebar','cosmos_contributors_attributed_to_a_project', 30 );
-function cosmos_contributors_attributed_to_a_project() {
+// Gets the owners attributed to a project
+add_action('single_company_sidebar','cosmos_owners_attributed_to_a_project', 30 );
+function cosmos_owners_attributed_to_a_project() {
   global $wpdb;
   $html = '<div class="border-top pt-5 mt-5">';
-  $title = '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Contributors to this project</h4>';
+  $title = '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
   $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
   $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
   foreach ($term_relationships as $key => $value) {

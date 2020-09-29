@@ -21,20 +21,6 @@ function cosmos_job_board_assets() {
 }
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
-// This is just stuff that will be needed but has not been customized.
-// Add field to frontend
-add_filter( 'submit_resume_form_fields', 'cosmos_frontend_resume_form_fields' );
-function cosmos_frontend_resume_form_fields( $fields ) {
-  $fields['resume_fields']['candidate_color'] = array(
-    'label' => __( 'Favourite Color', 'job_manager' ),
-    'type' => 'text',
-    'required' => true,
-    'placeholder' => '',
-    'priority' => 1
-  );
-  return $fields;
-}
-
 // Redirects a user back to a page after login or registration
 add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
 add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);
@@ -74,6 +60,22 @@ function cosmos_get_post_id() {
   global $post;
   return $post->ID;
 }
+
+// Gets all the projects
+add_action('init', 'cosmos_get_projects'); 
+function cosmos_get_projects() {
+  $args = array(
+    'post_type'               => 'company',
+    'numberposts'             => -1,
+  );
+  $projects = get_posts($args);
+  return $projects;
+}
+
+// foreach (cosmos_get_projects() as $key => $value) {
+//   var_dump($value->post_title);
+// }
+
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts
