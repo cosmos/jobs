@@ -253,6 +253,98 @@ if( ! function_exists( 'cosmos_single_contributor_description' ) ) {
 	  endif;
 	}
 }
+
+// Edits the title of Candidates and renames it Contributors
+add_action( 'resume_listing_before_loop', 'cosmos_resume_listing_loop_controlbar', 10 );
+add_action( 'after_setup_theme', 'cosmos_remove_listing_loop_controlbar');
+function cosmos_remove_listing_loop_controlbar() {
+	remove_action( 'resume_listing_before_loop', 'front_resume_listing_loop_controlbar', 10 );
+}
+if( ! function_exists( 'cosmos_resume_listing_loop_controlbar' ) ) {
+    function cosmos_resume_listing_loop_controlbar() {
+        $layout = front_get_wpjmr_resume_listing_layout();
+        $style = front_get_wpjmr_resume_listing_style();
+
+        if( $layout !== 'fullwidth' ) :
+            ?><div class="row"><div class="col-lg-9<?php echo ( 'left-sidebar' === $layout ) ? esc_attr( ' ml-lg-auto' ) : ''; ?>"><?php
+        endif;
+        ?>
+        <div class="mb-4">
+            <ul class="list-inline d-md-flex align-items-md-center mb-0">
+                <?php
+                do_action( 'resume_listing_loop_controlbar_controls_before' );
+
+                if( $layout === 'fullwidth' ) {
+                    if( get_option( 'resume_manager_enable_categories' ) ) :
+                        front_wpjm_job_control_bar_dropdown( esc_html__( 'Category', 'front' ), 'resume_category'  );
+                    endif;
+                } else {
+                    ?>
+                    <li class="list-inline-item col-sm-4 col-md-6 mb-3 px-0 mb-sm-0">
+                        <?php if( !empty( Front_WPJMR::get_current_page_query_args() ) ) : ?>
+                            <h1 class="h5 mb-0"><?php esc_html_e( 'Search results', 'front' ); ?></h1>
+                        <?php else : ?>
+                            <h1 class="h5 mb-0"><?php echo esc_html__( 'Contributors', 'front' ); ?></h1>
+                        <?php endif; ?>
+                    </li>
+                    <?php
+                }
+
+                ?>
+                <li class="list-inline-item mb-2 ml-md-auto">
+                    <?php front_wpjmr_resume_catalog_ordering(); ?>
+                </li>
+                <li class="list-inline-item mb-2">
+                    <a id="front-resume-view-switcher-grid" class="btn btn-xs btn-soft-primary<?php echo 'grid' == $style ? esc_attr( ' active' ) : ''; ?>" href="#">
+                        <span class="fas fa-th-large mr-2"></span>
+                        <?php esc_html_e( 'Grid', 'front' ); ?>
+                    </a>
+                </li>
+                <li class="list-inline-item mb-2">
+                    <a id="front-resume-view-switcher-list" class="btn btn-xs btn-soft-primary<?php echo 'list' == $style ? esc_attr( ' active' ) : ''; ?>" href="#">
+                        <span class="fas fa-list mr-2"></span>
+                        <?php esc_html_e( 'List', 'front' ); ?>
+                    </a>
+                </li>
+                <?php
+                do_action( 'resume_listing_loop_controlbar_controls_after' );
+                ?>
+            </ul>
+        </div>
+        <?php
+
+        if( $layout !== 'fullwidth' ) :
+            ?></div></div><?php
+        endif;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // Add a line to the notifcation email with custom field
 // add_filter( 'apply_with_resume_email_message', 'wpjms_color_field_email_message', 10, 2 );
 // function wpjms_color_field_email_message( $message, $resume_id ) {
