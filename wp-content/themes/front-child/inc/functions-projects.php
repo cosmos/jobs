@@ -223,24 +223,25 @@ function cosmos_add_project_claim_link() {
   echo $html;
 }
 
+// Changes the h2 header on the single project page
 add_action( 'single_company_content', 'cosmos_single_company_description', 10 );
 add_action( 'after_setup_theme', 'cosmos_remove_single_company_description');
 function cosmos_remove_single_company_description() {
   remove_action( 'single_company_content', 'front_single_company_description', 10 );
 }
 if( ! function_exists( 'cosmos_single_company_description' ) ) {
-    function cosmos_single_company_description() {
-        if( !empty( get_the_content() ) ) : 
-            ?>
-            <div class="mb-4">
-                <h2 class="h5"><?php esc_html_e( 'About Project', 'front' ) ?></h2>
-            </div>
-            <div class="border-bottom pb-5 mb-5">
-                <?php the_content(); ?>
-            </div>
-            <?php
-        endif;
-    }
+  function cosmos_single_company_description() {
+    if( !empty( get_the_content() ) ) : 
+      ?>
+      <div class="mb-4">
+        <h2 class="h5"><?php esc_html_e( 'About Project', 'front' ) ?></h2>
+      </div>
+      <div class="border-bottom pb-5 mb-5">
+        <?php the_content(); ?>
+      </div>
+      <?php
+    endif;
+  }
 }
 
 // Remove the comment section of the project page

@@ -233,6 +233,26 @@ function resume_file_required( $fields ) {
 	return $fields;
 }
 
+// Changes the h2 header on the single contributor page
+add_action( 'single_resume_content', 'cosmos_single_contributor_description', 10 );
+add_action( 'after_setup_theme', 'cosmos_remove_single_contributor_description');
+function cosmos_remove_single_contributor_description() {
+	remove_action( 'single_resume_content', 'front_single_resume_description', 10 );
+}
+if( ! function_exists( 'cosmos_single_contributor_description' ) ) {
+	function cosmos_single_contributor_description() {
+	  if( !empty( get_the_content() ) ) :
+      ?>
+      <div class="mb-4">
+        <h2 class="h5"><?php esc_html_e( 'About Contributor', 'front' ) ?></h2>
+      </div>
+      <div class="mb-5">
+        <?php echo apply_filters( 'the_resume_description', get_the_content() ); ?>
+      </div>
+      <?php
+	  endif;
+	}
+}
 // // Add a line to the notifcation email with custom field
 // add_filter( 'apply_with_resume_email_message', 'wpjms_color_field_email_message', 10, 2 );
 // function wpjms_color_field_email_message( $message, $resume_id ) {
