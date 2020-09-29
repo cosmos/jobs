@@ -202,7 +202,7 @@ function cosmos_add_project_claim_link() {
   $current_url = home_url( add_query_arg( array(), $wp->request ) );
   $html = null;
   if (is_user_logged_in()) {
-    $html .= '<form action="'.get_stylesheet_directory_uri().'/inc/claim-project-email-form.php" method="post" id="claim_this_project_form" class="mt-5 text-center">';
+    $html .= '<form action="'.get_stylesheet_directory_uri().'/inc/claim-project-email-form.php" method="post" id="claim_this_project_form" class="mt-5 text-center border-top pt-5">';
       $html .= '<div class="row">';
         $html .= '<div class="col-12">';
           $html .= '<div class="alert alert-success contact__msg text-center" style="display: none" role="alert">';
@@ -249,6 +249,48 @@ add_action( 'after_setup_theme', 'cosmos_remove_project_comments');
 function cosmos_remove_project_comments() {
   remove_action( 'single_company_content', 'front_single_company_comment', 20 );
 }
+
+// Gets the contributors attributed to a project
+add_action('single_company_sidebar','cosmos_contributors_attributed_to_a_project', 30 );
+function cosmos_contributors_attributed_to_a_project() {
+  global $wpdb;
+  $html = '<div class="border-top pt-5 mt-5">';
+  $title = '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Contributors to this project</h4>';
+  $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
+  $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
+  foreach ($term_relationships as $key => $value) {
+    foreach ($all_authors as $key2 => $value2) {
+      if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
+        $pattern = '/([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+/i';
+        preg_match_all($pattern, $value2->description, $matches);
+        $email_addresses[] = $matches[0][0];
+      }
+    }
+  }
+  foreach ($email_addresses as $key => $value) {
+    $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
+    if (!empty($post_id)) {
+      ++$i;
+      $contributor_name = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_name' AND post_id = '".$post_id[0]->post_id."'", OBJECT );
+      if ($i == 1) {
+        $html .= $title;
+      }
+      $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn transition-3d-hover" >';
+        $html .= $contributor_name[0]->meta_value;
+      $html .= '</a>';
+    }
+  }
+  $html .= '</div>';
+  echo $html;
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -90,24 +90,3 @@
 
 
 
-// // Here is where you unhook anything you want to unhook from the parent theme
-// function remove_parent_filters_home_page(){ //Have to do it after theme setup, because child theme functions are loaded first
-//   // Removes the grid of projects on the home page
-//   remove_action( 'job_listing_list_grid_content_area_before', 'front_job_listing_list_grid_card_open', 10 );
-//   remove_action( 'job_listing_list_grid_start', 'front_job_listing_list_grid_card_body_open', 10 );
-//   remove_action( 'job_listing_list_grid', 'front_job_listing_list_grid_card_body_content', 10 );
-//   remove_action( 'job_listing_list_grid_end', 'front_job_listing_list_grid_card_body_close', 10 );
-//   remove_action( 'job_listing_list_grid_content_area_after', 'front_job_listing_list_grid_card_close', 10 );
-
-//   // Adds back the grid of projects on the home page
-// 	add_action( 'job_listing_list_grid_content_area_before', 'front_job_listing_list_grid_card_open', 10 );
-// 	add_action( 'job_listing_list_grid_start', 'front_job_listing_list_grid_card_body_open', 10 );
-// 	add_action( 'job_listing_list_grid', 'cosmos_jobs_grid', 10 );
-// 	add_action( 'job_listing_list_grid_end', 'front_job_listing_list_grid_card_body_close', 10 );
-// 	add_action( 'job_listing_list_grid_content_area_after', 'front_job_listing_list_grid_card_close', 10 );
-
-// }
-// add_action( 'after_setup_theme', 'remove_parent_filters_home_page' );
-
-
-

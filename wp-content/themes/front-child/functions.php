@@ -12,6 +12,7 @@
 require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
 require(__DIR__.'/inc/functions-home.php');
+require(__DIR__.'/inc/functions-woocommerce-registration-fields.php');
 
 // Adds the child theme compiled assets
 function cosmos_job_board_assets() {
@@ -20,23 +21,16 @@ function cosmos_job_board_assets() {
 }
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
-// Here is where you unhook anything you want to unhook from the parent theme
-function remove_parent_filters(){
-  // Stuff goes in here // remove_filter
-}
-add_action( 'after_setup_theme', 'remove_parent_filters' );
-
-
 // This is just stuff that will be needed but has not been customized.
 // Add field to frontend
 add_filter( 'submit_resume_form_fields', 'cosmos_frontend_resume_form_fields' );
 function cosmos_frontend_resume_form_fields( $fields ) {
   $fields['resume_fields']['candidate_color'] = array(
-      'label' => __( 'Favourite Color', 'job_manager' ),
-      'type' => 'text',
-      'required' => true,
-      'placeholder' => '',
-      'priority' => 1
+    'label' => __( 'Favourite Color', 'job_manager' ),
+    'type' => 'text',
+    'required' => true,
+    'placeholder' => '',
+    'priority' => 1
   );
   return $fields;
 }
@@ -52,6 +46,34 @@ if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['l
   }
 }
 
+// Outputs the job listing class.
+function cosmos_job_listing_class( $class = '', $post_id = null ) {
+  // Separates classes with a single space, collates classes for post DIV.
+  return 'class="' . esc_attr( join( ' ', cosmos_get_job_listing_class( $class, $post_id ) ) ) . '"';
+}
+
+// Gets the job listing class.
+function cosmos_get_job_listing_class( $class = '', $post_id = null ) {
+  $post = get_post( $post_id );
+  if ( empty( $post ) || 'job_listing' !== $post->post_type ) {
+    return [];
+  }
+  $classes = [];
+  if ( ! empty( $class ) ) {
+    if ( ! is_array( $class ) ) {
+      $class = preg_split( '#\s+#', $class );
+    }
+    $classes = array_merge( $classes, $class );
+  }
+  return get_post_class( $classes, $post->ID );
+}
+
+// Gets the postt ID outside of the loop
+add_action('wp_enqueue_scripts', 'cosmos_get_post_id'); 
+function cosmos_get_post_id() {
+  global $post;
+  return $post->ID;
+}
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts
@@ -68,44 +90,3 @@ if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['l
 // }
 
 // add_action( 'wp_print_scripts', 'cosmos_print_scripts_styles' );
-
-
-
-/**
- * Outputs the job listing class.
- *
- * @since 1.0.0
- * @param string      $class (default: '').
- * @param int|WP_Post $post_id (default: null).
- */
-function cosmos_job_listing_class( $class = '', $post_id = null ) {
-  // Separates classes with a single space, collates classes for post DIV.
-  return 'class="' . esc_attr( join( ' ', cosmos_get_job_listing_class( $class, $post_id ) ) ) . '"';
-}
-
-/**
- * Gets the job listing class.
- *
- * @since 1.0.0
- * @param string      $class
- * @param int|WP_Post $post_id (default: null).
- * @return array
- */
-function cosmos_get_job_listing_class( $class = '', $post_id = null ) {
-  $post = get_post( $post_id );
-
-  if ( empty( $post ) || 'job_listing' !== $post->post_type ) {
-    return [];
-  }
-
-  $classes = [];
-
-  if ( ! empty( $class ) ) {
-    if ( ! is_array( $class ) ) {
-      $class = preg_split( '#\s+#', $class );
-    }
-    $classes = array_merge( $classes, $class );
-  }
-
-  return get_post_class( $classes, $post->ID );
-}

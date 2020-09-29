@@ -23,11 +23,15 @@
 			}
 		}
 	}
-	.menu-item.active a {
-		border-bottom: 2px solid #fff;
-		margin-bottom: 0;
+	.btn-text-secondary {
+		color: $primary;
 	}
-	.menu-item a {
-		margin-bottom: 2px;
+	.btn-text-secondary[href]:hover,
+	.btn-text-secondary[href]:focus,
+	.btn-text-secondary[href]:active,
+	.btn-text-secondary[type]:hover,
+	.btn-text-secondary[type]:focus,
+	.btn-text-secondary[type]:active {
+		color: #fff;
 	}
 }
