@@ -69,7 +69,7 @@ function cosmos_frontend_company_form_fields( $fields ) {
   $fields['company_fields']['contributors_contributed_to'] = array(
     'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
     'type'          => 'multiselect',
-    'options'       => $Contributors,
+    'options'       => $contributors,
     'required'      => false,
     'placeholder'   => '',
     'priority'      => 60,
@@ -82,18 +82,9 @@ function cosmos_frontend_company_form_fields( $fields ) {
 add_filter( 'company_manager_company_fields', 'wpjms_admin_projects_form_fields' );
 function wpjms_admin_projects_form_fields( $fields ) {
   $i = 10;
+  // Gets all the contributors
   foreach (cosmos_get_contributors() as $key => $value) {
     $contributors[$value->ID] = $value->post_title;
-  }
-  foreach ($fields as $key => $value) {
-    $fields[$key] = array(
-      'label'         => __( $value['label'], 'job_manager' ),
-      'type'          => $value['type'],
-      'placeholder'   => __( $value['placeholder'], 'job_manager' ),
-      'description'   => $value['description'],
-      'priority'      => $i,
-    );
-    $i = $i + 10;
   }
   $fields['_company_github'] = array(
     'label'         => __( 'Github', 'job_manager' ),
@@ -294,7 +285,7 @@ function cosmos_owners_attributed_to_a_project() {
         $html .= $contributor_name[0]->meta_value;
       $html .= '</a>';
     }
-  }
+  } 
   if (!empty($email_addresses)) {
     $html .= '</div>';
   }
@@ -313,7 +304,6 @@ function cosmos_contributors_attributed_to_a_project() {
     $html .= '<div class="border-top pt-5 mt-5">';
     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project contributors</h4>';
     foreach ($contributors as $key => $value) {
-      $contributor_data[] = get_post($value);
       $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
         $html .= get_post($value)->post_title;
       $html .= '</a>';

@@ -69,6 +69,8 @@ function cosmos_get_projects() {
     'post_type'               => 'company',
     'numberposts'             => -1,
     'post_status'             => 'publish',
+    'orderby'                 => 'name',
+    'order'                   => 'ASC'
   );
   $projects = get_posts($args);
   return $projects;
@@ -81,6 +83,8 @@ function cosmos_get_contributors() {
     'post_type'               => 'resume',
     'numberposts'             => -1,
     'post_status'             => 'publish',
+    'orderby'                 => 'name',
+    'order'                   => 'ASC'
   );
   $contributors = get_posts($args);
   return $contributors;

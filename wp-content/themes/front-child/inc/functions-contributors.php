@@ -184,16 +184,6 @@ function cosmos_admin_resume_form_fields( $fields ) {
 add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
 function cosmos_frontend_contributor_form_fields( $fields ) {
 	$i = 10;
-	foreach ($fields['resume_fields'] as $key => $value) {
-    $fields[$key] = array(
-	    'label'     		=> __( $value['label'], 'job_manager' ),
-	    'type'      		=> $value['type'],
-	    'placeholder'   => __( $value['placeholder'], 'job_manager' ),
-	    'description' 	=> $value['description'],
-	    'priority' 			=> $i,
-    );
-    $i = $i + 10;
-  }
 	// used to get all the active companies
 	foreach (cosmos_get_projects() as $key => $value) {
 	  $projects[$value->ID] = $value->post_title;
@@ -399,7 +389,6 @@ function cosmos_projects_attributed_to_a_contributor() {
     $html .= '<div class="border-top pt-5 mt-5">';
     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Contributes to these projects</h4>';
 	  foreach ($projects as $key => $value) {
-	    $project_data[] = get_post($value);
 	    $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
 	      $html .= get_post($value)->post_title;
 	    $html .= '</a>';
