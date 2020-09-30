@@ -260,7 +260,7 @@ function cosmos_owners_attributed_to_a_project() {
   $i = 0;
   $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
   $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
-  if (is_object()) {
+  if (is_object($term_relationships)) {
     foreach ($term_relationships as $key => $value) {
       foreach ($all_authors as $key2 => $value2) {
         if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
