@@ -62,7 +62,6 @@ add_action( 'after_setup_theme', 'cosmos_remove_resume_listing_list_content_area
 function cosmos_remove_resume_listing_list_content_area_after() {
 	remove_action('resume_listing_list_content_area_after', 'front_resume_listing_list_card_footer', 10);
 }
-
 function cosmos_add_resume_listing_list_card_footer() {
 	ob_start();
 	$html = null;
@@ -144,6 +143,10 @@ function cosmos_admin_resume_form_fields( $fields ) {
 		);
 		$i = $i + 10;
 	}
+	// used to get all the active companies
+	foreach (cosmos_get_projects() as $key => $value) {
+	  $projects[$value->ID] = $value->post_title;
+	}
 	$fields['_candidate_github'] = array(
 			'label'     => __( 'Github', 'job_manager' ),
 			'type'      => 'text',
@@ -165,12 +168,33 @@ function cosmos_admin_resume_form_fields( $fields ) {
 			'description' => 'Full URL',
 			'priority' => 162,
 	);
+  $fields['_projects_contributed_to'] = array(
+    'label' 				=> __( 'Projects you have contributed to', 'job_manager' ),
+		'type'          => 'multiselect',
+		'options'  			=> $projects,
+		'required'      => false,
+		'placeholder'   => '',
+		'priority'      => 163,
+		'personal_data' => true,
+  );
 	return $fields;
 }
 
 // Add fields to frontend
 add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
 function cosmos_frontend_contributor_form_fields( $fields ) {
+	$i = 10;
+	foreach ($fields['resume_fields'] as $key => $value) {
+    $fields[$key] = array(
+	    'label'     		=> __( $value['label'], 'job_manager' ),
+	    'type'      		=> $value['type'],
+	    'placeholder'   => __( $value['placeholder'], 'job_manager' ),
+	    'description' 	=> $value['description'],
+	    'priority' 			=> $i,
+    );
+    $i = $i + 10;
+  }
+	// used to get all the active companies
 	foreach (cosmos_get_projects() as $key => $value) {
 	  $projects[$value->ID] = $value->post_title;
 	}
@@ -213,7 +237,7 @@ function cosmos_frontend_contributor_form_fields( $fields ) {
   return $fields;
 }
 
-// Removes the standarf front linked accounts and adds in cosmos linked accounts
+// Removes the standard front linked accounts and adds in cosmos linked accounts
 add_action( 'single_resume_sidebar', 'cosmos_single_resume_linked_accounts', 90 );
 add_action( 'after_setup_theme', 'cosmos_remove_front_single_resume_linked_accounts');
 function cosmos_remove_front_single_resume_linked_accounts() {

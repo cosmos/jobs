@@ -39,6 +39,9 @@ function change_company_labels()
 
 add_filter( 'submit_company_form_fields', 'cosmos_frontend_company_form_fields' );
 function cosmos_frontend_company_form_fields( $fields ) {
+  foreach (cosmos_get_projects() as $key => $value) {
+    $projects[$value->ID] = $value->post_title;
+  }
   $fields['company_fields']['company_github'] = array(
       'label' => __( 'Github', 'job_manager' ),
       'type' => 'text',
@@ -77,11 +80,7 @@ function cosmos_frontend_company_form_fields( $fields ) {
   $fields['company_fields']['contributors_contributed_to'] = array(
     'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
     'type'          => 'multiselect',
-    'options'       => array(
-        '1' => 'Opt 1',
-        '2' => 'Opt 2',
-        '3' => 'Opt 3'
-    ),
+    'options'       => $projects,
     'required'      => false,
     'placeholder'   => '',
     'priority'      => 60,
@@ -94,13 +93,16 @@ function cosmos_frontend_company_form_fields( $fields ) {
 add_filter( 'company_manager_company_fields', 'wpjms_admin_projects_form_fields' );
 function wpjms_admin_projects_form_fields( $fields ) {
   $i = 10;
+  foreach (cosmos_get_projects() as $key => $value) {
+    $projects[$value->ID] = $value->post_title;
+  }
   foreach ($fields as $key => $value) {
     $fields[$key] = array(
-        'label'     => __( $value['label'], 'job_manager' ),
-        'type'      => $value['type'],
-        'placeholder'   => __( $value['placeholder'], 'job_manager' ),
-        'description' => $value['description'],
-        'priority' => $i,
+      'label'         => __( $value['label'], 'job_manager' ),
+      'type'          => $value['type'],
+      'placeholder'   => __( $value['placeholder'], 'job_manager' ),
+      'description'   => $value['description'],
+      'priority'      => $i,
     );
     $i = $i + 10;
   }
@@ -138,6 +140,15 @@ function wpjms_admin_projects_form_fields( $fields ) {
       'placeholder'   => __( 'https://telegram.org/', 'job_manager' ),
       'description' => 'Full URL',
       'priority' => 84,
+  );
+  $fields['_contributors_contributed_to'] = array(
+    'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
+    'type'          => 'multiselect',
+    'options'       => $projects,
+    'required'      => false,
+    'placeholder'   => '',
+    'priority'      => 85,
+    'personal_data' => true,
   );
   return $fields;
 }
