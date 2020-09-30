@@ -62,6 +62,29 @@ function cosmos_get_post_id() {
   return $post->ID;
 }
 
+// Gets all the projects
+add_action('init', 'cosmos_get_projects'); 
+function cosmos_get_projects() {
+  $args = array(
+    'post_type'               => 'company',
+    'numberposts'             => -1,
+    'post_status'             => 'publish',
+  );
+  $projects = get_posts($args);
+  return $projects;
+}
+
+// Gets all the contributors
+add_action('init', 'cosmos_get_contributors'); 
+function cosmos_get_contributors() {
+  $args = array(
+    'post_type'               => 'resume',
+    'numberposts'             => -1,
+    'post_status'             => 'publish',
+  );
+  $contributors = get_posts($args);
+  return $contributors;
+}
 // foreach (cosmos_get_projects() as $key => $value) {
 //   var_dump($value->post_title);
 // }
