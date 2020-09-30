@@ -13,6 +13,7 @@ require(__DIR__.'/inc/functions-contributors.php');
 require(__DIR__.'/inc/functions-projects.php');
 require(__DIR__.'/inc/functions-home.php');
 require(__DIR__.'/inc/functions-woocommerce-registration-fields.php');
+require(__DIR__.'/inc/functions-woocommerce-my-account-menu-items.php');
 
 // Adds the child theme compiled assets
 function cosmos_job_board_assets() {
@@ -59,17 +60,6 @@ add_action('wp_enqueue_scripts', 'cosmos_get_post_id');
 function cosmos_get_post_id() {
   global $post;
   return $post->ID;
-}
-
-// Gets all the projects
-add_action('init', 'cosmos_get_projects'); 
-function cosmos_get_projects() {
-  $args = array(
-    'post_type'               => 'company',
-    'numberposts'             => -1,
-  );
-  $projects = get_posts($args);
-  return $projects;
 }
 
 // foreach (cosmos_get_projects() as $key => $value) {

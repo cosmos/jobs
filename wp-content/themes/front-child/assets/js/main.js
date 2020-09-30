@@ -1,8 +1,6 @@
 // main.js
 
 // Sends the Claim a Project emaill to the Cosmos Job Board admin
-
-
 (function ($) {
     'use strict';
     var form = $('#claim_this_project_form'),
@@ -39,3 +37,6 @@
     });
     
 })(jQuery);
+
+
+

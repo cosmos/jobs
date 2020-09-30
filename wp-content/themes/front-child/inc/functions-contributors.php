@@ -168,6 +168,51 @@ function cosmos_admin_resume_form_fields( $fields ) {
 	return $fields;
 }
 
+// Add fields to frontend
+add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
+function cosmos_frontend_contributor_form_fields( $fields ) {
+	foreach (cosmos_get_projects() as $key => $value) {
+	  $projects[$value->ID] = $value->post_title;
+	}
+	$fields['resume_fields']['_candidate_github'] = array(
+		'label'     		=> __( 'Github', 'job_manager' ),
+		'type'      		=> 'text',
+		'placeholder'   => __( 'https://github.com/', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 6,
+		'personal_data' => true,
+	);
+	$fields['resume_fields']['_candidate_stackexchange'] = array(
+		'label'     		=> __( 'Stack Exchange', 'job_manager' ),
+		'type'      		=> 'text',
+		'placeholder'   => __( 'https://stackexchange.com/', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 6,
+		'personal_data' => true,
+	);
+	$fields['resume_fields']['_candidate_other'] = array(
+		'label'     		=> __( 'Other', 'job_manager' ),
+		'type'      		=> 'text',
+		'placeholder'   => __( 'https://', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 6,
+		'personal_data' => true,
+	);
+  $fields['resume_fields']['projects_contributed_to'] = array(
+    'label' 				=> __( 'Projects you have contributed to', 'job_manager' ),
+		'type'          => 'multiselect',
+		'options'  			=> $projects,
+		'required'      => false,
+		'placeholder'   => '',
+		'priority'      => 4,
+		'personal_data' => true,
+  );
+  return $fields;
+}
+
 // Removes the standarf front linked accounts and adds in cosmos linked accounts
 add_action( 'single_resume_sidebar', 'cosmos_single_resume_linked_accounts', 90 );
 add_action( 'after_setup_theme', 'cosmos_remove_front_single_resume_linked_accounts');
@@ -319,50 +364,7 @@ if( ! function_exists( 'cosmos_resume_listing_loop_controlbar' ) ) {
     }
 }
 
-// Add fields to frontend
-add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
-function cosmos_frontend_contributor_form_fields( $fields ) {
-	foreach (cosmos_get_projects() as $key => $value) {
-	  $projects[$value->ID] = $value->post_title;
-	}
-	$fields['resume_fields']['_candidate_github'] = array(
-		'label'     		=> __( 'Github', 'job_manager' ),
-		'type'      		=> 'text',
-		'placeholder'   => __( 'https://github.com/', 'job_manager' ),
-		'description' 	=> '',
-		'required'      => false,
-		'priority' 			=> 6,
-		'personal_data' => true,
-	);
-	$fields['resume_fields']['_candidate_stackexchange'] = array(
-		'label'     		=> __( 'Stack Exchange', 'job_manager' ),
-		'type'      		=> 'text',
-		'placeholder'   => __( 'https://stackexchange.com/', 'job_manager' ),
-		'description' 	=> '',
-		'required'      => false,
-		'priority' 			=> 6,
-		'personal_data' => true,
-	);
-	$fields['resume_fields']['_candidate_other'] = array(
-		'label'     		=> __( 'Other', 'job_manager' ),
-		'type'      		=> 'text',
-		'placeholder'   => __( 'https://', 'job_manager' ),
-		'description' 	=> '',
-		'required'      => false,
-		'priority' 			=> 6,
-		'personal_data' => true,
-	);
-  $fields['resume_fields']['projects_contributed_to'] = array(
-    'label' 				=> __( 'Projects you have contributed to', 'job_manager' ),
-		'type'          => 'multiselect',
-		'options'  			=> $projects,
-		'required'      => false,
-		'placeholder'   => '',
-		'priority'      => 4,
-		'personal_data' => true,
-  );
-  return $fields;
-}
+
 
 
 

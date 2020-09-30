@@ -1,21 +1,18 @@
 <?php
-
-
-
-
-
-// Get logos for the additional fields I added then delete this comment.
-
-
-
-
-
-
-
+// Gets all the projects
+add_action('init', 'cosmos_get_projects'); 
+function cosmos_get_projects() {
+  $args = array(
+    'post_type'               => 'company',
+    'numberposts'             => -1,
+    'post_status'             => 'publish',
+  );
+  $projects = get_posts($args);
+  return $projects;
+}
 
 // Edits the labels of the RESUME post_type and of it's taxonomies(2)
 add_action( 'wp_loaded', 'change_company_labels', 20 );
-
 function change_company_labels()
 {
   $p_object = get_post_type_object( 'company' );
@@ -76,6 +73,19 @@ function cosmos_frontend_company_form_fields( $fields ) {
       'required' => false,
       'placeholder'   => __( 'https://telegram.org', 'job_manager' ),
       'priority' => 60
+  );
+  $fields['company_fields']['contributors_contributed_to'] = array(
+    'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
+    'type'          => 'multiselect',
+    'options'       => array(
+        '1' => 'Opt 1',
+        '2' => 'Opt 2',
+        '3' => 'Opt 3'
+    ),
+    'required'      => false,
+    'placeholder'   => '',
+    'priority'      => 60,
+    'personal_data' => true,
   );
   return $fields;
 }
@@ -275,7 +285,7 @@ function cosmos_owners_attributed_to_a_project() {
       if ($i == 1) {
         $html .= $title;
       }
-      $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn transition-3d-hover" >';
+      $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
         $html .= $contributor_name[0]->meta_value;
       $html .= '</a>';
     }
