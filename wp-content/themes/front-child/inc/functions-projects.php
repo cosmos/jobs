@@ -28,8 +28,8 @@ function change_company_labels()
 // Add fields to Projects on the frontend
 add_filter( 'submit_company_form_fields', 'cosmos_frontend_company_form_fields' );
 function cosmos_frontend_company_form_fields( $fields ) {
-  foreach (cosmos_get_projects() as $key => $value) {
-    $projects[$value->ID] = $value->post_title;
+  foreach (cosmos_get_contributors() as $key => $value) {
+    $contributors[$value->ID] = $value->post_title;
   }
   $fields['company_fields']['company_github'] = array(
       'label' => __( 'Github', 'job_manager' ),
@@ -69,7 +69,7 @@ function cosmos_frontend_company_form_fields( $fields ) {
   $fields['company_fields']['contributors_contributed_to'] = array(
     'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
     'type'          => 'multiselect',
-    'options'       => $projects,
+    'options'       => $Contributors,
     'required'      => false,
     'placeholder'   => '',
     'priority'      => 60,
@@ -312,15 +312,12 @@ function cosmos_contributors_attributed_to_a_project() {
   if (!empty($contributors)) {
     $html .= '<div class="border-top pt-5 mt-5">';
     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project contributors</h4>';
-  }
-  foreach ($contributors as $key => $value) {
-    $contributor_data[] = get_post($value);
-    $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
-      $html .= get_post($value)->post_title;
-    $html .= '</a>';
-
-  }
-  if (!empty($contributors)) {
+    foreach ($contributors as $key => $value) {
+      $contributor_data[] = get_post($value);
+      $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
+        $html .= get_post($value)->post_title;
+      $html .= '</a>';
+    }
     $html .= '</div>';
   }
   echo $html;
