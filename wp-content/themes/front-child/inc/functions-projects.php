@@ -272,21 +272,19 @@ function cosmos_owners_attributed_to_a_project() {
   if (!empty($email_addresses)) {
     $html .= '<div class="border-top pt-5 mt-5">';
     $title = '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
-  }
-  foreach ($email_addresses as $key => $value) {
-    $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
-    if (!empty($post_id)) {
-      ++$i;
-      $contributor_name = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_name' AND post_id = '".$post_id[0]->post_id."'", OBJECT );
-      if ($i == 1) {
-        $html .= $title;
+    foreach ($email_addresses as $key => $value) {
+      $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
+      if (!empty($post_id)) {
+        ++$i;
+        $contributor_name = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_name' AND post_id = '".$post_id[0]->post_id."'", OBJECT );
+        if ($i == 1) {
+          $html .= $title;
+        }
+        $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
+          $html .= $contributor_name[0]->meta_value;
+        $html .= '</a>';
       }
-      $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
-        $html .= $contributor_name[0]->meta_value;
-      $html .= '</a>';
-    }
-  } 
-  if (!empty($email_addresses)) {
+    } 
     $html .= '</div>';
   }
 
