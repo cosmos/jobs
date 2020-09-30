@@ -260,18 +260,20 @@ function cosmos_owners_attributed_to_a_project() {
   $i = 0;
   $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
   $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
-  foreach ($term_relationships as $key => $value) {
-    foreach ($all_authors as $key2 => $value2) {
-      if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
-        $pattern = '/([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+/i';
-        preg_match_all($pattern, $value2->description, $matches);
-        $email_addresses[] = $matches[0][0];
+  if (is_object()) {
+    foreach ($term_relationships as $key => $value) {
+      foreach ($all_authors as $key2 => $value2) {
+        if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
+          $pattern = '/([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+/i';
+          preg_match_all($pattern, $value2->description, $matches);
+          $email_addresses[] = $matches[0][0];
+        }
       }
     }
   }
   if (!empty($email_addresses)) {
     $html .= '<div class="border-top pt-5 mt-5">';
-    $title = '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
+    $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
     foreach ($email_addresses as $key => $value) {
       $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
       if (!empty($post_id)) {
