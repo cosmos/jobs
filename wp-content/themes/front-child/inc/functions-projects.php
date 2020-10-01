@@ -313,7 +313,24 @@ function cosmos_contributors_attributed_to_a_project() {
   echo $html;
 }
 
+// Adds multi select pills to the company profile page
+if ( ! function_exists( 'mas_wpjmc_enhanced_select_enabled' ) ) {
+  function mas_wpjmc_enhanced_select_enabled( $enabled ) {
+    if ( has_wpjm_shortcode( null, [ 'mas_submit_company_form', 'mas_company_dashboard' ] ) ) {
+      $enabled = true;
+    }
+    return $enabled;
+  }
+}
+add_filter( 'job_manager_enhanced_select_enabled' , 'mas_wpjmc_enhanced_select_enabled' );
 
+if ( ! function_exists( 'mas_wpjmc_job_manager_shortcodes' ) ) {
+  function mas_wpjmc_job_manager_shortcodes( $shortcodes ) {
+    $shortcodes = array_unique( array_merge( $shortcodes, [ 'mas_submit_company_form', 'mas_company_dashboard' ] ) );
+    return $shortcodes;
+  }
+}
+add_filter( 'job_manager_shortcodes' , 'mas_wpjmc_job_manager_shortcodes' );
 
 
 
