@@ -17,6 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div id="resume-manager-candidate-dashboard">
 
-	<p class="account-sign-in"><?php _e( 'You need to be signed in to manage your resumes.', 'wp-job-manager-resumes' ); ?> <a class="button" href="<?php echo apply_filters( 'resume_manager_candidate_dashboard_login_url', home_url().'/my-account/?action='.home_url().'/candidate-dashboard' ); ?>"><?php _e( 'Sign in', 'wp-job-manager-resumes' ); ?></a></p>
+	<p class="account-sign-in"><?php _e( 'You need to be signed in to manage your resumes.', 'wp-job-manager-resumes' ); ?> <a class="button" href="<?php echo apply_filters( 'resume_manager_candidate_dashboard_login_url', home_url().'/my-account/?action='.home_url().'/candidate-dashboard/' ); ?>"><?php _e( 'Sign in', 'wp-job-manager-resumes' ); ?></a></p>
 
 </div>
