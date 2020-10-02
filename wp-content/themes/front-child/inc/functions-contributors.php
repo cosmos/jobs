@@ -406,8 +406,32 @@ function cosmos_projects_attributed_to_a_contributor() {
   echo $html;
 }
 
+// Removes the bio if a user does not actually write anything in the sidebar
+add_action( 'single_resume_sidebar', 'cosmos_single_resume_sidebar_bio', 30 );
+add_action( 'after_setup_theme', 'cosmos_remove_single_resume_sidebar_bio');
+function cosmos_remove_single_resume_sidebar_bio() {
+	remove_action( 'single_resume_sidebar', 'front_single_resume_sidebar_bio', 30 );
+}
+if( ! function_exists( 'cosmos_single_resume_sidebar_bio' ) ) {
+    function cosmos_single_resume_sidebar_bio() {
+        if( empty( $candidate_bio = front_get_the_meta_data( '_candidate_bio', null, 'resume', true ) ) ) :
+            // AS $candidate_bio = get_the_excerpt();
+        endif;
 
-
+        if( ! empty( $candidate_bio ) ) :
+            if( ( $pos = strrpos( $candidate_bio , '<p>' ) ) !== false ) {
+                $search_length  = strlen( '<p>' );
+                $candidate_bio    = substr_replace( $candidate_bio , '<p class="mb-0">' , $pos , $search_length );
+            }
+            ?>
+            <div class="border-top pt-5 mt-5">
+                <h2 class="font-size-1 font-weight-semi-bold text-uppercase mb-3"><?php esc_html_e( 'Bio', 'front' ); ?></h2>
+                <div class="resume-excerpt font-size-1 text-secondary"><?php echo wp_kses_post( $candidate_bio ); ?></div>
+            </div>
+            <?php
+        endif;
+    }
+}
 
 
 
