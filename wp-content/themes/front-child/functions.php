@@ -90,11 +90,7 @@ function cosmos_get_contributors() {
   return $contributors;
 }
 
-// Changes the login URL for unlogged in users on the dashboard page
-add_action( 'init', 'cosmos_change_login_url');
-function cosmos_change_login_url() {
-  apply_filters( 'resume_manager_candidate_dashboard_login_url', home_url().'/my-account/' );
-}
+
 
 
 
