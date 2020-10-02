@@ -1,5 +1,6 @@
 <?php
 add_action( 'woocommerce_register_form', 'cosmos_extra_registation_fields' );
+// add_action( 'front_header_topbar_user_account_view', 'cosmos_extra_registation_fields' );
 function cosmos_extra_registation_fields() {
   ?>
   	<div class="row">

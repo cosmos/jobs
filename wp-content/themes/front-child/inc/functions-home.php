@@ -1,6 +1,6 @@
 <?php
 	// Creates the shortcode for the home page job listing grid
-	add_shortcode('cosmos_jobs_grid', 'cosmos_jobs_grid'); // [cosmos_jobs_grid title="" subtitle="" no_jobs=9/default load_more=true/default number_of_categories=3/default]
+	add_shortcode('cosmos_jobs_grid', 'cosmos_jobs_grid'); // [cosmos_jobs_grid title="" sub_title=""]
 
 	add_action('init','cosmos_jobs_grid');
 	function cosmos_jobs_grid($atts = array() ) {

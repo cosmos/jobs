@@ -89,6 +89,20 @@ function cosmos_get_contributors() {
   $contributors = get_posts($args);
   return $contributors;
 }
+
+// Changes the login URL for unlogged in users on the dashboard page
+add_action( 'init', 'cosmos_change_login_url');
+function cosmos_change_login_url() {
+  apply_filters( 'resume_manager_candidate_dashboard_login_url', home_url().'/my-account/' );
+}
+
+
+
+
+
+
+
+
 // foreach (cosmos_get_projects() as $key => $value) {
 //   var_dump($value->post_title);
 // }
