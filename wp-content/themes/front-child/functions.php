@@ -33,6 +33,16 @@ if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['l
   }
 }
 
+// Removes unused roles
+$wp_roles = new WP_Roles();
+$wp_roles->remove_role("editor");
+$wp_roles->remove_role("author");
+$wp_roles->remove_role("contributor");
+$wp_roles->remove_role("subscriber");
+$wp_roles->remove_role("customer");
+$wp_roles->remove_role("shop_manager");
+
+
 // Outputs the job listing class.
 function cosmos_job_listing_class( $class = '', $post_id = null ) {
   // Separates classes with a single space, collates classes for post DIV.
