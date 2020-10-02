@@ -100,7 +100,9 @@ function cosmos_get_contributors() {
   return $contributors;
 }
 
-
+// Adds the ability for project owners to be able to edit projects with other owners.
+$edit_contributor = get_role('employer');
+$edit_contributor->add_cap('edit_posts');
 
 
 

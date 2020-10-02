@@ -353,7 +353,3 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
 add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_job_form_fields' );
 
 
-
-
-
-
