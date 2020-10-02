@@ -281,6 +281,14 @@ if( ! function_exists( 'cosmos_single_resume_linked_accounts' ) ) {
 	}
 }
 
+// Removes resume fields on the front end
+function cosmos_remove_submit_job_form_fields( $fields ) {
+	  unset( $fields['resume_fields']['resume_category'] );
+	  return $fields;
+}
+add_filter( 'submit_resume_form_fields', 'cosmos_remove_submit_job_form_fields' );
+
+
 // Add your own function to filter the fields. You can require fields or even add your own
 add_filter( 'submit_resume_form_fields', 'resume_file_required' );
 // This is your function which takes the fields, modifies them, and returns them

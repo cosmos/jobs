@@ -289,7 +289,7 @@ function cosmos_owners_attributed_to_a_project() {
     } 
     $html .= '</div>';
   }
-  echo $html;
+  // TAS removed per VLBETA echo $html;
 }
 
 // Gets the contributors attributed to a project
@@ -332,7 +332,7 @@ if ( ! function_exists( 'mas_wpjmc_job_manager_shortcodes' ) ) {
 add_filter( 'job_manager_shortcodes' , 'mas_wpjmc_job_manager_shortcodes' );
 
 // changes the front end form labels on the project page
-function custom_submit_job_form_fields( $fields ) {
+function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['company_fields']['company_name']['label'] = "Project Name";
   $fields['company_fields']['company_name']['placeholder'] = "Project Name";
   $fields['company_fields']['company_tagline']['label'] = "Project Tagline";
@@ -350,7 +350,7 @@ function custom_submit_job_form_fields( $fields ) {
   $fields['company_fields']['company_content']['label'] = "Project Content";
   return $fields;
 }
-add_filter( 'submit_company_form_fields', 'custom_submit_job_form_fields' );
+add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_job_form_fields' );
 
 
 
