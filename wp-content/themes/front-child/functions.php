@@ -65,7 +65,7 @@ function cosmos_get_job_listing_class( $class = '', $post_id = null ) {
   return get_post_class( $classes, $post->ID );
 }
 
-// Gets the postt ID outside of the loop
+// Gets the post ID outside of the loop
 add_action('wp_enqueue_scripts', 'cosmos_get_post_id'); 
 function cosmos_get_post_id() {
   global $post;

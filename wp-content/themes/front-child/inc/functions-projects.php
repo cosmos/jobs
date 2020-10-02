@@ -289,7 +289,6 @@ function cosmos_owners_attributed_to_a_project() {
     } 
     $html .= '</div>';
   }
-
   echo $html;
 }
 
@@ -311,7 +310,7 @@ function cosmos_contributors_attributed_to_a_project() {
     $html .= '</div>';
   }
   echo $html;
-}
+} 
 
 // Adds multi select pills to the company profile page
 if ( ! function_exists( 'mas_wpjmc_enhanced_select_enabled' ) ) {
@@ -332,7 +331,26 @@ if ( ! function_exists( 'mas_wpjmc_job_manager_shortcodes' ) ) {
 }
 add_filter( 'job_manager_shortcodes' , 'mas_wpjmc_job_manager_shortcodes' );
 
-
+// changes the front end form labels on the project page
+function custom_submit_job_form_fields( $fields ) {
+  $fields['company_fields']['company_name']['label'] = "Project Name";
+  $fields['company_fields']['company_name']['placeholder'] = "Project Name";
+  $fields['company_fields']['company_tagline']['label'] = "Project Tagline";
+  $fields['company_fields']['company_location']['label'] = "Project Location";
+  $fields['company_fields']['company_location']['description'] = "";
+  $fields['company_fields']['company_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
+  $fields['company_fields']['company_tagline']['placeholder'] = "Project Tagline";
+  $fields['company_fields']['company_logo']['label'] = "Project Logo";
+  $fields['company_fields']['company_video']['placeholder'] = "A link to a video about the project";
+  $fields['company_fields']['company_website']['label'] = "Project Website";
+  $fields['company_fields']['company_website']['placeholder'] = "Project Website";
+  $fields['company_fields']['company_website']['placeholder'] = "Project Website";
+  $fields['company_fields']['company_facebook']['placeholder'] = "https://facebook.com/";
+  $fields['company_fields']['company_revenue']['label'] = "Project Revenue";
+  $fields['company_fields']['company_content']['label'] = "Project Content";
+  return $fields;
+}
+add_filter( 'submit_company_form_fields', 'custom_submit_job_form_fields' );
 
 
 
