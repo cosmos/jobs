@@ -500,3 +500,33 @@ if ( ! function_exists( 'front_companies_header_search_form' ) ) {
         <?php
     }
 }
+
+// Lists the open jobs on the project page
+if( ! function_exists( 'mas_wpjmc_single_company_job_listings' ) ) {
+    function mas_wpjmc_single_company_job_listings() {
+        global $post;
+        $company_jobs = mas_wpjmc_get_the_company_job_listing();
+
+        if( count( $company_jobs ) ) :
+            ?><div class="mas-company-jobs"><?php
+                ?><h2 class="mas-company-jobs__title h5"><?php
+                    echo apply_filters( 'mas_wpjmc_company_jobs_title', esc_html__( 'Jobs by project', 'mas-wp-job-manager-company' ) );
+                ?></h2><?php
+
+                get_job_manager_template( 'job-listings-start.php' );
+
+                foreach( $company_jobs as $post ) :
+                    setup_postdata($post);
+                    do_action( 'job_listing_loop' );
+
+                    get_job_manager_template_part( 'content-job_listing' );
+
+                endforeach; // End of the loop. 
+                wp_reset_postdata();
+
+                get_job_manager_template( 'job-listings-end.php' );
+            ?></div><?php
+        endif;
+    }
+}
+add_action( 'single_company', 'mas_wpjmc_single_company_job_listings', 50 );  

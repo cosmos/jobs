@@ -23,6 +23,11 @@ function cosmos_job_board_assets() {
 }
 add_action('wp_enqueue_scripts', 'cosmos_job_board_assets');
 
+function cosmos_job_board_admin_assets() {
+  wp_enqueue_style( 'cosmos-admin-styles', get_stylesheet_directory_uri() . '/dist/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'cosmos_job_board_admin_assets');
+
 // Redirects a user back to a page after login or registration
 add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
 add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);

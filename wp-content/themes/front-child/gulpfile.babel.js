@@ -29,7 +29,7 @@ import info from "./package.json";
   export const clean = () => del(['dist']);
     
   export const styles = () => {
-  return src(['assets/scss/main.scss'])
+  return src(['assets/scss/main.scss', 'assets/scss/admin.scss'])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
