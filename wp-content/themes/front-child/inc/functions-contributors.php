@@ -386,21 +386,55 @@ if( ! function_exists( 'cosmos_resume_listing_loop_controlbar' ) ) {
     }
 }
 
-// Gets the projects attributed to a contributor
-add_action('single_resume_sidebar','cosmos_projects_attributed_to_a_contributor', 90 );
-function cosmos_projects_attributed_to_a_contributor() {
+// Gets the projects attributed to a contributor - PILLS
+// TAS removed via request from VLBETA in favor of the card view below add_action('single_resume_sidebar','cosmos_projects_attributed_to_a_contributor_pills', 90 );
+// function cosmos_projects_attributed_to_a_contributor_pills() {
+//   global $wpdb;
+//   $html = null;
+//   $projects = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE post_id = '".cosmos_get_post_id()."' AND meta_key = '_projects_contributed_to'", OBJECT );
+//   $projects = unserialize($projects[0]->meta_value);
+//   if (!empty($projects)) {
+//     $html .= '<div class="border-top pt-5 mt-5">';
+//     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">'.get_the_title().' contributes to these projects</h4>';
+// 	  foreach ($projects as $key => $value) {
+// 	    $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
+// 	      $html .= get_post($value)->post_title;
+// 	    $html .= '</a>';
+// 	  }
+//     $html .= '</div>';
+// 	}
+//   echo $html;
+// }
+
+// Gets the projects attributed to a contributor - CARDS
+add_action('single_resume_content','cosmos_projects_attributed_to_a_contributor_cards', 15);
+function cosmos_projects_attributed_to_a_contributor_cards() {
   global $wpdb;
   $html = null;
   $projects = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE post_id = '".cosmos_get_post_id()."' AND meta_key = '_projects_contributed_to'", OBJECT );
+  $logos = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_company_logo'", OBJECT );
   $projects = unserialize($projects[0]->meta_value);
   if (!empty($projects)) {
-    $html .= '<div class="border-top pt-5 mt-5">';
-    $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Contributes to these projects</h4>';
-	  foreach ($projects as $key => $value) {
-	    $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
-	      $html .= get_post($value)->post_title;
-	    $html .= '</a>';
-	  }
+    $html .= '<div class="border-top pt-5 mt-5 border-bottom pb-2 mb-5">';
+	    $html .= '<h2 class="h5 mb-3">'.get_the_title().' contributes to these projects</h2>';
+	    $html .= '<div class="row">';
+			  foreach ($projects as $key => $value) {
+					$html .= '<div class="col-md-4 mb-5">';
+						$html .= '<div class="card contributors">';
+							$logo =  get_the_company_logo( $value, 'thumbnail' ) ? get_the_company_logo( $value, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' );
+							$html .= '<div class="card-image text-center p-5 pt-3">';
+								$html .= '<img src="'.esc_url( $logo ).'" alt="'.get_the_title($value).' Logo">';
+							$html .= '</div>';
+						  $html .= '<div class="card-body">';
+						    $html .= '<h5 class="card-title text-center">'.get_post($value)->post_title.'</h5>';
+						    $html .= '<div class="text-center">';
+						    	$html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3  transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
+						    $html .= '</div>';
+						  $html .= '</div>';
+						$html .= '</div>';
+					$html .= '</div>';
+			  }
+			$html .= '</div>';
     $html .= '</div>';
 	}
   echo $html;
@@ -415,7 +449,7 @@ function cosmos_remove_single_resume_sidebar_bio() {
 if( ! function_exists( 'cosmos_single_resume_sidebar_bio' ) ) {
     function cosmos_single_resume_sidebar_bio() {
         if( empty( $candidate_bio = front_get_the_meta_data( '_candidate_bio', null, 'resume', true ) ) ) :
-            // AS $candidate_bio = get_the_excerpt();
+            // TAS $candidate_bio = get_the_excerpt();
         endif;
 
         if( ! empty( $candidate_bio ) ) :

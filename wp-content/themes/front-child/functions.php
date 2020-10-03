@@ -14,6 +14,7 @@ require(__DIR__.'/inc/functions-projects.php');
 require(__DIR__.'/inc/functions-home.php');
 require(__DIR__.'/inc/functions-woocommerce-registration-fields.php');
 require(__DIR__.'/inc/functions-woocommerce-my-account-menu-items.php');
+require(__DIR__.'/inc/functions-jobs.php');
 
 // Adds the child theme compiled assets
 function cosmos_job_board_assets() {
@@ -104,10 +105,47 @@ function cosmos_get_contributors() {
 $edit_contributor = get_role('employer');
 $edit_contributor->add_cap('edit_posts');
 
+// Creates the navigation in all of the dashboards
+if ( ! function_exists( 'cosmos_header_user_account_submenu' ) ) {
+    function cosmos_header_user_account_submenu() {
+        $header_account_view = apply_filters( 'front_header_topbar_user_account_view', 'dropdown' );
+        $my_account_page_url = get_permalink( get_option('woocommerce_myaccount_page_id') );
+        $woocommerce = function_exists( 'front_is_woocommerce_activated' ) && front_is_woocommerce_activated();
+        $job_manager = function_exists( 'front_is_wp_job_manager_activated' ) && front_is_wp_job_manager_activated();
+        $job_resume_manager = function_exists( 'front_is_wp_resume_manager_activated' ) && front_is_wp_resume_manager_activated();
+        $job_company_manager = function_exists( 'front_is_mas_wp_company_manager_activated' ) && front_is_mas_wp_company_manager_activated();
+        ?>
 
-
-
-
+        <div id="cosmos-account-dropdown" class="" aria-labelledby="account-dropdown-invoker">
+            <?php
+            if ( is_user_logged_in() ) {
+                front_header_user_job_account_submenu();
+                if ( $woocommerce ) {
+                    front_user_account_nav_menu();
+                }
+                if ( ! $woocommerce ) {
+                    ?>
+                    <a class="dropdown-item" href="<?php echo esc_url( wp_logout_url() ); ?>">
+                        <span class="fas fa-sign-out-alt dropdown-item-icon"></span><?php echo esc_html__( 'Logout', 'front' ); ?>
+                    </a>
+                    <?php
+                }
+            }
+            else if ( $woocommerce ) {
+                ?><div class="card"><?php
+                    front_header_user_account_login_form();
+                    front_header_user_account_register_form();
+                    front_header_user_account_forget_password_form();
+                ?></div><?php
+            } else {
+                front_header_user_account_job_login_form();
+                front_header_user_account_job_register_form();
+                front_header_user_account_job_forget_password_form();
+            }
+            ?>
+        </div><?php
+    }
+}
 
 
 

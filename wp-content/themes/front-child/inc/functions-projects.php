@@ -130,6 +130,13 @@ function wpjms_admin_projects_form_fields( $fields ) {
     'priority'      => 85,
     'personal_data' => true,
   );
+  $fields['_company_logo'] = array(
+    'label'         => __( 'Project Logo', 'job_manager' ),
+    'type'          => 'file',
+    'placeholder'   => __( '', 'job_manager' ),
+    'description'   => '',
+    'priority'      => 70,
+  );
   return $fields;
 }
 
@@ -253,64 +260,99 @@ function cosmos_remove_project_comments() {
 }
 
 // Gets the owners attributed to a project
-add_action('single_company_sidebar','cosmos_owners_attributed_to_a_project', 30 );
-function cosmos_owners_attributed_to_a_project() {
-  global $wpdb;
-  $html = null;
-  $i = 0;
-  $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
-  $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
-  if (is_object($term_relationships) || is_array($term_relationships)) {
-    foreach ($term_relationships as $key => $value) {
-      foreach ($all_authors as $key2 => $value2) {
-        if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
-          $pattern = '/([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+/i';
-          preg_match_all($pattern, $value2->description, $matches);
-          $email_addresses[] = $matches[0][0];
-        }
-      }
-    }
-  }
-  if (!empty($email_addresses)) {
-    $html .= '<div class="border-top pt-5 mt-5">';
-    $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
-    foreach ($email_addresses as $key => $value) {
-      $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
-      if (!empty($post_id)) {
-        ++$i;
-        $contributor_name = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_name' AND post_id = '".$post_id[0]->post_id."'", OBJECT );
-        if ($i == 1) {
-          $html .= $title;
-        }
-        $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
-          $html .= $contributor_name[0]->meta_value;
-        $html .= '</a>';
-      }
-    } 
-    $html .= '</div>';
-  }
-  // TAS removed per VLBETA echo $html;
-}
+// TAS removed per VLBETA
+// add_action('single_company_sidebar','cosmos_owners_attributed_to_a_project', 30 );
+// function cosmos_owners_attributed_to_a_project() {
+//   global $wpdb;
+//   $html = null;
+//   $i = 0;
+//   $all_authors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author'", OBJECT );
+//   $term_relationships = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}term_relationships WHERE object_id = '".cosmos_get_post_id()."'", OBJECT );
+//   if (is_object($term_relationships) || is_array($term_relationships)) {
+//     foreach ($term_relationships as $key => $value) {
+//       foreach ($all_authors as $key2 => $value2) {
+//         if ($value->term_taxonomy_id == $value2->term_taxonomy_id) {
+//           $pattern = '/([a-z0-9_\.\-])+\@(([a-z0-9\-])+\.)+([a-z0-9]{2,4})+/i';
+//           preg_match_all($pattern, $value2->description, $matches);
+//           $email_addresses[] = $matches[0][0];
+//         }
+//       }
+//     }
+//   }
+//   if (!empty($email_addresses)) {
+//     $html .= '<div class="border-top pt-5 mt-5">';
+//     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project owners</h4>';
+//     foreach ($email_addresses as $key => $value) {
+//       $post_id = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_email' AND meta_value = '".$value."'", OBJECT );
+//       if (!empty($post_id)) {
+//         ++$i;
+//         $contributor_name = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_candidate_name' AND post_id = '".$post_id[0]->post_id."'", OBJECT );
+//         if ($i == 1) {
+//           $html .= $title;
+//         }
+//         $html .= '<a href="'.home_url().'/resume/'.get_post($post_id[0]->post_id)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
+//           $html .= $contributor_name[0]->meta_value;
+//         $html .= '</a>';
+//       }
+//     } 
+//     $html .= '</div>';
+//   }
+//   echo $html;
+// }
 
-// Gets the contributors attributed to a project
-add_action('single_company_sidebar','cosmos_contributors_attributed_to_a_project', 30 );
-function cosmos_contributors_attributed_to_a_project() {
+// Gets the contributors attributed to a project - PILLS
+// TAS removed per VLBETA in favor for CARDS below add_action('single_company_sidebar','cosmos_contributors_attributed_to_a_project_pills', 30 );
+// function cosmos_contributors_attributed_to_a_project_pills() {
+//   global $wpdb;
+//   $html = null;
+  // $contributors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE post_id = '".cosmos_get_post_id()."' AND meta_key = '_contributors_contributed_to'", OBJECT );
+  // $contributors = unserialize($contributors[0]->meta_value);
+//   if (!empty($contributors)) {
+//     $html .= '<div class="border-top pt-5 mt-5">';
+//     $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project contributors</h4>';
+//     foreach ($contributors as $key => $value) {
+//       $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
+//         $html .= get_post($value)->post_title;
+//       $html .= '</a>';
+//     }
+//     $html .= '</div>';
+//   }
+//   echo $html;
+// } 
+
+// Gets the contributors attributed to a project - CARDS
+add_action('single_company_content','cosmos_contributors_attributed_to_a_project_cards', 15);
+function cosmos_contributors_attributed_to_a_project_cards() {
   global $wpdb;
   $html = null;
   $contributors = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE post_id = '".cosmos_get_post_id()."' AND meta_key = '_contributors_contributed_to'", OBJECT );
+  $logos = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '_company_logo'", OBJECT );
+  //var_dump($contributors);
   $contributors = unserialize($contributors[0]->meta_value);
   if (!empty($contributors)) {
-    $html .= '<div class="border-top pt-5 mt-5">';
-    $html .= '<h4 class="font-size-1 font-weight-semi-bold text-uppercase mb-3">Project contributors</h4>';
-    foreach ($contributors as $key => $value) {
-      $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3 mr-3 transition-3d-hoverbtn btn-pill transition-3d-hover" >';
-        $html .= get_post($value)->post_title;
-      $html .= '</a>';
-    }
+    $html .= '<h2 class="h5 mb-3">Contributors to the '.get_the_title().' project</h2>';
+    $html .= '<div class="row">';
+      foreach ($contributors as $key => $value) {
+        $html .= '<div class="col-md-4 mb-5">';
+          $html .= '<div class="card contributors">';
+            $html .= '<div class="card-image text-center p-5 pt-3">';
+              $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3" style="word-break: initial;">';
+                $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid rounded-circle', '', $value, false );
+              $html .= '</div>';
+            $html .= '</div>';
+            $html .= '<div class="card-body">';
+              $html .= '<h5 class="card-title text-center">'.get_post($value)->post_title.'</h5>';
+              $html .= '<div class="text-center">';
+                $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3  transition-3d-hover btn btn-pill transition-3d-hover">View Contributor</a>';
+              $html .= '</div>';
+            $html .= '</div>';
+          $html .= '</div>';
+        $html .= '</div>';
+      }
     $html .= '</div>';
   }
   echo $html;
-} 
+}
 
 // Adds multi select pills to the company profile page
 if ( ! function_exists( 'mas_wpjmc_enhanced_select_enabled' ) ) {
@@ -376,5 +418,85 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
   $fields['job']['job_description']['label'] = "Full Description";
   $fields['company']['company_id']['label'] = "Select A Project";
+  $fields['company']['company_id']['option'] = "Select A Project";
   return $fields;
+}
+
+// Removes the LOCATION field from project search
+if ( ! function_exists( 'front_companies_header_search_form' ) ) {
+    /**
+     * Display Companies Header Search Form
+     */
+    function front_companies_header_search_form( $args = array() ) {
+
+        $defaults =  apply_filters( 'front_companies_header_search_form_default_args', array(
+            'keywords_title_text'       => esc_html__( 'Company name or job title', 'front' ),
+            'keywords_placeholder_text' => esc_html__( 'Company or title', 'front' ),
+            'location_title_text'       => esc_html__( 'City, state, or zip', 'front' ),
+            'location_placeholder_text' => esc_html__( 'City, state, or zip', 'front' ),
+            'search_button_text'        => esc_html__( 'Search', 'front' ),
+            'background_color'          => 'bg-light',
+            'current_page_url'          => '',
+            'enable_container'          => true,
+        ) );
+
+        $args = wp_parse_args( $args, $defaults );
+
+        extract( $args );
+
+        $current_page_url = ! empty($current_page_url) ? $current_page_url : MAS_WPJMC::get_current_page_url();
+        $current_page_query_args = MAS_WPJMC::get_current_page_query_args();
+
+        ?>
+        <div class="company-filters<?php echo esc_attr( !empty( $background_color ) ? ' ' . $background_color : '' ); ?>">
+            <div class="<?php echo esc_attr( !empty( $enable_container ) ? 'container space-2' : '' ); ?>">
+                <!-- Search Jobs Form -->
+                <form class="company_filters" action="<?php echo esc_attr( $current_page_url ); ?>">
+                    <?php do_action( 'mas_job_manger_company_header_search_block_start' ); ?>
+                    <div class="search_companies row mb-2">
+                        <?php do_action( 'mas_job_manger_company_header_search_block_search_companies_start' ); ?>
+
+                        <div class="search_keywords col-lg-10 mb-4 mb-lg-0">
+                            <!-- Input -->
+                            <label for="search_keywords" class="d-block">
+                                <span class="h6 d-block text-dark font-weight-semi-bold mb-0"><?php echo esc_html( $args['keywords_title_text'] ) ?></span>
+                            </label>
+                            <div class="js-focus-state">
+                                <div class="input-group">
+                                    <input type="text" name="s" id="search_keywords" class="form-control" placeholder="<?php echo esc_attr( $args['keywords_placeholder_text'] ) ?>" aria-label="<?php echo esc_attr( $args['keywords_placeholder_text'] ) ?>" aria-describedby="keywordInputAddon" value="<?php echo get_search_query(); ?>" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                        <span class="fas fa-search" id="keywordInputAddon"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Input -->
+                        </div>
+                        <div class="search_submit col-lg-2 align-self-lg-end">
+                            <button type="submit" class="btn btn-block btn-primary transition-3d-hover">
+                                <?php echo esc_html( $search_button_text ); ?>
+                            </button>
+                        </div>
+                        <input type="hidden" name="paged" value="1" />
+                        <?php 
+                        if( is_array( $current_page_query_args ) && !empty(  $current_page_query_args  ) ) :
+                            foreach ( $current_page_query_args as $key => $current_page_query_arg ) :
+                                if( $key != 'search_keywords' && $key != 'search_location'  ) :
+                                    ?><input type="hidden" name="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_attr( $current_page_query_arg ); ?>" ><?php
+                                endif;
+                            endforeach;
+                        endif;
+                        ?>
+
+                        <?php do_action( 'mas_job_manger_company_header_search_block_search_companies_end' ); ?>
+                    </div>
+                    <?php do_action( 'mas_job_manger_company_header_search_block_end' ); ?>
+                    <!-- End Checkbox -->
+                </form>
+                <!-- End Search Jobs Form -->
+            </div>
+        </div>
+        <?php
+    }
 }
