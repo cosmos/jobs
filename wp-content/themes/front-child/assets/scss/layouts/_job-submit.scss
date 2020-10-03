@@ -1,0 +1,12 @@
+#submit-job-form .fieldset-job_title.fieldset-type-text {
+	flex: unset;
+	max-width: 100%;
+}
+#submit-job-form  {
+	.fieldset-job_type.fieldset-type-term-multiselect,
+	.fieldset-job_location.fieldset-type-text,
+	.fieldset-job_category.fieldset-type-term-multiselect {
+		flex: 0 0 33.3%;
+		max-width: 33.3%;
+	}
+}

@@ -332,7 +332,7 @@ if ( ! function_exists( 'mas_wpjmc_job_manager_shortcodes' ) ) {
 add_filter( 'job_manager_shortcodes' , 'mas_wpjmc_job_manager_shortcodes' );
 
 // changes the front end form labels on the project page
-function cosmos_customize_submit_job_form_fields( $fields ) {
+function cosmos_customize_submit_project_form_fields( $fields ) {
   $fields['company_fields']['company_name']['label'] = "Project Name";
   $fields['company_fields']['company_name']['placeholder'] = "Project Name";
   $fields['company_fields']['company_tagline']['label'] = "Project Tagline";
@@ -350,6 +350,31 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['company_fields']['company_content']['label'] = "Project Content";
   return $fields;
 }
-add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_job_form_fields' );
+add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_project_form_fields' );
 
-
+// Changess the job submit fields
+add_action( 'after_setup_theme', 'cosmos_customize_submit_job_form_fields_filter');
+function cosmos_customize_submit_job_form_fields_filter() {
+  add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_job_form_fields' );
+}
+function cosmos_customize_submit_job_form_fields( $fields ) {
+  unset( $fields['resume_fields']['resume_category'] );
+  unset( $fields['job']['contact_email'] );
+  unset( $fields['job']['contact_address'] );
+  unset( $fields['job']['application'] );
+  unset( $fields['job']['contact_phone'] );
+  unset( $fields['job']['job_qualification'] );
+  unset( $fields['job']['job_listing_salary'] );
+  unset( $fields['job']['job_listing_project_length'] );
+  unset( $fields['job']['job_listing_working_environment'] );
+  unset( $fields['job']['job_tags'] );
+  unset( $fields['job']['job_deadline'] );
+  $fields['job']['job_category']['priority'] = 3;
+  $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
+  $fields['job']['job_location']['description'] = "Leave this blank if the possition is remote";
+  $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
+  $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
+  $fields['job']['job_description']['label'] = "Full Description";
+  $fields['company']['company_id']['label'] = "Select A Project";
+  return $fields;
+}
