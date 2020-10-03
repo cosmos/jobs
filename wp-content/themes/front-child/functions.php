@@ -152,7 +152,53 @@ if ( ! function_exists( 'cosmos_header_user_account_submenu' ) ) {
     }
 }
 
+// Sends email when a listing is approved https://wpjobmanager.com/document/tutorial-send-email-employer-job-listing-approved/
+function listing_published_send_email($post_id) {
+  if( 'job_listing' != get_post_type( $post_id ) ) {
+    return;
+  }
+  $post = get_post($post_id);
+  $author = get_userdata($post->post_author);
 
+  $message = "
+    Hi ".$author->display_name.",
+    Your listing, ".$post->post_title." has just been approved at ".get_permalink( $post_id ).". Well done!
+  ";
+  wp_mail($author->user_email, "Your job listing is online", $message);
+}
+add_action('pending_to_publish', 'listing_published_send_email');
+add_action('pending_payment_to_publish', 'listing_published_send_email');
+
+// Sends an email when a resume is approved https://wpjobmanager.com/document/tutorial-send-email-employer-job-listing-approved/
+function resume_published_send_email($post_id) {
+   if( 'resume' != get_post_type( $post_id ) ) {
+    return;
+  }
+   $post = get_post($post_id);
+   $author = get_userdata($post->post_author);
+
+   $message = "
+      Hi ".$author->display_name.",
+      Your resume, ".$post->post_title." has just been approved at ".get_permalink( $post_id ).". Well done!
+   ";
+   wp_mail($author->user_email, "Your resume is online", $message);
+}
+add_action('pending_to_publish', 'resume_published_send_email');
+add_action('pending_payment_to_publish', 'resume_published_send_email');
+
+// Sends an email when a resume expires https://wpjobmanager.com/document/tutorial-send-email-employer-job-listing-approved/
+function resume_expired_send_email( $new_status, $old_status, $post ) {
+    if ( 'resume' !== $post->post_type || 'expired' !== $new_status || $old_status === $new_status ) {
+        return;
+    }
+    $author = get_userdata( $post->post_author );
+ 
+    $message = "
+        Hi " . $author->display_name . ",
+        Your resume, " . $post->post_title . " has now expired: " . get_permalink( $post_id );
+    wp_mail( $author->user_email, "Your job resume has expired", $message );
+}
+add_action( 'transition_post_status', 'resume_expired_send_email', 10, 3 );
 
 // foreach (cosmos_get_projects() as $key => $value) {
 //   var_dump($value->post_title);
