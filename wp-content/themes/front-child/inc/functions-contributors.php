@@ -87,7 +87,7 @@ function cosmos_add_resume_listing_list_card_footer() {
 function cosmos_resume_listing_list_card_footer_content() {
 	$args = apply_filters( 'front_resume_listing_list_card_footer_content_args', array(
 		'candidate_location'    => array(
-			'title'     => esc_html__( 'Location', 'front' ),
+			'title'     => esc_html__( 'candidate_location', 'front' ),
 			'content'   => get_the_candidate_location(),
 			'icon'      => 'fas fa-map-marker-alt',
 		),
@@ -299,7 +299,7 @@ function cosmos_resume_change_fields( $fields ) {
 	$fields['resume_fields']['candidate_photo']['priority'] = 6;
 	$fields['resume_fields']['candidate_twitter']['priority'] = 7;
 	$fields['resume_fields']['candidate_facebook']['priority'] = 7;
-	$fields['resume_fields']['candidate_stackexchange']['priority'] = 7;
+	$fields['resume_fields'][	'candidate_stackexchange']['priority'] = 7;
 	$fields['resume_fields']['candidate_github']['priority'] = 7;
 	$fields['resume_fields']['candidate_other']['priority'] = 7;
 	$fields['resume_fields']['candidate_rewards']['label'] = 'Accolades/Awards';
@@ -325,6 +325,12 @@ if( ! function_exists( 'cosmos_single_contributor_description' ) ) {
       <?php
 	  endif;
 	}
+}
+
+// Removed the Rewards sectioon of a contributors sidebar
+add_action( 'after_setup_theme', 'cosmos_remove_sidebar_rewards_categories');
+function cosmos_remove_sidebar_rewards_categories() {
+	remove_action( 'single_resume_sidebar', 'front_single_resume_sidebar_rewards_categories', 60 );
 }
 
 // Edits the title of Candidates and renames it Contributors
