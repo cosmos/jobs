@@ -188,7 +188,7 @@ function cosmos_frontend_contributor_form_fields( $fields ) {
 	foreach (cosmos_get_projects() as $key => $value) {
 	  $projects[$value->ID] = $value->post_title;
 	}
-	$fields['resume_fields']['_candidate_github'] = array(
+	$fields['resume_fields']['candidate_github'] = array(
 		'label'     		=> __( 'Github', 'job_manager' ),
 		'type'      		=> 'text',
 		'placeholder'   => __( 'https://github.com/', 'job_manager' ),
@@ -197,7 +197,7 @@ function cosmos_frontend_contributor_form_fields( $fields ) {
 		'priority' 			=> 6,
 		'personal_data' => true,
 	);
-	$fields['resume_fields']['_candidate_stackexchange'] = array(
+	$fields['resume_fields']['candidate_stackexchange'] = array(
 		'label'     		=> __( 'Stack Exchange', 'job_manager' ),
 		'type'      		=> 'text',
 		'placeholder'   => __( 'https://stackexchange.com/', 'job_manager' ),
@@ -206,7 +206,7 @@ function cosmos_frontend_contributor_form_fields( $fields ) {
 		'priority' 			=> 6,
 		'personal_data' => true,
 	);
-	$fields['resume_fields']['_candidate_other'] = array(
+	$fields['resume_fields']['candidate_other'] = array(
 		'label'     		=> __( 'Other', 'job_manager' ),
 		'type'      		=> 'text',
 		'placeholder'   => __( 'https://', 'job_manager' ),
@@ -280,24 +280,34 @@ if( ! function_exists( 'cosmos_single_resume_linked_accounts' ) ) {
 		}
 	}
 }
-
+	
 // Removes resume fields on the front end
 function cosmos_remove_submit_job_form_fields( $fields ) {
-	  unset( $fields['resume_fields']['resume_category'] );
-	  return $fields;
+  unset( $fields['resume_fields']['resume_category'] );
+  unset( $fields['resume_fields']['candidate_work_done'] );
+  unset( $fields['resume_fields']['candidate_success_rate'] );
+  unset( $fields['resume_fields']['candidate_pay_scale'] );
+  unset( $fields['resume_fields']['candidate_video'] );
+  unset( $fields['resume_fields']['candidate_experience'] );
+  return $fields;
 }
-add_filter( 'submit_resume_form_fields', 'cosmos_remove_submit_job_form_fields' );
+add_filter( 'submit_resume_form_fields', 'cosmos_remove_submit_job_form_fields', 30 );
 
 
-// Add your own function to filter the fields. You can require fields or even add your own
-add_filter( 'submit_resume_form_fields', 'resume_file_required' );
-// This is your function which takes the fields, modifies them, and returns them
-function resume_file_required( $fields ) {
-	// Here we target one of the job fields (candidate name) and change it's label
+// Changes the fields on the front end for the contributors profile
+add_filter( 'submit_resume_form_fields', 'cosmos_resume_change_fields', 30);
+function cosmos_resume_change_fields( $fields ) {
 	$fields['resume_fields']['resume_content']['required'] = false;
 	$fields['resume_fields']['candidate_name']['label'] = "Contributor's Name";
-	// And return the modified fields
-	return $fields;
+	$fields['resume_fields']['candidate_bio']['priority'] = 4;
+	$fields['resume_fields']['projects_contributed_to']['priority'] = 5;
+	$fields['resume_fields']['candidate_photo']['priority'] = 6;
+	$fields['resume_fields']['candidate_twitter']['priority'] = 7;
+	$fields['resume_fields']['candidate_facebook']['priority'] = 7;
+	$fields['resume_fields']['candidate_stackexchange']['priority'] = 7;
+	$fields['resume_fields']['candidate_github']['priority'] = 7;
+	$fields['resume_fields']['candidate_rewards']['label'] = 'Accolades/Awards';
+		return $fields;
 }
 
 // Changes the h2 header on the single contributor page

@@ -110,7 +110,6 @@ function cosmos_get_contributors() {
 $edit_contributor = get_role('employer');
 $edit_contributor->add_cap('edit_posts');
 
-// Creates the navigation in all of the dashboards
 if ( ! function_exists( 'cosmos_header_user_account_submenu' ) ) {
     function cosmos_header_user_account_submenu() {
         $header_account_view = apply_filters( 'front_header_topbar_user_account_view', 'dropdown' );
@@ -179,9 +178,9 @@ function resume_published_send_email($post_id) {
 
    $message = "
       Hi ".$author->display_name.",
-      Your resume, ".$post->post_title." has just been approved at ".get_permalink( $post_id ).". Well done!
+      Your contributor profile, ".$post->post_title." has just been approved at ".get_permalink( $post_id ).". Well done!
    ";
-   wp_mail($author->user_email, "Your resume is online", $message);
+   wp_mail($author->user_email, "Your contributor profile is online", $message);
 }
 add_action('pending_to_publish', 'resume_published_send_email');
 add_action('pending_payment_to_publish', 'resume_published_send_email');
@@ -195,10 +194,19 @@ function resume_expired_send_email( $new_status, $old_status, $post ) {
  
     $message = "
         Hi " . $author->display_name . ",
-        Your resume, " . $post->post_title . " has now expired: " . get_permalink( $post_id );
+        Your contributor profile, " . $post->post_title . " has now expired: " . get_permalink( $post_id );
     wp_mail( $author->user_email, "Your job resume has expired", $message );
 }
 add_action( 'transition_post_status', 'resume_expired_send_email', 10, 3 );
+
+// Block non-administrators from accessing the WordPress back-end
+function wpabsolute_block_users_backend() {
+  if ( is_admin() && ! current_user_can( 'administrator' ) && ! wp_doing_ajax() ) {
+    wp_redirect( home_url('/my-account/') );
+    exit;
+  }
+}
+add_action( 'init', 'wpabsolute_block_users_backend' );
 
 // foreach (cosmos_get_projects() as $key => $value) {
 //   var_dump($value->post_title);

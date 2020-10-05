@@ -392,9 +392,24 @@ function cosmos_customize_submit_project_form_fields( $fields ) {
   $fields['company_fields']['company_content']['label'] = "Project Content";
   return $fields;
 }
-add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_project_form_fields' );
+add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_project_form_fields', 30 );
 
-// Changess the job submit fields
+// changes the front end form labels on the project page
+function cosmos_customize_submit_project_form_fields2( $fields ) {
+  $fields['company']['company_name']['label'] = "Project Name";
+  $fields['company']['company_name']['placeholder'] = "Enter the name of the project";
+  $fields['company']['company_website']['label'] = "Project Website";
+  $fields['company']['company_video']['label'] = "Project Video";
+  $fields['company']['company_video']['placeholder'] = "A link to a video about your company";
+  $fields['company']['company_twitter']['label'] = "Twitter";
+  $fields['company']['company_logo']['label'] = "Logo";
+  $fields['company']['company_about']['label'] = "About Project";
+  $fields['company']['company_about']['placeholder'] = "Short description about the project";
+  return $fields;
+}
+add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_project_form_fields2', 30 );
+
+// Changess the job submit fields on the front end
 add_action( 'after_setup_theme', 'cosmos_customize_submit_job_form_fields_filter');
 function cosmos_customize_submit_job_form_fields_filter() {
   add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_job_form_fields' );
