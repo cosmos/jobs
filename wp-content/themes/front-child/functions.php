@@ -31,11 +31,15 @@ add_action('admin_enqueue_scripts', 'cosmos_job_board_admin_assets');
 // Redirects a user back to a page after login or registration
 add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
 add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);
-if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) ) ) {
   function cosmos_login_redirect() {
-    $location = $_GET['action'];
-    wp_safe_redirect($location);
-    exit();
+    if (empty($_GET['action'])) {
+      return;
+    }else{
+      $location = $_GET['action'];
+      wp_safe_redirect($location);
+      exit();
+    }
   }
 }
 
