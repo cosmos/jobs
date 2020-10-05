@@ -49,7 +49,9 @@
 					foreach ($value as $key2 => $value2) {
 						++$ii;
 						$meta = get_post_meta($value2->ID);
-						$image = get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0];
+						if (!empty($meta['_thumbnail_id'])) {
+							$image = get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0];
+						}
 						$location = $meta['_job_location'][0];
 						if ($i % $number_of_categories == 0) {
 							$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$terms[$i/$number_of_categories]->name.'</h3>';

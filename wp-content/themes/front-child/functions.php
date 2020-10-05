@@ -31,15 +31,11 @@ add_action('admin_enqueue_scripts', 'cosmos_job_board_admin_assets');
 // Redirects a user back to a page after login or registration
 add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
 add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);
-if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) ) ) {
-  function cosmos_login_redirect() {
-    if (empty($_GET['action'])) {
-      return;
-    }else{
-      $location = $_GET['action'];
-      wp_safe_redirect($location);
-      exit();
-    }
+function cosmos_login_redirect() {
+  if ( (isset($_GET['action']) && $_GET['action'] != 'logout') || (isset($_POST['login_location']) && !empty($_POST['login_location'])) ) {
+    $location = $_GET['action'];
+    wp_safe_redirect($location);
+    exit();
   }
 }
 
@@ -211,10 +207,6 @@ function wpabsolute_block_users_backend() {
   }
 }
 add_action( 'init', 'wpabsolute_block_users_backend' );
-
-// foreach (cosmos_get_projects() as $key => $value) {
-//   var_dump($value->post_title);
-// }
 
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {

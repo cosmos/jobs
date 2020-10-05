@@ -390,6 +390,9 @@ function cosmos_customize_submit_project_form_fields( $fields ) {
   $fields['company_fields']['company_facebook']['placeholder'] = "https://facebook.com/";
   $fields['company_fields']['company_revenue']['label'] = "Project Revenue";
   $fields['company_fields']['company_content']['label'] = "Project Content";
+  unset( $fields['company_fields']['company_strength'] );
+  unset( $fields['company_fields']['company_average_salary'] );
+  unset( $fields['company_fields']['company_revenue'] );
   return $fields;
 }
 add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_project_form_fields', 30 );
@@ -409,7 +412,7 @@ function cosmos_customize_submit_project_form_fields2( $fields ) {
 }
 add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_project_form_fields2', 30 );
 
-// Changess the job submit fields on the front end
+// Changes the job submit fields on the front end
 add_action( 'after_setup_theme', 'cosmos_customize_submit_job_form_fields_filter');
 function cosmos_customize_submit_job_form_fields_filter() {
   add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_job_form_fields' );
@@ -544,4 +547,9 @@ if( ! function_exists( 'mas_wpjmc_single_company_job_listings' ) ) {
         endif;
     }
 }
-add_action( 'single_company', 'mas_wpjmc_single_company_job_listings', 50 );  
+add_action( 'single_company', 'mas_wpjmc_single_company_job_listings', 50 );
+
+
+
+
+
