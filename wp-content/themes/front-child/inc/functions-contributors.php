@@ -87,24 +87,19 @@ function cosmos_add_resume_listing_list_card_footer() {
 function cosmos_resume_listing_list_card_footer_content() {
 	$args = apply_filters( 'front_resume_listing_list_card_footer_content_args', array(
 		'candidate_location'    => array(
-			'title'     => esc_html__( 'LocationsTAS', 'front' ),
+			'title'     => esc_html__( 'Location', 'front' ),
 			'content'   => get_the_candidate_location(),
 			'icon'      => 'fas fa-map-marker-alt',
 		),
 		'candidate_pay_scale'   => array(
-			'title'     => esc_html__( 'Working rateTAS', 'front' ),
+			'title'     => esc_html__( 'Working rate', 'front' ),
 			'content'   => front_get_the_meta_data( '_candidate_pay_scale', null, 'resume' ),
 			'icon'      => 'fas fa-clock',
 		),
 		'candidate_work_done'  => array(
-			'title'     => esc_html__( 'ProjectsTAS', 'front' ),
+			'title'     => esc_html__( 'Projects', 'front' ),
 			'content'   => front_get_the_meta_data( '_candidate_work_done', null, 'resume' ),
 			'icon'      => 'fas fa-briefcase',
-		),
-		'candidate_location2'    => array(
-			'title'     => esc_html__( 'Locations2TAS', 'front' ),
-			'content'   => get_the_candidate_location(),
-			'icon'      => 'fas fa-map-marker-alt',
 		),
 	) );
 

@@ -50,6 +50,7 @@
 						++$ii;
 						$meta = get_post_meta($value2->ID);
 						if (!empty($meta['_thumbnail_id'])) {
+							var_dump(get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0]);
 							$image = get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0];
 						}
 						$location = $meta['_job_location'][0];
