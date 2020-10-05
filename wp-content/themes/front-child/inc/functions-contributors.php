@@ -306,6 +306,7 @@ function cosmos_resume_change_fields( $fields ) {
 	$fields['resume_fields']['candidate_facebook']['priority'] = 7;
 	$fields['resume_fields']['candidate_stackexchange']['priority'] = 7;
 	$fields['resume_fields']['candidate_github']['priority'] = 7;
+	$fields['resume_fields']['candidate_other']['priority'] = 7;
 	$fields['resume_fields']['candidate_rewards']['label'] = 'Accolades/Awards';
 		return $fields;
 }
