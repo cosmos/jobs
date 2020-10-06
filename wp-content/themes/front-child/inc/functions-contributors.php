@@ -431,18 +431,20 @@ function cosmos_projects_attributed_to_a_contributor_cards() {
 	    $html .= '<h2 class="h5 mb-3">'.get_the_title().' contributes to these projects</h2>';
 	    $html .= '<div class="row">';
 			  foreach ($projects as $key => $value) {
-					$html .= '<div class="col-md-4 mb-5">';
-						$html .= '<div class="card contributors">';
-							$logo =  get_the_company_logo( $value, 'thumbnail' ) ? get_the_company_logo( $value, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' );
-							$html .= '<div class="card-image text-center p-5 pt-3">';
-								$html .= '<img src="'.esc_url( $logo ).'" alt="'.get_the_title($value).' Logo">';
-							$html .= '</div>';
-						  $html .= '<div class="card-body">';
-						    $html .= '<h5 class="card-title text-center">'.get_post($value)->post_title.'</h5>';
-						    $html .= '<div class="text-center">';
-						    	$html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3  transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
-						    $html .= '</div>';
-						  $html .= '</div>';
+					$logo =  get_the_company_logo( $value, 'thumbnail' ) ? get_the_company_logo( $value, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' );
+					$html .= '<div class="col-md-6 mb-5">';
+						$html .= '<div class="card card-frame transition-3d-hover p-0">';
+							$html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'">';
+								$html .= '<div class="media p-3">';	
+									$html .= '<div class="u-avatar position-relative">';
+										$html .= '<img width="150" height="150" src="'.esc_url( $logo ).'" alt="'.get_the_title($value).' Logo" loading="lazy">';
+									$html .= '</div>';
+									$html .= '<div class="media-body px-4 text-cente">';
+										$html .= '<h4 class="h6 text-dark mb-1">'.get_post($value)->post_title.'</h4>';
+											// $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
+									$html .= '</div>';
+								$html .= '</div>';
+							$html .= '</a>';
 						$html .= '</div>';
 					$html .= '</div>';
 			  }
@@ -451,6 +453,7 @@ function cosmos_projects_attributed_to_a_contributor_cards() {
 	}
   echo $html;
 }
+
 
 // Removes the bio if a user does not actually write anything in the sidebar
 add_action( 'single_resume_sidebar', 'cosmos_single_resume_sidebar_bio', 30 );
