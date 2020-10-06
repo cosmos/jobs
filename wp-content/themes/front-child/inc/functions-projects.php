@@ -408,6 +408,12 @@ function cosmos_customize_submit_project_form_fields2( $fields ) {
   $fields['company']['company_logo']['label'] = "Logo";
   $fields['company']['company_about']['label'] = "About Project";
   $fields['company']['company_about']['placeholder'] = "Short description about the project";
+  unset( $fields['company']['company_name'] );
+  unset( $fields['company']['company_website'] );
+  unset( $fields['company']['company_video'] );
+  unset( $fields['company']['company_twitter'] );
+  unset( $fields['company']['company_logo'] );
+  unset( $fields['company']['company_about'] );
   return $fields;
 }
 add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_project_form_fields2', 30 );
