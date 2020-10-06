@@ -439,8 +439,11 @@ function cosmos_projects_attributed_to_a_contributor_cards() {
 									$html .= '<div class="u-avatar position-relative">';
 										$html .= '<img width="150" height="150" src="'.esc_url( $logo ).'" alt="'.get_the_title($value).' Logo" loading="lazy">';
 									$html .= '</div>';
-									$html .= '<div class="media-body px-4 text-cente">';
+									$html .= '<div class="media-body px-4">';
 										$html .= '<h4 class="h6 text-dark mb-1">'.get_post($value)->post_title.'</h4>';
+										$html .= '<small class="d-block text-muted">';
+											$html .= get_post_meta($value, '_company_website')[0];
+										$html .= '</small>';
 											// $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
 									$html .= '</div>';
 								$html .= '</div>';
