@@ -330,25 +330,30 @@ function cosmos_contributors_attributed_to_a_project_cards() {
   //var_dump($contributors);
   $contributors = unserialize($contributors[0]->meta_value);
   if (!empty($contributors)) {
-    $html .= '<h2 class="h5 mb-3">Contributors to the '.get_the_title().' project</h2>';
-    $html .= '<div class="row">';
-      foreach ($contributors as $key => $value) {
-        $html .= '<div class="col-md-4 mb-5">';
-          $html .= '<div class="card contributors">';
-            $html .= '<div class="card-image text-center p-5 pt-3">';
-              $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3" style="word-break: initial;">';
-                $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid rounded-circle', '', $value, false );
-              $html .= '</div>';
-            $html .= '</div>';
-            $html .= '<div class="card-body">';
-              $html .= '<h5 class="card-title text-center">'.get_post($value)->post_title.'</h5>';
-              $html .= '<div class="text-center">';
-                $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs mb-3  transition-3d-hover btn btn-pill transition-3d-hover">View Contributor</a>';
-              $html .= '</div>';
+    $html .= '<div class="border-top pt-5 mt-5 border-bottom pb-2 mb-5">';
+      $html .= '<h2 class="h5 mb-3">Contributors to the '.get_the_title().' project</h2>';
+      $html .= '<div class="row">';
+        foreach ($contributors as $key => $value) {
+          $html .= '<div class="col-md-6 mb-5">';
+            $html .= '<div class="card card-frame transition-3d-hover p-0">';
+              $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'">';
+                $html .= '<div class="media p-3">'; 
+                  $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3" style="word-break: initial;">';
+                    $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid rounded-circle', '', $value, false );
+                  $html .= '</div>';
+                  $html .= '<div class="media-body px-4">';
+                    $html .= '<h4 class="h6 text-dark mb-1">'.get_post($value)->post_title.'</h4>';
+                    $html .= '<small class="d-block text-muted">';
+                      $html .= get_post_meta($value, '_candidate_website')[0];
+                    $html .= '</small>';
+                      // $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
+                  $html .= '</div>';
+                $html .= '</div>';
+              $html .= '</a>';
             $html .= '</div>';
           $html .= '</div>';
-        $html .= '</div>';
-      }
+        }
+      $html .= '</div>';
     $html .= '</div>';
   }
   echo $html;
