@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the MAS Static Content package.
 msgid ""
 msgstr ""
-"Project-Id-Version: MAS Static Content 1.0.2\n"
+"Project-Id-Version: MAS Static Content 1.0.3\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/madrasthemes/mas-static-content/issues\n"
-"POT-Creation-Date: 2020-01-30 10:49:11+00:00\n"
+"POT-Creation-Date: 2020-09-30 11:23:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,171 +14,175 @@ msgstr ""
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: includes/class-mas-static-content-post-types.php:51
+#: includes/class-mas-static-content-post-types.php:37
+msgid "Shortcode"
+msgstr ""
+
+#: includes/class-mas-static-content-post-types.php:79
 msgid "Static Contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:52
+#: includes/class-mas-static-content-post-types.php:80
 msgid "Static Content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:53
+#: includes/class-mas-static-content-post-types.php:81
 msgid "All Static Contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:55
+#: includes/class-mas-static-content-post-types.php:83
 msgid "Add New"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:56
+#: includes/class-mas-static-content-post-types.php:84
 msgid "Add new static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:57
+#: includes/class-mas-static-content-post-types.php:85
 msgid "Edit"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:58
+#: includes/class-mas-static-content-post-types.php:86
 msgid "Edit static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:59
+#: includes/class-mas-static-content-post-types.php:87
 msgid "New static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:60
+#: includes/class-mas-static-content-post-types.php:88
 msgid "View static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:61
+#: includes/class-mas-static-content-post-types.php:89
 msgid "View static contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:62
+#: includes/class-mas-static-content-post-types.php:90
 msgid "Search static contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:63
+#: includes/class-mas-static-content-post-types.php:91
 msgid "No static contents found"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:64
+#: includes/class-mas-static-content-post-types.php:92
 msgid "No static contents found in trash"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:65
+#: includes/class-mas-static-content-post-types.php:93
 msgid "Parent static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:66
+#: includes/class-mas-static-content-post-types.php:94
 msgid "Static Content image"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:67
+#: includes/class-mas-static-content-post-types.php:95
 msgid "Set static content image"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:68
+#: includes/class-mas-static-content-post-types.php:96
 msgid "Remove static content image"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:69
+#: includes/class-mas-static-content-post-types.php:97
 msgid "Use as static content image"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:70
+#: includes/class-mas-static-content-post-types.php:98
 msgid "Insert into static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:71
+#: includes/class-mas-static-content-post-types.php:99
 msgid "Uploaded to this static content"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:72
+#: includes/class-mas-static-content-post-types.php:100
 msgid "Filter static contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:73
+#: includes/class-mas-static-content-post-types.php:101
 msgid "Static Contents navigation"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:74
+#: includes/class-mas-static-content-post-types.php:102
 msgid "Static Contents list"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:76
+#: includes/class-mas-static-content-post-types.php:104
 msgid "This is where you can add new static contents to your site."
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:100
+#: includes/class-mas-static-content-post-types.php:128
 msgid "Categories"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:101
+#: includes/class-mas-static-content-post-types.php:129
 msgid "All Items"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:102
+#: includes/class-mas-static-content-post-types.php:130
 msgid "Parent Item"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:103
+#: includes/class-mas-static-content-post-types.php:131
 msgid "Parent Item:"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:104
+#: includes/class-mas-static-content-post-types.php:132
 msgid "New Item Name"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:105
+#: includes/class-mas-static-content-post-types.php:133
 msgid "Add New Item"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:106
+#: includes/class-mas-static-content-post-types.php:134
 msgid "Edit Item"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:107
+#: includes/class-mas-static-content-post-types.php:135
 msgid "Update Item"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:108
+#: includes/class-mas-static-content-post-types.php:136
 msgid "View Item"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:109
+#: includes/class-mas-static-content-post-types.php:137
 msgid "Separate items with commas"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:110
+#: includes/class-mas-static-content-post-types.php:138
 msgid "Add or remove items"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:111
+#: includes/class-mas-static-content-post-types.php:139
 msgid "Choose from the most used"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:112
+#: includes/class-mas-static-content-post-types.php:140
 msgid "Popular Items"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:113
+#: includes/class-mas-static-content-post-types.php:141
 msgid "Search Items"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:114
+#: includes/class-mas-static-content-post-types.php:142
 msgid "Not Found"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:115
+#: includes/class-mas-static-content-post-types.php:143
 msgid "No items"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:116
+#: includes/class-mas-static-content-post-types.php:144
 msgid "Items list"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:117
+#: includes/class-mas-static-content-post-types.php:145
 msgid "Items list navigation"
 msgstr ""
 
@@ -209,17 +213,17 @@ msgstr ""
 msgid "https://madrasthemes.com/"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:54
+#: includes/class-mas-static-content-post-types.php:82
 msgctxt "Admin menu name"
 msgid "Static Contents"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:98
+#: includes/class-mas-static-content-post-types.php:126
 msgctxt "Taxonomy General Name"
 msgid "Categories"
 msgstr ""
 
-#: includes/class-mas-static-content-post-types.php:99
+#: includes/class-mas-static-content-post-types.php:127
 msgctxt "Taxonomy Singular Name"
 msgid "Category"
 msgstr ""

@@ -3,7 +3,7 @@
  * Plugin Name: MAS Static Content
  * Plugin URI: https://github.com/madrasthemes/mas-static-content
  * Description: This plugin helps to create a custom post type static content and use it with shortcode.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: MadrasThemes
  * Author URI: https://madrasthemes.com/
  * Text Domain: mas-static-content

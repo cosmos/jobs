@@ -20,10 +20,38 @@ class Mas_Static_Content_Post_Types {
      */
     public static function init() {
         add_action( 'init', array( __CLASS__, 'register_post_types' ), 5 );
+        add_filter( 'manage_mas_static_content_posts_columns', array( __CLASS__, 'custom_mas_static_content_columns' ) );
+        add_action( 'manage_mas_static_content_posts_custom_column' , array( __CLASS__, 'custom_mas_static_content_column' ), 10, 2 );
         add_filter( 'rest_api_allowed_post_types', array( __CLASS__, 'rest_api_allowed_post_types' ) );
         add_action( 'mas_static_content_after_register_post_type', array( __CLASS__, 'maybe_flush_rewrite_rules' ) );
         add_action( 'mas_static_content_flush_rewrite_rules', array( __CLASS__, 'flush_rewrite_rules' ) );
         add_filter( 'gutenberg_can_edit_post_type', array( __CLASS__, 'gutenberg_can_edit_post_type' ), 10, 2 );
+    }
+
+    /**
+     * Add custom columns in mas static content post type admin panel
+     */
+    public static function custom_mas_static_content_columns($columns) {
+        $columns_new['cb'] = $columns['cb'];
+        $columns_new['title'] = $columns['title'];
+        $columns_new['shortcode'] = esc_html__( 'Shortcode', 'mas-static-content' );
+
+        $columns_old = $columns;
+        unset( $columns );
+
+        $columns = array_merge( $columns_new, $columns_old );
+        return $columns;
+    }
+
+    /**
+     * Add the data to the custom columns for the mas static content post type
+     */
+    public static function custom_mas_static_content_column( $column, $post_id ) {
+        switch ( $column ) {
+            case 'shortcode' :
+                echo '<input class="mas-static-content-shortcode-input" style="width:80%;" type="text" readonly="" onfocus="this.select()" onClick="this.select()" value="[mas_static_content id=&quot;' . $post_id . '&quot;]">';
+            break;
+        }
     }
 
     /**
