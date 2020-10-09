@@ -57,3 +57,8 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+wp-content/themes/twentytwenty
+wp-content/plugins/capability-manager-enhanced
+wp-content/plugins/query-monitor
+wp-content/plugins/simply-show-hooks
+.htaccess

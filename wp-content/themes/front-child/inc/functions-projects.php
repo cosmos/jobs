@@ -336,7 +336,7 @@ function cosmos_contributors_attributed_to_a_project_cards() {
         foreach ($contributors as $key => $value) {
           $html .= '<div class="col-md-6 mb-5">';
             $html .= '<div class="card card-frame transition-3d-hover p-0">';
-              $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'">';
+              $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'">';
                 $html .= '<div class="media p-3">'; 
                   $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3" style="word-break: initial;">';
                     $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid rounded-circle', '', $value, false );
