@@ -41,7 +41,7 @@ wp_enqueue_script( 'wp-resume-manager-resume-submission' );
               <div class="card">
                 <div class="card-header" id="heading-additional-info">
                   <h2 class="mb-0">
-                    <button class="btn btn-primary mb-1" type="button" data-toggle="collapse" data-target="#collapse-additional-info" aria-expanded="false" aria-controls="collapse-additional-info">
+                    <button class="btn btn-sm transition-3d-hover dropdown-toggle btn-soft-primary" type="button" data-toggle="collapse" data-target="#collapse-additional-info" aria-expanded="false" aria-controls="collapse-additional-info">
                       Additional Info
                     </button>
                   </h2>

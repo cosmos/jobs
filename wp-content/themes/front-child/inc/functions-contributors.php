@@ -496,8 +496,6 @@ if( ! function_exists( 'cosmos_single_resume_sidebar_bio' ) ) {
 
 
 
-
-
 // // Add a line to the notifcation email with custom field
 // add_filter( 'apply_with_resume_email_message', 'wpjms_color_field_email_message', 10, 2 );
 // function wpjms_color_field_email_message( $message, $resume_id ) {
