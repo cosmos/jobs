@@ -1,7 +1,6 @@
 body {
 	font-family: 'metropolis-regular', 'sans-serif';
 }
-
 .image-cropper {
   width: 7rem;
   height: 7rem;
@@ -22,4 +21,33 @@ body {
   margin-left: 0;
   height: 100%;
   width: auto;
+}
+#submit-resume-form {
+  .card-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .fieldset-type-wp-editor,
+  .fieldset-type-tag-input,
+  .fieldset-type-file {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .fieldset-type-repeated {
+    width: 50%;
+    padding: 0 15px;
+    small:nth-child(2) {
+      display: block;
+    }
+  }
+  .card {
+    border: none;
+  }
+  .accordion > .card .card-header,
+  .card-body {
+    padding: 0;
+    border: none;
+  }
 }

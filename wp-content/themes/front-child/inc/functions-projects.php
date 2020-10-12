@@ -34,7 +34,7 @@ function cosmos_frontend_company_form_fields( $fields ) {
   $fields['company_fields']['company_github'] = array(
       'label' => __( 'Github', 'job_manager' ),
       'type' => 'text',
-      'required' => false,
+      'required' => true,
       'placeholder'   => __( 'https://github.com/', 'job_manager' ),
       'priority' => 60
   );
@@ -388,18 +388,25 @@ function cosmos_customize_submit_project_form_fields( $fields ) {
   $fields['company_fields']['company_location']['label'] = "Project Location";
   $fields['company_fields']['company_location']['description'] = "";
   $fields['company_fields']['company_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
+  $fields['company_fields']['company_location']['required'] = true;
   $fields['company_fields']['company_tagline']['placeholder'] = "Project Tagline";
   $fields['company_fields']['company_logo']['label'] = "Project Logo";
+  $fields['company_fields']['company_logo']['required'] = true;
   $fields['company_fields']['company_video']['placeholder'] = "A link to a video about the project";
   $fields['company_fields']['company_website']['label'] = "Project Website";
+  $fields['company_fields']['company_website']['required'] = true;
   $fields['company_fields']['company_website']['placeholder'] = "Project Website";
   $fields['company_fields']['company_website']['placeholder'] = "Project Website";
   $fields['company_fields']['company_facebook']['placeholder'] = "https://facebook.com/";
   $fields['company_fields']['company_revenue']['label'] = "Project Revenue";
   $fields['company_fields']['company_content']['label'] = "Project Content";
+  $fields['company_fields']['company_email']['required'] = true;
+  $fields['company_fields']['company_excerpt']['required'] = true;
+  $fields['company_fields']['company_category']['priority'] = 61;
   unset( $fields['company_fields']['company_strength'] );
   unset( $fields['company_fields']['company_average_salary'] );
   unset( $fields['company_fields']['company_revenue'] );
+  unset( $fields['company_fields']['company_tagline'] );
   return $fields;
 }
 add_filter( 'submit_company_form_fields', 'cosmos_customize_submit_project_form_fields', 30 );
@@ -431,6 +438,17 @@ function cosmos_customize_submit_job_form_fields_filter() {
   add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_job_form_fields' );
 }
 function cosmos_customize_submit_job_form_fields( $fields ) {
+  $fields['company']['company_id']['label'] = "Select A Project";
+  $fields['company']['company_id']['option'] = "Select A Project";
+  $fields['job']['job_category']['priority'] = 3;
+  $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
+  $fields['job']['job_location']['description'] = "Leave this blank if the possition is remote";
+  $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
+  $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
+  $fields['job']['job_description']['label'] = "Full Description";
+  $fields['job']['job_location']['required'] = true;
+  $fields['job']['job_listing_skills']['required'] = true;
+  $fields['job']['job_about']['required'] = true;
   unset( $fields['resume_fields']['resume_category'] );
   unset( $fields['job']['contact_email'] );
   unset( $fields['job']['contact_address'] );
@@ -441,15 +459,7 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   unset( $fields['job']['job_listing_project_length'] );
   unset( $fields['job']['job_listing_working_environment'] );
   unset( $fields['job']['job_tags'] );
-  unset( $fields['job']['job_deadline'] );
-  $fields['job']['job_category']['priority'] = 3;
-  $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
-  $fields['job']['job_location']['description'] = "Leave this blank if the possition is remote";
-  $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
-  $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
-  $fields['job']['job_description']['label'] = "Full Description";
-  $fields['company']['company_id']['label'] = "Select A Project";
-  $fields['company']['company_id']['option'] = "Select A Project";
+  unset( $fields['job']['job_deadline'] ); 
   return $fields;
 }
 

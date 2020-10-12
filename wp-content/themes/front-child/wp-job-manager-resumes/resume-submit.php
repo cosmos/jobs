@@ -41,13 +41,13 @@ wp_enqueue_script( 'wp-resume-manager-resume-submission' );
               <div class="card">
                 <div class="card-header" id="heading-additional-info">
                   <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-additional-info" aria-expanded="false" aria-controls="collapse-additional-info">
+                    <button class="btn btn-primary mb-1" type="button" data-toggle="collapse" data-target="#collapse-additional-info" aria-expanded="false" aria-controls="collapse-additional-info">
                       Additional Info
                     </button>
                   </h2>
                 </div>
                 <div id="collapse-additional-info" class="collapse" aria-labelledby="heading-additional-info" data-parent="#accordion-additional-info">
-                  <div class="card-body">
+                  <div class="card-body mt-5">
           <?php } ?>
                     <fieldset class="fieldset-<?php echo esc_attr( $key ); ?> fieldset-type-<?php echo esc_attr( in_array ( $field['type'], array( 'links', 'education', 'experience' ) ) ? 'repeated' : $field['type'] ); ?>">
                         <label for="<?php echo esc_attr( $key ); ?>"><?php echo wp_kses_post( $field['label'] ) . apply_filters( 'submit_resume_form_required_label', $field['required'] ? '' : ' <small>' . esc_html__( '(optional)', 'front' ) . '</small>', $field ); ?></label>

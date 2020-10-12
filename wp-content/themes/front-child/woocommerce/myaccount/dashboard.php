@@ -24,7 +24,7 @@ exit; // Exit if accessed directly
 
 <div class="card-deck d-block d-lg-flex card-lg-gutters-3 mb-6">
     <!-- Card -->
-    <div class="card card-frame mb-3">
+    <!-- <div class="card card-frame mb-3">
         <a class="card-body p-5" href="<?php echo esc_url( wc_get_endpoint_url( 'orders' ));?>">
             <div class="media align-items-center">
                 <span class="btn btn-lg btn-icon btn-soft-primary rounded-circle mr-4">
@@ -36,7 +36,7 @@ exit; // Exit if accessed directly
                 </div>
             </div>
         </a>
-    </div>
+    </div> -->
     <!-- End Card -->
 
     <!-- Card -->
@@ -56,7 +56,7 @@ exit; // Exit if accessed directly
     <!-- End Card -->
 
     <!-- Card -->
-    <a class="card card-frame mb-3" href="<?php echo esc_url(wc_get_endpoint_url( 'edit-address'));?>">
+<!--     <a class="card card-frame mb-3" href="<?php echo esc_url(wc_get_endpoint_url( 'edit-address'));?>">
         <div class="card-body p-5">
             <div class="media align-items-center">
                 <span class="btn btn-lg btn-icon btn-soft-warning rounded-circle mr-4">
@@ -68,11 +68,11 @@ exit; // Exit if accessed directly
                 </div>
             </div>
         </div>
-    </a>
+    </a> -->
     <!-- End Card -->
 
     <!-- Card -->
-    <a class="card card-frame mb-3" href="<?php echo esc_url(wc_get_endpoint_url( 'edit-address'));?>">
+   <!--  <a class="card card-frame mb-3" href="<?php echo esc_url(wc_get_endpoint_url( 'edit-address'));?>">
         <div class="card-body p-5">
             <div class="media align-items-center">
                 <span class="btn btn-lg btn-icon btn-soft-warning rounded-circle mr-4">
@@ -84,7 +84,7 @@ exit; // Exit if accessed directly
                 </div>
             </div>
         </div>
-    </a>
+    </a> -->
     <!-- End Card -->
 </div>
 
