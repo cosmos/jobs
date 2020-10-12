@@ -87,7 +87,7 @@ function cosmos_add_resume_listing_list_card_footer() {
 function cosmos_resume_listing_list_card_footer_content() {
 	$args = apply_filters( 'front_resume_listing_list_card_footer_content_args', array(
 		'candidate_location'    => array(
-			'title'     => esc_html__( 'candidate_location', 'front' ),
+			'title'     => esc_html__( 'Contributor location', 'front' ),
 			'content'   => get_the_candidate_location(),
 			'icon'      => 'fas fa-map-marker-alt',
 		),

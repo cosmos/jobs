@@ -537,24 +537,29 @@ if( ! function_exists( 'mas_wpjmc_single_company_job_listings' ) ) {
         $company_jobs = mas_wpjmc_get_the_company_job_listing();
 
         if( count( $company_jobs ) ) :
-            ?><div class="mas-company-jobs"><?php
-                ?><h2 class="mas-company-jobs__title h5"><?php
-                    echo apply_filters( 'mas_wpjmc_company_jobs_title', esc_html__( 'Jobs by project', 'mas-wp-job-manager-company' ) );
-                ?></h2><?php
+            ?>
+              <div class="col-md-12">
+                <div class="mas-company-jobs"><?php
+                  ?><h2 class="mas-company-jobs__title h5"><?php
+                      echo apply_filters( 'mas_wpjmc_company_jobs_title', esc_html__( 'Jobs by project', 'mas-wp-job-manager-company' ) );
+                  ?></h2><?php
 
-                get_job_manager_template( 'job-listings-start.php' );
+                  get_job_manager_template( 'job-listings-start.php' );
 
-                foreach( $company_jobs as $post ) :
-                    setup_postdata($post);
-                    do_action( 'job_listing_loop' );
+                  foreach( $company_jobs as $post ) :
+                      setup_postdata($post);
+                      do_action( 'job_listing_loop' );
 
-                    get_job_manager_template_part( 'content-job_listing' );
+                      get_job_manager_template_part( 'content-job_listing' );
 
-                endforeach; // End of the loop. 
-                wp_reset_postdata();
+                  endforeach; // End of the loop. 
+                  wp_reset_postdata();
 
-                get_job_manager_template( 'job-listings-end.php' );
-            ?></div><?php
+                  get_job_manager_template( 'job-listings-end.php' );
+              ?>
+                </div>
+              </div>
+              <?php
         endif;
     }
 }

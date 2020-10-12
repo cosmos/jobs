@@ -209,6 +209,115 @@ function wpabsolute_block_users_backend() {
 }
 add_action( 'init', 'wpabsolute_block_users_backend' );
 
+// Edits the dashboard link titles
+if ( ! function_exists( 'front_header_user_job_account_submenu' ) ) {
+
+    function front_header_user_job_account_submenu() {
+        $job_manager = function_exists( 'front_is_wp_job_manager_activated' ) && front_is_wp_job_manager_activated();
+        $job_resume_manager = function_exists( 'front_is_wp_resume_manager_activated' ) && front_is_wp_resume_manager_activated();
+        $job_company_manager = function_exists( 'front_is_mas_wp_company_manager_activated' ) && front_is_mas_wp_company_manager_activated();
+        $user = wp_get_current_user();
+        $header_account_view = apply_filters( 'front_header_topbar_user_account_view', 'dropdown' );
+
+        if ( $job_manager || $job_resume_manager || $job_company_manager ) {
+
+            if ( $header_account_view == 'sidebar-left' || $header_account_view == 'sidebar-right' ) {
+                ?><ul class="list-unstyled u-sidebar--account__list"><li class="u-sidebar--account__list-item"><?php
+            }
+            if ( $job_manager && get_option( 'job_manager_job_dashboard_page_id' ) && ( in_array( 'employer', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) ) {
+                ?>
+                <a class="<?php echo esc_attr( $header_account_view == 'dropdown' ? 'dropdown-item' : 'u-sidebar--account__list-link' ); ?>" href="<?php echo esc_url( get_permalink( get_option( 'job_manager_job_dashboard_page_id' ) ) ); ?>">
+                    <span class="<?php echo esc_attr( 'fas fa-home' . ( $header_account_view == 'dropdown' ? ' dropdown-item-icon' : ' u-sidebar--account__list-icon mr-2' ) ); ?>"></span><?php echo esc_html__( ' Job Dashboard', 'front' ); ?>
+                </a>
+                <?php
+            }
+            if ( $job_resume_manager && get_option( 'resume_manager_candidate_dashboard_page_id' ) && ! ( in_array( 'employer', (array) $user->roles ) ) ) {
+                ?>
+                <a class="<?php echo esc_attr( $header_account_view == 'dropdown' ? 'dropdown-item' : 'u-sidebar--account__list-link' ); ?>" href="<?php echo esc_url( get_permalink( get_option( 'resume_manager_candidate_dashboard_page_id' ) ) ); ?>">
+                    <span class="fas fa-home dropdown-item-icon"></span><?php echo esc_html__( ' Contributor Dashboard', 'front' ); ?>
+                </a>
+                <?php
+            }
+            if ( $job_company_manager && mas_wpjmc_get_page_id( 'company_dashboard' ) && ( in_array( 'employer', (array) $user->roles ) || in_array( 'administrator', (array) $user->roles ) ) ) {
+                ?>
+                <a class="<?php echo esc_attr( $header_account_view == 'dropdown' ? 'dropdown-item' : 'u-sidebar--account__list-link' ); ?>" href="<?php echo esc_url( get_permalink( mas_wpjmc_get_page_id( 'company_dashboard' ) ) ); ?>">
+                    <span class="fas fa-home dropdown-item-icon"></span><?php echo esc_html__( ' Project Dashboard', 'front' ); ?>
+                </a>
+                <?php
+            }
+            if ( $header_account_view == 'sidebar-left' || $header_account_view == 'sidebar-right' ) {
+                ?></li></ul><?php
+            }
+        }
+    }
+}
+
+// Makes the avitar in the contributor sidebar a circle no matter he size
+if( ! function_exists( 'front_single_resume_sidebar_details' ) ) {
+    function front_single_resume_sidebar_details() {
+        global $post;
+        ?>
+        <div class="text-center">
+            <div class="<?php  echo esc_attr( ! get_the_candidate_photo() && apply_filters( 'front_enable_candidate_photo_default_text_placeholder', true )  ? 'btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3' : 'mb-3 mx-auto image-cropper' ); ?>" style="word-break: initial;">
+                <?php front_the_candidate_photo( 'thumbnail', 'candidiate-image img-fluid max-width-15 profile-pic', '' ); ?>
+            </div>
+            <?php the_title( '<h1 class="h5">', '</h1>' ); ?>
+            <ul class="list-inline text-secondary font-size-1 mb-4">
+                <?php if( ! empty( front_get_the_meta_data( '_candidate_location', null, 'resume' ) ) ) : ?>
+                    <li class="list-inline-item">
+                        <small class="fas fa-map-marker-alt mr-1"></small>
+                        <?php echo esc_html( front_get_the_meta_data( '_candidate_location', null, 'resume' ) ); ?>
+                    </li>
+                    <li class="list-inline-item text-muted">&bull;</li>
+                <?php endif; ?>
+                <li class="list-inline-item">
+                    <?php echo wp_kses_post( sprintf( __( 'Joined %s', 'front' ), get_post_time( 'M Y' ) ) ); ?>
+                </li>
+            </ul>
+            <?php
+            if( ! empty( front_get_the_meta_data( '_candidate_email', null, 'resume' ) ) ) :
+                get_job_manager_template( 'contact-details.php', array( 'post' => $post ), 'wp-job-manager-resumes', RESUME_MANAGER_PLUGIN_DIR . '/templates/' );
+            endif;
+            if ( resume_has_file() ) :
+                get_job_manager_template( 'content-resume-file.php', array( 'post' => $post ), 'wp-job-manager-resumes', RESUME_MANAGER_PLUGIN_DIR . '/templates/' );
+            endif;
+            do_action( 'single_resume_details_after' );
+            ?>
+        </div>
+        <?php
+    }
+}
+
+if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
+    function front_resume_listing_list_card_body_content() {
+        ?>
+        <!-- Header -->
+        <div class="media align-items-center mb-4">
+            <!-- Avatar -->
+            <div class="<?php  echo esc_attr( ! get_the_candidate_photo() && apply_filters( 'front_enable_candidate_photo_default_text_placeholder', true )  ? 'btn btn-icon btn-soft-primary rounded-circle mr-4' : 'u-avatar position-relative mr-3 image-cropper-small' ); ?>" style="word-break: initial;">
+                <?php front_the_candidate_photo( 'thumbnail', 'img-fluid profile-pic', '' ); ?>
+                <?php do_action( 'front_the_candidate_status' ); ?>
+            </div>
+            <!-- End Avatar -->
+            <div class="media-body">
+                <h1 class="h6 mb-0">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h1>
+                <?php if( ! empty ( $candidate_title = front_get_the_meta_data( '_candidate_title', null, 'resume', true ) ) ) : ?>
+                    <small class="text-secondary"><?php echo esc_html( $candidate_title ); ?></small>
+                <?php endif; ?>
+            </div>
+            <?php do_action( 'resume_listing_list_card_body_content_bookmark', 'list' ) ?>
+        </div>
+        <!-- End Header -->
+        <?php if( !empty( $candidate_bio = front_get_the_meta_data( '_candidate_bio', null, 'resume', true ) ) ) : ?>
+            <div class="resume-excerpt font-size-1 text-secondary"><?php echo wp_kses_post( $candidate_bio ); ?></div>
+        <?php elseif( !empty( get_the_excerpt() ) ) : ?>
+            <div class="resume-excerpt font-size-1 text-secondary"><?php echo get_the_excerpt(); ?></div>
+        <?php endif; ?>
+        <?php
+    }
+}
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts

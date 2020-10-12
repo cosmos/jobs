@@ -1,3 +1,25 @@
 body {
 	font-family: 'metropolis-regular', 'sans-serif';
 }
+
+.image-cropper {
+  width: 7rem;
+  height: 7rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image-cropper-small {
+  width: 3.125rem;
+  height: 3.125rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  margin-left: 0;
+  height: 100%;
+  width: auto;
+}

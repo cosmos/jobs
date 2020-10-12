@@ -30,6 +30,7 @@
     "yargs": "^16.0.3"
   },
   "dependencies": {
+    "jquery-validation": "^1.19.2",
     "postcss": "^8.0.6"
   }
 }
