@@ -39,8 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<fieldset class="fieldset-login_required">
 		<label><?php esc_html_e( 'Have an account?', 'wp-job-manager' ); ?></label>
 		<div class="field account-sign-in">
-			<a class="button btn btn-primary float-left mr-5" href="<?php echo esc_url( apply_filters( 'submit_job_form_login_url', home_url().'/my-account/?action='.home_url().'/company-dashboard/' ) ); ?>"><?php esc_html_e( 'Sign in', 'wp-job-manager' ); ?></a>
-
+			<a class="button btn btn-primary mr-5 mb-5 float-left" href="<?php echo esc_url( apply_filters( 'submit_job_form_login_url', home_url().'/my-account/?action='.home_url().'/company-dashboard/' ) ); ?>"><?php esc_html_e( 'Sign in', 'wp-job-manager' ); ?></a>
 			<?php if ( $registration_enabled ) : ?>
 
 				<?php // translators: Placeholder %s is the optionally text. ?>

@@ -338,13 +338,15 @@ function cosmos_contributors_attributed_to_a_project_cards() {
             $html .= '<div class="card card-frame transition-3d-hover p-0">';
               $html .= '<a href="'.home_url().'/resume/'.get_post($value)->post_name.'">';
                 $html .= '<div class="media p-3">'; 
-                  $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3" style="word-break: initial;">';
-                    $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid rounded-circle', '', $value, false );
+                  $html .= '<div class="btn btn-lg btn-icon btn-soft-primary rounded-circle mb-3 image-cropper" style="word-break: initial;">';
+                    $html .= front_the_candidate_photo( 'thumbnail', 'img-fluid profile-pic', '', $value, false );
                   $html .= '</div>';
                   $html .= '<div class="media-body px-4">';
                     $html .= '<h4 class="h6 text-dark mb-1">'.get_post($value)->post_title.'</h4>';
                     $html .= '<small class="d-block text-muted">';
-                      $html .= get_post_meta($value, '_candidate_website')[0];
+                      $html .= get_post_meta($value, '_candidate_location')[0];
+                      $html .= '<br>';
+                      $html .= wp_kses_post( sprintf( __( 'Joined %s', 'front' ), get_post_time( 'M Y' ) ) );
                     $html .= '</small>';
                       // $html .= '<a href="'.home_url().'/company/'.get_post($value)->post_name.'" class="btn btn-soft-primary btn-xs transition-3d-hover btn btn-pill transition-3d-hover">View Project</a>';
                   $html .= '</div>';

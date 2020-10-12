@@ -288,6 +288,7 @@ if( ! function_exists( 'front_single_resume_sidebar_details' ) ) {
     }
 }
 
+// Fixes the circle avatar
 if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
     function front_resume_listing_list_card_body_content() {
         ?>
@@ -318,6 +319,12 @@ if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
         <?php
     }
 }
+
+
+
+
+
+
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts
