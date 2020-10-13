@@ -22,20 +22,29 @@
 			'numberposts' 							=> -1,
 		);
 	  $jobs = get_posts($args);
-	  foreach ($jobs as $key => $value) {
-	  	$job_ids[] = $value->ID;
-	  }
-		foreach ($job_ids as $key => $value) {
-			$categories1[] = get_the_terms($value, 'job_listing_category');
+	  if (is_array($jobs)) {
+		  foreach ($jobs as $key => $value) {
+		  	$job_ids[] = $value->ID;
+		  }
 		}
-		foreach ($categories1 as $key => $value) {
-			foreach ($value as $key2 => $value2) {
-				$categories2[] = array(
-													'term_id' => $value2->term_id,
-													'name' => $value2->name,
-												);
+		if (is_array($job_ids)) {
+			foreach ($job_ids as $key => $value) {
+				$categories1[] = get_the_terms($value, 'job_listing_category');
 			}
 		}
+		if (is_array($categories1)) {
+			foreach ($categories1 as $key => $value) {
+				if (is_array($value)) {
+					foreach ($value as $key2 => $value2) {
+						$categories2[] = array(
+															'term_id' => $value2->term_id,
+															'name' => $value2->name,
+														);
+					}
+				}
+			}
+		}
+
 		$categories2 = array_map("unserialize", array_unique(array_map("serialize", $categories2)));
 	  // var_dump($categories2);
 		foreach ($categories2 as $key => $value) {
