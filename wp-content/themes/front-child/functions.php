@@ -322,9 +322,6 @@ if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
 
 
 
-
-
-
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts

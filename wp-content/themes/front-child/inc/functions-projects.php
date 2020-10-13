@@ -79,8 +79,8 @@ function cosmos_frontend_company_form_fields( $fields ) {
 }
 
 // Add fields to Projects on the backend
-add_filter( 'company_manager_company_fields', 'wpjms_admin_projects_form_fields' );
-function wpjms_admin_projects_form_fields( $fields ) {
+add_filter( 'company_manager_company_fields', 'cosmos_admin_projects_form_fields' );
+function cosmos_admin_projects_form_fields( $fields ) {
   $i = 10;
   // Gets all the contributors
   foreach (cosmos_get_contributors() as $key => $value) {
@@ -136,6 +136,13 @@ function wpjms_admin_projects_form_fields( $fields ) {
     'placeholder'   => __( '', 'job_manager' ),
     'description'   => '',
     'priority'      => 70,
+  );
+  $fields['_company_excerpt'] = array(
+    'label'         => __( 'Project Excerpt', 'job_manager' ),
+    'type'          => 'textarea',
+    'placeholder'   => __( '', 'job_manager' ),
+    'description'   => '',
+    'priority'      => 90,
   );
   return $fields;
 }
