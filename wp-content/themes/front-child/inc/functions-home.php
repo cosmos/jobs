@@ -59,10 +59,10 @@
 			}
 		}
 
-		echo '<pre>';
-		// var_dump($categories2);
-		// var_dump($posts);
-		echo '</pre>';
+		// echo '<pre>';
+		// // var_dump($categories2);
+		// // var_dump($posts);
+		// echo '</pre>';
 		$i = $ii = 0;
 		$html .= '<div id="cgb-jobs-i08oonx55" class="wp-block-fgb-jobs container space-2 space-md-3">';
 			$html .= '<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">';
