@@ -16,29 +16,54 @@
 		$html =  null;
 		$i = $ii = 0;
 		$args = array(
-			'taxonomy'									=> 'job_listing_category',
-			'hide_empty' 								=> true,
-			'orderby'										=> 'count',
+			'post_type'									=> 'job_listing',
+			'orderby'										=> 'date',
 			'order'											=> 'DESC',
-			'number'										=> $number_of_categories,
+			'numberposts' 							=> -1,
 		);
-	  $terms = get_categories($args);
-
-		foreach ($terms as $key => $value) {
-			$posts[] = get_posts([
-			  'post_type' 							=> 'job_listing',
-			  'post_status' 						=> 'publish',
-			  'numberposts' 						=> 3,
-			  'tax_query' 							=> [
-			    [
-			      'taxonomy' 						=> 'job_listing_category',
-			      'terms' 							=> $value->term_taxonomy_id,
-			      'include_children' 		=> false // Remove if you need posts from term 7 child terms
-			    ],
-			  ],
-			]);
+	  $jobs = get_posts($args);
+	  foreach ($jobs as $key => $value) {
+	  	$job_ids[] = $value->ID;
+	  }
+		foreach ($job_ids as $key => $value) {
+			$categories1[] = get_the_terms($value, 'job_listing_category');
+		}
+		foreach ($categories1 as $key => $value) {
+			foreach ($value as $key2 => $value2) {
+				$categories2[] = array(
+													'term_id' => $value2->term_id,
+													'name' => $value2->name,
+												);
+			}
+		}
+		$categories2 = array_map("unserialize", array_unique(array_map("serialize", $categories2)));
+	  // var_dump($categories2);
+		foreach ($categories2 as $key => $value) {
+			// var_dump($value);
+			++$i;
+			if ($i <= 3) {
+				$posts[$value['name']] = get_posts(array(
+				  'post_type' 							=> 'job_listing',
+				  'post_status' 						=> 'publish',
+				  'numberposts' 						=> 3,
+				  'orderby'									=> 'date',
+					'order'										=> 'DESC',
+				  'tax_query' 							=> array(
+	          array(
+				      'taxonomy' 						=> 'job_listing_category',
+				      'terms' 							=> $value['term_id'],
+				      'field' 							=> 'term_id',
+				    ),
+				  ),
+				));
+			}
 		}
 
+		echo '<pre>';
+		// var_dump($categories2);
+		// var_dump($posts);
+		echo '</pre>';
+		$i = $ii = 0;
 		$html .= '<div id="cgb-jobs-i08oonx55" class="wp-block-fgb-jobs container space-2 space-md-3">';
 			$html .= '<div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">';
 				$html .= '<h2 class="text-primary"><span class="font-weight-medium"><span style="color:#313131" class="has-inline-color">'.$title.'</span></span></h2>';
@@ -49,12 +74,12 @@
 					foreach ($value as $key2 => $value2) {
 						++$ii;
 						$meta = get_post_meta($value2->ID);
+						$location = $meta['_job_location'][0];
 						if (!empty($meta['_thumbnail_id'])) {
 							$image = get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0];
 						}
-						$location = $meta['_job_location'][0];
 						if ($i % $number_of_categories == 0) {
-							$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$terms[$i/$number_of_categories]->name.'</h3>';
+							$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$key.'</h3>';
 						}
 						if ($i % $number_of_categories == 0) {
 							$html .= '<ul class="job_listings cosmos-job-listings-home row d-lg-flex list-unstyled mb-0 list-grid-view">';
@@ -75,18 +100,18 @@
 								$html .= '</div>';
 							$html .= '</li>';
 						if ($ii % $number_of_categories == 0) {
-							$html .= '</ul></div>';
+							$html .= '</ul>';
+						}
+						if ($ii % $number_of_categories == 0) {
+							$html .= '</div>';
 						}
 						++$i;
-					}					
-				}
+					}
+				}					
 			$html .= '</div>';
 		$html .= '</div>';
 	  return $html;
 	}
-
-
-?>
 
 
 

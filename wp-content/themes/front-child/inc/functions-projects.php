@@ -144,6 +144,13 @@ function cosmos_admin_projects_form_fields( $fields ) {
     'description'   => '',
     'priority'      => 90,
   );
+  $fields['_company_since'] = array(
+    'label'         => __( 'Project Since', 'job_manager' ),
+    'type'          => 'text',
+    'placeholder'   => __( '', 'job_manager' ),
+    'description'   => '',
+    'priority'      => 90,
+  );
   return $fields;
 }
 
