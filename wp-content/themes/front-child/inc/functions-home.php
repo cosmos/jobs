@@ -85,13 +85,13 @@
 				foreach ($posts as $key => $value) {
 					foreach ($value as $key2 => $value2) {
 						++$ii;
-						// echo '<pre>';
-						// var_dump(get_the_terms($value2->ID, 'job_listing_category'));
-						// echo '</pre>';
 						$meta = get_post_meta($value2->ID);
+						$company_id = get_post_meta($value2->ID, '_company_id');
 						$location = $meta['_job_location'][0];
-						if (!empty($meta['_thumbnail_id'])) {
-							$image = get_post_meta($meta['_thumbnail_id'][0],'_wp_attached_file')[0];
+						if (!empty(get_post_meta($company_id[0], '_company_logo'))) {
+							$image = get_post_meta($company_id[0], '_company_logo')[0];
+						}else{
+							$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
 						}
 						if ($i % $number_of_categories == 0) {
 							$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$key.'</h3>';
@@ -105,7 +105,7 @@
 										$html .= '<div class="media">';
 											$html .= '<div class="u-avatar position-relative">';
 												if (isset($image)) {
-													$html .= '<img width="150" height="150" src="'.wp_upload_dir()['baseurl'].'/'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
+													$html .= '<img class="img-fluid rounded" src="'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
 												}
 											$html .= '</div>';
 											$html .= '<div class="media-body px-4">';
