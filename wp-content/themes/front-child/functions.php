@@ -28,6 +28,12 @@ function cosmos_job_board_admin_assets() {
 }
 add_action('admin_enqueue_scripts', 'cosmos_job_board_admin_assets');
 
+function cosmos_login_stylesheet() {
+  wp_enqueue_style( 'cosmos-custom-login', get_stylesheet_directory_uri() . '/dist/css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'cosmos_login_stylesheet' );
+
+
 // Redirects a user back to a page after login or registration
 add_filter('woocommerce_login_redirect', 'cosmos_login_redirect', 10, 3);
 add_filter('woocommerce_registration_redirect', 'cosmos_login_redirect', 10, 3);
@@ -329,8 +335,11 @@ function cosmos_change_resume_slug( $args ) {
   $args['rewrite']['slug'] = _x( 'contributor', 'Contributor permalink - resave permalinks after changing this', 'job_manager' );
   return $args;
 }
-add_filter( 'register_post_type_resume', 'cosmos_change_resume_slug' );
-add_filter( 'register_post_type_company', 'cosmos_change_company_slug' );
+add_action( 'after_setup_theme', 'cosmos_change_slugs');
+function cosmos_change_slugs() {
+  add_filter( 'register_post_type_resume', 'cosmos_change_resume_slug' );
+  add_filter( 'register_post_type_company', 'cosmos_change_company_slug' );
+}
 
 // Editing the WP login logo
 function cosmos_login_logo() { ?>
