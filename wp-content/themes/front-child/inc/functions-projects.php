@@ -162,7 +162,7 @@ if ( ! function_exists( 'cosmos_fields_remove_admin_fields' ) ) {
         return $fields;
     }
 }
-add_filter( 'company_manager_company_fields', 'mas_wpjmc_fields_remove_admin_fields', 10 );
+add_filter( 'company_manager_company_fields', 'cosmos_fields_remove_admin_fields', 10 );
 
 // Add the additional project logos
 add_action( 'single_company_sidebar', 'cosmos_single_company_linked_accounts', 30 );
