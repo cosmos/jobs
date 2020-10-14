@@ -98,7 +98,9 @@
 									$html .= '<a href="'.get_the_permalink($value2->ID).'" class="card-body p-3">';
 										$html .= '<div class="media">';
 											$html .= '<div class="u-avatar position-relative">';
-												$html .= '<img width="150" height="150" src="'.wp_upload_dir()['baseurl'].'/'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
+												if (isset($image)) {
+													$html .= '<img width="150" height="150" src="'.wp_upload_dir()['baseurl'].'/'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
+												}
 											$html .= '</div>';
 											$html .= '<div class="media-body px-4">';
 												$html .= '<h4 class="h6 text-dark mb-1">'.$value2->post_title.'</h4>';

@@ -2,4 +2,5 @@
 # For more information, see: https://pantheon.io/docs/pantheon-yml/
 api_version: 1
 
+# Added by Todd Santoro to fix the error of a white screen after loggin in. The theme said they are issuing an update.
 php_version: 7.3
