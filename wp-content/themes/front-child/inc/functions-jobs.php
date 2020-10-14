@@ -111,4 +111,106 @@
 	    }
 	}
 
+	// Shows the correct project logo on  the find jobs page
+	add_action( 'job_listing_list', 'cosmos_job_listing_list_card_body_content', 10 );
+	add_action( 'after_setup_theme', 'cosmos_remove_job_listing_list_card_body_content');
+	function cosmos_remove_job_listing_list_card_body_content() {
+		remove_action( 'job_listing_list', 'front_job_listing_list_card_body_content', 10 );
+	}
+	if( ! function_exists( 'cosmos_job_listing_list_card_body_content' ) ) {
+	    function cosmos_job_listing_list_card_body_content() {
+	    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
+	    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+	    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+						if (!empty($company_image)) {
+							$image = $company_image;
+						}else{
+							$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+						}
+	        ?>
+	        <div class="media d-block d-sm-flex">
+	            <div class="u-avatar mb-3 mb-sm-0 mr-4 position-relative">
+	                <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php echo $company_name; ?>">
+	                <?php front_the_job_status(); ?>
+	            </div>
+	            <div class="media-body">
+	                <div class="media mb-2">
+	                    <div class="media-body mb-2">
+	                        <h1 class="h5 mb-1">
+	                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	                        </h1>
+	                        <?php front_job_listing_body_content_meta( true ); ?>
+	                    </div>
+	                    <div class="d-flex ml-auto">
+	                        <?php do_action( 'job_listing_list_card_body_content_additional', 'list' ) ?>
+	                    </div>
+	                </div>
+	                <?php if( !empty( get_the_excerpt() ) ) : ?>
+	                    <div class="mb-5"><?php the_excerpt(); ?></div>
+	                <?php elseif( !empty( front_get_the_meta_data( '_job_about' ) ) ) : ?>
+	                    <div class="mb-5"><?php echo '<p>' . front_get_the_meta_data( '_job_about' ) . '</p>'; ?></div>
+	                <?php endif; ?>
+	                <div class="d-md-flex align-items-md-center">
+	                    <?php
+	                        front_job_listing_list_card_body_content_bottom();
+	                        if( !empty( front_get_taxomony_data( 'job_listing_type' ) ) ) :
+	                            ?>
+	                            <div class="ml-md-auto">
+	                                <span class="btn btn-xs btn-soft-danger btn-pill"><?php echo front_get_taxomony_data( 'job_listing_type' ); ?></span>
+	                            </div>
+	                            <?php
+	                        endif;
+	                    ?>
+	                </div>
+	            </div>
+	        </div>
+	        <?php
+	    }
+	}
+
+	// Shows the correct project logo on the single job page (other jobs)
+	add_action( 'job_listing_grid', 'cosmos_job_listing_grid_card_body_content', 10 );
+	add_action( 'after_setup_theme', 'cosmos_remove_job_listing_grid_card_body_content');
+	function cosmos_remove_job_listing_grid_card_body_content() {
+		add_action( 'job_listing_grid', 'front_job_listing_grid_card_body_content', 10 );
+	}
+	if( ! function_exists( 'cosmos_job_listing_grid_card_body_content' ) ) {
+	    function cosmos_job_listing_grid_card_body_content() {
+	    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
+	    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+	    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+						if (!empty($company_image)) {
+							$image = $company_image;
+						}else{
+							$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+						}
+	        ?>
+	        <div class="text-center">
+	            <div class="u-lg-avatar mx-auto mb-3 position-relative">
+	                <img class="img-fluid" src="<?php echo $image; ?>" alt="<?php echo $company_name; ?>">
+	                <?php front_the_job_status(); ?>
+	            </div>
+	            <div class="mb-4">
+	                <h1 class="h5 mb-1">
+	                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+	                </h1>
+	                <?php front_job_listing_body_content_meta( false ); ?>
+	            </div>
+	            <?php
+	                if( !empty( front_get_the_meta_data( '_job_about' ) ) ) :
+	                    echo '<p>' . front_get_the_meta_data( '_job_about' ) . '</p>';
+	                elseif( !empty( front_get_the_meta_data( '_job_about' ) ) ) :
+	                    the_excerpt();
+	                endif;
+	            ?>
+	        </div>
+	        <?php
+	    }
+	}
+
+
+
+
+
+
 

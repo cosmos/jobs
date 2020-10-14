@@ -6,6 +6,14 @@
   font-weight: normal;
   font-style: normal;	
 }
+@font-face {
+  font-family: "metropolis-bold";
+  src:
+    url("../../dist/fonts/Metropolis-Bold.woff2") format("woff2"),
+    url("../../dist/fonts/Metropolis-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;	
+}
 
 $primary:																			#5064fb!default;
 $primary-darker:                              darken($primary,5.8%);
