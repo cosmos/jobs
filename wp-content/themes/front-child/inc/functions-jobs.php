@@ -70,4 +70,37 @@
 	    }
 	}
 
+	// Shows the correct project logo
+	add_action( 'single_job_listing_job_header', 'cosmos_single_job_listing_job_header_job_data', 10 );
+	add_action( 'after_setup_theme', 'cosmos_remove_single_job_listing_job_header_job_data');
+	function cosmos_remove_single_job_listing_job_header_job_data() {
+	  remove_action( 'single_job_listing_job_header', 'front_single_job_listing_job_header_job_data', 10 );
+	}
+
+	if( ! function_exists( 'cosmos_single_job_listing_job_header_job_data' ) ) {
+	    function cosmos_single_job_listing_job_header_job_data() {
+	    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
+	    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+	    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+						if (!empty($company_image)) {
+							$image = $company_image;
+						}else{
+							$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+						}
+	        ?>
+	        <div class="media align-items-center mb-5">
+	            <div class="u-lg-avatar mr-4 position-relative">
+	            		<img class="img-fluid rounded-circle" src="<?php echo $image; ?>" alt="<?php echo $company_name; ?>">
+	                <?php front_the_job_status(); ?>
+	            </div>
+	            <div class="media-body">
+	                <div class="row">
+	                    <?php do_action( 'single_job_listing_job_header_job_data' ); ?>
+	                </div>
+	            </div>
+	        </div>
+	        <?php
+	    }
+	}
+
 
