@@ -154,6 +154,16 @@ function cosmos_admin_projects_form_fields( $fields ) {
   return $fields;
 }
 
+// edits company fields on the back end
+if ( ! function_exists( 'cosmos_fields_remove_admin_fields' ) ) {
+    function cosmos_fields_remove_admin_fields( $fields ) {
+        unset( $fields['_company_tagline'] );
+        // unset( $fields['_company_since'] ); // You can unset other fields also like this
+        return $fields;
+    }
+}
+add_filter( 'company_manager_company_fields', 'mas_wpjmc_fields_remove_admin_fields', 10 );
+
 // Add the additional project logos
 add_action( 'single_company_sidebar', 'cosmos_single_company_linked_accounts', 30 );
 add_action( 'after_setup_theme', 'cosmos_remove_front_single_company_linked_accounts');
@@ -472,8 +482,8 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   unset( $fields['job']['job_listing_salary'] );
   unset( $fields['job']['job_listing_project_length'] );
   unset( $fields['job']['job_listing_working_environment'] );
-  unset( $fields['job']['job_tags'] );
-  unset( $fields['job']['job_deadline'] ); 
+  // unset( $fields['job']['job_tags'] );
+  // unset( $fields['job']['job_deadline'] ); 
   return $fields;
 }
 
