@@ -85,44 +85,50 @@
 				foreach ($posts as $key => $value) {
 					foreach ($value as $key2 => $value2) {
 						++$ii;
+						$job_terms = get_the_terms($value2->ID, 'job_listing_category');
 						$meta = get_post_meta($value2->ID);
 						$company_id = get_post_meta($value2->ID, '_company_id');
 						$location = $meta['_job_location'][0];
-						if (!empty(get_post_meta($company_id[0], '_company_logo'))) {
-							$image = get_post_meta($company_id[0], '_company_logo')[0];
-						}else{
-							$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
-						}
-						if ($i % $number_of_categories == 0) {
-							$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$key.'</h3>';
-						}
-						if ($i % $number_of_categories == 0) {
-							$html .= '<ul class="job_listings cosmos-job-listings-home row d-lg-flex list-unstyled mb-0 list-grid-view">';
-						}
-							$html .= '<li '.cosmos_job_listing_class(null,$value2->ID).'>';
-						   	$html .= '<div class="list-grid card card-frame transition-3d-hover h-100 mw-100 mt-0 p-0">';
-									$html .= '<a href="'.get_the_permalink($value2->ID).'" class="card-body p-3">';
-										$html .= '<div class="media">';
-											$html .= '<div class="u-avatar position-relative">';
-												if (isset($image)) {
-													$html .= '<img class="img-fluid rounded" src="'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
-												}
-											$html .= '</div>';
-											$html .= '<div class="media-body px-4">';
-												$html .= '<h4 class="h6 text-dark mb-1">'.$key.'-'.$value2->post_title.'</h4>';
-												$html .= '<small class="d-block text-muted">'.$location.'</small>';
-											$html .= '</div>';
+						foreach ($job_terms as $key3 => $value3) {
+							if ($value3->name == $key) {
+								echo $iii;
+								if (!empty(get_post_meta($company_id[0], '_company_logo'))) {
+									$image = get_post_meta($company_id[0], '_company_logo')[0];
+								}else{
+									$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+								}
+								if ($i % $number_of_categories == 0) {
+									$html .= '<div class="col-12 col-md-4"><h3 class="h5 text-center">'.$key.'</h3>';
+								}
+								if ($i % $number_of_categories == 0) {
+									$html .= '<ul class="job_listings cosmos-job-listings-home row d-lg-flex list-unstyled mb-0 list-grid-view">';
+								}
+									$html .= '<li '.cosmos_job_listing_class(null,$value2->ID).'>';
+								   	$html .= '<div class="list-grid card card-frame transition-3d-hover h-100 mw-100 mt-0 p-0">';
+											$html .= '<a href="'.get_the_permalink($value2->ID).'" class="card-body p-3">';
+												$html .= '<div class="media">';
+													$html .= '<div class="u-avatar position-relative">';
+														if (isset($image)) {
+															$html .= '<img class="img-fluid rounded" src="'.$image.'" alt="'.$value2->post_title.' logo" loading="lazy">';
+														}
+													$html .= '</div>';
+													$html .= '<div class="media-body px-4">';
+														$html .= '<h4 class="h6 text-dark mb-1">'.$value2->post_title.'</h4>';
+														$html .= '<small class="d-block text-muted">'.$location.'</small>';
+													$html .= '</div>';
+												$html .= '</div>';
+											$html .= '</a>';
 										$html .= '</div>';
-									$html .= '</a>';
-								$html .= '</div>';
-							$html .= '</li>';
-						if ($ii % $number_of_categories == 0) {
-							$html .= '</ul>';
+									$html .= '</li>';
+								if ($ii % $number_of_categories == 0) {
+									$html .= '</ul>';
+								}
+								if ($ii % $number_of_categories == 0) {
+									$html .= '</div>';
+								}
+								++$i;
+							}
 						}
-						if ($ii % $number_of_categories == 0) {
-							$html .= '</div>';
-						}
-						++$i;
 					}
 				}					
 			$html .= '</div>';
