@@ -112,6 +112,16 @@ function cosmos_get_contributors() {
   return $contributors;
 }
 
+add_action('init', 'cosmos_get_work_env'); 
+function cosmos_get_work_env() {
+  $args = array(
+    'taxonomy' => 'job_listing_working_environment',
+    'hide_empty' => false,
+  );
+  $work_envs = get_terms($args);
+  return $work_envs;
+}
+
 // Adds the ability for project owners to be able to edit projects with other owners.
 $edit_contributor = get_role('employer');
 $edit_contributor->add_cap('edit_posts');

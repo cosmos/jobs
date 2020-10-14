@@ -32,39 +32,39 @@ function cosmos_frontend_company_form_fields( $fields ) {
     $contributors[$value->ID] = $value->post_title;
   }
   $fields['company_fields']['company_github'] = array(
-      'label' => __( 'Github', 'job_manager' ),
-      'type' => 'text',
-      'required' => true,
-      'placeholder'   => __( 'https://github.com/', 'job_manager' ),
-      'priority' => 60
+    'label' => __( 'Github', 'job_manager' ),
+    'type' => 'text',
+    'required' => true,
+    'placeholder'   => __( 'https://github.com/', 'job_manager' ),
+    'priority' => 60
   );
   $fields['company_fields']['company_documentation'] = array(
-      'label' => __( 'Documentation', 'job_manager' ),
-      'type' => 'text',
-      'required' => false,
-      'placeholder'   => __( 'https://', 'job_manager' ),
-      'priority' => 60
+    'label' => __( 'Documentation', 'job_manager' ),
+    'type' => 'text',
+    'required' => false,
+    'placeholder'   => __( 'https://', 'job_manager' ),
+    'priority' => 60
   );
   $fields['company_fields']['company_medium'] = array(
-      'label' => __( 'Medium', 'job_manager' ),
-      'type' => 'text',
-      'required' => false,
-      'placeholder'   => __( 'https://medium.com', 'job_manager' ),
-      'priority' => 60
+    'label' => __( 'Medium', 'job_manager' ),
+    'type' => 'text',
+    'required' => false,
+    'placeholder'   => __( 'https://medium.com', 'job_manager' ),
+    'priority' => 60
   );
   $fields['company_fields']['company_discord'] = array(
-      'label' => __( 'Discord', 'job_manager' ),
-      'type' => 'text',
-      'required' => false,
-      'placeholder'   => __( 'https://discord.com', 'job_manager' ),
-      'priority' => 60
+    'label' => __( 'Discord', 'job_manager' ),
+    'type' => 'text',
+    'required' => false,
+    'placeholder'   => __( 'https://discord.com', 'job_manager' ),
+    'priority' => 60
   );
   $fields['company_fields']['company_telegram'] = array(
-      'label' => __( 'Telegram', 'job_manager' ),
-      'type' => 'text',
-      'required' => false,
-      'placeholder'   => __( 'https://telegram.org', 'job_manager' ),
-      'priority' => 60
+    'label' => __( 'Telegram', 'job_manager' ),
+    'type' => 'text',
+    'required' => false,
+    'placeholder'   => __( 'https://telegram.org', 'job_manager' ),
+    'priority' => 60
   );
   $fields['company_fields']['contributors_contributed_to'] = array(
     'label'         => __( 'Contributors that have contributed to this project', 'job_manager' ),
@@ -81,12 +81,24 @@ function cosmos_frontend_company_form_fields( $fields ) {
 // Add fields to Jobs on the frontend
 add_filter( 'submit_job_form_fields', 'cosmos_frontend_job_form_fields' );
 function cosmos_frontend_job_form_fields( $fields ) {
+  foreach (cosmos_get_work_env() as $key => $value) {
+    $work_envs[$value->term_id] = $value->name;
+  }
   $fields['job']['job_app_url'] = array(
-      'label' => __( 'Application email/URL field', 'job_manager' ),
-      'type' => 'text',
-      'required' => false,
-      'placeholder'   => __( 'https:// or email', 'job_manager' ),
-      'priority' => 3
+    'label' => __( 'Application Email/URL', 'job_manager' ),
+    'type' => 'text',
+    'required' => false,
+    'placeholder'   => __( 'https:// or email', 'job_manager' ),
+    'priority' => 3
+  );
+  $fields['job']['job_work_environment'] = array(
+    'label' => __( 'Work Environment', 'job_manager' ),
+    'type'          => 'multiselect',
+    'options'       => $work_envs,
+    'required'      => false,
+    'placeholder'   => '',
+    'priority'      => 3,
+    'personal_data' => true,
   );
   return $fields;
 }
