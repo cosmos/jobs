@@ -172,7 +172,7 @@
 	add_action( 'job_listing_grid', 'cosmos_job_listing_grid_card_body_content', 10 );
 	add_action( 'after_setup_theme', 'cosmos_remove_job_listing_grid_card_body_content');
 	function cosmos_remove_job_listing_grid_card_body_content() {
-		add_action( 'job_listing_grid', 'front_job_listing_grid_card_body_content', 20 );
+		remove_action( 'job_listing_grid', 'front_job_listing_grid_card_body_content', 10 );
 	}
 	if( ! function_exists( 'cosmos_job_listing_grid_card_body_content' ) ) {
 	    function cosmos_job_listing_grid_card_body_content() {
