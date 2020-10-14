@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+	#submit-company-form .fieldset-type-url,
+	#submit-company-form .fieldset-type-email,
+	#submit-company-form .fieldset-type-tel {
+	  position: relative;
+	  width: 100%;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+}
