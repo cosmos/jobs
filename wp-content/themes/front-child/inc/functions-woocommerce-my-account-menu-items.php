@@ -32,3 +32,6 @@ function cosmos_remove_my_account_links( $menu_links ){
 // 	echo 'Last time you logged in: yesterday from Safari.';
 // }	
 
+
+?>
+

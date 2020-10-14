@@ -320,7 +320,17 @@ if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
     }
 }
 
-
+// Changes the permalink structure for projects and contributors
+function cosmos_change_company_slug( $args ) {
+  $args['rewrite']['slug'] = _x( 'project', 'Project permalink - resave permalinks after changing this', 'job_manager' );
+  return $args;
+}
+function cosmos_change_resume_slug( $args ) {
+  $args['rewrite']['slug'] = _x( 'contributor', 'Contributor permalink - resave permalinks after changing this', 'job_manager' );
+  return $args;
+}
+add_filter( 'register_post_type_resume', 'cosmos_change_resume_slug' );
+add_filter( 'register_post_type_company', 'cosmos_change_company_slug' );
 
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
