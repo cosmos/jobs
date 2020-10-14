@@ -84,13 +84,6 @@ function cosmos_frontend_job_form_fields( $fields ) {
   foreach (cosmos_get_work_env() as $key => $value) {
     $work_envs[$value->term_id] = $value->name;
   }
-  $fields['job']['job_app_url'] = array(
-    'label' => __( 'Application Email/URL', 'job_manager' ),
-    'type' => 'text',
-    'required' => false,
-    'placeholder'   => __( 'https:// or email', 'job_manager' ),
-    'priority' => 3
-  );
   $fields['job']['job_work_environment'] = array(
     'label' => __( 'Work Environment', 'job_manager' ),
     'type'          => 'multiselect',
@@ -502,6 +495,7 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['company']['company_id']['label'] = "Select A Project";
   $fields['company']['company_id']['option'] = "Select A Project";
   $fields['job']['job_category']['priority'] = 3;
+  $fields['job']['application']['priority'] = 3;
   $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
   $fields['job']['job_location']['description'] = "Leave this blank if the possition is remote";
   $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
@@ -513,7 +507,6 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   unset( $fields['resume_fields']['resume_category'] );
   unset( $fields['job']['contact_email'] );
   unset( $fields['job']['contact_address'] );
-  unset( $fields['job']['application'] );
   unset( $fields['job']['contact_phone'] );
   unset( $fields['job']['job_qualification'] );
   unset( $fields['job']['job_listing_salary'] );
