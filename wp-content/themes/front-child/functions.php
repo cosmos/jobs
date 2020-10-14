@@ -332,6 +332,22 @@ function cosmos_change_resume_slug( $args ) {
 add_filter( 'register_post_type_resume', 'cosmos_change_resume_slug' );
 add_filter( 'register_post_type_company', 'cosmos_change_company_slug' );
 
+// Editing the WP login logo
+function cosmos_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/dist/img/cosmos-job-board-logo-white.svg);
+    height:65px;
+    width:320px;
+    background-size: 320px 65px;
+    background-repeat: no-repeat;
+          padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'cosmos_login_logo' );
+
+
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts

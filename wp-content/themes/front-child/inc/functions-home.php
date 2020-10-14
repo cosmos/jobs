@@ -45,27 +45,29 @@
 			}
 		}
 		//var_dump(array_unique(array_map("serialize", $categories2)));
-
-		$categories2 = array_map("unserialize", array_unique(array_map("serialize", $categories2)));
-	  // var_dump($categories2);
-		foreach ($categories2 as $key => $value) {
-			// var_dump($value);
-			++$i;
-			if ($i <= 3) {
-				$posts[$value['name']] = get_posts(array(
-				  'post_type' 							=> 'job_listing',
-				  'post_status' 						=> 'publish',
-				  'numberposts' 						=> 3,
-				  'orderby'									=> 'date',
-					'order'										=> 'DESC',
-				  'tax_query' 							=> array(
-	          array(
-				      'taxonomy' 						=> 'job_listing_category',
-				      'terms' 							=> $value['term_id'],
-				      'field' 							=> 'term_id',
-				    ),
-				  ),
-				));
+		// var_dump($categories2);
+		if (is_array($categories2)) {
+			$categories2 = array_map("unserialize", array_unique(array_map("serialize", $categories2)));
+		  // var_dump($categories2);
+			foreach ($categories2 as $key => $value) {
+				// var_dump($value);
+				++$i;
+				if ($i <= 3) {
+					$posts[$value['name']] = get_posts(array(
+					  'post_type' 							=> 'job_listing',
+					  'post_status' 						=> 'publish',
+					  'numberposts' 						=> 3,
+					  'orderby'									=> 'date',
+						'order'										=> 'DESC',
+					  'tax_query' 							=> array(
+		          array(
+					      'taxonomy' 						=> 'job_listing_category',
+					      'terms' 							=> $value['term_id'],
+					      'field' 							=> 'term_id',
+					    ),
+					  ),
+					));
+				}
 			}
 		}
 
@@ -83,6 +85,9 @@
 				foreach ($posts as $key => $value) {
 					foreach ($value as $key2 => $value2) {
 						++$ii;
+						// echo '<pre>';
+						// var_dump(get_the_terms($value2->ID, 'job_listing_category'));
+						// echo '</pre>';
 						$meta = get_post_meta($value2->ID);
 						$location = $meta['_job_location'][0];
 						if (!empty($meta['_thumbnail_id'])) {
@@ -104,7 +109,7 @@
 												}
 											$html .= '</div>';
 											$html .= '<div class="media-body px-4">';
-												$html .= '<h4 class="h6 text-dark mb-1">'.$value2->post_title.'</h4>';
+												$html .= '<h4 class="h6 text-dark mb-1">'.$key.'-'.$value2->post_title.'</h4>';
 												$html .= '<small class="d-block text-muted">'.$location.'</small>';
 											$html .= '</div>';
 										$html .= '</div>';

@@ -1,7 +1,6 @@
 // main.js
 
-// Import everything from autoload
-import validate from "jquery-validation";
+// import validate from "jquery-validation";
 
 // Sends the Claim a Project emaill to the Cosmos Job Board admin
 (function ($) {
@@ -41,48 +40,48 @@ import validate from "jquery-validation";
 })(jQuery);
 
 
-// Wait for the DOM to be ready
-jQuery(function() {
-  // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
-  jQuery("form[id='submit-resume-form-erase']").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      candidate_website: {
-        url: true,
-      },
-      candidate_other: {
-        url: true,
-      },
-      candidate_twitter: {
-        url: true,
-      },
-      candidate_facebook: {
-        url: true,
-      },
-      candidate_github: {
-        url: true,
-      },
-      candidate_stackexchange: {
-        url: true,
-      },
-    },
-    // Specify validation error messages
-    messages: {
-      candidate_website: "Please enter a valid URL",
-      candidate_other: "Please enter a valid URL",
-      candidate_twitter: "Please enter a valid URL",
-      candidate_facebook: "Please enter a valid URL",
-      candidate_github: "Please enter a valid URL",
-      candidate_stackexchange: "Please enter a valid URL",
-    },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
-});
+// // Wait for the DOM to be ready
+// jQuery(function() {
+//   // Initialize form validation on the registration form.
+//   // It has the name attribute "registration"
+//   jQuery("form[id='submit-resume-form']").validate({
+//     // Specify validation rules
+//     rules: {
+//       // The key name on the left side is the name attribute
+//       // of an input field. Validation rules are defined
+//       // on the right side
+//       candidate_website: {
+//         url: true,
+//       },
+//       candidate_other: {
+//         url: true,
+//       },
+//       candidate_twitter: {
+//         url: true,
+//       },
+//       candidate_facebook: {
+//         url: true,
+//       },
+//       candidate_github: {
+//         url: true,
+//       },
+//       candidate_stackexchange: {
+//         url: true,
+//       },
+//     },
+//     // Specify validation error messages
+//     messages: {
+//       candidate_website: "Please enter a valid URL",
+//       candidate_other: "Please enter a valid URL",
+//       candidate_twitter: "Please enter a valid URL",
+//       candidate_facebook: "Please enter a valid URL",
+//       candidate_github: "Please enter a valid URL",
+//       candidate_stackexchange: "Please enter a valid URL",
+//     },
+//     // Make sure the form is submitted to the destination defined
+//     // in the "action" attribute of the form when valid
+//     submitHandler: function(form) {
+//       form.submit();
+//     }
+//   });
+// });
