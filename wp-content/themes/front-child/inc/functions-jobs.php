@@ -4,13 +4,21 @@
 	        ?>
 	        <div class="mb-4">
 	            <?php
-	            front_the_company_logo( 'thumbnail', 'u-clients mb-4' );
+			    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
+			    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+			    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+								if (!empty($company_image)) {
+									$image = $company_image;
+								}else{
+									$image = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+								}
 	            if( !empty( $company_excerpt = front_get_the_job_listing_company_excerpt() ) ) :
 	                if( ( $pos = strrpos( $company_excerpt , '<p>' ) ) !== false ) {
 	                    $search_length  = strlen( '<p>' );
 	                    $company_excerpt = substr_replace( $company_excerpt , '<p class="mb-0">' , $pos , $search_length );
 	                }
 	                ?>
+	            		<img class="u-clients mb-4" src="<?php echo $image; ?>" alt="<?php echo $company_name; ?>">
 	                <h4 class="h6"><?php esc_html_e( 'About', 'front' ); ?></h4>
 	                <div class="font-size-1 text-secondary text-lh-md"><?php echo wp_kses_post( $company_excerpt ); ?></div>
 	                <?php
