@@ -10,6 +10,13 @@
 		max-width: 33.3%;
 	}
 }
+#submit-resume-form .fieldset-type-url,
+#submit-resume-form .fieldset-type-email {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 @media (min-width: 768px) {
 	#submit-resume-form .fieldset-type-url,
 	#submit-resume-form .fieldset-type-email {
