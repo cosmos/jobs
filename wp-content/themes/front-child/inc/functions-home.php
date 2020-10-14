@@ -44,6 +44,7 @@
 				}
 			}
 		}
+		//var_dump(array_unique(array_map("serialize", $categories2)));
 
 		$categories2 = array_map("unserialize", array_unique(array_map("serialize", $categories2)));
 	  // var_dump($categories2);

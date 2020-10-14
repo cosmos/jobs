@@ -123,6 +123,22 @@ function cosmos_resume_listing_list_card_footer_content() {
 	echo $html;
 }
 
+// Removes resume fields on the front end
+function cosmos_remove_submit_job_form_fields( $fields ) {
+  unset( $fields['resume_fields']['resume_category'] );
+  unset( $fields['resume_fields']['candidate_work_done'] );
+  unset( $fields['resume_fields']['candidate_success_rate'] );
+  unset( $fields['resume_fields']['candidate_pay_scale'] );
+  unset( $fields['resume_fields']['candidate_video'] );
+  unset( $fields['resume_fields']['candidate_experience'] );
+  unset( $fields['resume_fields']['candidate_website'] );
+  unset( $fields['resume_fields']['candidate_facebook'] );
+  unset( $fields['resume_fields']['candidate_twitter'] );
+  unset( $fields['resume_fields']['candidate_email'] );
+  return $fields;
+}
+add_filter( 'submit_resume_form_fields', 'cosmos_remove_submit_job_form_fields', 30 );
+
 // https://wpjobmanager.com/document/resume-manager-editing-submission-fields/
 // Add fields to Contributors on the backend
 add_filter( 'resume_manager_resume_fields', 'cosmos_admin_resume_form_fields' );
@@ -176,40 +192,76 @@ function cosmos_admin_resume_form_fields( $fields ) {
 }
 
 // Add fields to frontend
-add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields' );
+add_filter( 'submit_resume_form_fields', 'cosmos_frontend_contributor_form_fields', 40 );
 function cosmos_frontend_contributor_form_fields( $fields ) {
 	$i = 10;
 	// used to get all the active companies
 	foreach (cosmos_get_projects() as $key => $value) {
 	  $projects[$value->ID] = $value->post_title;
 	}
+	$fields['resume_fields']['candidate_email'] = array(
+		'label'     		=> __( 'Your Email', 'job_manager' ),
+		'type'      		=> 'email',
+		'placeholder'   => __( 'you@yourdomain.com', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => true,
+		'priority' 			=> 2	,
+		'personal_data' => true,
+	);
+	$fields['resume_fields']['candidate_website'] = array(
+		'label'     		=> __( 'Website', 'job_manager' ),
+		'type'      		=> 'url',
+		'placeholder'   => __( 'https://', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 7,
+		'personal_data' => true,
+	);
 	$fields['resume_fields']['candidate_github'] = array(
 		'label'     		=> __( 'Github', 'job_manager' ),
-		'type'      		=> 'text',
+		'type'      		=> 'url',
 		'placeholder'   => __( 'https://github.com/', 'job_manager' ),
 		'description' 	=> '',
 		'required'      => false,
-		'priority' 			=> 6,
+		'priority' 			=> 7,
+		'personal_data' => true,
+	);
+	$fields['resume_fields']['candidate_twitter'] = array(
+		'label'     		=> __( 'Twitter', 'job_manager' ),
+		'type'      		=> 'url',
+		'placeholder'   => __( 'https://twitter.com', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 7,
+		'personal_data' => true,
+	);
+	$fields['resume_fields']['candidate_facebook'] = array(
+		'label'     		=> __( 'Facebook', 'job_manager' ),
+		'type'      		=> 'url',
+		'placeholder'   => __( 'https://github.com/', 'job_manager' ),
+		'description' 	=> '',
+		'required'      => false,
+		'priority' 			=> 7,
 		'personal_data' => true,
 	);
 	$fields['resume_fields']['candidate_stackexchange'] = array(
 		'label'     		=> __( 'Stack Exchange', 'job_manager' ),
-		'type'      		=> 'text',
+		'type'      		=> 'url',
 		'placeholder'   => __( 'https://stackexchange.com/', 'job_manager' ),
 		'description' 	=> '',
 		'required'      => false,
-		'priority' 			=> 6,
+		'priority' 			=> 7,
 		'personal_data' => true,
 	);
 	$fields['resume_fields']['candidate_other'] = array(
 		'label'     		=> __( 'Other', 'job_manager' ),
-		'type'      		=> 'text',
+		'type'      		=> 'url',
 		'placeholder'   => __( 'https://', 'job_manager' ),
 		'description' 	=> '',
 		'required'      => false,
-		'priority' 			=> 6,
+		'priority' 			=> 7,
 		'personal_data' => true,
-	);
+	);	
   $fields['resume_fields']['projects_contributed_to'] = array(
     'label' 				=> __( 'Projects you have contributed to', 'job_manager' ),
 		'type'          => 'multiselect',
@@ -275,19 +327,6 @@ if( ! function_exists( 'cosmos_single_resume_linked_accounts' ) ) {
 		}
 	}
 }
-	
-// Removes resume fields on the front end
-function cosmos_remove_submit_job_form_fields( $fields ) {
-  unset( $fields['resume_fields']['resume_category'] );
-  unset( $fields['resume_fields']['candidate_work_done'] );
-  unset( $fields['resume_fields']['candidate_success_rate'] );
-  unset( $fields['resume_fields']['candidate_pay_scale'] );
-  unset( $fields['resume_fields']['candidate_video'] );
-  unset( $fields['resume_fields']['candidate_experience'] );
-  return $fields;
-}
-add_filter( 'submit_resume_form_fields', 'cosmos_remove_submit_job_form_fields', 30 );
-
 
 // Changes the fields on the front end for the contributors profile
 add_filter( 'submit_resume_form_fields', 'cosmos_resume_change_fields', 30);
@@ -295,11 +334,12 @@ function cosmos_resume_change_fields( $fields ) {
 	$fields['resume_fields']['resume_content']['required'] = false;
 	$fields['resume_fields']['candidate_name']['label'] = "Contributor's Name";
 	$fields['resume_fields']['candidate_bio']['priority'] = 4;
+	$fields['resume_fields']['candidate_location']['priority'] = 3;
 	$fields['resume_fields']['projects_contributed_to']['priority'] = 5;
 	$fields['resume_fields']['candidate_photo']['priority'] = 6;
 	$fields['resume_fields']['candidate_twitter']['priority'] = 7;
 	$fields['resume_fields']['candidate_facebook']['priority'] = 7;
-	$fields['resume_fields'][	'candidate_stackexchange']['priority'] = 7;
+	$fields['resume_fields']['candidate_stackexchange']['priority'] = 7;
 	$fields['resume_fields']['candidate_github']['priority'] = 7;
 	$fields['resume_fields']['candidate_other']['priority'] = 7;
 	$fields['resume_fields']['candidate_rewards']['label'] = 'Accolades/Awards';

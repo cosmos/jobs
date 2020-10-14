@@ -320,7 +320,7 @@ if( ! function_exists( 'front_resume_listing_list_card_body_content' ) ) {
     }
 }
 
-// Changes the permalink structure for projects and contributors
+// Changes the permalink structure for projects and contributors https://wpjobmanager.com/document/tutorial-changing-the-job-slugpermalink/
 function cosmos_change_company_slug( $args ) {
   $args['rewrite']['slug'] = _x( 'project', 'Project permalink - resave permalinks after changing this', 'job_manager' );
   return $args;
