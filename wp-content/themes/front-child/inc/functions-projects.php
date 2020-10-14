@@ -78,6 +78,19 @@ function cosmos_frontend_company_form_fields( $fields ) {
   return $fields;
 }
 
+// Add fields to Jobs on the frontend
+add_filter( 'submit_job_form_fields', 'cosmos_frontend_job_form_fields' );
+function cosmos_frontend_job_form_fields( $fields ) {
+  $fields['job']['job_app_url'] = array(
+      'label' => __( 'Application email/URL field', 'job_manager' ),
+      'type' => 'text',
+      'required' => false,
+      'placeholder'   => __( 'https:// or email', 'job_manager' ),
+      'priority' => 3
+  );
+  return $fields;
+}
+
 // Add fields to Projects on the backend
 add_filter( 'company_manager_company_fields', 'cosmos_admin_projects_form_fields' );
 function cosmos_admin_projects_form_fields( $fields ) {
