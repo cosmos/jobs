@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $job_manager;
 ?>
 <form action="<?php echo esc_url( $action ); ?>" method="post" id="submit-job-form" class="job-manager-form" enctype="multipart/form-data">
-
+	<ul class="errorMessages"></ul>
 	<?php
 	if ( isset( $resume_edit ) && $resume_edit ) {
 		printf( '<p><strong>' . esc_html__( "You are editing an existing job. %s", 'wp-job-manager' ) . '</strong></p>', '<a href="?job_manager_form=submit-job&new=1&key=' . esc_attr( $resume_edit ) . '">' . esc_html__( 'Create A New Job', 'wp-job-manager' ) . '</a>' );

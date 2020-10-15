@@ -27,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	do_action( 'preview_resume_form_start' );
 	?>
 	<div class="job_listing_preview_title">
+		<h2><?php echo( '<span class="btn btn-xs btn-soft-primary">'.get_the_title().'\'s  contributor profile preview</span>'); ?></h2>
 		<input type="submit" name="edit_resume" class="button" value="<?php esc_attr_e( '&larr; Edit Contributor Profile', 'wp-job-manager-resumes' ); ?>" />
 		<input type="submit" name="continue" id="resume_preview_submit_button" class="button job-manager-button-submit-listing" value="<?php echo esc_attr( apply_filters( 'submit_resume_step_preview_submit_text', __( 'Submit Contributor Profile &rarr;', 'wp-job-manager-resumes' ) ) ); ?>" />
 		<input type="hidden" name="resume_id" value="<?php echo esc_attr( $form->get_resume_id() ); ?>" />
@@ -34,10 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input type="hidden" name="step" value="<?php echo esc_attr( $form->get_step() ); ?>" />
 		<input type="hidden" name="resume_manager_form" value="<?php echo esc_attr( $form->form_name ); ?>" />
 
-		<h2><?php esc_html_e( 'Preview', 'wp-job-manager-resumes' ); ?></h2>
 	</div>
 	<div class="resume_preview single-resume">
-		<h1><?php the_title(); ?></h1>
 		<?php get_job_manager_template_part( 'content-single', 'resume', 'wp-job-manager-resumes', RESUME_MANAGER_PLUGIN_DIR . '/templates/' ); ?>
 	</div>
 	<?php
