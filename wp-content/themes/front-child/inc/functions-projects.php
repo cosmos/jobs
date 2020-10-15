@@ -449,7 +449,7 @@ function cosmos_customize_submit_project_form_fields( $fields ) {
   $fields['company_fields']['company_discord']['type'] = "url";
   $fields['company_fields']['company_telegram']['type'] = "url";
   $fields['company_fields']['company_phone']['type'] = "tel";
-  $fields['company_fields']['company_phone']['description'] = "(format: xxxx-xxx-xxxx)";
+  $fields['company_fields']['company_phone']['description'] = "(format: +x-xxx-xxx-xxxx)";
   $fields['company_fields']['company_facebook']['placeholder'] = "https://facebook.com/";
   $fields['company_fields']['company_revenue']['label'] = "Project Revenue";
   $fields['company_fields']['company_content']['label'] = "Project Content";
@@ -494,7 +494,7 @@ function cosmos_customize_submit_job_form_fields_filter() {
 function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['company']['company_id']['label'] = "Select A Project";
   $fields['company']['company_id']['option'] = "Select A Project";
-  $fields['job']['job_category']['priority'] = 3;
+  $fields['job']['job_category']['priority'] = 2;
   $fields['job']['application']['priority'] = 3;
   $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
   $fields['job']['job_location']['description'] = "Leave this blank if the possition is remote";

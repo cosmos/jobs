@@ -91,7 +91,6 @@
 						$location = $meta['_job_location'][0];
 						foreach ($job_terms as $key3 => $value3) {
 							if ($value3->name == $key) {
-								echo $iii;
 								if (!empty(get_post_meta($company_id[0], '_company_logo'))) {
 									$image = get_post_meta($company_id[0], '_company_logo')[0];
 								}else{
