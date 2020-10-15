@@ -89,6 +89,7 @@
 						$meta = get_post_meta($value2->ID);
 						$company_id = get_post_meta($value2->ID, '_company_id');
 						$location = $meta['_job_location'][0];
+						$company = get_post($company_id[0]);
 						foreach ($job_terms as $key3 => $value3) {
 							if ($value3->name == $key) {
 								if (!empty(get_post_meta($company_id[0], '_company_logo'))) {
@@ -114,6 +115,7 @@
 													$html .= '<div class="media-body px-4">';
 														$html .= '<h4 class="h6 text-dark mb-1">'.$value2->post_title.'</h4>';
 														$html .= '<small class="d-block text-muted">'.$location.'</small>';
+														$html .= '<small class="d-block text-muted">'.$company->post_title.'</small>';
 													$html .= '</div>';
 												$html .= '</div>';
 											$html .= '</a>';
