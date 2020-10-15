@@ -39,4 +39,3 @@ function cosmos_save_registration_form_fields( $customer_id ) {
   }
 }
 
-// apply_filters( 'front_user_account_register_text', esc_html__( 'Welcome to Cosmos Jobs.', 'front' ) );
