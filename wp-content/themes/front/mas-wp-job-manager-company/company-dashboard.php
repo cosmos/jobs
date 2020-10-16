@@ -4,18 +4,17 @@
  *
  * This template can be overridden by copying it to yourtheme/mas-wp-job-manager-company/company-dashboard.php.
  *
- * @see         https://wpjobmanager.com/document/template-overrides/
- * @author      Automattic
- * @package     MAS WP Job Manager Company
+ * @author      MadrasThemes
+ * @package     MAS Companies For WP Job Manager
  * @category    Template
- * @version     1.13.0
+ * @version     1.0.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-$submission_limit           = get_option( 'job_manager_company_submission_limit' );
+$submission_limit = get_option( 'job_manager_company_submission_limit' );
 $submit_company_form_page_id = get_option( 'job_manager_submit_company_form_page_id' );
 ?>
 <div id="job-manager-company-dashboard" class="table-responsive-md">
@@ -50,19 +49,46 @@ $submit_company_form_page_id = get_option( 'job_manager_submit_company_form_page
 
                                             switch ( $company->post_status ) {
                                                 case 'publish' :
-                                                    $actions['edit'] = array( 'label' => esc_html__( 'Edit', 'front' ), 'nonce' => false );
-                                                    $actions['hide'] = array( 'label' => esc_html__( 'Hide', 'front' ), 'nonce' => true );
+                                                    $actions['edit'] = array(
+                                                        'label' => esc_html__( 'Edit', 'front' ),
+                                                        'nonce' => false
+                                                    );
+                                                    $actions['hide'] = array(
+                                                        'label' => esc_html__( 'Hide', 'front' ),
+                                                        'nonce' => true
+                                                    );
                                                 break;
                                                 case 'private' :
-                                                    $actions['publish'] = array( 'label' => esc_html__( 'Publish', 'front' ), 'nonce' => true );
+                                                    $actions['publish'] = array(
+                                                        'label' => esc_html__( 'Publish', 'front' ),
+                                                        'nonce' => true
+                                                    );
                                                 break;
                                                 case 'hidden' :
-                                                    $actions['edit'] = array( 'label' => esc_html__( 'Edit', 'front' ), 'nonce' => false );
-                                                    $actions['publish'] = array( 'label' => esc_html__( 'Publish', 'front' ), 'nonce' => true );
+                                                    $actions['edit'] = array(
+                                                        'label' => esc_html__( 'Edit', 'front' ),
+                                                        'nonce' => false
+                                                    );
+                                                    $actions['publish'] = array(
+                                                        'label' => esc_html__( 'Publish', 'front' ),
+                                                        'nonce' => true
+                                                    );
+                                                break;
+                                                case 'pending' :
+                                                case 'pending_review' :
+                                                    if ( get_option( 'job_manager_user_can_edit_pending_company_submissions' ) ) {
+                                                        $actions['edit'] = array(
+                                                            'label' => esc_html__( 'Edit', 'front' ),
+                                                            'nonce' => false
+                                                        );
+                                                    }
                                                 break;
                                                 case 'expired' :
                                                     if ( get_option( 'job_manager_manager_submit_company_form_page_id' ) ) {
-                                                        $actions['relist'] = array( 'label' => esc_html__( 'Relist', 'front' ), 'nonce' => true );
+                                                        $actions['relist'] = array(
+                                                            'label' => esc_html__( 'Relist', 'front' ),
+                                                            'nonce' => true
+                                                        );
                                                     }
                                                 break;
                                             }

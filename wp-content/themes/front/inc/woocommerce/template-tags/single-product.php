@@ -87,10 +87,7 @@ if ( ! function_exists( 'front_wc_template_single_rating' ) ) {
                 <small class="fas fa-star"></small>
             </div>
             <?php endif; ?>
-            <a class="js-go-to link-muted woocommerce-review-link" href="#reviews" rel="nofollow"
-            data-target="#reviews"
-            data-compensation="#header"
-            data-type="static">
+            <a class="js-go-to link-muted" href="#reviews" rel="nofollow" data-target="#reviews" data-compensation="#header" data-type="static">
             <?php
                 if ( $rating_count === 0 ) {
                     echo esc_html__( 'Write a review', 'front' );

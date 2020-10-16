@@ -1,0 +1,17 @@
+.single-hp_listing {
+    @include media-breakpoint-down( md ) {
+        #pills-listing-tab.nav {
+            flex-wrap: nowrap;
+            overflow: auto;
+
+            > .nav-item {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            &.nav-classic .nav-link {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

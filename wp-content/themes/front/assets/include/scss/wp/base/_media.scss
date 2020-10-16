@@ -1,4 +1,9 @@
 img {
     max-width: 100%;
     height: auto;
+
+    &[src$=".svg"].js-svg-injector:not(.injected-svg) {
+        opacity: 0;
+        transition: opacity $transition-timing-md ease-in;
+    }
 }

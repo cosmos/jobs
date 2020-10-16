@@ -6,7 +6,7 @@ Author:            MadrasThemes
 Author URI:        https://themeforest.net/user/madrasthemes/
 Description:       Front - Multipurpose Business WordPress Theme is an incredibly beautiful, fully responsive and cleanly coded WordPress theme. It is the perfect starting point for your creative business. 
 Requires at least: WordPress 5.0
-Version:           1.1.0
+Version:           1.1.2
 License:           GNU General Public License v2 or later
 License URI:       LICENSE
 Text Domain:       front
@@ -18294,6 +18294,9 @@ body {
 img {
   max-width: 100%;
   height: auto; }
+  img[src$=".svg"].js-svg-injector:not(.injected-svg) {
+    opacity: 0;
+    transition: opacity 0.4s ease-in; }
 
 select {
   max-width: 100%;
@@ -21770,6 +21773,9 @@ pre {
 
 iframe {
   width: 100%; }
+
+.u-text-animation:not(.u-text-animation-initializd) {
+  display: none; }
 
 .article__content--post .gallery {
   display: flex;

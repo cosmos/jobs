@@ -20,3 +20,15 @@ require_once get_template_directory() . '/inc/redux-framework/functions/customer
 require_once get_template_directory() . '/inc/redux-framework/functions/404-functions.php';
 require_once get_template_directory() . '/inc/redux-framework/functions/style-functions.php';
 require_once get_template_directory() . '/inc/redux-framework/functions/typography-functions.php';
+
+if ( ! function_exists( 'front_redux_remove_custom_css_panel' ) ) {
+	function front_redux_remove_custom_css_panel() {
+		$custom_script = '
+			wp.domReady( function() {
+				wp.hooks.removeFilter( "editor.BlockEdit", "redux-custom-css/with-inspector-controls" );
+			} );
+		';
+
+		wp_add_inline_script( 'wp-blocks', $custom_script );
+	}
+}

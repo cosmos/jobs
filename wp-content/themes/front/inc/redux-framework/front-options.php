@@ -83,6 +83,7 @@ if ( ! class_exists( 'Front_Options' ) ) {
             array_push( $sections, $portfolio_hero_block_options );
             array_push( $sections, $portfolio_related_projects_options );
             array_push( $sections, $portfolio_contact_options );
+            array_push( $sections, $portfolio_static_content_options );
 
             if ( function_exists( 'front_is_wp_job_manager_activated' ) && front_is_wp_job_manager_activated() ) {
                 array_push( $sections, $job_options );

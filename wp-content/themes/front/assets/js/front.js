@@ -230,6 +230,7 @@
             $('.u-text-animation').each( function() {
                 var strings = $.map( $( this ).text().split('|'), $.trim );
                 if( strings.length ) {
+                    $( this ).addClass( "u-text-animation-initializd" )
                     $( this ).text('');
                     var typed = new Typed( this, {
                         strings: strings,

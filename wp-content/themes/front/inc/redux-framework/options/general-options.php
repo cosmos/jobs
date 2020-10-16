@@ -37,7 +37,6 @@ $general_my_account_options = apply_filters( 'front_general_my_account_options_a
     'id'               => 'general-my-account',
     'subsection'       => true,
     'customizer_width' => '450px',
-    'required'         => $my_account_enabled,
     'fields'           => array(
 
         array(

@@ -90,13 +90,27 @@ if ( ! function_exists( 'front_single_customer_story_sticky_content' ) ) {
                                     <dl class="row font-size-1 <?php if( $i > 1 ) { echo 'mb-0'; } ?>">
                                         <dt class="col-sm-4">
                                             <figure id="<?php echo esc_attr( $icon_uniqid ) ?>" class="ie-height-56 max-width-8 w-100">
-                                                <?php if( ! empty( $featured_logo_arr['id'] ) ) {
-                                                    echo wp_get_attachment_image( $key_features_arr['imageID' . $i], 'full', '', array( 'class' => 'js-svg-injector', 'data-parent' => $icon_uniqid ) );
-                                                } ?>
+                                                <?php if ( ! empty( $key_features_arr['link'. $i] ) ): ?>
+                                                    <a href="<?php echo esc_attr( $key_features_arr['link' . $i] ); ?>" <?php if ( isset( $key_features_arr['linkNewTab' . $i] ) && $key_features_arr['linkNewTab' . $i] ): ?>target="_blank"<?php endif; ?>>
+                                                <?php endif;
+                                                    if( ! empty( $featured_logo_arr['id'] ) ) {
+                                                        echo wp_get_attachment_image( $key_features_arr['imageID' . $i], 'full', '', array( 'class' => 'js-svg-injector', 'data-parent' => $icon_uniqid ) );
+                                                    }
+                                                if ( ! empty( $key_features_arr['link'. $i] ) ): ?>
+                                                    </a>
+                                                <?php endif; ?>
                                             </figure>
                                         </dt>
                                         <dd class="col-sm-8 text-secondary">
-                                            <h4 class="font-size-1 font-weight-semi-bold mb-0"><?php echo esc_html( $key_features_arr['title'. $i] ); ?></h4>
+                                            <h4 class="font-size-1 font-weight-semi-bold mb-0">
+                                                <?php if ( ! empty( $key_features_arr['link'. $i] ) ): ?>
+                                                    <a class="text-secondary" href="<?php echo esc_attr( $key_features_arr['link' . $i] ); ?>" <?php if ( isset( $key_features_arr['linkNewTab' . $i] ) && $key_features_arr['linkNewTab' . $i] ): ?>target="_blank"<?php endif; ?>>
+                                                <?php endif;
+                                                    echo esc_html( $key_features_arr['title'. $i] );
+                                                if ( ! empty( $key_features_arr['link'. $i] ) ): ?>
+                                                    </a>
+                                                <?php endif; ?>
+                                            </h4>
                                             <p class="font-size-1 mb-0"><?php echo wp_kses_post( $key_features_arr['description'. $i] ); ?></p>
                                         </dd>
                                     </dl>

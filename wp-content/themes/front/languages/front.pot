@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Front 1.1.0\n"
+"Project-Id-Version: Front 1.1.2\n"
 "Report-Msgid-Bugs-To: https://madrasthemes.freshdesk.com/\n"
-"POT-Creation-Date: 2020-09-01 14:29:15+00:00\n"
+"POT-Creation-Date: 2020-10-02 04:52:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -557,53 +557,53 @@ msgstr ""
 msgid "Footer Primary Menu"
 msgstr ""
 
-#: inc/class-front.php:243 inc/redux-framework/options/header-options.php:627
+#: inc/class-front.php:243 inc/redux-framework/options/header-options.php:644
 #: inc/redux-framework/options/portfolio-options.php:248
 msgid "Primary"
 msgstr ""
 
-#: inc/class-front.php:248 inc/redux-framework/options/header-options.php:628
+#: inc/class-front.php:248 inc/redux-framework/options/header-options.php:645
 #: inc/redux-framework/options/portfolio-options.php:249
 msgid "Secondary"
 msgstr ""
 
-#: inc/class-front.php:253 inc/redux-framework/options/header-options.php:629
+#: inc/class-front.php:253 inc/redux-framework/options/header-options.php:646
 #: inc/redux-framework/options/portfolio-options.php:250
 msgid "Success"
 msgstr ""
 
-#: inc/class-front.php:258 inc/redux-framework/options/header-options.php:630
+#: inc/class-front.php:258 inc/redux-framework/options/header-options.php:647
 #: inc/redux-framework/options/portfolio-options.php:251
 msgid "Danger"
 msgstr ""
 
-#: inc/class-front.php:263 inc/redux-framework/options/header-options.php:631
+#: inc/class-front.php:263 inc/redux-framework/options/header-options.php:648
 #: inc/redux-framework/options/portfolio-options.php:252
 msgid "Warning"
 msgstr ""
 
-#: inc/class-front.php:268 inc/redux-framework/options/header-options.php:632
+#: inc/class-front.php:268 inc/redux-framework/options/header-options.php:649
 #: inc/redux-framework/options/portfolio-options.php:253
 msgid "Info"
 msgstr ""
 
 #: inc/class-front.php:273 inc/redux-framework/options/header-options.php:288
-#: inc/redux-framework/options/header-options.php:633
+#: inc/redux-framework/options/header-options.php:650
 #: inc/redux-framework/options/portfolio-options.php:254
 msgid "Dark"
 msgstr ""
 
-#: inc/class-front.php:278 inc/redux-framework/options/header-options.php:634
+#: inc/class-front.php:278 inc/redux-framework/options/header-options.php:651
 #: inc/redux-framework/options/portfolio-options.php:255
 msgid "Light"
 msgstr ""
 
-#: inc/class-front.php:283 inc/redux-framework/options/header-options.php:635
+#: inc/class-front.php:283 inc/redux-framework/options/header-options.php:652
 #: inc/redux-framework/options/portfolio-options.php:256
 msgid "Indigo"
 msgstr ""
 
-#: inc/class-front.php:288 inc/redux-framework/options/header-options.php:636
+#: inc/class-front.php:288 inc/redux-framework/options/header-options.php:653
 msgid "White"
 msgstr ""
 
@@ -807,7 +807,7 @@ msgstr ""
 #: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:105
 #: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:115
 #: inc/hivepress-marketplace/front-hp-marketplace-template-functions.php:125
-#: inc/woocommerce/template-tags/single-product.php:227
+#: inc/woocommerce/template-tags/single-product.php:224
 msgid "SVG"
 msgstr ""
 
@@ -840,7 +840,8 @@ msgstr ""
 #: inc/front-menu-functions.php:169 job_manager/job-dashboard.php:77
 #: job_manager/job-dashboard.php:95
 #: mas-wp-job-manager-company/company-dashboard.php:53
-#: mas-wp-job-manager-company/company-dashboard.php:60
+#: mas-wp-job-manager-company/company-dashboard.php:69
+#: mas-wp-job-manager-company/company-dashboard.php:81
 #: woocommerce/myaccount/my-address.php:56
 #: wp-job-manager-alerts/my-alerts.php:62
 #: wp-job-manager-resumes/candidate-dashboard.php:53
@@ -934,18 +935,18 @@ msgid "Megamenu Position"
 msgstr ""
 
 #: inc/front-menu-functions.php:313
-#: inc/redux-framework/options/header-options.php:496
-#: inc/redux-framework/options/header-options.php:563
+#: inc/redux-framework/options/header-options.php:513
+#: inc/redux-framework/options/header-options.php:580
 msgid "Left"
 msgstr ""
 
 #: inc/front-menu-functions.php:313
-#: inc/redux-framework/options/header-options.php:564
+#: inc/redux-framework/options/header-options.php:581
 msgid "Right"
 msgstr ""
 
 #: inc/front-template-functions.php:71
-#: inc/redux-framework/options/header-options.php:612
+#: inc/redux-framework/options/header-options.php:629
 msgid "Buy Now"
 msgstr ""
 
@@ -955,13 +956,13 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: inc/front-template-functions.php:501 inc/front-template-functions.php:2247
-#: inc/redux-framework/options/header-options.php:688
-#: inc/redux-framework/options/header-options.php:692
+#: inc/redux-framework/options/header-options.php:705
+#: inc/redux-framework/options/header-options.php:709
 msgid "Address"
 msgstr ""
 
 #: inc/front-template-functions.php:520
-#: inc/redux-framework/options/header-options.php:703
+#: inc/redux-framework/options/header-options.php:720
 msgid "Social"
 msgstr ""
 
@@ -1113,12 +1114,12 @@ msgid "#"
 msgstr ""
 
 #: inc/front-template-functions.php:2241
-#: inc/redux-framework/options/portfolio-options.php:353
+#: inc/redux-framework/options/portfolio-options.php:415
 msgid "Phone Number"
 msgstr ""
 
 #: inc/front-template-functions.php:2242
-#: inc/redux-framework/options/portfolio-options.php:355
+#: inc/redux-framework/options/portfolio-options.php:417
 msgid "+1 (062) 109-9222"
 msgstr ""
 
@@ -1158,7 +1159,7 @@ msgstr ""
 
 #: inc/front-template-functions.php:2650 inc/front-template-functions.php:3096
 #: inc/front-template-functions.php:3637
-#: inc/redux-framework/options/general-options.php:56
+#: inc/redux-framework/options/general-options.php:55
 #: woocommerce/myaccount/form-login.php:52
 msgid "Login to manage your account."
 msgstr ""
@@ -1219,7 +1220,7 @@ msgstr ""
 
 #: inc/front-template-functions.php:2741 inc/front-template-functions.php:3275
 #: inc/front-template-functions.php:3703
-#: inc/redux-framework/options/general-options.php:72
+#: inc/redux-framework/options/general-options.php:71
 #: woocommerce/myaccount/form-login.php:107
 msgid "Fill out the form to get started."
 msgstr ""
@@ -1366,19 +1367,19 @@ msgid "Password you entered is mismatched"
 msgstr ""
 
 #: inc/front-template-functions.php:3619
-#: inc/redux-framework/options/general-options.php:48
+#: inc/redux-framework/options/general-options.php:47
 #: woocommerce/myaccount/form-login.php:33
 msgid "Welcome"
 msgstr ""
 
 #: inc/front-template-functions.php:3619
-#: inc/redux-framework/options/general-options.php:48
+#: inc/redux-framework/options/general-options.php:47
 #: woocommerce/myaccount/form-login.php:33
 msgid "back"
 msgstr ""
 
 #: inc/front-template-functions.php:3620
-#: inc/redux-framework/options/general-options.php:64
+#: inc/redux-framework/options/general-options.php:63
 #: woocommerce/myaccount/form-login.php:34
 msgid "Welcome to"
 msgstr ""
@@ -1388,7 +1389,7 @@ msgid "Front"
 msgstr ""
 
 #: inc/front-template-functions.php:3645
-#: inc/redux-framework/options/portfolio-options.php:336
+#: inc/redux-framework/options/portfolio-options.php:398
 #: woocommerce/myaccount/form-login.php:60
 #: woocommerce/myaccount/form-lost-password.php:36
 msgid "Email Address"
@@ -1496,32 +1497,32 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:203
-#: inc/jetpack/front-jetpack-template-functions.php:228
-#: inc/jetpack/front-jetpack-template-functions.php:262
-#: inc/jetpack/front-jetpack-template-functions.php:294
+#: inc/jetpack/front-jetpack-template-functions.php:214
+#: inc/jetpack/front-jetpack-template-functions.php:239
+#: inc/jetpack/front-jetpack-template-functions.php:273
+#: inc/jetpack/front-jetpack-template-functions.php:305
 msgid "by %s"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:332
+#: inc/jetpack/front-jetpack-template-functions.php:357
 msgid "You wish us %s to talk about %s your project %s?"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:410
+#: inc/jetpack/front-jetpack-template-functions.php:435
 msgid "Portfolio Navigation"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:539
+#: inc/jetpack/front-jetpack-template-functions.php:625
 #: inc/redux-framework/options/portfolio-options.php:4
 #: inc/redux-framework/options/portfolio-options.php:239
 msgid "Portfolio"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:541
+#: inc/jetpack/front-jetpack-template-functions.php:627
 msgid "Our %s Branding %s works"
 msgstr ""
 
-#: inc/jetpack/front-jetpack-template-functions.php:542
+#: inc/jetpack/front-jetpack-template-functions.php:628
 #: inc/redux-framework/options/portfolio-options.php:286
 msgid "Experience a level of our quality in both design & customization works."
 msgstr ""
@@ -1545,7 +1546,7 @@ msgid "City, state, or zip"
 msgstr ""
 
 #: inc/mas-wp-job-manager-company/front-wpjmc-functions.php:40
-#: inc/redux-framework/options/header-options.php:709
+#: inc/redux-framework/options/header-options.php:726
 #: templates/header/topbar-search-form.php:18
 msgid "Search"
 msgstr ""
@@ -1715,16 +1716,17 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:343
 #: inc/redux-framework/options/header-options.php:356
 #: inc/redux-framework/options/header-options.php:387
-#: inc/redux-framework/options/header-options.php:463
-#: inc/redux-framework/options/header-options.php:483
-#: inc/redux-framework/options/header-options.php:584
-#: inc/redux-framework/options/header-options.php:602
-#: inc/redux-framework/options/header-options.php:670
+#: inc/redux-framework/options/header-options.php:481
+#: inc/redux-framework/options/header-options.php:501
+#: inc/redux-framework/options/header-options.php:601
+#: inc/redux-framework/options/header-options.php:619
+#: inc/redux-framework/options/header-options.php:687
 #: inc/redux-framework/options/job-options.php:25
 #: inc/redux-framework/options/job-options.php:48
 #: inc/redux-framework/options/job-options.php:79
 #: inc/redux-framework/options/portfolio-options.php:22
 #: inc/redux-framework/options/portfolio-options.php:53
+#: inc/redux-framework/options/portfolio-options.php:319
 #: inc/redux-framework/options/shop-options.php:25
 #: inc/redux-framework/options/shop-options.php:56
 #: inc/redux-framework/options/style-options.php:44
@@ -1762,16 +1764,17 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:344
 #: inc/redux-framework/options/header-options.php:357
 #: inc/redux-framework/options/header-options.php:388
-#: inc/redux-framework/options/header-options.php:464
-#: inc/redux-framework/options/header-options.php:484
-#: inc/redux-framework/options/header-options.php:585
-#: inc/redux-framework/options/header-options.php:603
-#: inc/redux-framework/options/header-options.php:671
+#: inc/redux-framework/options/header-options.php:482
+#: inc/redux-framework/options/header-options.php:502
+#: inc/redux-framework/options/header-options.php:602
+#: inc/redux-framework/options/header-options.php:620
+#: inc/redux-framework/options/header-options.php:688
 #: inc/redux-framework/options/job-options.php:26
 #: inc/redux-framework/options/job-options.php:49
 #: inc/redux-framework/options/job-options.php:80
 #: inc/redux-framework/options/portfolio-options.php:23
 #: inc/redux-framework/options/portfolio-options.php:54
+#: inc/redux-framework/options/portfolio-options.php:320
 #: inc/redux-framework/options/shop-options.php:26
 #: inc/redux-framework/options/shop-options.php:57
 #: inc/redux-framework/options/style-options.php:45
@@ -1936,6 +1939,7 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:21
 #: inc/redux-framework/options/job-options.php:15
 #: inc/redux-framework/options/portfolio-options.php:12
+#: inc/redux-framework/options/portfolio-options.php:309
 #: inc/redux-framework/options/shop-options.php:15
 msgid "Header"
 msgstr ""
@@ -2131,8 +2135,8 @@ msgstr ""
 
 #: inc/redux-framework/options/footer-options.php:126
 #: inc/redux-framework/options/header-options.php:287
-#: inc/redux-framework/options/header-options.php:648
-#: inc/redux-framework/options/header-options.php:660
+#: inc/redux-framework/options/header-options.php:665
+#: inc/redux-framework/options/header-options.php:677
 msgid "Default"
 msgstr ""
 
@@ -2241,7 +2245,7 @@ msgstr ""
 
 #: inc/redux-framework/options/footer-options.php:198
 #: inc/redux-framework/options/general-options.php:28
-#: inc/redux-framework/options/header-options.php:600
+#: inc/redux-framework/options/header-options.php:617
 #: wp-job-manager-alerts/my-alerts.php:66
 msgid "Enable"
 msgstr ""
@@ -2394,7 +2398,7 @@ msgid "Use the options below to set the general behaviour of your website's foot
 msgstr ""
 
 #: inc/redux-framework/options/footer-options.php:426
-#: inc/redux-framework/options/header-options.php:473
+#: inc/redux-framework/options/header-options.php:491
 msgid "Logo"
 msgstr ""
 
@@ -2414,65 +2418,65 @@ msgstr ""
 msgid "Enable to display the scroll to top arrow"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:44
+#: inc/redux-framework/options/general-options.php:43
 msgid "My Account Login Form Title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:45
+#: inc/redux-framework/options/general-options.php:44
 msgid "Enter my account login form title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:52
+#: inc/redux-framework/options/general-options.php:51
 msgid "My Account Login Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:53
+#: inc/redux-framework/options/general-options.php:52
 msgid "Enter my account login form description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:60
+#: inc/redux-framework/options/general-options.php:59
 msgid "My Account Register Form Title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:61
+#: inc/redux-framework/options/general-options.php:60
 msgid "Enter my account register form title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:68
+#: inc/redux-framework/options/general-options.php:67
 msgid "My Account Register Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:69
+#: inc/redux-framework/options/general-options.php:68
 msgid "Enter my account register form description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:76
+#: inc/redux-framework/options/general-options.php:75
 msgid "My Account Reset Password Form Title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:77
+#: inc/redux-framework/options/general-options.php:76
 msgid "Enter my account reset password form title"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:80
+#: inc/redux-framework/options/general-options.php:79
 #: woocommerce/myaccount/form-lost-password.php:20
 msgid "Forgot your"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:80
+#: inc/redux-framework/options/general-options.php:79
 #: woocommerce/myaccount/form-lost-password.php:20
 msgid "password?"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:84
+#: inc/redux-framework/options/general-options.php:83
 msgid "My Account Reset Password Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:85
+#: inc/redux-framework/options/general-options.php:84
 msgid "Enter my account reset password form description"
 msgstr ""
 
-#: inc/redux-framework/options/general-options.php:88
+#: inc/redux-framework/options/general-options.php:87
 #: woocommerce/myaccount/form-lost-password.php:32
 msgid "Enter your email address below and well get you back on track."
 msgstr ""
@@ -2564,7 +2568,7 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:184
 #: inc/redux-framework/options/header-options.php:221
 #: inc/redux-framework/options/header-options.php:245
-#: inc/redux-framework/options/header-options.php:507
+#: inc/redux-framework/options/header-options.php:524
 msgid "All Screens"
 msgstr ""
 
@@ -2573,8 +2577,8 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:185
 #: inc/redux-framework/options/header-options.php:222
 #: inc/redux-framework/options/header-options.php:246
-#: inc/redux-framework/options/header-options.php:508
-#: inc/redux-framework/options/header-options.php:549
+#: inc/redux-framework/options/header-options.php:525
+#: inc/redux-framework/options/header-options.php:566
 msgid "sm"
 msgstr ""
 
@@ -2583,8 +2587,8 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:186
 #: inc/redux-framework/options/header-options.php:223
 #: inc/redux-framework/options/header-options.php:247
-#: inc/redux-framework/options/header-options.php:509
-#: inc/redux-framework/options/header-options.php:550
+#: inc/redux-framework/options/header-options.php:526
+#: inc/redux-framework/options/header-options.php:567
 msgid "md"
 msgstr ""
 
@@ -2593,8 +2597,8 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:187
 #: inc/redux-framework/options/header-options.php:224
 #: inc/redux-framework/options/header-options.php:248
-#: inc/redux-framework/options/header-options.php:510
-#: inc/redux-framework/options/header-options.php:551
+#: inc/redux-framework/options/header-options.php:527
+#: inc/redux-framework/options/header-options.php:568
 msgid "lg"
 msgstr ""
 
@@ -2603,8 +2607,8 @@ msgstr ""
 #: inc/redux-framework/options/header-options.php:188
 #: inc/redux-framework/options/header-options.php:225
 #: inc/redux-framework/options/header-options.php:249
-#: inc/redux-framework/options/header-options.php:511
-#: inc/redux-framework/options/header-options.php:552
+#: inc/redux-framework/options/header-options.php:528
+#: inc/redux-framework/options/header-options.php:569
 msgid "xl"
 msgstr ""
 
@@ -2634,7 +2638,7 @@ msgstr ""
 
 #: inc/redux-framework/options/header-options.php:150
 #: inc/redux-framework/options/header-options.php:199
-#: inc/redux-framework/options/header-options.php:537
+#: inc/redux-framework/options/header-options.php:554
 msgid "None"
 msgstr ""
 
@@ -2783,7 +2787,7 @@ msgid "Dropdown"
 msgstr ""
 
 #: inc/redux-framework/options/header-options.php:375
-#: inc/redux-framework/options/header-options.php:616
+#: inc/redux-framework/options/header-options.php:633
 msgid "Link"
 msgstr ""
 
@@ -2813,214 +2817,216 @@ msgstr ""
 msgid "Enter header my account login form title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:420
+#: inc/redux-framework/options/header-options.php:424
 msgid "Header Login Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:421
+#: inc/redux-framework/options/header-options.php:425
 msgid "Enter header my account login form description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:428
+#: inc/redux-framework/options/header-options.php:434
 msgid "Header Register Form Title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:429
+#: inc/redux-framework/options/header-options.php:435
 msgid "Enter header my account register form title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:436
+#: inc/redux-framework/options/header-options.php:446
 msgid "Header Register Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:437
+#: inc/redux-framework/options/header-options.php:447
 msgid "Enter header my account register form description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:444
+#: inc/redux-framework/options/header-options.php:456
 msgid "Header Reset Password Form Title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:445
+#: inc/redux-framework/options/header-options.php:457
 msgid "Enter header my account reset password form title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:452
+#: inc/redux-framework/options/header-options.php:468
 msgid "Header Reset Password Form Description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:453
+#: inc/redux-framework/options/header-options.php:469
 msgid "Enter header my account reset password form description"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:460
+#: inc/redux-framework/options/header-options.php:478
 msgid "Header My Account Username"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:462
+#: inc/redux-framework/options/header-options.php:480
 msgid "Enable to show username in my account in header"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:474
+#: inc/redux-framework/options/header-options.php:492
 msgid ""
 "Please use Appearance > Customize > Site Identity > Site Logo to upload "
 "your Site Logo & Favicon"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:480
+#: inc/redux-framework/options/header-options.php:498
 msgid "Enable Logo White"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:482
-msgid "Use this option to enable to display White Logo for darker backgrounds."
+#: inc/redux-framework/options/header-options.php:500
+msgid ""
+"Use this option to enable to display White Logo for darker backgrounds( "
+"Works only for default logo )."
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:493
+#: inc/redux-framework/options/header-options.php:510
 msgid "Logo Align"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:494
+#: inc/redux-framework/options/header-options.php:511
 msgid "If you select \"Center\" option, the navbar will appear in the next line."
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:497
-#: inc/redux-framework/options/header-options.php:565
+#: inc/redux-framework/options/header-options.php:514
+#: inc/redux-framework/options/header-options.php:582
 msgid "Center"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:505
+#: inc/redux-framework/options/header-options.php:522
 msgid "Logo Align Breakpoint"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:518
+#: inc/redux-framework/options/header-options.php:535
 msgid "Upload Scroll Logo"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:519
+#: inc/redux-framework/options/header-options.php:536
 msgid ""
 "Scroll Logo is the Logo that you want to appear when the user scrolls down "
 "and the header sticks."
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:527
+#: inc/redux-framework/options/header-options.php:544
 msgid "Primary Menu ( Navbar )"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:535
+#: inc/redux-framework/options/header-options.php:552
 msgid "Responsive Type"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:538
+#: inc/redux-framework/options/header-options.php:555
 msgid "Collapse"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:539
+#: inc/redux-framework/options/header-options.php:556
 msgid "Scroll"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:547
+#: inc/redux-framework/options/header-options.php:564
 msgid "Collapse Breakpoint"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:561
+#: inc/redux-framework/options/header-options.php:578
 msgid "Align"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:573
+#: inc/redux-framework/options/header-options.php:590
 msgid "Dropdown Trigger"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:575
+#: inc/redux-framework/options/header-options.php:592
 msgid "Hover"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:576
+#: inc/redux-framework/options/header-options.php:593
 msgid "Click"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:582
+#: inc/redux-framework/options/header-options.php:599
 msgid "Enable Scroll Nav"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:593
+#: inc/redux-framework/options/header-options.php:610
 msgid "Header Action Button"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:597
+#: inc/redux-framework/options/header-options.php:614
 msgid ""
 "This is the button that appears to the right of the Header when there is no "
 "Primary Menu ( navbar ) or if it is center aligned."
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:609
+#: inc/redux-framework/options/header-options.php:626
 msgid "Text"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:625
+#: inc/redux-framework/options/header-options.php:642
 msgid "Background Color"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:644
+#: inc/redux-framework/options/header-options.php:661
 msgid "Size"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:646
+#: inc/redux-framework/options/header-options.php:663
 msgid "Extra Small"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:647
+#: inc/redux-framework/options/header-options.php:664
 msgid "Small"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:649
+#: inc/redux-framework/options/header-options.php:666
 msgid "Large"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:657
+#: inc/redux-framework/options/header-options.php:674
 msgid "Border Radius"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:659
+#: inc/redux-framework/options/header-options.php:676
 msgid "Rounded 0"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:661
+#: inc/redux-framework/options/header-options.php:678
 msgid "Pill"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:662
+#: inc/redux-framework/options/header-options.php:679
 msgid "Circle"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:668
+#: inc/redux-framework/options/header-options.php:685
 msgid "Enable Transition"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:679
+#: inc/redux-framework/options/header-options.php:696
 msgid "Fullscreen Modal"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:685
+#: inc/redux-framework/options/header-options.php:702
 msgid "Address Title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:695
+#: inc/redux-framework/options/header-options.php:712
 msgid "Add Address"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:696
+#: inc/redux-framework/options/header-options.php:713
 msgid "153 Williamson Plaza, Maggieberg, MT 09514"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:700
+#: inc/redux-framework/options/header-options.php:717
 msgid "Social Title"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:716
+#: inc/redux-framework/options/header-options.php:733
 msgid "Push Top Static Content"
 msgstr ""
 
-#: inc/redux-framework/options/header-options.php:717
+#: inc/redux-framework/options/header-options.php:734
 msgid "Choose a static content for search push top"
 msgstr ""
 
@@ -3081,18 +3087,22 @@ msgid "Options available for your portfolio"
 msgstr ""
 
 #: inc/redux-framework/options/portfolio-options.php:20
+#: inc/redux-framework/options/portfolio-options.php:317
 msgid "Use separate header for portfolio"
 msgstr ""
 
 #: inc/redux-framework/options/portfolio-options.php:21
+#: inc/redux-framework/options/portfolio-options.php:318
 msgid "Do you want to display a separate header for portfolio ?"
 msgstr ""
 
 #: inc/redux-framework/options/portfolio-options.php:29
+#: inc/redux-framework/options/portfolio-options.php:326
 msgid "Portfolio Header"
 msgstr ""
 
 #: inc/redux-framework/options/portfolio-options.php:30
+#: inc/redux-framework/options/portfolio-options.php:327
 msgid "Choose a static block header for portfolio"
 msgstr ""
 
@@ -3144,7 +3154,8 @@ msgstr ""
 #: inc/redux-framework/options/portfolio-options.php:207
 #: inc/redux-framework/options/portfolio-options.php:218
 #: inc/redux-framework/options/portfolio-options.php:229
-#: inc/redux-framework/options/portfolio-options.php:320
+#: inc/redux-framework/options/portfolio-options.php:351
+#: inc/redux-framework/options/portfolio-options.php:382
 msgid "Enabled"
 msgstr ""
 
@@ -3156,7 +3167,8 @@ msgstr ""
 #: inc/redux-framework/options/portfolio-options.php:208
 #: inc/redux-framework/options/portfolio-options.php:219
 #: inc/redux-framework/options/portfolio-options.php:230
-#: inc/redux-framework/options/portfolio-options.php:321
+#: inc/redux-framework/options/portfolio-options.php:352
+#: inc/redux-framework/options/portfolio-options.php:383
 msgid "Disabled"
 msgstr ""
 
@@ -3190,7 +3202,7 @@ msgstr ""
 
 #: inc/redux-framework/options/portfolio-options.php:166
 #: inc/redux-framework/options/portfolio-options.php:274
-#: inc/redux-framework/options/portfolio-options.php:327
+#: inc/redux-framework/options/portfolio-options.php:389
 msgid "Title"
 msgstr ""
 
@@ -3315,45 +3327,65 @@ msgstr ""
 msgid "Select the view for related projects"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:309
+#: inc/redux-framework/options/portfolio-options.php:340
+msgid "Static Content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:348
+msgid "Enable Static Block in Portfolio Page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:349
+msgid "Please choose if you want to enable static block in Portfolio page"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:357
+msgid "Portfolio Static Content"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:358
+msgid "Choose a static block for portfolio Contact"
+msgstr ""
+
+#: inc/redux-framework/options/portfolio-options.php:371
 #: wp-job-manager-resumes/contact-details.php:30
 #: wp-job-manager-resumes/contact-details.php:36
 msgid "Contact"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:317
+#: inc/redux-framework/options/portfolio-options.php:379
 msgid "Enable Contact Block in Portfolio Page"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:318
+#: inc/redux-framework/options/portfolio-options.php:380
 msgid "Please choose if you want to enable contact block in Portfolio page"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:328
+#: inc/redux-framework/options/portfolio-options.php:390
 msgid "Enter the contact section title. HTML tags permitted."
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:329
+#: inc/redux-framework/options/portfolio-options.php:391
 msgid "You wish us %s to talk about %s your project %s"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:337
+#: inc/redux-framework/options/portfolio-options.php:399
 msgid "Enter your contact email address"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:338
+#: inc/redux-framework/options/portfolio-options.php:400
 msgid "support@htmlstream.com"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:344
+#: inc/redux-framework/options/portfolio-options.php:406
 msgid "Social Network Menu"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:345
+#: inc/redux-framework/options/portfolio-options.php:407
 msgid "Select the menu that displays your social networks"
 msgstr ""
 
-#: inc/redux-framework/options/portfolio-options.php:354
+#: inc/redux-framework/options/portfolio-options.php:416
 msgid "Enter your phone number "
 msgstr ""
 
@@ -3468,12 +3500,12 @@ msgid "Add Title"
 msgstr ""
 
 #: inc/redux-framework/options/shop-options.php:174
-#: inc/woocommerce/template-tags/single-product.php:184
+#: inc/woocommerce/template-tags/single-product.php:181
 msgid "Free Shipping"
 msgstr ""
 
 #: inc/redux-framework/options/shop-options.php:175
-#: inc/woocommerce/template-tags/single-product.php:189
+#: inc/woocommerce/template-tags/single-product.php:186
 msgid "30 Days return"
 msgstr ""
 
@@ -3487,8 +3519,8 @@ msgstr ""
 
 #: inc/redux-framework/options/shop-options.php:186
 #: inc/redux-framework/options/shop-options.php:187
-#: inc/woocommerce/template-tags/single-product.php:185
-#: inc/woocommerce/template-tags/single-product.php:190
+#: inc/woocommerce/template-tags/single-product.php:182
+#: inc/woocommerce/template-tags/single-product.php:187
 msgid ""
 "We offer free shipping anywhere in the U.S. A skilled delivery team will "
 "bring the boxes into your office."
@@ -3800,35 +3832,35 @@ msgstr ""
 msgid "View All"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:96
+#: inc/woocommerce/template-tags/single-product.php:93
 #: templates/shop/single-product-advanced-reviews.php:106
 msgid "Write a review"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:98
+#: inc/woocommerce/template-tags/single-product.php:95
 msgid "Read %s review"
 msgid_plural "Read all %s reviews"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/woocommerce/template-tags/single-product.php:123
+#: inc/woocommerce/template-tags/single-product.php:120
 msgid "Total price:"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:141
+#: inc/woocommerce/template-tags/single-product.php:138
 msgid "Select quantity"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:317
-#: inc/woocommerce/template-tags/single-product.php:347
+#: inc/woocommerce/template-tags/single-product.php:314
+#: inc/woocommerce/template-tags/single-product.php:344
 msgid "Awaiting product image"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:466
+#: inc/woocommerce/template-tags/single-product.php:463
 msgid "Upsell Products"
 msgstr ""
 
-#: inc/woocommerce/template-tags/single-product.php:473
+#: inc/woocommerce/template-tags/single-product.php:470
 msgid "Related Products"
 msgstr ""
 
@@ -4470,7 +4502,7 @@ msgid "Duplicate"
 msgstr ""
 
 #: job_manager/job-dashboard.php:89
-#: mas-wp-job-manager-company/company-dashboard.php:65
+#: mas-wp-job-manager-company/company-dashboard.php:89
 #: wp-job-manager-resumes/candidate-dashboard.php:62
 msgid "Relist"
 msgstr ""
@@ -4480,7 +4512,7 @@ msgid "Continue Submission"
 msgstr ""
 
 #: job_manager/job-dashboard.php:104
-#: mas-wp-job-manager-company/company-dashboard.php:70
+#: mas-wp-job-manager-company/company-dashboard.php:96
 #: wp-job-manager-alerts/my-alerts.php:70
 #: wp-job-manager-resumes/candidate-dashboard.php:67
 msgid "Delete"
@@ -4530,28 +4562,28 @@ msgstr ""
 msgid "Your Review"
 msgstr ""
 
-#: mas-wp-job-manager-company/company-dashboard.php:22
+#: mas-wp-job-manager-company/company-dashboard.php:21
 msgid "Your company can be viewed, edited or removed below."
 msgid_plural "Your companies can be viewed, edited or removed below."
 msgstr[0] ""
 msgstr[1] ""
 
-#: mas-wp-job-manager-company/company-dashboard.php:34
+#: mas-wp-job-manager-company/company-dashboard.php:33
 msgid "You do not have any active company listings."
 msgstr ""
 
-#: mas-wp-job-manager-company/company-dashboard.php:54
+#: mas-wp-job-manager-company/company-dashboard.php:57
 #: wp-job-manager-resumes/candidate-dashboard.php:54
 msgid "Hide"
 msgstr ""
 
-#: mas-wp-job-manager-company/company-dashboard.php:57
-#: mas-wp-job-manager-company/company-dashboard.php:61
+#: mas-wp-job-manager-company/company-dashboard.php:63
+#: mas-wp-job-manager-company/company-dashboard.php:73
 #: wp-job-manager-resumes/candidate-dashboard.php:58
 msgid "Publish"
 msgstr ""
 
-#: mas-wp-job-manager-company/company-dashboard.php:99
+#: mas-wp-job-manager-company/company-dashboard.php:125
 msgid "Add Company"
 msgstr ""
 

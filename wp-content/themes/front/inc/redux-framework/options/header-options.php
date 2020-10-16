@@ -413,7 +413,11 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account login form title', 'front' ),
             'id'        => 'header_my_account_login_form_title',
             'type'      => 'text',
-            'required'  => $header_my_account_login_form_title_condition
+            'required'  => array( 
+                array( 'header_enable_topbar_right', 'equals', true ),
+                array( 'header_enable_user_account', 'equals', true ),
+                array( 'header_enable_topbar', '=', true ),
+            ),
         ),
 
         array(
@@ -421,7 +425,9 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account login form description', 'front' ),
             'id'        => 'header_my_account_login_form_description',
             'type'      => 'textarea',
-            'required'  => $header_my_account_regster_form_description_condition
+            'required'  => array(
+                array( 'front_header_user_account_view', 'equals', array( 'sidebar-left', 'sidebar-right' ) )
+            )
         ),
 
         array(
@@ -429,7 +435,11 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account register form title', 'front' ),
             'id'        => 'header_my_account_register_form_title',
             'type'      => 'text',
-            'required'  => $header_my_account_login_form_title_condition
+            'required'  => array( 
+                array( 'header_enable_topbar_right', 'equals', true ),
+                array( 'header_enable_user_account', 'equals', true ),
+                array( 'header_enable_topbar', '=', true ),
+            ),
         ),
 
         array(
@@ -437,7 +447,9 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account register form description', 'front' ),
             'id'        => 'header_my_account_register_form_description',
             'type'      => 'textarea',
-            'required'  => $header_my_account_regster_form_description_condition
+            'required'  => array(
+                array( 'front_header_user_account_view', 'equals', array( 'sidebar-left', 'sidebar-right' ) )
+            )
         ),
 
         array(
@@ -445,7 +457,11 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account reset password form title', 'front' ),
             'id'        => 'header_my_account_forget_password_form_title',
             'type'      => 'text',
-            'required'  => $header_my_account_login_form_title_condition
+            'required'  => array( 
+                array( 'header_enable_topbar_right', 'equals', true ),
+                array( 'header_enable_user_account', 'equals', true ),
+                array( 'header_enable_topbar', '=', true ),
+            ),
         ),
 
         array(
@@ -453,7 +469,9 @@ $header_topbar_options = apply_filters( 'front_header_topbar_options_args', arra
             'subtitle'  => esc_html__( 'Enter header my account reset password form description', 'front' ),
             'id'        => 'header_my_account_forget_password_form_description',
             'type'      => 'textarea',
-            'required'  => $header_my_account_regster_form_description_condition
+            'required'  => array(
+                array( 'front_header_user_account_view', 'equals', array( 'sidebar-left', 'sidebar-right' ) )
+            )
         ),
 
         array(
@@ -479,11 +497,10 @@ $header_logo_options = apply_filters( 'front_header_logo_options_args', array(
         array(
             'title'     => esc_html__( 'Enable Logo White', 'front' ),
             'id'        => 'header_enable_logo_white',
-            'desc'      => esc_html__( 'Use this option to enable to display White Logo for darker backgrounds.', 'front' ),
+            'desc'      => esc_html__( 'Use this option to enable to display White Logo for darker backgrounds( Works only for default logo ).', 'front' ),
             'on'        => esc_html__('Yes', 'front'),
             'off'       => esc_html__('No', 'front'),
             'type'      => 'switch',
-            'required'  => ! has_custom_logo(),
             'default'   => false,
         ),
 

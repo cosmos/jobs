@@ -191,3 +191,7 @@ pre {
 iframe {
     width: 100%;
 }
+
+.u-text-animation:not(.u-text-animation-initializd) {
+    display: none;
+}

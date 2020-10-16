@@ -305,6 +305,68 @@ $portfolio_related_projects_options = apply_filters( 'front_portfolio_related_pr
     )
 ) );
 
+$portfolio_header_options = apply_filters( 'front_portfolio_header_options_args', array(
+    'title'            => esc_html__( 'Header', 'front' ),
+    'id'               => 'portfolio-header',
+    'subsection'       => true,
+    'customizer_width' => '450px',
+    'fields'           => array(
+        array(
+            'id'        => 'enable_separate_potfolio_header',
+            'type'      => 'switch',
+            'title'     => esc_html__( 'Use separate header for portfolio', 'front' ),
+            'subtitle'  => esc_html__( 'Do you want to display a separate header for portfolio ?', 'front' ),
+            'on'        => esc_html__( 'Yes', 'front' ),
+            'off'       => esc_html__( 'No', 'front' ),
+            'default'   => 0,
+        ),
+
+        array(
+            'id'        => 'header_portfolio_static_block_id',
+            'title'     => esc_html__( 'Portfolio Header', 'front' ),
+            'subtitle'  => esc_html__( 'Choose a static block header for portfolio', 'front' ),
+            'type'      => 'select',
+            'data'      => 'posts',
+            'args'      => array(
+                'post_type'         => 'mas_static_content',
+                'posts_per_page'    => -1,
+            ),
+            'required'  => array( 'enable_separate_potfolio_header', 'equals', 1 ),
+        ),
+    )
+) );
+
+$portfolio_static_content_options = apply_filters( 'front_portfolio_static_content_args', array(
+    'title'            => esc_html__( 'Static Content', 'front' ),
+    'id'               => 'portfolio-Static-Content',
+    'subsection'       => true,
+    'customizer_width' => '450px',
+    'fields'           => array(
+        array(
+            'id'        => 'portfolio_enable_static_content_block',
+            'type'      => 'switch',
+            'title'     => esc_html__( 'Enable Static Block in Portfolio Page', 'front' ),
+            'subtitle'  => esc_html__( 'Please choose if you want to enable static block in Portfolio page', 'front' ),
+            'default'   => false,
+            'on'        => esc_html__( 'Enabled', 'front' ),
+            'off'       => esc_html__( 'Disabled', 'front' ),
+        ),
+
+        array(
+            'id'        => 'portfolio_static_content_block',
+            'title'     => esc_html__( 'Portfolio Static Content', 'front' ),
+            'subtitle'  => esc_html__( 'Choose a static block for portfolio Contact', 'front' ),
+            'type'      => 'select',
+            'data'      => 'posts',
+            'args'      => array(
+                'post_type'         => 'mas_static_content',
+                'posts_per_page'    => -1,
+            ),
+            'required'  => array( 'portfolio_enable_static_content_block', 'equals', true ),
+        ),
+    )
+) );
+
 $portfolio_contact_options = apply_filters( 'front_portfolio_contact_options_args', array(
     'title'            => esc_html__( 'Contact', 'front' ),
     'id'               => 'portfolio-contact',
@@ -344,7 +406,7 @@ $portfolio_contact_options = apply_filters( 'front_portfolio_contact_options_arg
             'title'    => esc_html__( 'Social Network Menu', 'front' ),
             'subtitle' => esc_html__( 'Select the menu that displays your social networks', 'front' ),
             'data'     => 'menus',
-            'default'  => ''
+            'default'  => '',
         ),
 
         array(   

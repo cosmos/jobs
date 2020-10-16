@@ -6,6 +6,11 @@
  */
 
 /**
+ * General Hooks
+ */
+add_action( 'enqueue_block_editor_assets', 'front_redux_remove_custom_css_panel', 99 );
+
+/**
  * General Filters
  */
 add_filter( 'front_scroll_to_top_enable', 'front_redux_scroll_to_top_enable' );
@@ -137,7 +142,7 @@ add_filter( 'front_portfolio_post_excerpt_enable', 'front_redux_toggle_portfolio
  */
 add_filter( 'front_portfolio_enable_hero', 'front_redux_toggle_portfolio_hero_enable', 10 );
 add_filter( 'front_portfolio_hero_title', 'front_redux_change_portfolio_hero_title', 10 );
-add_filter( 'front_porfolio_hero_subtitle', 'front_redux_change_portfolio_hero_subtitle', 10 );
+add_filter( 'front_portfolio_hero_subtitle', 'front_redux_change_portfolio_hero_subtitle', 10 );
 
 /*
  * Portfolio Related Works
@@ -163,6 +168,8 @@ add_filter( 'front_portfolio_contact_section_title', 'front_redux_change_portfol
 add_filter( 'front_portfolio_contact_email', 'front_redux_change_portfolio_contact_email', 10 );
 add_filter( 'front_portfolio_contact_sm_menu_id', 'front_redux_change_portfolio_contact_sm_menu_id', 10 );
 add_filter( 'front_portfolio_contact_phone', 'front_redux_change_portfolio_contact_phone', 10 );
+add_filter( 'front_portfolio_enable_static_content_block', 'front_redux_toggle_portfolio_static_content', 10 );
+add_filter( 'front_portfolio_static_block_id', 'front_redux_portfolio_static_content', 10 );
 
 /*
  * Job Header & Footer

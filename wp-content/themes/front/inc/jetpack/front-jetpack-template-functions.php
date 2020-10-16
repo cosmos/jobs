@@ -12,7 +12,7 @@ if ( ! function_exists( 'front_portfolio_hero' ) ) {
 
         $hero_title = apply_filters( 'front_portfolio_hero_title', sprintf( esc_html__( 'Portfolio %s card %s', 'front' ), '<span class="font-weight-semi-bold">', '</span>' ) );
 
-        $hero_subtitle = apply_filters( 'front_porfolio_hero_subtitle', esc_html__( 'Your portfolio should tell your story.', 'front' ) );
+        $hero_subtitle = apply_filters( 'front_portfolio_hero_subtitle', esc_html__( 'Your portfolio should tell your story.', 'front' ) );
 
         if ( $enable_portfolio_hero == true ) {
             ?><!-- Hero Section -->
@@ -149,7 +149,7 @@ if ( ! function_exists( 'front_portfolio_get_cbp_class_and_atts' ) ) {
     }
 }
 
-if ( ! function_exists( 'front_porfolio_content' ) ) {
+if ( ! function_exists( 'front_portfolio_content' ) ) {
     function front_portfolio_content( $portfolio_view = '' ) {
         $portfolio_view = ! empty( $portfolio_view ) ? $portfolio_view : front_get_portfolio_view();
 
@@ -172,6 +172,17 @@ if ( ! function_exists( 'front_porfolio_content' ) ) {
 
 if ( ! function_exists( 'front_portfolio_post_excerpt' ) ) {
     function front_portfolio_post_excerpt() {
+        global $post;
+        $post_excerpt = get_post_meta( $post->ID, '_description', true );
+
+        if( empty( $post_excerpt ) ) {
+            $post_excerpt = $post->post_excerpt;
+        }
+
+        if( empty( $post_excerpt ) ) {
+            $post_excerpt = get_the_excerpt();
+        }
+
         $portfolio_view = front_get_portfolio_view();
         if ( $portfolio_view == 'classic' ) {
             $content_class = 'dark';
@@ -183,8 +194,8 @@ if ( ! function_exists( 'front_portfolio_post_excerpt' ) ) {
             $content_class .= ' px-3'; 
         }
 
-        if ( apply_filters( 'front_portfolio_post_excerpt_enable', true ) && ! empty( get_the_excerpt() ) ) {
-            ?><p class="portfolio-post-content small mb-0 mt-1 text-<?php echo esc_attr( $content_class ); ?>"><?php echo get_the_excerpt(); ?></p><?php
+        if ( apply_filters( 'front_portfolio_post_excerpt_enable', true ) && ! empty( $post_excerpt ) ) {
+            ?><div class="portfolio-post-content small mb-0 mt-1 text-<?php echo esc_attr( $content_class ); ?>"><?php echo wp_kses_post( $post_excerpt ); ?></div><?php
         }
     }
 }
@@ -323,6 +334,20 @@ if ( ! function_exists( 'front_loop_portfolio_wrap_end' ) ) {
     }
 }
 
+if ( ! function_exists( 'front_portfolio_static_content' ) ) {
+    /**
+     * Display the static content in footer
+     */
+    function front_portfolio_static_content() {
+        if( apply_filters( 'portfolio_enable_static_content_block', true )) {
+            $static_content_id = apply_filters( 'front_portfolio_static_block_id', '' );
+
+            if( front_is_mas_static_content_activated() && ! empty( $static_content_id ) ) {
+                echo do_shortcode( '[mas_static_content id=' . $static_content_id . ' class="contact-static-content"]' );
+            }
+        }
+    }
+}
 
 if ( ! function_exists( 'front_portfolio_contact' ) ) {
     function front_portfolio_contact() {
@@ -428,13 +453,32 @@ if ( ! function_exists( 'front_portfolio_pagination' ) ) {
 }
 
 if ( ! function_exists( 'front_single_portfolio_content' ) ) {
-    function front_single_portfolio_content() { 
+    function front_single_portfolio_content() {
+        global $post;
+        $content = get_post_meta( $post->ID, '_description', true );
+
+        if( empty( $content ) ) {
+            $content = $post->post_excerpt;
+        }
+
+        $attributes_json = get_post_meta( $post->ID, '_attributes', true );
+        $attributes = json_decode( $attributes_json );
+        $last_key = '';
+
+        if( ! empty( $attributes ) && is_array( $attributes ) ) {
+            $attributes = array_filter( $attributes );
+            end( $attributes );
+            $last_key = key( $attributes );
+            reset( $attributes );
+        }
 
         ?>
         <div class="container space-2 space-top-md-4 space-bottom-md-3">
             <div class="row">
                 <div class="col-lg-7 mb-7 mb-lg-0">
                    <?php front_portfolio_image_gallery(); ?>
+                   <hr class="my-5">
+                   <?php the_content(); ?>
                 </div>
                 <div id="stickyBlockStartPoint" class="col-lg-5">
                     <div class="js-sticky-block pl-lg-4"
@@ -443,11 +487,32 @@ if ( ! function_exists( 'front_single_portfolio_content' ) ) {
                        data-start-point="#stickyBlockStartPoint"
                        data-end-point="#stickyBlockEndPoint"
                        data-offset-top="80"
-                       data-offset-bottom="130">
+                       data-offset-bottom="130"
+                    >
                         <div class="mb-6">
-                          <h1 class="h4 text-primary font-weight-semi-bold"><?php the_title(); ?></h1>
-                          <?php the_content(); ?>
+                            <h1 class="h4 text-primary font-weight-semi-bold"><?php the_title(); ?></h1>
+                            <?php echo wp_kses_post( $content ); ?>
                         </div>
+                        <?php if( ! empty( $attributes ) && is_array( $attributes ) ) : ?>
+                            <hr class="my-5">
+                            <ul class="list-unstyled mb-0">
+                                <?php foreach ( $attributes as $key => $attribute ) : ?>
+                                    <?php if( isset( $attribute->label ) && ! empty( $attribute->label ) ) : ?>
+                                        <li class="media<?php if( $last_key !== $key ) { echo esc_attr( ' mb-1' ); } ?>">
+                                            <div class="d-flex w-40 w-sm-30">
+                                                <h3 class="h6"><?php echo esc_html( $attribute->label ); ?></h3>
+                                            </div>
+                                            <div class="media-body">
+                                                <small class="text-muted">
+                                                    <?php echo wp_kses_post( isset( $attribute->value ) ? $attribute->value : '' ); ?>
+                                                </small>
+                                            </div>
+                                        </li>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+                        <?php front_single_portfolio_share(); ?>
                     </div>
                 </div>
             </div>
@@ -457,7 +522,28 @@ if ( ! function_exists( 'front_single_portfolio_content' ) ) {
     <?php
     }
 }
- 
+
+if( ! function_exists( 'front_single_portfolio_share' ) ) {
+    function front_single_portfolio_share() {
+        if ( function_exists( 'sharing_display' ) && apply_filters( 'front_single_portfolio_share_enable', true ) ) {
+            global $post;
+            $show = false;
+            $options = get_option( 'sharing-options' );
+
+            if ( is_singular() && in_array( get_post_type(), $options['global']['show'], true ) ) {
+                $show = true;
+            }
+            $switched_status = get_post_meta( $post->ID, 'sharing_disabled', false );
+            if ( ! empty( $switched_status ) ) {
+                $show = false;
+            }
+
+            if( $show ) {
+                sharing_display( '', true );
+            }
+        }
+    }
+}
 
 if ( ! function_exists( 'front_portfolio_image_gallery' ) ) {
     function front_portfolio_image_gallery( $view = '' ) {

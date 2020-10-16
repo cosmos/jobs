@@ -14,6 +14,7 @@ add_action( 'front_loop_portfolio_before', 'front_loop_portfolio_wrap_start', 10
 add_action( 'front_loop_portfolio', 'front_portfolio_content', 10);
 add_action( 'front_loop_portfolio_after', 'front_loop_portfolio_wrap_end', 10 );
 add_action( 'front_after_portfolio', 'front_portfolio_contact', 10 );
+add_action( 'front_after_portfolio', 'front_portfolio_static_content', 20 );
 
 /**
  * Single Portfolio

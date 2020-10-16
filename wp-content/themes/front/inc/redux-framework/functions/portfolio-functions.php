@@ -182,6 +182,32 @@ if ( ! function_exists( 'front_redux_change_portfolio_contact_phone' ) ) {
     }
 }
 
+if ( ! function_exists( 'front_redux_toggle_portfolio_static_content' ) ) {
+    function front_redux_toggle_portfolio_static_content( $enabled ) {
+        global $front_options;
+
+        if ( isset( $front_options['portfolio_enable_static_content_block'] ) ) {
+            $enabled = (bool) $front_options['portfolio_enable_static_content_block'];
+        }
+
+        return $enabled;
+    }
+}
+
+if( ! function_exists( 'front_redux_portfolio_static_content' ) ) {
+    function front_redux_portfolio_static_content( $portfolio_static_block_id ) {
+        global $front_options;
+
+        $portfolio_enable_static_content_block = isset( $front_options['portfolio_enable_static_content_block'] ) && $front_options['portfolio_enable_static_content_block'];
+
+        if( $portfolio_enable_static_content_block && isset( $front_options['portfolio_static_content_block'] ) && ( is_post_type_archive( 'jetpack-portfolio' ) || is_singular( 'jetpack-portfolio' ) ) ) {
+            $portfolio_static_block_id = $front_options['portfolio_static_content_block'];
+        }
+
+        return $portfolio_static_block_id;
+    }
+}
+
 if ( ! function_exists( 'front_redux_toggle_separate_portfolio_header' ) ) {
     function front_redux_toggle_separate_portfolio_header( $enable_separate_portfolio_header ) {
         global $front_options;
@@ -200,9 +226,9 @@ if( ! function_exists( 'front_redux_portfolio_header_static_block' ) ) {
     function front_redux_portfolio_header_static_block( $portfolio_static_block_id ) {
         global $front_options;
 
-        $enable_separate_potfolio_header = isset( $front_options['enable_separate_potfolio_header'] ) && $front_options['enable_separate_potfolio_header'];
+        $enable_separate_portfolio_header = isset( $front_options['enable_separate_portfolio_header'] ) && $front_options['enable_separate_potfolio_header'];
 
-        if( $enable_separate_potfolio_header && isset( $front_options['header_portfolio_static_block_id'] ) && ( is_post_type_archive( 'jetpack-portfolio' ) || is_singular( 'jetpack-portfolio' ) ) ) {
+        if( $enable_separate_portfolio_header && isset( $front_options['header_portfolio_static_block_id'] ) && ( is_post_type_archive( 'jetpack-portfolio' ) || is_singular( 'jetpack-portfolio' ) ) ) {
             $portfolio_static_block_id = $front_options['header_portfolio_static_block_id'];
         }
 
