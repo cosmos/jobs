@@ -512,6 +512,7 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   unset( $fields['job']['job_listing_salary'] );
   unset( $fields['job']['job_listing_project_length'] );
   unset( $fields['job']['job_listing_working_environment'] );
+  unset( $fields['company']['company_tagline'] );
   // unset( $fields['job']['job_tags'] );
   // unset( $fields['job']['job_deadline'] ); 
   return $fields;

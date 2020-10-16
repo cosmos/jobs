@@ -1,6 +1,8 @@
-body.login {
+body.login,
+.login form {
 	background: #1d1e43;
 	color: #ffffff;
+	border: none;
 	input {
 		border: none;
 	}
@@ -30,4 +32,21 @@ body.login div#login p#nav a {
 body.login div#login p#backtoblog {}
 body.login div#login p#backtoblog a {
 	color: #ffffff;
+}
+
+.login #login_error,
+.login .message,
+.login .success {
+  background-color: transparent;
+  border-left-color: #5064fb !important
+}
+.wp-core-ui .button-primary {
+	background: #5064fb !important;
+	border-color: #5064fb !important;
+}
+#pass-strength-result.strong {
+  background-color: #5064fb;
+  border-color: #5064fb;
+  border-radius: 5px;
+  margin-top: 5px;
 }
