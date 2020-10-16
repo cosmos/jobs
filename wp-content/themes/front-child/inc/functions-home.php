@@ -76,7 +76,7 @@
 					$html .= '<div class="col-md-4">';
 						for ($i = 0; $i <= 0; $i++) {
 							$html .= '<div class="col-12 text-center">';
-								$html .= $value['name'];
+								$html .= '<h5>'.$value['name'].'</h5>';
 							$html .= '</div>';
 						}
 					$html .= '</div>';
@@ -92,7 +92,6 @@
 							$company_meta = get_post_meta($company_id);
 							$job = $job_meta['_job_title'][0];	
 							$location = $job_meta['_job_location'][0];
-							// var_dump($company_id);
 							$company = get_post($company_id)->post_title;
 							$logo = $company_meta['_company_logo'][0];
 							if (empty($logo)) {
@@ -108,7 +107,7 @@
 											$html .= '<div class="media-body px-4">';
 												$html .= '<h4 class="h6 text-dark mb-1">'.$job.'</h4>';
 												$html .= '<small class="d-block text-muted">'.$location.'</small>';
-												if (!is_null($company)) {
+												if ($company_id != null) {
 													$html .= '<small class="d-block text-muted">'.$company.'</small>';
 												}
 											$html .= '</div>';
