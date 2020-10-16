@@ -5,7 +5,7 @@
  * Description:     This selection of extensions compliment our lean and mean theme front. Please note: they don’t work with any WordPress theme, just front.
  * Author:          MadrasThemes
  * Author URI:      https://madrasthemes.com/
- * Version:         1.1.0
+ * Version:         1.1.2
  * Text Domain:     front-extensions
  * Domain Path:     /languages
  */

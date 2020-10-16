@@ -34,7 +34,8 @@ if ( ! function_exists( 'frontgb_render_customer_stories_content_block' ) ) {
             'post_type'         => 'customer_story',
             'orderby'           => 'date',
             'order'             => 'DESC',
-            'per_page'          => 3
+            'per_page'          => 3,
+            'include'     => ( ! empty( $attributes['posts'] ) && is_array($attributes['posts']) ) ? array_column($attributes['posts'], 'id') : '',
         );
 
         $args = wp_parse_args( $attributes['shortcode_atts'], $default_args );

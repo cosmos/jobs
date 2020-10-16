@@ -26,13 +26,13 @@ if ( ! function_exists( 'frontgb_render_sidebar_block' ) ) {
             ?>
             <div class="<?php if( ! empty( $attributes['className'] ) ) { echo esc_attr( $attributes['className'] ); } ?>">
                 <div class="navbar-expand-lg navbar-expand-lg-collapse-block">
-                    <button class="btn btn-block btn-gray d-lg-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false" aria-label="<?php echo esc_attr__( 'Toggle navigation', FRONTGB_I18N ); ?>">
+                    <button class="btn btn-block btn-gray d-lg-none collapsed" type="button" data-toggle="collapse" data-target="#sidebar-nav" aria-controls="sidebar-nav" aria-expanded="false" aria-label="<?php echo esc_attr__( 'Toggle navigation', FRONTGB_I18N ); ?>">
                         <span class="d-flex justify-content-between align-items-center">
                             <span><?php echo esc_html__( 'View all categories', FRONTGB_I18N ); ?></span>
                             <span class="fas fa-angle-right"></span>
                         </span>
                     </button>
-                    <div id="customSidebarNav" class="navbar-collapse collapse">
+                    <div id="sidebar-nav" class="navbar-collapse collapse">
                         <?php dynamic_sidebar( $attributes['sidebarName'] ); ?>
                     </div>
                 </div>

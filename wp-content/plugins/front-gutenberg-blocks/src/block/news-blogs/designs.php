@@ -82,7 +82,7 @@ if ( ! function_exists( 'frontgb_blog_posts_designs' ) ) {
             $markup .= '<div class="' . esc_attr( $cardBodyClass ) . '" style="' . esc_attr($cardBodyStyle) . '">';
             if ($attributes['displayIcon']) {
                 $markup .= '<span class="' . esc_attr($iconClass) . '">';
-                $markup .= '<span class="' . esc_attr( ! empty($attributes['icon0']) ? $attributes['icon0'] : ( $props['index'] % 2 ) == 0 ? 'fab fa-audible' : 'far fa-file-archive' ) . ' font-size-5 btn-icon__inner btn-icon__inner-bottom-minus"></span>';
+                $markup .= '<span class="' . esc_attr( ! empty( $attributes['icon0'] ) ? $attributes['icon0'] : ( ( $props['index'] % 2 ) == 0 ? 'fab fa-audible' : 'far fa-file-archive' ) ) . ' font-size-5 btn-icon__inner btn-icon__inner-bottom-minus"></span>';
                 $markup .= '</span>';
             }
             if ($attributes['displayCategory']) {

@@ -13,63 +13,63 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/init.php:410
+#: src/init.php:393
 msgid "FrontGB"
 msgstr ""
 
-#: src/init.php:414
+#: src/init.php:397
 msgid "FrontGB Products"
 msgstr ""
 
-#: src/init.php:418
+#: src/init.php:401
 msgid "FrontGB Info Blocks"
 msgstr ""
 
-#: src/init.php:422
+#: src/init.php:405
 msgid "FrontGB Jobs"
 msgstr ""
 
-#: src/init.php:426
+#: src/init.php:409
 msgid "FrontGB Hero"
 msgstr ""
 
-#: src/init.php:430
+#: src/init.php:413
 msgid "FrontGB Hero Carousel"
 msgstr ""
 
-#: src/init.php:434
+#: src/init.php:417
 msgid "FrontGB Hero Form"
 msgstr ""
 
-#: src/init.php:438
+#: src/init.php:421
 msgid "FrontGB Pricing"
 msgstr ""
 
-#: src/init.php:442
+#: src/init.php:425
 msgid "FrontGB Gallery"
 msgstr ""
 
-#: src/init.php:446
+#: src/init.php:429
 msgid "FrontGB Contact Form"
 msgstr ""
 
-#: src/init.php:450
+#: src/init.php:433
 msgid "FrontGB Docs"
 msgstr ""
 
-#: src/init.php:454
+#: src/init.php:437
 msgid "FrontGB Listing"
 msgstr ""
 
-#: src/init.php:458
+#: src/init.php:441
 msgid "FrontGB Footer"
 msgstr ""
 
-#: src/init.php:462
+#: src/init.php:445
 msgid "FrontGB Portfolio"
 msgstr ""
 
-#: src/init.php:466
+#: src/init.php:449
 msgid "FrontGB Stats"
 msgstr ""
 
@@ -145,11 +145,11 @@ msgstr ""
 msgid "\"customer_story\" post type is not available"
 msgstr ""
 
-#: src/block/customer-stories-content/index.php:88
+#: src/block/customer-stories-content/index.php:89
 msgid "Customer Stories is empty"
 msgstr ""
 
-#: src/block/customer-stories-content/index.php:79
+#: src/block/customer-stories-content/index.php:80
 msgid "Read Story"
 msgstr ""
 

@@ -5,7 +5,7 @@
  * Description: Gutenberg Blocks for Front WordPress Theme
  * Author: MadrasThemes
  * Author URI: https://themeforest.net/user/madrasthemes/portfolio
- * Version: 1.1.0
+ * Version: 1.1.2
  *
  * @package FrontGB
  */
@@ -21,7 +21,7 @@ if ( function_exists( 'sugb_fs' ) ) {
 	return;
 }
 
-defined( 'FRONTGB_VERSION' ) || define( 'FRONTGB_VERSION', '1.1.0' );
+defined( 'FRONTGB_VERSION' ) || define( 'FRONTGB_VERSION', '1.1.2' );
 defined( 'FRONTGB_FILE' ) || define( 'FRONTGB_FILE', __FILE__ );
 defined( 'FRONTGB_I18N' ) || define( 'FRONTGB_I18N', 'front-gutenberg-blocks' ); // Plugin slug.
 

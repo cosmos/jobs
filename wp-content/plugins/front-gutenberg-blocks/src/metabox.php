@@ -100,6 +100,26 @@ if ( ! function_exists( 'frontgb_register_meta_fields' ) ) {
                 return current_user_can( 'edit_posts' );
             }
         ) );
+
+        add_post_type_support( 'jetpack-portfolio', 'custom-fields' );
+        register_meta( 'post', '_description', array(
+            'object_subtype' => 'jetpack-portfolio',
+            'show_in_rest' => true,
+            'type' => 'string',
+            'single' => true,
+            'auth_callback' => function() { 
+                return current_user_can( 'edit_posts' );
+            }
+        ) );
+        register_meta( 'post', '_attributes', array(
+            'object_subtype' => 'jetpack-portfolio',
+            'show_in_rest' => true,
+            'type' => 'string',
+            'single' => true,
+            'auth_callback' => function() { 
+                return current_user_can( 'edit_posts' );
+            }
+        ) );
     }
     add_action('init', 'frontgb_register_meta_fields');
 }

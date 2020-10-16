@@ -319,27 +319,11 @@ if ( ! function_exists( 'frontgb_block_editor_assets' ) ) {
             FRONTGB_VERSION
         );
 
-        // Backend editor scripts: meta.
-        wp_enqueue_script(
-            'fgb-meta-js',
-            plugins_url( 'dist/editor_meta.js', FRONTGB_FILE ),
-            array( 'wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element' ),
-            FRONTGB_VERSION
-        );
-
-        // Backend editor scripts: formats.
-        wp_enqueue_script(
-            'fgb-format-js',
-            plugins_url( 'dist/editor_formats.js', FRONTGB_FILE ),
-            array( 'wp-rich-text' ),
-            FRONTGB_VERSION
-        );
-
         // Backend editor scripts: blocks.
         wp_enqueue_script(
             'fgb-block-js',
             plugins_url( 'dist/editor_blocks.js', FRONTGB_FILE ),
-            array( 'fgb-block-js-vendor', 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor', 'front-hs-slick-carousel', 'front-hs-svg-injector', 'wp-i18n' ),
+            array( 'fgb-block-js-vendor', 'code-editor', 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor', 'wp-util', 'wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-api', 'front-hs-slick-carousel', 'front-hs-svg-injector' ),
             FRONTGB_VERSION
         );
 
@@ -376,10 +360,9 @@ if ( ! function_exists( 'frontgb_block_editor_assets' ) ) {
             'isRTL'                 => is_rtl(),
             'wpVersion'             => get_bloginfo('version')
         );
-        wp_localize_script( 'fgb-meta-js', 'frontgb', $frontgb_script_data );
         wp_localize_script( 'fgb-block-js', 'frontgb', $frontgb_script_data );
     }
-    add_action( 'enqueue_block_editor_assets', 'frontgb_block_editor_assets' );
+    add_action( 'enqueue_block_editor_assets', 'frontgb_block_editor_assets', 10 );
 }
 
 if ( ! function_exists( 'front_get_assets_url' ) ) {

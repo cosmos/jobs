@@ -97,6 +97,7 @@ if ( ! function_exists( 'front_jetpack_sharing_remove_filters' ) ) {
     }
 }
 
+add_action( 'front_before_portfolio', 'front_jetpack_sharing_remove_filters', 5 );
 add_action( 'front_portfolio_single_post', 'front_jetpack_sharing_remove_filters', 5 );
 add_action( 'front_single_post_before', 'front_jetpack_sharing_remove_filters', 5 );
 
@@ -105,6 +106,15 @@ function front_remove_sharedaddy_excerpt_sharing() {
         remove_filter( 'the_excerpt', 'sharing_display', 19 );
     }
 }
+
+function front_jp_jetpack_sharing_remove_filters( $content ) {
+    if ( function_exists( 'sharing_display' ) && has_shortcode( $content, 'portfolio' ) ) {
+        remove_filter( 'the_content', 'sharing_display', 19 );
+        remove_filter( 'the_excerpt', 'sharing_display', 19 );
+    }
+    return $content;
+}
+add_filter( 'the_content', 'front_jp_jetpack_sharing_remove_filters' );
 
 add_action( 'single_job_listing_before', 'front_remove_sharedaddy_excerpt_sharing' );
 add_action( 'single_company_before', 'front_remove_sharedaddy_excerpt_sharing' );
