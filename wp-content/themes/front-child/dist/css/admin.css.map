@@ -1,0 +1,1 @@
+{"version":3,"file":"admin.css","sources":["admin.scss","layouts/admin.scss"],"sourcesContent":["@import './layouts/admin.scss';","#_projects_contributed_to,\n#_contributors_contributed_to {\n  width: 100%;\n  max-width: 100%;\n  height: 400px;\n}"],"names":[],"mappings":"ACAA,AAAA,yBAAyB;AACzB,6BAA6B,CAAC;EAC5B,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,KAAK,GACd"}
