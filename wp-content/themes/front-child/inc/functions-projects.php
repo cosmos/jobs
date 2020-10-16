@@ -263,7 +263,7 @@ function cosmos_add_project_claim_link() {
       $html .= '</div>';
       $html .= '<input type="hidden" name="project" id="project" value="'.$current_url.'" />';
       $html .= '<input type="hidden" name="user_email" id="user_email" value="'.wp_get_current_user()->data->user_email.'" />';
-      $html .= '<input type="hidden" name="name" id="name" value="'.wp_get_current_user()->data->display_name.'" />';
+      $html .= '<input type="hidden" name="full_name" id="name" value="'.wp_get_current_user()->data->display_name.'" />';
       $html .= '<input type="hidden" name="mailto" id="mailto" value="'.get_bloginfo('admin_email').'" />';
       $html .= '<button name="submit" type="submit" id="submit" class="btn btn-sm btn-primary transition-3d-hoverbtn btn-sm btn-primary transition-3d-hover">Claim this project</button>';
     $html .= '</form>';

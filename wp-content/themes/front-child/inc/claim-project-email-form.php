@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $subject = "Cosmos Jobs - Claim Project Request";
 
   # Sender Data
-  $full_name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+  $full_name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["full_name"])));
   $user_email = filter_var(trim($_POST["user_email"]), FILTER_SANITIZE_EMAIL);
   $project = trim($_POST["project"]);
   
