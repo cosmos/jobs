@@ -92,7 +92,7 @@
 							$company_meta = get_post_meta($company_id);
 							$job = $job_meta['_job_title'][0];	
 							$location = $job_meta['_job_location'][0];
-							var_dump($company_id);
+							// var_dump($company_id);
 							$company = get_post($company_id)->post_title;
 							$logo = $company_meta['_company_logo'][0];
 							if (empty($logo)) {
