@@ -372,7 +372,7 @@ function cosmos_contributors_attributed_to_a_project_cards() {
   //var_dump($contributors);
   $contributors = unserialize($contributors[0]->meta_value);
   if (!empty($contributors)) {
-    $html .= '<div class="border-top pt-5 mt-5 border-bottom pb-2 mb-5">';
+    $html .= '<div class="pt-5 mt-5 border-bottom pb-2 mb-5">';
       $html .= '<h2 class="h5 mb-3">Contributors to the '.get_the_title().' project</h2>';
       $html .= '<div class="row">';
         foreach ($contributors as $key => $value) {
