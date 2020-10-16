@@ -81,7 +81,9 @@ function cosmos_get_job_listing_class( $class = '', $post_id = null ) {
 add_action('wp_enqueue_scripts', 'cosmos_get_post_id'); 
 function cosmos_get_post_id() {
   global $post;
-  return $post->ID;
+  if (isset($post->ID)) {
+    return $post->ID;
+  }
 }
 
 // Gets all the projects
