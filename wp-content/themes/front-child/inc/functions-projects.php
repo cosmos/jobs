@@ -486,6 +486,16 @@ function cosmos_customize_submit_project_form_fields2( $fields ) {
 }
 add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_project_form_fields2', 30 );
 
+// changes the front end form labels on the project page
+function cosmos_customize_submit_project_form_fields3( $fields ) {
+  unset( $fields['company_fields']['create_account_email'] );
+  return $fields;
+}
+add_filter( 'wpjm_get_registration_fields', 'cosmos_customize_submit_project_form_fields3', 30 );
+  
+
+
+
 // Changes the job submit fields on the front end
 add_action( 'after_setup_theme', 'cosmos_customize_submit_job_form_fields_filter');
 function cosmos_customize_submit_job_form_fields_filter() {
