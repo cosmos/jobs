@@ -6,11 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $subject = "Cosmos Jobs - Claim Project Request";
 
   # Sender Data
-  $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+  $full_name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
   $user_email = filter_var(trim($_POST["user_email"]), FILTER_SANITIZE_EMAIL);
   $project = trim($_POST["project"]);
   
-  if ( empty($name) OR !filter_var($user_email, FILTER_VALIDATE_EMAIL) OR empty($project)) {
+  if ( empty($full_name) OR !filter_var($user_email, FILTER_VALIDATE_EMAIL) OR empty($project)) {
       # Set a 400 (bad request) response code and exit.
       http_response_code(400);
       echo "Please complete the form and try again.";
@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   # Mail Content
-  $content = "Name: $name\n";
+  $content = "Name: $full_name\n";
   $content .= "Email: $user_email\n";
   $content .= "Project: $project\n";
 
   # email headers.
-  $headers = "From: $name <$user_email>";
+  $headers = "From: $full_name <$user_email>";
 
   # Send the email.
   $success = mail($mailto, $subject, $content, $headers);
