@@ -368,7 +368,6 @@ function cosmos_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'cosmos_login_logo' );
 
-
 // Prints out the handles of all style sheets and scripts
 // function cosmos_print_scripts_styles() {
 //   // Print all loaded Scripts

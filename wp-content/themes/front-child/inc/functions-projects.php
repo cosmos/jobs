@@ -493,7 +493,26 @@ function cosmos_customize_submit_project_form_fields3( $fields ) {
 }
 add_filter( 'wpjm_get_registration_fields', 'cosmos_customize_submit_project_form_fields3', 30 );
   
-
+// gets all the projects that are authored by the logged in user
+function cosmos_get_projects_by_author() {
+  global $wpdb;
+  $user_email = wp_get_current_user()->user_email;
+  $results = $wpdb->get_results( "SELECT term_taxonomy_id FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'author' AND description LIKE '%".$user_email."%'");
+  $user_id = $results[0]->term_taxonomy_id;
+  $results = $wpdb->get_results( "SELECT object_id FROM {$wpdb->prefix}term_relationships WHERE term_taxonomy_id = '".$user_id."'");
+  foreach ($results as $key => $value) {
+    $posts[] = $value->object_id;
+  }
+  foreach ($posts as $key => $value) {
+    if (get_post($value)->post_type == 'company' && get_post($value)->post_status == 'publish') {
+      $project_id = get_post($value)->ID;
+      $projects[$project_id] = get_post($value)->post_title;
+    }
+  }
+  $select = array('' => 'Select a Project');
+  $projects = $select + $projects;
+  return $projects;
+}
 
 
 // Changes the job submit fields on the front end
@@ -502,8 +521,8 @@ function cosmos_customize_submit_job_form_fields_filter() {
   add_filter( 'submit_job_form_fields', 'cosmos_customize_submit_job_form_fields' );
 }
 function cosmos_customize_submit_job_form_fields( $fields ) {
+  $fields['company']['company_id']['options'] = cosmos_get_projects_by_author();
   $fields['company']['company_id']['label'] = "Select A Project";
-  $fields['company']['company_id']['option'] = "Select A Project";
   $fields['job']['job_category']['priority'] = 2;
   $fields['job']['application']['priority'] = 3;
   $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
