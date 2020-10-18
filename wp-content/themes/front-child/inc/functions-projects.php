@@ -510,8 +510,17 @@ function cosmos_get_projects_by_author() {
     }
   }
   $select = array('' => 'Select a Project');
-  $projects = $select + $projects;
-  return $projects;
+  if (isset($projects)) {
+    if (is_array($projects)) {
+      $projects = $select + $projects;
+    }else{
+      $projects = $select;
+    }
+    return $projects;
+  }else{
+    return $select;
+  }
+
 }
 
 
