@@ -534,7 +534,7 @@ function cosmos_get_projects_by_author() {
 // gets all the published projects
 function cosmos_get_all_projects() {
   global $wpdb;
-  $results = $wpdb->get_results( "SELECT ID, post_title FROM {$wpdb->prefix}posts WHERE post_type = 'company' AND post_status = 'publish' ORDER BY post_title DESC", ARRAY_N);
+  $results = $wpdb->get_results( "SELECT ID, post_title FROM {$wpdb->prefix}posts WHERE post_type = 'company' AND post_status = 'publish' ORDER BY post_title ASC", ARRAY_N);
   foreach ($results as $key => $value) {
     $id = $value[0];
     $projects[$id] = $value[1];
