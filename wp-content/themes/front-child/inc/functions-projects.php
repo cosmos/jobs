@@ -182,6 +182,15 @@ if ( ! function_exists( 'cosmos_fields_remove_admin_fields' ) ) {
 }
 add_filter( 'company_manager_company_fields', 'cosmos_fields_remove_admin_fields', 10 );
 
+// edits fields on the backend of the jobs submission
+function custom_job_manager_job_listing_data_fields( $fields ) {
+  $fields['_company_id']['options'] = cosmos_get_all_projects();
+  $fields['_company_id']['label'] = 'Project';
+  unset( $fields['_company_tagline'] );
+  return $fields;
+}
+add_filter( 'job_manager_job_listing_data_fields', 'custom_job_manager_job_listing_data_fields' );
+
 // Add the additional project logos
 add_action( 'single_company_sidebar', 'cosmos_single_company_linked_accounts', 30 );
 add_action( 'after_setup_theme', 'cosmos_remove_front_single_company_linked_accounts');
@@ -520,10 +529,29 @@ function cosmos_get_projects_by_author() {
   }else{
     return $select;
   }
-
 }
 
-
+// gets all the published projects
+function cosmos_get_all_projects() {
+  global $wpdb;
+  $results = $wpdb->get_results( "SELECT ID, post_title FROM {$wpdb->prefix}posts WHERE post_type = 'company' AND post_status = 'publish' ORDER BY post_title DESC", ARRAY_N);
+  foreach ($results as $key => $value) {
+    $id = $value[0];
+    $projects[$id] = $value[1];
+  }
+  $select = array('' => 'Select a Project');
+  if (isset($projects)) {
+    if (is_array($projects)) {
+      $projects = $select + $projects;
+    }else{
+      $projects = $select;
+    }
+    return $projects;
+  }else{
+    return $select;
+  }
+}
+// var_dump(cosmos_get_all_projects());
 // Changes the job submit fields on the front end
 add_action( 'after_setup_theme', 'cosmos_customize_submit_job_form_fields_filter');
 function cosmos_customize_submit_job_form_fields_filter() {
