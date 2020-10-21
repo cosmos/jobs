@@ -32,16 +32,16 @@
 				$categories[] = get_the_terms($value, 'job_listing_category');
 			}
 		}
-		if (is_array($categories)) {
-			foreach ($categories as $key => $value) {
-				if (is_array($value)) {
-					foreach ($value as $key2 => $value2) {
-						$three_categories[] = array(
-															'term_id' => $value2->term_id,
-															'name' => $value2->name,
-														);
-					}
-				}
+		foreach ($categories as $key => $value) {
+			$all_categories[] = array('term_id' => $value[0]->term_id, 'name' => $value[0]->name);
+		}
+		$unique_categories = array_unique($all_categories, SORT_REGULAR);
+		if (is_array($unique_categories)) {
+			foreach ($unique_categories as $key => $value) {
+				$three_categories[] = array(
+																'term_id' => $value['term_id'],
+																'name' => $value['name'],
+															);
 			}
 		}
 		$three_categories = array_slice($three_categories, 0, 3);
