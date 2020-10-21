@@ -32,7 +32,6 @@
 				$categories[] = get_the_terms($value, 'job_listing_category');
 			}
 		}
-		$categories = array_slice($categories, 0, 3);
 		if (is_array($categories)) {
 			foreach ($categories as $key => $value) {
 				if (is_array($value)) {
@@ -45,6 +44,7 @@
 				}
 			}
 		}
+		$three_categories = array_slice($three_categories, 0, 3);
 		if (is_array($three_categories)) {
 			$three_categories = array_map("unserialize", array_unique(array_map("serialize", $three_categories)));
 			foreach ($three_categories as $key => $value) {
