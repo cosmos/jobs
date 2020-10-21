@@ -32,6 +32,7 @@
 				$categories[] = get_the_terms($value, 'job_listing_category');
 			}
 		}
+		$categories = array_slice($categories, 0, 3);
 		if (is_array($categories)) {
 			foreach ($categories as $key => $value) {
 				if (is_array($value)) {
