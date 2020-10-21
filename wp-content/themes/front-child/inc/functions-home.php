@@ -104,13 +104,13 @@
 								}
 								if (!empty($job_meta)) {
 									$html .= '<div '.cosmos_job_listing_class('list-grid card card-frame transition-3d-hover mw-100 mb-3 p-0',$value[$i]->ID).'>';
-										$html .= '<a href="'.$i.'" class="card-body p-3">';
+										$html .= '<a href="'.get_permalink($value[$i]->ID).'" class="card-body p-3">';
 											$html .= '<div class="media">';
 												$html .= '<div class="u-avatar position-relative">';
 													$html .= '<img class="img-fluid rounded" src="'.$logo.'" alt="'.$value[$i]->post_title.' Logo" loading="lazy">';
 												$html .= '</div>';
 												$html .= '<div class="media-body px-4">';
-													$html .= '<h4 class="h6 text-dark mb-1">'.$job.'</h4>';
+													$html .= '<h4 class="h6 text-dark mb-1">'.$value[$i]->post_title.'</h4>';
 													$html .= '<small class="d-block text-muted">'.$location.'</small>';
 													if ($company_id != null) {
 														$html .= '<small class="d-block text-muted">'.$company.'</small>';
