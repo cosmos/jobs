@@ -40,3 +40,15 @@
 	  background-color: transparent;	
 	}
 }
+@media (max-width: 576px) {
+	.dropdown-menu {
+		right: 0;
+		left: unset;
+	}
+	.dropdown-nav-link {
+		color: #fff;
+		&:hover {
+			color: #5064fb;
+		}
+	}
+}
