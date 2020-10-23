@@ -35,3 +35,8 @@
 		color: #fff;
 	}
 }
+@media (max-width: 767.98px) {
+	.u-header--bg-transparent .u-header__navbar-nav {
+	  background-color: transparent;	
+	}
+}

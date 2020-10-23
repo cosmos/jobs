@@ -73,21 +73,18 @@
 				$html .= '<p>'.$sub_title.'</p>';
 			$html .= '</div>';
 			$html .= '<div class="row">';
-				foreach ($three_categories as $key => $value) {
-					$html .= '<div class="col-md-4">';
-						for ($i = 0; $i <= 0; $i++) {
-							$html .= '<div class="col-12 text-center">';
-								$html .= '<h5>'.$value['name'].'</h5>';
-							$html .= '</div>';
-						}
-					$html .= '</div>';
-				}
 			$html .= '</div>';
 			$html .= '<div class="row">';
 				foreach ($posts as $key => $value) {
 					$job_meta = $company_id = $company_meta = $job = $location = $company = $logo = null;
 					$html .= '<div class="col-md-4">';
 						for ($i = 0; $i <= 2; $i++) {
+							if ($i == 0) {
+								$html .= '<div class="col-12 text-center mt-3 mb-1 mt-md-0 mb-md-0">';
+									$html .= '<h5>'.$three_categories[$ii]['name'].'</h5>';
+								$html .= '</div>';
+								++$ii;
+							}
 							if ($value[$i]->ID != null) {
 								$job_meta = get_post_meta($value[$i]->ID);
 								$company_id = $job_meta['_company_id'][0];
