@@ -567,7 +567,7 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
   $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
   $fields['job']['job_description']['label'] = "Full Description";
-  $fields['job']['job_location']['required'] = true;
+  $fields['job']['job_location']['required'] = false;
   $fields['job']['job_listing_skills']['required'] = true;
   $fields['job']['job_about']['required'] = true;
   unset( $fields['resume_fields']['resume_category'] );
