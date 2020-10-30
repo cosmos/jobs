@@ -85,38 +85,39 @@
 								$html .= '</div>';
 								++$ii;
 							}
-							if ($value[$i]->ID != null) {
-								$job_meta = get_post_meta($value[$i]->ID);
-								$company_id = $job_meta['_company_id'][0];
-								$company_meta = get_post_meta($company_id);
-								$job = $job_meta['_job_title'][0];	
-								$location = $job_meta['_job_location'][0];
-								if (get_post($company_id) != null) {
-									$company = get_post($company_id)->post_title;
-								}
-								if (isset($company_meta['_company_logo'])) {
-									$logo = $company_meta['_company_logo'][0];
-								}
-								if (empty($logo)) {
-									$logo = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
-								}
-								if (!empty($job_meta)) {
-									$html .= '<div '.cosmos_job_listing_class('list-grid card card-frame transition-3d-hover mw-100 mb-3 p-0',$value[$i]->ID).'>';
-										$html .= '<a href="'.get_permalink($value[$i]->ID).'" class="card-body p-3">';
-											$html .= '<div class="media">';
-												$html .= '<div class="u-avatar position-relative">';
-													$html .= '<img class="img-fluid rounded" src="'.$logo.'" alt="'.$value[$i]->post_title.' Logo" loading="lazy">';
+							if (isset($value[$i]->ID)) {
+								if ($value[$i]->ID != null) {
+									$job_meta = get_post_meta($value[$i]->ID);
+									$company_id = $job_meta['_company_id'][0];
+									$company_meta = get_post_meta($company_id);
+									$location = $job_meta['_job_location'][0];
+									if (get_post($company_id) != null) {
+										$company = get_post($company_id)->post_title;
+									}
+									if (isset($company_meta['_company_logo'])) {
+										$logo = $company_meta['_company_logo'][0];
+									}
+									if (empty($logo)) {
+										$logo = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+									}
+									if (!empty($job_meta)) {
+										$html .= '<div '.cosmos_job_listing_class('list-grid card card-frame transition-3d-hover mw-100 mb-3 p-0',$value[$i]->ID).'>';
+											$html .= '<a href="'.get_permalink($value[$i]->ID).'" class="card-body p-3">';
+												$html .= '<div class="media">';
+													$html .= '<div class="u-avatar position-relative">';
+														$html .= '<img class="img-fluid rounded" src="'.$logo.'" alt="'.$value[$i]->post_title.' Logo" loading="lazy">';
+													$html .= '</div>';
+													$html .= '<div class="media-body px-4">';
+														$html .= '<h4 class="h6 text-dark mb-1">'.$value[$i]->post_title.'</h4>';
+														$html .= '<small class="d-block text-muted">'.$location.'</small>';
+														if ($company_id != null) {
+															$html .= '<small class="d-block text-muted">'.$company.'</small>';
+														}
+													$html .= '</div>';
 												$html .= '</div>';
-												$html .= '<div class="media-body px-4">';
-													$html .= '<h4 class="h6 text-dark mb-1">'.$value[$i]->post_title.'</h4>';
-													$html .= '<small class="d-block text-muted">'.$location.'</small>';
-													if ($company_id != null) {
-														$html .= '<small class="d-block text-muted">'.$company.'</small>';
-													}
-												$html .= '</div>';
-											$html .= '</div>';
-										$html .= '</a>';
-									$html .= '</div>';
+											$html .= '</a>';
+										$html .= '</div>';
+									}
 								}
 							}
 						}
