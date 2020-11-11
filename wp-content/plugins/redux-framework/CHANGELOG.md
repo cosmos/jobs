@@ -1,5 +1,20 @@
 # Redux Changelog
 
+## 4.1.23
+* Fixed: Massive speed improvement to the library.
+* Fixed: Pro template count error if previously activated and Redux Pro not enabled. 
+* Release date: Oct 24, 2020
+
+## 4.1.22
+* Fixed: Menu locations WordPress data object not providing name.
+* Added: Undefined if menu location is not assigned to a menu.
+* Fixed: Another import/export edge case.
+* Fixed: Fix setField API value.
+* Fixed: Older extension compatibility.
+* Fixed: Text field error with data/options args not displaying properly.
+* Fixed: Import/Export now properly respects order of objects. Now using PHP over JS json_encode.
+* Release date: Oct 23, 2020
+
 ## 4.1.21
 * Fixed: Fixed connection banner to hide even if JS is broken by jQuery migrate issue (WP 5.5).
 * Fixed: Resolved all remaining legacy extension compatibility issues.

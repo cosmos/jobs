@@ -35,3 +35,20 @@
 		color: #fff;
 	}
 }
+@media (max-width: 767.98px) {
+	.u-header--bg-transparent .u-header__navbar-nav {
+	  background-color: transparent;	
+	}
+}
+@media (max-width: 576px) {
+	.dropdown-menu {
+		right: 0;
+		left: unset;
+	}
+	.dropdown-nav-link {
+		color: #fff;
+		&:hover {
+			color: #5064fb;
+		}
+	}
+}

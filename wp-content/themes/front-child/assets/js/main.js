@@ -38,3 +38,7 @@
         .fail(fail_func);
     });
 })(jQuery);
+
+// Adds required to the job_type field when posting a job
+jQuery("select#job_type").prop('required',true);
+jQuery("select#job_category").prop('required',true);

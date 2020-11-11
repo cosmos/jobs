@@ -21,6 +21,19 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+.input-tag {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  display: block !important;
+  top: 20px;
+}
+.select2-hidden-accessible,
+.select2-hidden-accessible:focus {
+  left: auto!important;
+  top: auto!important;
+  margin: -1px;
+}
 @media (min-width: 768px) {
 	#submit-resume-form .fieldset-type-url,
 	#submit-resume-form .fieldset-type-email {

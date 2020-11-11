@@ -5,8 +5,12 @@
 	        <div class="mb-4">
 	            <?php
 			    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
-			    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
-			    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+			    		if (isset(get_post_meta(cosmos_get_post_id())['_company_name'][0])) {
+			    			$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+			    		}
+			    		if (isset(get_post_meta($company_id, '_company_logo')[0])) {
+			    			$company_image = get_post_meta($company_id, '_company_logo')[0];
+			    		}
 								if (!empty($company_image)) {
 									$image = $company_image;
 								}else{
@@ -78,6 +82,69 @@
 	    }
 	}
 
+if( ! function_exists( 'front_single_job_listing_summary_icon_block_elements' ) ) {
+    function front_single_job_listing_summary_icon_block_elements() {
+        $args = apply_filters( 'front_single_job_listing_summary_icon_block_elements_args', array(
+            'job_location' => array(
+                'text_1' => get_the_job_location(),
+                'text_2' => esc_html__( 'Location', 'front' ),
+                'icon' => 'fas fa-map-marked-alt',
+            ),
+            'job_type' => array(
+                'text_1' => front_get_taxomony_data( 'job_listing_type' ),
+                'text_2' => esc_html__( 'Job Type', 'front' ),
+                'icon' => 'fas fa-clock',
+            ),
+            'project_length' => array(
+                'text_1' => front_get_taxomony_data( 'job_listing_project_length' ),
+                'text_2' => esc_html__( 'Project length', 'front' ),
+                'icon' => 'fas fa-business-time',
+            ),
+            'job_salary' => array(
+                'text_1' => esc_html__( 'Salary', 'front' ),
+                'text_2' => front_get_taxomony_data( 'job_listing_salary' ),
+                'icon' => 'fas fa-money-bill-alt',
+            ),
+            'entry_level' => array(
+                'text_1' => esc_html__( 'Entry level', 'front' ),
+                'text_2' => front_get_the_meta_data( '_job_qualification' ),
+                'icon' => 'fas fa-briefcase',
+            ),
+        ) );
+
+        if( is_array( $args ) && count( $args ) > 0 ) {
+            foreach( $args as $key => $arg) {
+                if( isset( $arg['text_1'], $arg['text_2'], $arg['icon'] ) && !empty( $arg['text_1'] && $arg['text_2'] && $arg['icon'] ) ) :
+                    ?>
+                    <div class="media mb-3">
+                        <div class="min-width-4 text-center text-primary mt-1 mr-3">
+                            <span class="<?php echo esc_attr( $arg['icon'] ); ?>"></span>
+                        </div>
+                        <div class="media-body">
+                            <span class="d-block font-weight-medium"><?php echo wp_kses_post( $arg['text_1'] ); ?></span>
+                            <small class="d-block text-secondary"><?php echo wp_kses_post( $arg['text_2'] ); ?></small>
+                        </div>
+                    </div>
+                    <?php
+                endif;
+              	if (empty( $arg['text_1']) && $arg['text_2'] == 'Location') :
+              			?>
+                    <div class="media mb-3">
+                        <div class="min-width-4 text-center text-primary mt-1 mr-3">
+                            <span class="<?php echo esc_attr( $arg['icon'] ); ?>"></span>
+                        </div>
+                        <div class="media-body">
+                            <span class="d-block font-weight-medium"><?php echo 'Remote'; ?></span>
+                            <small class="d-block text-secondary"><?php echo wp_kses_post( $arg['text_2'] ); ?></small>
+                        </div>
+                    </div>
+                  	<?php
+                endif;
+            }
+        }
+    }
+}
+
 	// Shows the correct project logo
 	add_action( 'single_job_listing_job_header', 'cosmos_single_job_listing_job_header_job_data', 10 );
 	add_action( 'after_setup_theme', 'cosmos_remove_single_job_listing_job_header_job_data');
@@ -88,8 +155,12 @@
 	if( ! function_exists( 'cosmos_single_job_listing_job_header_job_data' ) ) {
 	    function cosmos_single_job_listing_job_header_job_data() {
 	    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
-	    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
-	    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+	    		if (isset(get_post_meta(cosmos_get_post_id())['_company_name'][0])) {
+	    			$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+	    		}
+	    		if (isset(get_post_meta($company_id, '_company_logo')[0])) {
+		    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+		    	}
 						if (!empty($company_image)) {
 							$image = $company_image;
 						}else{

@@ -49,6 +49,11 @@ if ( ! class_exists( 'Redux_WordPress_Data', false ) ) {
 		public function get( $type = false, $args = array(), $current_value = '', $ajax = false ) {
 			$opt_name = $this->opt_name;
 
+			// We don't want to run this, it's not a string value. Send it back!
+			if ( is_array( $type ) ) {
+				return $type;
+			}
+
 			/**
 			 * Filter 'redux/options/{opt_name}/pre_data/{type}'
 			 *
@@ -347,8 +352,13 @@ if ( ! class_exists( 'Redux_WordPress_Data', false ) ) {
 
 				case 'menu_locations':
 				case 'menu_location':
-					$results = get_nav_menu_locations();
-					$data    = $this->process_results( $results, '', '', $display_keys, $secondary_key );
+					global $_wp_registered_nav_menus;
+					foreach ( $_wp_registered_nav_menus as $k => $v ) {
+						$data[ $k ] = $v;
+						if ( ! has_nav_menu( $k ) ) {
+							$data[ $k ] .= ' ' . __( '[unassigned]', 'redux-framework' );
+						}
+					}
 					break;
 
 				case 'image_sizes':

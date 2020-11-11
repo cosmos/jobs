@@ -32,18 +32,19 @@
 				$categories[] = get_the_terms($value, 'job_listing_category');
 			}
 		}
-		if (is_array($categories)) {
-			foreach ($categories as $key => $value) {
-				if (is_array($value)) {
-					foreach ($value as $key2 => $value2) {
-						$three_categories[] = array(
-															'term_id' => $value2->term_id,
-															'name' => $value2->name,
-														);
-					}
-				}
+		foreach ($categories as $key => $value) {
+			$all_categories[] = array('term_id' => $value[0]->term_id, 'name' => $value[0]->name);
+		}
+		$unique_categories = array_unique($all_categories, SORT_REGULAR);
+		if (is_array($unique_categories)) {
+			foreach ($unique_categories as $key => $value) {
+				$three_categories[] = array(
+																'term_id' => $value['term_id'],
+																'name' => $value['name'],
+															);
 			}
 		}
+		$three_categories = array_slice($three_categories, 0, 3);
 		if (is_array($three_categories)) {
 			$three_categories = array_map("unserialize", array_unique(array_map("serialize", $three_categories)));
 			foreach ($three_categories as $key => $value) {
@@ -72,53 +73,51 @@
 				$html .= '<p>'.$sub_title.'</p>';
 			$html .= '</div>';
 			$html .= '<div class="row">';
-				foreach ($three_categories as $key => $value) {
-					$html .= '<div class="col-md-4">';
-						for ($i = 0; $i <= 0; $i++) {
-							$html .= '<div class="col-12 text-center">';
-								$html .= '<h5>'.$value['name'].'</h5>';
-							$html .= '</div>';
-						}
-					$html .= '</div>';
-				}
 			$html .= '</div>';
 			$html .= '<div class="row">';
 				foreach ($posts as $key => $value) {
 					$job_meta = $company_id = $company_meta = $job = $location = $company = $logo = null;
 					$html .= '<div class="col-md-4">';
 						for ($i = 0; $i <= 2; $i++) {
-							if ($value[$i]->ID != null) {
-								$job_meta = get_post_meta($value[$i]->ID);
-								$company_id = $job_meta['_company_id'][0];
-								$company_meta = get_post_meta($company_id);
-								$job = $job_meta['_job_title'][0];	
-								$location = $job_meta['_job_location'][0];
-								if (get_post($company_id) != null) {
-									$company = get_post($company_id)->post_title;
-								}
-								if (isset($company_meta['_company_logo'])) {
-									$logo = $company_meta['_company_logo'][0];
-								}
-								if (empty($logo)) {
-									$logo = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
-								}
-								if (!empty($job_meta)) {
-									$html .= '<div '.cosmos_job_listing_class('list-grid card card-frame transition-3d-hover mw-100 mb-3 p-0',$value[$i]->ID).'>';
-										$html .= '<a href="'.$i.'" class="card-body p-3">';
-											$html .= '<div class="media">';
-												$html .= '<div class="u-avatar position-relative">';
-													$html .= '<img class="img-fluid rounded" src="'.$logo.'" alt="'.$value[$i]->post_title.' Logo" loading="lazy">';
+							if ($i == 0) {
+								$html .= '<div class="col-12 text-center mt-3 mb-1 mt-md-0 mb-md-0">';
+									$html .= '<h5>'.$three_categories[$ii]['name'].'</h5>';
+								$html .= '</div>';
+								++$ii;
+							}
+							if (isset($value[$i]->ID)) {
+								if ($value[$i]->ID != null) {
+									$job_meta = get_post_meta($value[$i]->ID);
+									$company_id = $job_meta['_company_id'][0];
+									$company_meta = get_post_meta($company_id);
+									$location = $job_meta['_job_location'][0];
+									if (get_post($company_id) != null) {
+										$company = get_post($company_id)->post_title;
+									}
+									if (isset($company_meta['_company_logo'])) {
+										$logo = $company_meta['_company_logo'][0];
+									}
+									if (empty($logo)) {
+										$logo = get_the_company_logo( null, 'thumbnail' ) ? get_the_company_logo( null, 'thumbnail' ) : apply_filters( 'job_manager_default_company_logo', JOB_MANAGER_PLUGIN_URL . '/assets/images/company.png' ); 
+									}
+									if (!empty($job_meta)) {
+										$html .= '<div '.cosmos_job_listing_class('list-grid card card-frame transition-3d-hover mw-100 mb-3 p-0',$value[$i]->ID).'>';
+											$html .= '<a href="'.get_permalink($value[$i]->ID).'" class="card-body p-3">';
+												$html .= '<div class="media">';
+													$html .= '<div class="u-avatar position-relative">';
+														$html .= '<img class="img-fluid rounded" src="'.$logo.'" alt="'.$value[$i]->post_title.' Logo" loading="lazy">';
+													$html .= '</div>';
+													$html .= '<div class="media-body px-4">';
+														$html .= '<h4 class="h6 text-dark mb-1">'.$value[$i]->post_title.'</h4>';
+														$html .= '<small class="d-block text-muted">'.$location.'</small>';
+														if ($company_id != null) {
+															$html .= '<small class="d-block text-muted">'.$company.'</small>';
+														}
+													$html .= '</div>';
 												$html .= '</div>';
-												$html .= '<div class="media-body px-4">';
-													$html .= '<h4 class="h6 text-dark mb-1">'.$job.'</h4>';
-													$html .= '<small class="d-block text-muted">'.$location.'</small>';
-													if ($company_id != null) {
-														$html .= '<small class="d-block text-muted">'.$company.'</small>';
-													}
-												$html .= '</div>';
-											$html .= '</div>';
-										$html .= '</a>';
-									$html .= '</div>';
+											$html .= '</a>';
+										$html .= '</div>';
+									}
 								}
 							}
 						}

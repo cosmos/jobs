@@ -513,9 +513,11 @@ function cosmos_get_projects_by_author() {
     $posts[] = $value->object_id;
   }
   foreach ($posts as $key => $value) {
-    if (get_post($value)->post_type == 'company' && get_post($value)->post_status == 'publish') {
-      $project_id = get_post($value)->ID;
-      $projects[$project_id] = get_post($value)->post_title;
+    if (isset(get_post($value)->post_type)) {
+      if (get_post($value)->post_type == 'company' && get_post($value)->post_status == 'publish') {
+        $project_id = get_post($value)->ID;
+        $projects[$project_id] = get_post($value)->post_title;
+      }
     }
   }
   $select = array('' => 'Select a Project');
@@ -560,6 +562,7 @@ function cosmos_customize_submit_job_form_fields_filter() {
 function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['company']['company_id']['options'] = cosmos_get_projects_by_author();
   $fields['company']['company_id']['label'] = "Select A Project";
+  $fields['job']['job_type']['required'] = true;
   $fields['job']['job_category']['priority'] = 2;
   $fields['job']['application']['priority'] = 3;
   $fields['job']['job_location']['placeholder'] = "e.g. \"San Francisco, CA USA\"";
@@ -567,7 +570,7 @@ function cosmos_customize_submit_job_form_fields( $fields ) {
   $fields['job']['job_listing_skills']['placeholder'] = "Relevant skills";
   $fields['job']['job_listing_skills']['description'] = "List of relevant skills, use comma to separate";
   $fields['job']['job_description']['label'] = "Full Description";
-  $fields['job']['job_location']['required'] = true;
+  $fields['job']['job_location']['required'] = false;
   $fields['job']['job_listing_skills']['required'] = true;
   $fields['job']['job_about']['required'] = true;
   unset( $fields['resume_fields']['resume_category'] );
