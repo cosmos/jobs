@@ -5,8 +5,12 @@
 	        <div class="mb-4">
 	            <?php
 			    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
-			    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
-			    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+			    		if (isset(get_post_meta(cosmos_get_post_id())['_company_name'][0])) {
+			    			$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+			    		}
+			    		if (isset(get_post_meta($company_id, '_company_logo')[0])) {
+			    			$company_image = get_post_meta($company_id, '_company_logo')[0];
+			    		}
 								if (!empty($company_image)) {
 									$image = $company_image;
 								}else{
@@ -151,8 +155,12 @@ if( ! function_exists( 'front_single_job_listing_summary_icon_block_elements' ) 
 	if( ! function_exists( 'cosmos_single_job_listing_job_header_job_data' ) ) {
 	    function cosmos_single_job_listing_job_header_job_data() {
 	    		$company_id = get_post_meta(cosmos_get_post_id())['_company_id'][0];
-	    		$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
-	    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+	    		if (isset(get_post_meta(cosmos_get_post_id())['_company_name'][0])) {
+	    			$company_name = get_post_meta(cosmos_get_post_id())['_company_name'][0];
+	    		}
+	    		if (isset(get_post_meta($company_id, '_company_logo')[0])) {
+		    		$company_image = get_post_meta($company_id, '_company_logo')[0];
+		    	}
 						if (!empty($company_image)) {
 							$image = $company_image;
 						}else{
